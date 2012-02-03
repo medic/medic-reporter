@@ -100,7 +100,7 @@
                "display": "Live in village served?"
             },
             "position": 3,
-            "type": undefined,
+            "type": "boolean",
             "length": [
                0,
                0
