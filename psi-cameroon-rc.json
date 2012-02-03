@@ -1,0 +1,535 @@
+[
+   {
+      "meta": {
+         "code": "PSCR"
+      },
+      "fields": {
+         "lc_synthese_year": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_year",
+               "display": "Année"
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ]
+         },
+         "lc_synthese_month": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_month",
+               "display": "Mois"
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Janvier"
+               ],
+               [
+                  2,
+                  "Février"
+               ],
+               [
+                  3,
+                  "Mars"
+               ],
+               [
+                  4,
+                  "Avril"
+               ],
+               [
+                  5,
+                  "Mai"
+               ],
+               [
+                  6,
+                  "Juin"
+               ],
+               [
+                  7,
+                  "Juillet"
+               ],
+               [
+                  8,
+                  "Aout"
+               ],
+               [
+                  9,
+                  "Septembre"
+               ],
+               [
+                  10,
+                  "Octobre"
+               ],
+               [
+                  11,
+                  "Novembre"
+               ],
+               [
+                  12,
+                  "Décembre"
+               ]
+            ]
+         },
+         "lc_synthese_district": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_district",
+               "display": "District de santé"
+            },
+            "position": 2,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Abong Mbang"
+               ],
+               [
+                  2,
+                  "Awaé"
+               ],
+               [
+                  3,
+                  "Bafang"
+               ],
+               [
+                  4,
+                  "Bafia"
+               ],
+               [
+                  5,
+                  "Bangangté"
+               ],
+               [
+                  6,
+                  "Batouri"
+               ],
+               [
+                  7,
+                  "Doumé"
+               ],
+               [
+                  8,
+                  "Ebebda"
+               ],
+               [
+                  9,
+                  "Esse"
+               ],
+               [
+                  10,
+                  "Mbalmayo"
+               ],
+               [
+                  11,
+                  "Mbankomo"
+               ],
+               [
+                  12,
+                  "Mfou"
+               ],
+               [
+                  13,
+                  "Monatélé"
+               ],
+               [
+                  14,
+                  "Ndikinimeki"
+               ],
+               [
+                  15,
+                  "Ngogmapoubi"
+               ],
+               [
+                  16,
+                  "Ngoumou"
+               ],
+               [
+                  17,
+                  "Nguelemendouka"
+               ],
+               [
+                  18,
+                  "Okola"
+               ],
+               [
+                  19,
+                  "Pouma"
+               ],
+               [
+                  20,
+                  "Sa'a"
+               ]
+            ]
+         },
+         "lc_synthese_area": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_area",
+               "display": "Aire de santé"
+            },
+            "position": 3,
+            "type": "string",
+            "length": [
+               1,
+               12
+            ]
+         },
+         "lc_synthese_village_rc": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_village_rc",
+               "display": "Village/quartier"
+            },
+            "position": 4,
+            "type": "string",
+            "length": [
+               1,
+               12
+            ]
+         },
+         "lc_synthese_name_rc": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_name_rc",
+               "display": "Nom du RC"
+            },
+            "position": 5,
+            "type": "string",
+            "length": [
+               0,
+               20
+            ]
+         },
+         "lc_synthese_v1": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_v1",
+               "display": "Malades vus, toutes causes confondues"
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_v2": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_v2",
+               "display": "Palu vus"
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_v3": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_v3",
+               "display": "Diarrhées vues"
+            },
+            "position": 8,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_v5": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_v5",
+               "display": "Autres causes vues"
+            },
+            "position": 9,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_t1": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_t1",
+               "display": "Palu traités total"
+            },
+            "position": 10,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_t1a": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_t1a",
+               "display": "Palu traités < 24h"
+            },
+            "position": 11,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_t1b": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_t1b",
+               "display": "Palu traités 24-48h"
+            },
+            "position": 12,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_t2": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_t2",
+               "display": "Diarrhées traitées"
+            },
+            "position": 13,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_r1": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_r1",
+               "display": "Palu référés au CSI"
+            },
+            "position": 14,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_r2": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_r2",
+               "display": "Diarrhées référées au CSI"
+            },
+            "position": 15,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_r4": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_r4",
+               "display": "Autres causes référées au CSI"
+            },
+            "position": 16,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_r5": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_r5",
+               "display": "Cas contre-référés par le CSI"
+            },
+            "position": 17,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_a1d": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_a1d",
+               "display": "ACT1 distribués"
+            },
+            "position": 18,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_a1f": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_a1f",
+               "display": "ACT1 disponibles fin du mois"
+            },
+            "position": 19,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_generic_stockout1": {
+            "names": {
+               "description": null,
+               "tiny": "generic_stockout1",
+               "display": "Rupture de stock"
+            },
+            "position": 20,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "choices": [
+               [
+                  1,
+                  "Aucune rupture"
+               ],
+               [
+                  2,
+                  "ACT1 rupture 3 jours ou plus"
+               ]
+            ]
+         },
+         "lc_synthese_a2d": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_a2d",
+               "display": "ACT2 distribués"
+            },
+            "position": 21,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_a2f": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_a2f",
+               "display": "ACT2 disponibles fin du mois"
+            },
+            "position": 22,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_generic_stockout2": {
+            "names": {
+               "description": null,
+               "tiny": "generic_stockout2",
+               "display": "Rupture de stock"
+            },
+            "position": 23,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "choices": [
+               [
+                  1,
+                  "Aucune rupture"
+               ],
+               [
+                  2,
+                  "ACT2 rupture 3 jours ou plus"
+               ]
+            ]
+         },
+         "lc_synthese_sd": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_sd",
+               "display": "SRO/ZINC distribués"
+            },
+            "position": 24,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_synthese_sf": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_sf",
+               "display": "SRO/ZINC disponibles fin du mois"
+            },
+            "position": 25,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_generic_stockout3": {
+            "names": {
+               "description": null,
+               "tiny": "generic_stockout3",
+               "display": "Rupture de stock"
+            },
+            "position": 26,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "choices": [
+               [
+                  1,
+                  "Aucune rupture"
+               ],
+               [
+                  2,
+                  "SRO/ZINC rupture 3 jours ou plus"
+               ]
+            ]
+         },
+         "lc_synthese_d1": {
+            "names": {
+               "description": null,
+               "tiny": "synthese_d1",
+               "display": "Décès < 5 ans"
+            },
+            "position": 27,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ]
+         }
+      }
+   }
+]

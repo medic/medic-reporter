@@ -1,0 +1,995 @@
+[
+   {
+      "meta": {
+         "code": "MSBR"
+      },
+      "fields": {
+         "lc_ref_year": {
+            "names": {
+               "description": null,
+               "tiny": "ref_year",
+               "display": "Année"
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ]
+         },
+         "lc_ref_month": {
+            "names": {
+               "description": null,
+               "tiny": "ref_month",
+               "display": "Mois"
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Janvier"
+               ],
+               [
+                  2,
+                  "Février"
+               ],
+               [
+                  3,
+                  "Mars"
+               ],
+               [
+                  4,
+                  "Avril"
+               ],
+               [
+                  5,
+                  "Mai"
+               ],
+               [
+                  6,
+                  "Juin"
+               ],
+               [
+                  7,
+                  "Juillet"
+               ],
+               [
+                  8,
+                  "Aout"
+               ],
+               [
+                  9,
+                  "Septembre"
+               ],
+               [
+                  10,
+                  "Octobre"
+               ],
+               [
+                  11,
+                  "Novembre"
+               ],
+               [
+                  12,
+                  "Décembre"
+               ]
+            ]
+         },
+         "lc_ref_day": {
+            "names": {
+               "description": null,
+               "tiny": "ref_day",
+               "display": "Jour"
+            },
+            "position": 2,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ]
+         },
+         "lc_ref_rc": {
+            "names": {
+               "description": null,
+               "tiny": "ref_rc",
+               "display": "Code du RC"
+            },
+            "position": 3,
+            "type": "string",
+            "length": [
+               11,
+               11
+            ]
+         },
+         "lc_ref_hour": {
+            "names": {
+               "description": null,
+               "tiny": "ref_hour",
+               "display": "Heure de départ"
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               3,
+               4
+            ]
+         },
+         "lc_ref_name": {
+            "names": {
+               "description": null,
+               "tiny": "ref_name",
+               "display": "Nom"
+            },
+            "position": 5,
+            "type": "string",
+            "length": [
+               0,
+               20
+            ]
+         },
+         "lc_ref_age": {
+            "names": {
+               "description": null,
+               "tiny": "ref_age",
+               "display": "Age"
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ]
+         },
+         "lc_ref_reason": {
+            "names": {
+               "description": null,
+               "tiny": "ref_reason",
+               "display": "Motif référence"
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Fme encnte malade"
+               ],
+               [
+                  2,
+                  "Accouchmnt difficile"
+               ],
+               [
+                  3,
+                  "Accouchée malade"
+               ],
+               [
+                  4,
+                  "Nouveau-né malade"
+               ],
+               [
+                  5,
+                  "Enfant SG/SGD"
+               ],
+               [
+                  6,
+                  "Trté pas mieux"
+               ],
+               [
+                  7,
+                  "Mnque médicament"
+               ],
+               [
+                  8,
+                  "TB rouge"
+               ],
+               [
+                  9,
+                  "Palu grave"
+               ],
+               [
+                  10,
+                  "Diarrhée grave"
+               ],
+               [
+                  11,
+                  "Malnutrition"
+               ],
+               [
+                  12,
+                  "Autre"
+               ]
+            ]
+         },
+         "lc_ref_reason_other": {
+            "names": {
+               "description": null,
+               "tiny": "ref_reason_other",
+               "display": "Si 'autre', précisez motif référence"
+            },
+            "position": 8,
+            "type": "string",
+            "length": [
+               0,
+               60
+            ]
+         }
+      }
+   },
+   {
+      "meta": {
+         "code": "MSBM"
+      },
+      "fields": {
+         "lc_med_year": {
+            "names": {
+               "description": null,
+               "tiny": "med_year",
+               "display": "Année"
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ]
+         },
+         "lc_med_month": {
+            "names": {
+               "description": null,
+               "tiny": "med_month",
+               "display": "Mois"
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Janvier"
+               ],
+               [
+                  2,
+                  "Février"
+               ],
+               [
+                  3,
+                  "Mars"
+               ],
+               [
+                  4,
+                  "Avril"
+               ],
+               [
+                  5,
+                  "Mai"
+               ],
+               [
+                  6,
+                  "Juin"
+               ],
+               [
+                  7,
+                  "Juillet"
+               ],
+               [
+                  8,
+                  "Aout"
+               ],
+               [
+                  9,
+                  "Septembre"
+               ],
+               [
+                  10,
+                  "Octobre"
+               ],
+               [
+                  11,
+                  "Novembre"
+               ],
+               [
+                  12,
+                  "Décembre"
+               ]
+            ]
+         },
+         "lc_med_day": {
+            "names": {
+               "description": null,
+               "tiny": "med_day",
+               "display": "Jour"
+            },
+            "position": 2,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ]
+         },
+         "lc_med_rc": {
+            "names": {
+               "description": null,
+               "tiny": "med_rc",
+               "display": "Code du RC"
+            },
+            "position": 3,
+            "type": "string",
+            "length": [
+               11,
+               11
+            ]
+         },
+         "lc_med_cta_a": {
+            "names": {
+               "description": null,
+               "tiny": "med_cta_a",
+               "display": "CTA actuel"
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_med_cta_c": {
+            "names": {
+               "description": null,
+               "tiny": "med_cta_c",
+               "display": "CTA commandé"
+            },
+            "position": 5,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_med_tdr_a": {
+            "names": {
+               "description": null,
+               "tiny": "med_tdr_a",
+               "display": "TDR actuel"
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_med_tdr_c": {
+            "names": {
+               "description": null,
+               "tiny": "med_tdr_c",
+               "display": "TDR commandé"
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_med_ctm_a": {
+            "names": {
+               "description": null,
+               "tiny": "med_ctm_a",
+               "display": "CTM 480 actuel"
+            },
+            "position": 8,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_med_ctm_c": {
+            "names": {
+               "description": null,
+               "tiny": "med_ctm_c",
+               "display": "CTM 480 commandé"
+            },
+            "position": 9,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_med_sro_a": {
+            "names": {
+               "description": null,
+               "tiny": "med_sro_a",
+               "display": "SRO/Zinc actuel"
+            },
+            "position": 10,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_med_sro_c": {
+            "names": {
+               "description": null,
+               "tiny": "med_sro_c",
+               "display": "SRO/Zinc commandé"
+            },
+            "position": 11,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_med_para_a": {
+            "names": {
+               "description": null,
+               "tiny": "med_para_a",
+               "display": "PARA actuel"
+            },
+            "position": 12,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_med_para_c": {
+            "names": {
+               "description": null,
+               "tiny": "med_para_c",
+               "display": "PARA commandé"
+            },
+            "position": 13,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         }
+      }
+   },
+   {
+      "meta": {
+         "code": "MSBP"
+      },
+      "fields": {
+         "lc_case_year": {
+            "names": {
+               "description": null,
+               "tiny": "case_year",
+               "display": "Année"
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ]
+         },
+         "lc_case_month": {
+            "names": {
+               "description": null,
+               "tiny": "case_month",
+               "display": "Mois"
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Janvier"
+               ],
+               [
+                  2,
+                  "Février"
+               ],
+               [
+                  3,
+                  "Mars"
+               ],
+               [
+                  4,
+                  "Avril"
+               ],
+               [
+                  5,
+                  "Mai"
+               ],
+               [
+                  6,
+                  "Juin"
+               ],
+               [
+                  7,
+                  "Juillet"
+               ],
+               [
+                  8,
+                  "Aout"
+               ],
+               [
+                  9,
+                  "Septembre"
+               ],
+               [
+                  10,
+                  "Octobre"
+               ],
+               [
+                  11,
+                  "Novembre"
+               ],
+               [
+                  12,
+                  "Décembre"
+               ]
+            ]
+         },
+         "lc_case_day": {
+            "names": {
+               "description": null,
+               "tiny": "case_day",
+               "display": "Jour"
+            },
+            "position": 2,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ]
+         },
+         "lc_case_rc": {
+            "names": {
+               "description": null,
+               "tiny": "case_rc",
+               "display": "Code du RC"
+            },
+            "position": 3,
+            "type": "string",
+            "length": [
+               11,
+               11
+            ]
+         },
+         "lc_case_pec_m": {
+            "names": {
+               "description": null,
+               "tiny": "case_pec_m",
+               "display": "M - 0 à 5 ans PEC"
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_pec_f": {
+            "names": {
+               "description": null,
+               "tiny": "case_pec_f",
+               "display": "F - 0 à 5 ans PEC"
+            },
+            "position": 5,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_urg_m": {
+            "names": {
+               "description": null,
+               "tiny": "case_urg_m",
+               "display": "M - 0 à 5 ans référé en urgence"
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_urg_f": {
+            "names": {
+               "description": null,
+               "tiny": "case_urg_f",
+               "display": "F - 0 à 5 ans référé en urgence"
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_tdr": {
+            "names": {
+               "description": null,
+               "tiny": "case_tdr",
+               "display": "TDR de palu réalisé"
+            },
+            "position": 8,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_palu_m": {
+            "names": {
+               "description": null,
+               "tiny": "case_palu_m",
+               "display": "M - Palu simple traité"
+            },
+            "position": 9,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_palu_f": {
+            "names": {
+               "description": null,
+               "tiny": "case_palu_f",
+               "display": "F - Palu simple traité"
+            },
+            "position": 10,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_dia_m": {
+            "names": {
+               "description": null,
+               "tiny": "case_dia_m",
+               "display": "M - Diarrhée simple traité"
+            },
+            "position": 11,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_dia_f": {
+            "names": {
+               "description": null,
+               "tiny": "case_dia_f",
+               "display": "F - Diarrhée simple traité"
+            },
+            "position": 12,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_pneu_m": {
+            "names": {
+               "description": null,
+               "tiny": "case_pneu_m",
+               "display": "M - Pneumonie traité"
+            },
+            "position": 13,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_pneu_f": {
+            "names": {
+               "description": null,
+               "tiny": "case_pneu_f",
+               "display": "F - Pneumonie traité"
+            },
+            "position": 14,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_mal_m": {
+            "names": {
+               "description": null,
+               "tiny": "case_mal_m",
+               "display": "M - Malnutrition dépistée"
+            },
+            "position": 15,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_mal_f": {
+            "names": {
+               "description": null,
+               "tiny": "case_mal_f",
+               "display": "F - Malnutrition dépistée"
+            },
+            "position": 16,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_rev": {
+            "names": {
+               "description": null,
+               "tiny": "case_rev",
+               "display": "0 à 5 ans revu pour suivi des soins"
+            },
+            "position": 17,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_vad": {
+            "names": {
+               "description": null,
+               "tiny": "case_vad",
+               "display": "0 à 5 ans vu au cours VAD"
+            },
+            "position": 18,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_case_edu": {
+            "names": {
+               "description": null,
+               "tiny": "case_edu",
+               "display": "Séance éducative réalisée"
+            },
+            "position": 19,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         }
+      }
+   },
+   {
+      "meta": {
+         "code": "MSBG"
+      },
+      "fields": {
+         "lc_case_year": {
+            "names": {
+               "description": null,
+               "tiny": "case_year",
+               "display": "Année"
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ]
+         },
+         "lc_case_month": {
+            "names": {
+               "description": null,
+               "tiny": "case_month",
+               "display": "Mois"
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Janvier"
+               ],
+               [
+                  2,
+                  "Février"
+               ],
+               [
+                  3,
+                  "Mars"
+               ],
+               [
+                  4,
+                  "Avril"
+               ],
+               [
+                  5,
+                  "Mai"
+               ],
+               [
+                  6,
+                  "Juin"
+               ],
+               [
+                  7,
+                  "Juillet"
+               ],
+               [
+                  8,
+                  "Aout"
+               ],
+               [
+                  9,
+                  "Septembre"
+               ],
+               [
+                  10,
+                  "Octobre"
+               ],
+               [
+                  11,
+                  "Novembre"
+               ],
+               [
+                  12,
+                  "Décembre"
+               ]
+            ]
+         },
+         "lc_monthly_rc": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_rc",
+               "display": "Code du RC"
+            },
+            "position": 2,
+            "type": "string",
+            "length": [
+               11,
+               11
+            ]
+         },
+         "lc_monthly_cta1": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_cta1",
+               "display": "CTA au début de mois"
+            },
+            "position": 3,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_monthly_cta2": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_cta2",
+               "display": "CTA cédés dans le mois"
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_monthly_cta3": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_cta3",
+               "display": "CTA restants à la fin du mois"
+            },
+            "position": 5,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_monthly_sro1": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_sro1",
+               "display": "SRO/Zinc au début de mois"
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_monthly_sro2": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_sro2",
+               "display": "SRO/Zinc cédés dans le mois"
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_monthly_sro3": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_sro3",
+               "display": "SRO/Zinc restants à la fin du mois"
+            },
+            "position": 8,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_monthly_ctm1": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_ctm1",
+               "display": "CTM 480mg au début de mois"
+            },
+            "position": 9,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_monthly_ctm2": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_ctm2",
+               "display": "CTM 480mg cédés dans le mois"
+            },
+            "position": 10,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         },
+         "lc_monthly_ctm3": {
+            "names": {
+               "description": null,
+               "tiny": "monthly_ctm3",
+               "display": "CTM 480mg restants à la fin du mois"
+            },
+            "position": 11,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ]
+         }
+      }
+   }
+]

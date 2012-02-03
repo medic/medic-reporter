@@ -1,0 +1,519 @@
+[
+   {
+      "meta": {
+         "code": "MSBB"
+      },
+      "fields": {
+         "lc_ref_year": {
+            "names": {
+               "description": null,
+               "tiny": "ref_year",
+               "display": "Année"
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ]
+         },
+         "lc_ref_month": {
+            "names": {
+               "description": null,
+               "tiny": "ref_month",
+               "display": "Mois"
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Janvier"
+               ],
+               [
+                  2,
+                  "Février"
+               ],
+               [
+                  3,
+                  "Mars"
+               ],
+               [
+                  4,
+                  "Avril"
+               ],
+               [
+                  5,
+                  "Mai"
+               ],
+               [
+                  6,
+                  "Juin"
+               ],
+               [
+                  7,
+                  "Juillet"
+               ],
+               [
+                  8,
+                  "Aout"
+               ],
+               [
+                  9,
+                  "Septembre"
+               ],
+               [
+                  10,
+                  "Octobre"
+               ],
+               [
+                  11,
+                  "Novembre"
+               ],
+               [
+                  12,
+                  "Décembre"
+               ]
+            ]
+         },
+         "lc_ref_day": {
+            "names": {
+               "description": null,
+               "tiny": "ref_day",
+               "display": "Jour"
+            },
+            "position": 2,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ]
+         },
+         "lc_ref_rc": {
+            "names": {
+               "description": null,
+               "tiny": "ref_rc",
+               "display": "Code du RC"
+            },
+            "position": 3,
+            "type": "string",
+            "length": [
+               11,
+               11
+            ]
+         },
+         "lc_ref_hour": {
+            "names": {
+               "description": null,
+               "tiny": "ref_hour",
+               "display": "Heure de départ"
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               3,
+               4
+            ]
+         },
+         "lc_ref_name": {
+            "names": {
+               "description": null,
+               "tiny": "ref_name",
+               "display": "Nom"
+            },
+            "position": 5,
+            "type": "string",
+            "length": [
+               0,
+               20
+            ]
+         },
+         "lc_ref_age": {
+            "names": {
+               "description": null,
+               "tiny": "ref_age",
+               "display": "Age"
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ]
+         },
+         "lc_ref_reason": {
+            "names": {
+               "description": null,
+               "tiny": "ref_reason",
+               "display": "Motif référence"
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Palu grave"
+               ],
+               [
+                  2,
+                  "Urg Chir"
+               ],
+               [
+                  3,
+                  "Hémorragie Fm"
+               ],
+               [
+                  4,
+                  "HTA grossesse"
+               ],
+               [
+                  5,
+                  "Détresse resp"
+               ],
+               [
+                  6,
+                  "Coma"
+               ],
+               [
+                  7,
+                  "Anémie sevère"
+               ],
+               [
+                  8,
+                  "Ut cicatriciel"
+               ],
+               [
+                  9,
+                  "-Choléra"
+               ],
+               [
+                  10,
+                  "-Fievre jaune"
+               ],
+               [
+                  11,
+                  "-Méningite"
+               ],
+               [
+                  12,
+                  "-Tétanos"
+               ],
+               [
+                  13,
+                  "-PFA"
+               ],
+               [
+                  14,
+                  "-Autres MPE"
+               ],
+               [
+                  15,
+                  "Autres"
+               ]
+            ]
+         },
+         "lc_ref_reason_other": {
+            "names": {
+               "description": null,
+               "tiny": "ref_reason_other",
+               "display": "Si 'autre', précisez motif référence"
+            },
+            "position": 8,
+            "type": "string",
+            "length": [
+               0,
+               60
+            ]
+         }
+      }
+   },
+   {
+      "meta": {
+         "code": "MSBC"
+      },
+      "fields": {
+         "lc_cref_year": {
+            "names": {
+               "description": null,
+               "tiny": "cref_year",
+               "display": "Année"
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ]
+         },
+         "lc_cref_month": {
+            "names": {
+               "description": null,
+               "tiny": "cref_month",
+               "display": "Mois"
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Janvier"
+               ],
+               [
+                  2,
+                  "Février"
+               ],
+               [
+                  3,
+                  "Mars"
+               ],
+               [
+                  4,
+                  "Avril"
+               ],
+               [
+                  5,
+                  "Mai"
+               ],
+               [
+                  6,
+                  "Juin"
+               ],
+               [
+                  7,
+                  "Juillet"
+               ],
+               [
+                  8,
+                  "Aout"
+               ],
+               [
+                  9,
+                  "Septembre"
+               ],
+               [
+                  10,
+                  "Octobre"
+               ],
+               [
+                  11,
+                  "Novembre"
+               ],
+               [
+                  12,
+                  "Décembre"
+               ]
+            ]
+         },
+         "lc_cref_day": {
+            "names": {
+               "description": null,
+               "tiny": "cref_day",
+               "display": "Jour"
+            },
+            "position": 2,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ]
+         },
+         "lc_cref_rc": {
+            "names": {
+               "description": null,
+               "tiny": "cref_rc",
+               "display": "Code du RC"
+            },
+            "position": 3,
+            "type": "string",
+            "length": [
+               11,
+               11
+            ]
+         },
+         "lc_cref_ptype": {
+            "names": {
+               "description": null,
+               "tiny": "cref_ptype",
+               "display": "Type de patient"
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Femme enceinte"
+               ],
+               [
+                  2,
+                  "Accouchée malade"
+               ],
+               [
+                  3,
+                  "Enfant"
+               ],
+               [
+                  4,
+                  "Nouveau né"
+               ],
+               [
+                  5,
+                  "Autre"
+               ]
+            ]
+         },
+         "lc_cref_name": {
+            "names": {
+               "description": null,
+               "tiny": "cref_name",
+               "display": "Nom"
+            },
+            "position": 5,
+            "type": "string",
+            "length": [
+               0,
+               20
+            ]
+         },
+         "lc_cref_age": {
+            "names": {
+               "description": null,
+               "tiny": "cref_age",
+               "display": "Age"
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ]
+         },
+         "lc_cref_mom": {
+            "names": {
+               "description": null,
+               "tiny": "cref_mom",
+               "display": "Nom de la mère ou de l'accompagnant"
+            },
+            "position": 7,
+            "type": "string",
+            "length": [
+               0,
+               20
+            ]
+         },
+         "lc_cref_treated": {
+            "names": {
+               "description": null,
+               "tiny": "cref_treated",
+               "display": "Patient traité pour"
+            },
+            "position": 8,
+            "type": "string",
+            "length": [
+               0,
+               20
+            ]
+         },
+         "lc_cref_rec": {
+            "names": {
+               "description": null,
+               "tiny": "cref_rec",
+               "display": "Recommandations/Conseils"
+            },
+            "position": 9,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "choices": [
+               [
+                  1,
+                  "Accusé réception"
+               ],
+               [
+                  2,
+                  "Non recu, rechercher le malade"
+               ],
+               [
+                  3,
+                  "Revenir au CS"
+               ],
+               [
+                  4,
+                  "Suivi à domicile"
+               ],
+               [
+                  5,
+                  "Guéri"
+               ],
+               [
+                  6,
+                  "Décédé"
+               ],
+               [
+                  7,
+                  "Référé"
+               ],
+               [
+                  8,
+                  "Evadé"
+               ],
+               [
+                  9,
+                  "Refus d'admission"
+               ],
+               [
+                  10,
+                  "Conseils hygiéno-diététiques"
+               ],
+               [
+                  11,
+                  "Autres"
+               ]
+            ]
+         },
+         "lc_cref_reason": {
+            "names": {
+               "description": null,
+               "tiny": "cref_reason",
+               "display": "Précisions pour recommandations"
+            },
+            "position": 10,
+            "type": "string",
+            "length": [
+               0,
+               35
+            ]
+         },
+         "lc_cref_agent": {
+            "names": {
+               "description": null,
+               "tiny": "cref_agent",
+               "display": "Nom de l'agent de santé"
+            },
+            "position": 11,
+            "type": "string",
+            "length": [
+               0,
+               20
+            ]
+         }
+      }
+   }
+]
