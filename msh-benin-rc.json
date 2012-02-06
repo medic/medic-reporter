@@ -5,9 +5,10 @@
       },
       "fields": {
          "ref_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Année"
                }
             },
@@ -23,9 +24,10 @@
             "flags": {}
          },
          "ref_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Mois"
                }
             },
@@ -115,9 +117,10 @@
             ]
          },
          "ref_day": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Jour"
                }
             },
@@ -133,9 +136,10 @@
             "flags": {}
          },
          "ref_rc": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Code du RC"
                }
             },
@@ -151,9 +155,10 @@
             }
          },
          "ref_hour": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Heure de départ"
                }
             },
@@ -169,9 +174,10 @@
             "flags": {}
          },
          "ref_name": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Nom"
                }
             },
@@ -185,9 +191,10 @@
             "flags": {}
          },
          "ref_age": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Age"
                }
             },
@@ -201,9 +208,10 @@
             "flags": {}
          },
          "ref_reason": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Motif référence"
                }
             },
@@ -291,9 +299,10 @@
             ]
          },
          "ref_reason_other": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Si 'autre', précisez motif référence"
                }
             },
@@ -314,9 +323,10 @@
       },
       "fields": {
          "med_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Année"
                }
             },
@@ -332,9 +342,10 @@
             "flags": {}
          },
          "med_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Mois"
                }
             },
@@ -424,9 +435,10 @@
             ]
          },
          "med_day": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Jour"
                }
             },
@@ -442,9 +454,10 @@
             "flags": {}
          },
          "med_rc": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Code du RC"
                }
             },
@@ -460,9 +473,10 @@
             }
          },
          "med_cta_a": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTA actuel"
                }
             },
@@ -476,9 +490,10 @@
             "flags": {}
          },
          "med_cta_c": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTA commandé"
                }
             },
@@ -492,9 +507,10 @@
             "flags": {}
          },
          "med_tdr_a": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "TDR actuel"
                }
             },
@@ -508,9 +524,10 @@
             "flags": {}
          },
          "med_tdr_c": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "TDR commandé"
                }
             },
@@ -524,9 +541,10 @@
             "flags": {}
          },
          "med_ctm_a": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTM 480 actuel"
                }
             },
@@ -540,9 +558,10 @@
             "flags": {}
          },
          "med_ctm_c": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTM 480 commandé"
                }
             },
@@ -556,9 +575,10 @@
             "flags": {}
          },
          "med_sro_a": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/Zinc actuel"
                }
             },
@@ -572,9 +592,10 @@
             "flags": {}
          },
          "med_sro_c": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/Zinc commandé"
                }
             },
@@ -588,9 +609,10 @@
             "flags": {}
          },
          "med_para_a": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "PARA actuel"
                }
             },
@@ -604,9 +626,10 @@
             "flags": {}
          },
          "med_para_c": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "PARA commandé"
                }
             },
@@ -627,9 +650,10 @@
       },
       "fields": {
          "case_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Année"
                }
             },
@@ -645,9 +669,10 @@
             "flags": {}
          },
          "case_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Mois"
                }
             },
@@ -737,9 +762,10 @@
             ]
          },
          "case_day": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Jour"
                }
             },
@@ -755,9 +781,10 @@
             "flags": {}
          },
          "case_rc": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Code du RC"
                }
             },
@@ -773,9 +800,10 @@
             }
          },
          "case_pec_m": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "M - 0 à 5 ans PEC"
                }
             },
@@ -789,9 +817,10 @@
             "flags": {}
          },
          "case_pec_f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "F - 0 à 5 ans PEC"
                }
             },
@@ -805,9 +834,10 @@
             "flags": {}
          },
          "case_urg_m": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "M - 0 à 5 ans référé en urgence"
                }
             },
@@ -821,9 +851,10 @@
             "flags": {}
          },
          "case_urg_f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "F - 0 à 5 ans référé en urgence"
                }
             },
@@ -837,9 +868,10 @@
             "flags": {}
          },
          "case_tdr": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "TDR de palu réalisé"
                }
             },
@@ -853,9 +885,10 @@
             "flags": {}
          },
          "case_palu_m": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "M - Palu simple traité"
                }
             },
@@ -869,9 +902,10 @@
             "flags": {}
          },
          "case_palu_f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "F - Palu simple traité"
                }
             },
@@ -885,9 +919,10 @@
             "flags": {}
          },
          "case_dia_m": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "M - Diarrhée simple traité"
                }
             },
@@ -901,9 +936,10 @@
             "flags": {}
          },
          "case_dia_f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "F - Diarrhée simple traité"
                }
             },
@@ -917,9 +953,10 @@
             "flags": {}
          },
          "case_pneu_m": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "M - Pneumonie traité"
                }
             },
@@ -933,9 +970,10 @@
             "flags": {}
          },
          "case_pneu_f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "F - Pneumonie traité"
                }
             },
@@ -949,9 +987,10 @@
             "flags": {}
          },
          "case_mal_m": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "M - Malnutrition dépistée"
                }
             },
@@ -965,9 +1004,10 @@
             "flags": {}
          },
          "case_mal_f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "F - Malnutrition dépistée"
                }
             },
@@ -981,9 +1021,10 @@
             "flags": {}
          },
          "case_rev": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "0 à 5 ans revu pour suivi des soins"
                }
             },
@@ -997,9 +1038,10 @@
             "flags": {}
          },
          "case_vad": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "0 à 5 ans vu au cours VAD"
                }
             },
@@ -1013,9 +1055,10 @@
             "flags": {}
          },
          "case_edu": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Séance éducative réalisée"
                }
             },
@@ -1036,9 +1079,10 @@
       },
       "fields": {
          "case_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Année"
                }
             },
@@ -1054,9 +1098,10 @@
             "flags": {}
          },
          "case_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Mois"
                }
             },
@@ -1146,9 +1191,10 @@
             ]
          },
          "monthly_rc": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Code du RC"
                }
             },
@@ -1164,9 +1210,10 @@
             }
          },
          "monthly_cta1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTA au début de mois"
                }
             },
@@ -1180,9 +1227,10 @@
             "flags": {}
          },
          "monthly_cta2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTA cédés dans le mois"
                }
             },
@@ -1196,9 +1244,10 @@
             "flags": {}
          },
          "monthly_cta3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTA restants à la fin du mois"
                }
             },
@@ -1212,9 +1261,10 @@
             "flags": {}
          },
          "monthly_sro1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/Zinc au début de mois"
                }
             },
@@ -1228,9 +1278,10 @@
             "flags": {}
          },
          "monthly_sro2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/Zinc cédés dans le mois"
                }
             },
@@ -1244,9 +1295,10 @@
             "flags": {}
          },
          "monthly_sro3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/Zinc restants à la fin du mois"
                }
             },
@@ -1260,9 +1312,10 @@
             "flags": {}
          },
          "monthly_ctm1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTM 480mg au début de mois"
                }
             },
@@ -1276,9 +1329,10 @@
             "flags": {}
          },
          "monthly_ctm2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTM 480mg cédés dans le mois"
                }
             },
@@ -1292,9 +1346,10 @@
             "flags": {}
          },
          "monthly_ctm3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "CTM 480mg restants à la fin du mois"
                }
             },

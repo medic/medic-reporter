@@ -5,9 +5,10 @@
       },
       "fields": {
          "monthly_id": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Village Clinic ID"
                }
             },
@@ -21,9 +22,10 @@
             "flags": {}
          },
          "monthly_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Year Reporting"
                }
             },
@@ -39,9 +41,10 @@
             "flags": {}
          },
          "monthly_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Month Reporting"
                }
             },
@@ -131,9 +134,10 @@
             ]
          },
          "monthly_residence": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Live in village served?"
                }
             },
@@ -147,9 +151,10 @@
             "flags": {}
          },
          "monthly_f1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "< 1 days Fever cases"
                }
             },
@@ -163,9 +168,10 @@
             "flags": {}
          },
          "monthly_f2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "< 2 days Fever cases"
                }
             },
@@ -179,9 +185,10 @@
             "flags": {}
          },
          "monthly_f3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "> 3 days Fever cases"
                }
             },
@@ -195,9 +202,10 @@
             "flags": {}
          },
          "monthly_d1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "< 1 days Diarrhea cases"
                }
             },
@@ -211,9 +219,10 @@
             "flags": {}
          },
          "monthly_d2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "< 2 days Diarrhea cases"
                }
             },
@@ -227,9 +236,10 @@
             "flags": {}
          },
          "monthly_d3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "> 3 days Diarrhea cases"
                }
             },
@@ -243,9 +253,10 @@
             "flags": {}
          },
          "monthly_b1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "< 1 days Fast breath cases"
                }
             },
@@ -259,9 +270,10 @@
             "flags": {}
          },
          "monthly_b2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "< 2 days Fast breath cases"
                }
             },
@@ -275,9 +287,10 @@
             "flags": {}
          },
          "monthly_b3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "> 3 days Fast breath cases"
                }
             },
@@ -291,9 +304,10 @@
             "flags": {}
          },
          "monthly_sv": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Supervisor visits"
                }
             },
@@ -307,9 +321,10 @@
             "flags": {}
          },
          "monthly_ms": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Mentorship sessions"
                }
             },
@@ -323,9 +338,10 @@
             "flags": {}
          },
          "monthly_s1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "LA 6x1 days stocked out"
                }
             },
@@ -339,9 +355,10 @@
             "flags": {}
          },
          "monthly_s2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "LA 6x2 days stocked out"
                }
             },
@@ -355,9 +372,10 @@
             "flags": {}
          },
          "monthly_s3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "ORS days stocked out"
                }
             },
@@ -371,9 +389,10 @@
             "flags": {}
          },
          "monthly_s4": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Cotrimoxazole days stocked out"
                }
             },
@@ -387,9 +406,10 @@
             "flags": {}
          },
          "monthly_s5": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Zinc days stocked out"
                }
             },
@@ -403,9 +423,10 @@
             "flags": {}
          },
          "monthly_s6": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Eye Ointment days stocked out"
                }
             },
@@ -419,9 +440,10 @@
             "flags": {}
          },
          "referral_s1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Referral 2-11 month total"
                }
             },
@@ -435,9 +457,10 @@
             "flags": {}
          },
          "referral_s2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Referral 12-59 month total"
                }
             },
@@ -451,9 +474,10 @@
             "flags": {}
          },
          "deaths_s1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Deaths 2-11 month total"
                }
             },
@@ -467,9 +491,10 @@
             "flags": {}
          },
          "deaths_s2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Deaths 12-59 month total"
                }
             },
@@ -490,9 +515,10 @@
       },
       "fields": {
          "stocks_id": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Health Facility ID"
                }
             },
@@ -506,9 +532,10 @@
             "flags": {}
          },
          "stocks_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Year Reporting"
                }
             },
@@ -524,9 +551,10 @@
             "flags": {}
          },
          "stocks_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Month Reporting"
                }
             },
@@ -616,9 +644,10 @@
             ]
          },
          "stocks_t1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "LA 6x1 dispensed total"
                }
             },
@@ -632,9 +661,10 @@
             "flags": {}
          },
          "stocks_t2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "LA 6x2 dispensed total"
                }
             },
@@ -648,9 +678,10 @@
             "flags": {}
          },
          "stocks_t3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Cotrimoxazole dispensed total"
                }
             },
@@ -664,9 +695,10 @@
             "flags": {}
          },
          "stocks_t4": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Zinc dispensed total"
                }
             },
@@ -680,9 +712,10 @@
             "flags": {}
          },
          "stocks_t5": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "ORS dispensed total"
                }
             },
@@ -696,9 +729,10 @@
             "flags": {}
          },
          "stocks_t6": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Eye Ointment dispensed total"
                }
             },
@@ -712,9 +746,10 @@
             "flags": {}
          },
          "stocks_d1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "LA 6x1 days stocked out"
                }
             },
@@ -728,9 +763,10 @@
             "flags": {}
          },
          "stocks_d2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "LA 6x2 days stocked out"
                }
             },
@@ -744,9 +780,10 @@
             "flags": {}
          },
          "stocks_d3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Cotrimoxazole days stocked out"
                }
             },
@@ -760,9 +797,10 @@
             "flags": {}
          },
          "stocks_d4": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Zinc days stocked out"
                }
             },
@@ -776,9 +814,10 @@
             "flags": {}
          },
          "stocks_d5": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "ORS days stocked out"
                }
             },
@@ -792,9 +831,10 @@
             "flags": {}
          },
          "stocks_d6": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "en": "Eye Ointment days stocked out"
                }
             },

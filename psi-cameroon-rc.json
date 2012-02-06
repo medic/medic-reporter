@@ -5,9 +5,10 @@
       },
       "fields": {
          "synthese_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Année"
                }
             },
@@ -23,9 +24,10 @@
             "flags": {}
          },
          "synthese_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Mois"
                }
             },
@@ -115,9 +117,10 @@
             ]
          },
          "synthese_district": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "District de santé"
                }
             },
@@ -255,9 +258,10 @@
             ]
          },
          "synthese_area": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Aire de santé"
                }
             },
@@ -271,9 +275,10 @@
             "flags": {}
          },
          "synthese_village_rc": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Village/quartier"
                }
             },
@@ -287,9 +292,10 @@
             "flags": {}
          },
          "synthese_name_rc": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Nom du RC"
                }
             },
@@ -303,9 +309,10 @@
             "flags": {}
          },
          "synthese_v1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Malades vus, toutes causes confondues"
                }
             },
@@ -319,9 +326,10 @@
             "flags": {}
          },
          "synthese_v2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu vus"
                }
             },
@@ -335,9 +343,10 @@
             "flags": {}
          },
          "synthese_v3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Diarrhées vues"
                }
             },
@@ -351,9 +360,10 @@
             "flags": {}
          },
          "synthese_v5": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Autres causes vues"
                }
             },
@@ -367,9 +377,10 @@
             "flags": {}
          },
          "synthese_t1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu traités total"
                }
             },
@@ -383,9 +394,10 @@
             "flags": {}
          },
          "synthese_t1a": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu traités < 24h"
                }
             },
@@ -399,9 +411,10 @@
             "flags": {}
          },
          "synthese_t1b": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu traités 24-48h"
                }
             },
@@ -415,9 +428,10 @@
             "flags": {}
          },
          "synthese_t2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Diarrhées traitées"
                }
             },
@@ -431,9 +445,10 @@
             "flags": {}
          },
          "synthese_r1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu référés au CSI"
                }
             },
@@ -447,9 +462,10 @@
             "flags": {}
          },
          "synthese_r2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Diarrhées référées au CSI"
                }
             },
@@ -463,9 +479,10 @@
             "flags": {}
          },
          "synthese_r4": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Autres causes référées au CSI"
                }
             },
@@ -479,9 +496,10 @@
             "flags": {}
          },
          "synthese_r5": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Cas contre-référés par le CSI"
                }
             },
@@ -495,9 +513,10 @@
             "flags": {}
          },
          "synthese_a1d": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT1 distribués"
                }
             },
@@ -511,9 +530,10 @@
             "flags": {}
          },
          "synthese_a1f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT1 disponibles fin du mois"
                }
             },
@@ -527,9 +547,10 @@
             "flags": {}
          },
          "generic_stockout1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Rupture de stock"
                }
             },
@@ -559,9 +580,10 @@
             ]
          },
          "synthese_a2d": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT2 distribués"
                }
             },
@@ -575,9 +597,10 @@
             "flags": {}
          },
          "synthese_a2f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT2 disponibles fin du mois"
                }
             },
@@ -591,9 +614,10 @@
             "flags": {}
          },
          "generic_stockout2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Rupture de stock"
                }
             },
@@ -623,9 +647,10 @@
             ]
          },
          "synthese_sd": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/ZINC distribués"
                }
             },
@@ -639,9 +664,10 @@
             "flags": {}
          },
          "synthese_sf": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/ZINC disponibles fin du mois"
                }
             },
@@ -655,9 +681,10 @@
             "flags": {}
          },
          "generic_stockout3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Rupture de stock"
                }
             },
@@ -687,9 +714,10 @@
             ]
          },
          "synthese_d1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Décès < 5 ans"
                }
             },

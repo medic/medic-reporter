@@ -5,9 +5,10 @@
       },
       "fields": {
          "ref_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Année"
                }
             },
@@ -23,9 +24,10 @@
             "flags": {}
          },
          "ref_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Mois"
                }
             },
@@ -115,9 +117,10 @@
             ]
          },
          "ref_day": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Jour"
                }
             },
@@ -133,9 +136,10 @@
             "flags": {}
          },
          "ref_rc": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Code du RC"
                }
             },
@@ -151,9 +155,10 @@
             }
          },
          "ref_hour": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Heure de départ"
                }
             },
@@ -169,9 +174,10 @@
             "flags": {}
          },
          "ref_name": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Nom"
                }
             },
@@ -185,9 +191,10 @@
             "flags": {}
          },
          "ref_age": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Age"
                }
             },
@@ -201,9 +208,10 @@
             "flags": {}
          },
          "ref_reason": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Motif référence"
                }
             },
@@ -309,9 +317,10 @@
             ]
          },
          "ref_reason_other": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Si 'autre', précisez motif référence"
                }
             },
@@ -332,9 +341,10 @@
       },
       "fields": {
          "cref_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Année"
                }
             },
@@ -350,9 +360,10 @@
             "flags": {}
          },
          "cref_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Mois"
                }
             },
@@ -442,9 +453,10 @@
             ]
          },
          "cref_day": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Jour"
                }
             },
@@ -460,9 +472,10 @@
             "flags": {}
          },
          "cref_rc": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Code du RC"
                }
             },
@@ -478,9 +491,10 @@
             }
          },
          "cref_ptype": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Type de patient"
                }
             },
@@ -526,9 +540,10 @@
             ]
          },
          "cref_name": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Nom"
                }
             },
@@ -542,9 +557,10 @@
             "flags": {}
          },
          "cref_age": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Age"
                }
             },
@@ -558,9 +574,10 @@
             "flags": {}
          },
          "cref_mom": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Nom de la mère ou de l'accompagnant"
                }
             },
@@ -574,9 +591,10 @@
             "flags": {}
          },
          "cref_treated": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Patient traité pour"
                }
             },
@@ -590,9 +608,10 @@
             "flags": {}
          },
          "cref_rec": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Recommandations/Conseils"
                }
             },
@@ -674,9 +693,10 @@
             ]
          },
          "cref_reason": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Précisions pour recommandations"
                }
             },
@@ -690,9 +710,10 @@
             "flags": {}
          },
          "cref_agent": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Nom de l'agent de santé"
                }
             },

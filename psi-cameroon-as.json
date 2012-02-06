@@ -5,9 +5,10 @@
       },
       "fields": {
          "supervision_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Année"
                }
             },
@@ -23,9 +24,10 @@
             "flags": {}
          },
          "supervision_trimester": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Trimestre"
                }
             },
@@ -67,9 +69,10 @@
             ]
          },
          "supervision_district": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "District de santé"
                }
             },
@@ -207,9 +210,10 @@
             ]
          },
          "supervision_area": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Aire de santé"
                }
             },
@@ -223,9 +227,10 @@
             "flags": {}
          },
          "supervision_a1r": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT 1 re\11us"
                }
             },
@@ -239,9 +244,10 @@
             "flags": {}
          },
          "supervision_a1disp": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT 1 disponibles"
                }
             },
@@ -255,9 +261,10 @@
             "flags": {}
          },
          "generic_stockout1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Rupture de stock"
                }
             },
@@ -287,9 +294,10 @@
             ]
          },
          "supervision_a2r": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT 2 re\11us"
                }
             },
@@ -303,9 +311,10 @@
             "flags": {}
          },
          "supervision_a2disp": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT 2 disponibles"
                }
             },
@@ -319,9 +328,10 @@
             "flags": {}
          },
          "generic_stockout2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Rupture de stock"
                }
             },
@@ -351,9 +361,10 @@
             ]
          },
          "supervision_a3r": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/Zinc re\11us"
                }
             },
@@ -367,9 +378,10 @@
             "flags": {}
          },
          "supervision_a3disp": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/Zinc disponibles"
                }
             },
@@ -383,9 +395,10 @@
             "flags": {}
          },
          "generic_stockout3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Rupture de stock"
                }
             },
@@ -415,9 +428,10 @@
             ]
          },
          "supervision_r1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "RC formés"
                }
             },
@@ -431,9 +445,10 @@
             "flags": {}
          },
          "supervision_r2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "RC fonctionnels"
                }
             },
@@ -447,9 +462,10 @@
             "flags": {}
          },
          "supervision_r3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "RC supervisés"
                }
             },
@@ -463,9 +479,10 @@
             "flags": {}
          },
          "supervision_r4": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Algorithme, # l'utilisant correctement"
                }
             },
@@ -479,9 +496,10 @@
             "flags": {}
          },
          "supervision_r5": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Signes de danger, # capable d'en citer 5 ou plus"
                }
             },
@@ -495,9 +513,10 @@
             "flags": {}
          },
          "supervision_r6": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT1, # ayant rupture de stock plus de 3 jours"
                }
             },
@@ -511,9 +530,10 @@
             "flags": {}
          },
          "supervision_r6b": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT2, # ayant rupture de stock plus de 3 jours"
                }
             },
@@ -527,9 +547,10 @@
             "flags": {}
          },
          "supervision_r7": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/Zinc, # ayant rupture de stock plus de 3 jours"
                }
             },
@@ -543,9 +564,10 @@
             "flags": {}
          },
          "supervision_p1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "# interrogées"
                }
             },
@@ -559,9 +581,10 @@
             "flags": {}
          },
          "supervision_p2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "# qui rapportent les services rendus par le RC au sein de la communauté"
                }
             },
@@ -575,9 +598,10 @@
             "flags": {}
          },
          "supervision_p3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "# administré un traitement à leur enfant chaque fois qu'il est malade"
                }
             },
@@ -591,9 +615,10 @@
             "flags": {}
          },
          "supervision_p4": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "# rencontré le RC lorsqu'ils étaient dans le besoin"
                }
             },
@@ -607,9 +632,10 @@
             "flags": {}
          },
          "supervision_v1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Malades vus, toutes causes confondues"
                }
             },
@@ -623,9 +649,10 @@
             "flags": {}
          },
          "supervision_v2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu vus"
                }
             },
@@ -639,9 +666,10 @@
             "flags": {}
          },
          "supervision_v3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Diarrhées vues"
                }
             },
@@ -655,9 +683,10 @@
             "flags": {}
          },
          "supervision_t1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu traités total"
                }
             },
@@ -671,9 +700,10 @@
             "flags": {}
          },
          "supervision_t1a": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu traités < 24h"
                }
             },
@@ -687,9 +717,10 @@
             "flags": {}
          },
          "supervision_t1b": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu traités 24-48h"
                }
             },
@@ -703,9 +734,10 @@
             "flags": {}
          },
          "supervision_t2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Diarrhées traitées"
                }
             },
@@ -719,9 +751,10 @@
             "flags": {}
          },
          "supervision_ref1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Cas référés par RC au AS"
                }
             },
@@ -735,9 +768,10 @@
             "flags": {}
          },
          "supervision_ref2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Cas référés par AS au DS"
                }
             },
@@ -751,9 +785,10 @@
             "flags": {}
          },
          "supervision_d1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Décès < 5 ans"
                }
             },
@@ -774,9 +809,10 @@
       },
       "fields": {
          "synthese_year": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Année"
                }
             },
@@ -792,9 +828,10 @@
             "flags": {}
          },
          "synthese_month": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Mois"
                }
             },
@@ -884,9 +921,10 @@
             ]
          },
          "synthese_district": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "District de santé"
                }
             },
@@ -1024,9 +1062,10 @@
             ]
          },
          "synthese_area": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Aire de santé"
                }
             },
@@ -1040,9 +1079,10 @@
             "flags": {}
          },
          "synthese_village_as": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "# de villages"
                }
             },
@@ -1056,9 +1096,10 @@
             "flags": {}
          },
          "synthese_name_as": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Nom du chef AS"
                }
             },
@@ -1072,9 +1113,10 @@
             "flags": {}
          },
          "synthese_v1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Malades vus, toutes causes confondues"
                }
             },
@@ -1088,9 +1130,10 @@
             "flags": {}
          },
          "synthese_v2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu vus"
                }
             },
@@ -1104,9 +1147,10 @@
             "flags": {}
          },
          "synthese_v3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Diarrhées vues"
                }
             },
@@ -1120,9 +1164,10 @@
             "flags": {}
          },
          "synthese_v5": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Autres causes vues"
                }
             },
@@ -1136,9 +1181,10 @@
             "flags": {}
          },
          "synthese_t1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu traités total"
                }
             },
@@ -1152,9 +1198,10 @@
             "flags": {}
          },
          "synthese_t1a": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu traités < 24h"
                }
             },
@@ -1168,9 +1215,10 @@
             "flags": {}
          },
          "synthese_t1b": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu traités 24-48h"
                }
             },
@@ -1184,9 +1232,10 @@
             "flags": {}
          },
          "synthese_t2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Diarrhées traitées"
                }
             },
@@ -1200,9 +1249,10 @@
             "flags": {}
          },
          "synthese_r1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Palu référés au CSI"
                }
             },
@@ -1216,9 +1266,10 @@
             "flags": {}
          },
          "synthese_r2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Diarrhées référées au CSI"
                }
             },
@@ -1232,9 +1283,10 @@
             "flags": {}
          },
          "synthese_r4": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Autres causes référées au CSI"
                }
             },
@@ -1248,9 +1300,10 @@
             "flags": {}
          },
          "synthese_r5": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Cas contre-référés par le CSI"
                }
             },
@@ -1264,9 +1317,10 @@
             "flags": {}
          },
          "synthese_a1d": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT1 distribués"
                }
             },
@@ -1280,9 +1334,10 @@
             "flags": {}
          },
          "synthese_a1f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT1 disponibles fin du mois"
                }
             },
@@ -1296,9 +1351,10 @@
             "flags": {}
          },
          "generic_stockout1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Rupture de stock"
                }
             },
@@ -1328,9 +1384,10 @@
             ]
          },
          "synthese_a2d": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT2 distribués"
                }
             },
@@ -1344,9 +1401,10 @@
             "flags": {}
          },
          "synthese_a2f": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "ACT2 disponibles fin du mois"
                }
             },
@@ -1360,9 +1418,10 @@
             "flags": {}
          },
          "generic_stockout2": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Rupture de stock"
                }
             },
@@ -1392,9 +1451,10 @@
             ]
          },
          "synthese_sd": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/ZINC distribués"
                }
             },
@@ -1408,9 +1468,10 @@
             "flags": {}
          },
          "synthese_sf": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "SRO/ZINC disponibles fin du mois"
                }
             },
@@ -1424,9 +1485,10 @@
             "flags": {}
          },
          "generic_stockout3": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Rupture de stock"
                }
             },
@@ -1456,9 +1518,10 @@
             ]
          },
          "synthese_d1": {
-            "names": {
+            "labels": {
+               "long": null,
                "description": null,
-               "label": {
+               "short": {
                   "fr": "Décès < 5 ans"
                }
             },
