@@ -7,8 +7,7 @@
          "ref_year": {
             "names": {
                "description": null,
-               "symbolic": "ref_year",
-               "display": {
+               "label": {
                   "fr": "Année"
                }
             },
@@ -26,8 +25,7 @@
          "ref_month": {
             "names": {
                "description": null,
-               "symbolic": "ref_month",
-               "display": {
+               "label": {
                   "fr": "Mois"
                }
             },
@@ -119,8 +117,7 @@
          "ref_day": {
             "names": {
                "description": null,
-               "symbolic": "ref_day",
-               "display": {
+               "label": {
                   "fr": "Jour"
                }
             },
@@ -138,8 +135,7 @@
          "ref_rc": {
             "names": {
                "description": null,
-               "symbolic": "ref_rc",
-               "display": {
+               "label": {
                   "fr": "Code du RC"
                }
             },
@@ -157,8 +153,7 @@
          "ref_hour": {
             "names": {
                "description": null,
-               "symbolic": "ref_hour",
-               "display": {
+               "label": {
                   "fr": "Heure de départ"
                }
             },
@@ -176,8 +171,7 @@
          "ref_name": {
             "names": {
                "description": null,
-               "symbolic": "ref_name",
-               "display": {
+               "label": {
                   "fr": "Nom"
                }
             },
@@ -193,8 +187,7 @@
          "ref_age": {
             "names": {
                "description": null,
-               "symbolic": "ref_age",
-               "display": {
+               "label": {
                   "fr": "Age"
                }
             },
@@ -210,8 +203,7 @@
          "ref_reason": {
             "names": {
                "description": null,
-               "symbolic": "ref_reason",
-               "display": {
+               "label": {
                   "fr": "Motif référence"
                }
             },
@@ -301,8 +293,7 @@
          "ref_reason_other": {
             "names": {
                "description": null,
-               "symbolic": "ref_reason_other",
-               "display": {
+               "label": {
                   "fr": "Si 'autre', précisez motif référence"
                }
             },
@@ -325,8 +316,7 @@
          "med_year": {
             "names": {
                "description": null,
-               "symbolic": "med_year",
-               "display": {
+               "label": {
                   "fr": "Année"
                }
             },
@@ -344,8 +334,7 @@
          "med_month": {
             "names": {
                "description": null,
-               "symbolic": "med_month",
-               "display": {
+               "label": {
                   "fr": "Mois"
                }
             },
@@ -437,8 +426,7 @@
          "med_day": {
             "names": {
                "description": null,
-               "symbolic": "med_day",
-               "display": {
+               "label": {
                   "fr": "Jour"
                }
             },
@@ -456,8 +444,7 @@
          "med_rc": {
             "names": {
                "description": null,
-               "symbolic": "med_rc",
-               "display": {
+               "label": {
                   "fr": "Code du RC"
                }
             },
@@ -475,8 +462,7 @@
          "med_cta_a": {
             "names": {
                "description": null,
-               "symbolic": "med_cta_a",
-               "display": {
+               "label": {
                   "fr": "CTA actuel"
                }
             },
@@ -492,8 +478,7 @@
          "med_cta_c": {
             "names": {
                "description": null,
-               "symbolic": "med_cta_c",
-               "display": {
+               "label": {
                   "fr": "CTA commandé"
                }
             },
@@ -509,8 +494,7 @@
          "med_tdr_a": {
             "names": {
                "description": null,
-               "symbolic": "med_tdr_a",
-               "display": {
+               "label": {
                   "fr": "TDR actuel"
                }
             },
@@ -526,8 +510,7 @@
          "med_tdr_c": {
             "names": {
                "description": null,
-               "symbolic": "med_tdr_c",
-               "display": {
+               "label": {
                   "fr": "TDR commandé"
                }
             },
@@ -543,8 +526,7 @@
          "med_ctm_a": {
             "names": {
                "description": null,
-               "symbolic": "med_ctm_a",
-               "display": {
+               "label": {
                   "fr": "CTM 480 actuel"
                }
             },
@@ -560,8 +542,7 @@
          "med_ctm_c": {
             "names": {
                "description": null,
-               "symbolic": "med_ctm_c",
-               "display": {
+               "label": {
                   "fr": "CTM 480 commandé"
                }
             },
@@ -577,8 +558,7 @@
          "med_sro_a": {
             "names": {
                "description": null,
-               "symbolic": "med_sro_a",
-               "display": {
+               "label": {
                   "fr": "SRO/Zinc actuel"
                }
             },
@@ -594,8 +574,7 @@
          "med_sro_c": {
             "names": {
                "description": null,
-               "symbolic": "med_sro_c",
-               "display": {
+               "label": {
                   "fr": "SRO/Zinc commandé"
                }
             },
@@ -611,8 +590,7 @@
          "med_para_a": {
             "names": {
                "description": null,
-               "symbolic": "med_para_a",
-               "display": {
+               "label": {
                   "fr": "PARA actuel"
                }
             },
@@ -628,8 +606,7 @@
          "med_para_c": {
             "names": {
                "description": null,
-               "symbolic": "med_para_c",
-               "display": {
+               "label": {
                   "fr": "PARA commandé"
                }
             },
@@ -652,8 +629,7 @@
          "case_year": {
             "names": {
                "description": null,
-               "symbolic": "case_year",
-               "display": {
+               "label": {
                   "fr": "Année"
                }
             },
@@ -671,8 +647,7 @@
          "case_month": {
             "names": {
                "description": null,
-               "symbolic": "case_month",
-               "display": {
+               "label": {
                   "fr": "Mois"
                }
             },
@@ -764,8 +739,7 @@
          "case_day": {
             "names": {
                "description": null,
-               "symbolic": "case_day",
-               "display": {
+               "label": {
                   "fr": "Jour"
                }
             },
@@ -783,8 +757,7 @@
          "case_rc": {
             "names": {
                "description": null,
-               "symbolic": "case_rc",
-               "display": {
+               "label": {
                   "fr": "Code du RC"
                }
             },
@@ -802,8 +775,7 @@
          "case_pec_m": {
             "names": {
                "description": null,
-               "symbolic": "case_pec_m",
-               "display": {
+               "label": {
                   "fr": "M - 0 à 5 ans PEC"
                }
             },
@@ -819,8 +791,7 @@
          "case_pec_f": {
             "names": {
                "description": null,
-               "symbolic": "case_pec_f",
-               "display": {
+               "label": {
                   "fr": "F - 0 à 5 ans PEC"
                }
             },
@@ -836,8 +807,7 @@
          "case_urg_m": {
             "names": {
                "description": null,
-               "symbolic": "case_urg_m",
-               "display": {
+               "label": {
                   "fr": "M - 0 à 5 ans référé en urgence"
                }
             },
@@ -853,8 +823,7 @@
          "case_urg_f": {
             "names": {
                "description": null,
-               "symbolic": "case_urg_f",
-               "display": {
+               "label": {
                   "fr": "F - 0 à 5 ans référé en urgence"
                }
             },
@@ -870,8 +839,7 @@
          "case_tdr": {
             "names": {
                "description": null,
-               "symbolic": "case_tdr",
-               "display": {
+               "label": {
                   "fr": "TDR de palu réalisé"
                }
             },
@@ -887,8 +855,7 @@
          "case_palu_m": {
             "names": {
                "description": null,
-               "symbolic": "case_palu_m",
-               "display": {
+               "label": {
                   "fr": "M - Palu simple traité"
                }
             },
@@ -904,8 +871,7 @@
          "case_palu_f": {
             "names": {
                "description": null,
-               "symbolic": "case_palu_f",
-               "display": {
+               "label": {
                   "fr": "F - Palu simple traité"
                }
             },
@@ -921,8 +887,7 @@
          "case_dia_m": {
             "names": {
                "description": null,
-               "symbolic": "case_dia_m",
-               "display": {
+               "label": {
                   "fr": "M - Diarrhée simple traité"
                }
             },
@@ -938,8 +903,7 @@
          "case_dia_f": {
             "names": {
                "description": null,
-               "symbolic": "case_dia_f",
-               "display": {
+               "label": {
                   "fr": "F - Diarrhée simple traité"
                }
             },
@@ -955,8 +919,7 @@
          "case_pneu_m": {
             "names": {
                "description": null,
-               "symbolic": "case_pneu_m",
-               "display": {
+               "label": {
                   "fr": "M - Pneumonie traité"
                }
             },
@@ -972,8 +935,7 @@
          "case_pneu_f": {
             "names": {
                "description": null,
-               "symbolic": "case_pneu_f",
-               "display": {
+               "label": {
                   "fr": "F - Pneumonie traité"
                }
             },
@@ -989,8 +951,7 @@
          "case_mal_m": {
             "names": {
                "description": null,
-               "symbolic": "case_mal_m",
-               "display": {
+               "label": {
                   "fr": "M - Malnutrition dépistée"
                }
             },
@@ -1006,8 +967,7 @@
          "case_mal_f": {
             "names": {
                "description": null,
-               "symbolic": "case_mal_f",
-               "display": {
+               "label": {
                   "fr": "F - Malnutrition dépistée"
                }
             },
@@ -1023,8 +983,7 @@
          "case_rev": {
             "names": {
                "description": null,
-               "symbolic": "case_rev",
-               "display": {
+               "label": {
                   "fr": "0 à 5 ans revu pour suivi des soins"
                }
             },
@@ -1040,8 +999,7 @@
          "case_vad": {
             "names": {
                "description": null,
-               "symbolic": "case_vad",
-               "display": {
+               "label": {
                   "fr": "0 à 5 ans vu au cours VAD"
                }
             },
@@ -1057,8 +1015,7 @@
          "case_edu": {
             "names": {
                "description": null,
-               "symbolic": "case_edu",
-               "display": {
+               "label": {
                   "fr": "Séance éducative réalisée"
                }
             },
@@ -1081,8 +1038,7 @@
          "case_year": {
             "names": {
                "description": null,
-               "symbolic": "case_year",
-               "display": {
+               "label": {
                   "fr": "Année"
                }
             },
@@ -1100,8 +1056,7 @@
          "case_month": {
             "names": {
                "description": null,
-               "symbolic": "case_month",
-               "display": {
+               "label": {
                   "fr": "Mois"
                }
             },
@@ -1193,8 +1148,7 @@
          "monthly_rc": {
             "names": {
                "description": null,
-               "symbolic": "monthly_rc",
-               "display": {
+               "label": {
                   "fr": "Code du RC"
                }
             },
@@ -1212,8 +1166,7 @@
          "monthly_cta1": {
             "names": {
                "description": null,
-               "symbolic": "monthly_cta1",
-               "display": {
+               "label": {
                   "fr": "CTA au début de mois"
                }
             },
@@ -1229,8 +1182,7 @@
          "monthly_cta2": {
             "names": {
                "description": null,
-               "symbolic": "monthly_cta2",
-               "display": {
+               "label": {
                   "fr": "CTA cédés dans le mois"
                }
             },
@@ -1246,8 +1198,7 @@
          "monthly_cta3": {
             "names": {
                "description": null,
-               "symbolic": "monthly_cta3",
-               "display": {
+               "label": {
                   "fr": "CTA restants à la fin du mois"
                }
             },
@@ -1263,8 +1214,7 @@
          "monthly_sro1": {
             "names": {
                "description": null,
-               "symbolic": "monthly_sro1",
-               "display": {
+               "label": {
                   "fr": "SRO/Zinc au début de mois"
                }
             },
@@ -1280,8 +1230,7 @@
          "monthly_sro2": {
             "names": {
                "description": null,
-               "symbolic": "monthly_sro2",
-               "display": {
+               "label": {
                   "fr": "SRO/Zinc cédés dans le mois"
                }
             },
@@ -1297,8 +1246,7 @@
          "monthly_sro3": {
             "names": {
                "description": null,
-               "symbolic": "monthly_sro3",
-               "display": {
+               "label": {
                   "fr": "SRO/Zinc restants à la fin du mois"
                }
             },
@@ -1314,8 +1262,7 @@
          "monthly_ctm1": {
             "names": {
                "description": null,
-               "symbolic": "monthly_ctm1",
-               "display": {
+               "label": {
                   "fr": "CTM 480mg au début de mois"
                }
             },
@@ -1331,8 +1278,7 @@
          "monthly_ctm2": {
             "names": {
                "description": null,
-               "symbolic": "monthly_ctm2",
-               "display": {
+               "label": {
                   "fr": "CTM 480mg cédés dans le mois"
                }
             },
@@ -1348,8 +1294,7 @@
          "monthly_ctm3": {
             "names": {
                "description": null,
-               "symbolic": "monthly_ctm3",
-               "display": {
+               "label": {
                   "fr": "CTM 480mg restants à la fin du mois"
                }
             },

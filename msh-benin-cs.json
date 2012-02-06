@@ -7,8 +7,7 @@
          "ref_year": {
             "names": {
                "description": null,
-               "symbolic": "ref_year",
-               "display": {
+               "label": {
                   "fr": "Année"
                }
             },
@@ -26,8 +25,7 @@
          "ref_month": {
             "names": {
                "description": null,
-               "symbolic": "ref_month",
-               "display": {
+               "label": {
                   "fr": "Mois"
                }
             },
@@ -119,8 +117,7 @@
          "ref_day": {
             "names": {
                "description": null,
-               "symbolic": "ref_day",
-               "display": {
+               "label": {
                   "fr": "Jour"
                }
             },
@@ -138,8 +135,7 @@
          "ref_rc": {
             "names": {
                "description": null,
-               "symbolic": "ref_rc",
-               "display": {
+               "label": {
                   "fr": "Code du RC"
                }
             },
@@ -157,8 +153,7 @@
          "ref_hour": {
             "names": {
                "description": null,
-               "symbolic": "ref_hour",
-               "display": {
+               "label": {
                   "fr": "Heure de départ"
                }
             },
@@ -176,8 +171,7 @@
          "ref_name": {
             "names": {
                "description": null,
-               "symbolic": "ref_name",
-               "display": {
+               "label": {
                   "fr": "Nom"
                }
             },
@@ -193,8 +187,7 @@
          "ref_age": {
             "names": {
                "description": null,
-               "symbolic": "ref_age",
-               "display": {
+               "label": {
                   "fr": "Age"
                }
             },
@@ -210,8 +203,7 @@
          "ref_reason": {
             "names": {
                "description": null,
-               "symbolic": "ref_reason",
-               "display": {
+               "label": {
                   "fr": "Motif référence"
                }
             },
@@ -319,8 +311,7 @@
          "ref_reason_other": {
             "names": {
                "description": null,
-               "symbolic": "ref_reason_other",
-               "display": {
+               "label": {
                   "fr": "Si 'autre', précisez motif référence"
                }
             },
@@ -343,8 +334,7 @@
          "cref_year": {
             "names": {
                "description": null,
-               "symbolic": "cref_year",
-               "display": {
+               "label": {
                   "fr": "Année"
                }
             },
@@ -362,8 +352,7 @@
          "cref_month": {
             "names": {
                "description": null,
-               "symbolic": "cref_month",
-               "display": {
+               "label": {
                   "fr": "Mois"
                }
             },
@@ -455,8 +444,7 @@
          "cref_day": {
             "names": {
                "description": null,
-               "symbolic": "cref_day",
-               "display": {
+               "label": {
                   "fr": "Jour"
                }
             },
@@ -474,8 +462,7 @@
          "cref_rc": {
             "names": {
                "description": null,
-               "symbolic": "cref_rc",
-               "display": {
+               "label": {
                   "fr": "Code du RC"
                }
             },
@@ -493,8 +480,7 @@
          "cref_ptype": {
             "names": {
                "description": null,
-               "symbolic": "cref_ptype",
-               "display": {
+               "label": {
                   "fr": "Type de patient"
                }
             },
@@ -542,8 +528,7 @@
          "cref_name": {
             "names": {
                "description": null,
-               "symbolic": "cref_name",
-               "display": {
+               "label": {
                   "fr": "Nom"
                }
             },
@@ -559,8 +544,7 @@
          "cref_age": {
             "names": {
                "description": null,
-               "symbolic": "cref_age",
-               "display": {
+               "label": {
                   "fr": "Age"
                }
             },
@@ -576,8 +560,7 @@
          "cref_mom": {
             "names": {
                "description": null,
-               "symbolic": "cref_mom",
-               "display": {
+               "label": {
                   "fr": "Nom de la mère ou de l'accompagnant"
                }
             },
@@ -593,8 +576,7 @@
          "cref_treated": {
             "names": {
                "description": null,
-               "symbolic": "cref_treated",
-               "display": {
+               "label": {
                   "fr": "Patient traité pour"
                }
             },
@@ -610,8 +592,7 @@
          "cref_rec": {
             "names": {
                "description": null,
-               "symbolic": "cref_rec",
-               "display": {
+               "label": {
                   "fr": "Recommandations/Conseils"
                }
             },
@@ -695,8 +676,7 @@
          "cref_reason": {
             "names": {
                "description": null,
-               "symbolic": "cref_reason",
-               "display": {
+               "label": {
                   "fr": "Précisions pour recommandations"
                }
             },
@@ -712,8 +692,7 @@
          "cref_agent": {
             "names": {
                "description": null,
-               "symbolic": "cref_agent",
-               "display": {
+               "label": {
                   "fr": "Nom de l'agent de santé"
                }
             },

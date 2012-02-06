@@ -7,8 +7,7 @@
          "supervision_year": {
             "names": {
                "description": null,
-               "symbolic": "supervision_year",
-               "display": {
+               "label": {
                   "fr": "Année"
                }
             },
@@ -26,8 +25,7 @@
          "supervision_trimester": {
             "names": {
                "description": null,
-               "symbolic": "supervision_trimester",
-               "display": {
+               "label": {
                   "fr": "Trimestre"
                }
             },
@@ -71,8 +69,7 @@
          "supervision_district": {
             "names": {
                "description": null,
-               "symbolic": "supervision_district",
-               "display": {
+               "label": {
                   "fr": "District de santé"
                }
             },
@@ -212,8 +209,7 @@
          "supervision_area": {
             "names": {
                "description": null,
-               "symbolic": "supervision_area",
-               "display": {
+               "label": {
                   "fr": "Aire de santé"
                }
             },
@@ -229,8 +225,7 @@
          "supervision_a1r": {
             "names": {
                "description": null,
-               "symbolic": "supervision_a1r",
-               "display": {
+               "label": {
                   "fr": "ACT 1 re\11us"
                }
             },
@@ -246,8 +241,7 @@
          "supervision_a1disp": {
             "names": {
                "description": null,
-               "symbolic": "supervision_a1disp",
-               "display": {
+               "label": {
                   "fr": "ACT 1 disponibles"
                }
             },
@@ -263,8 +257,7 @@
          "generic_stockout1": {
             "names": {
                "description": null,
-               "symbolic": "generic_stockout1",
-               "display": {
+               "label": {
                   "fr": "Rupture de stock"
                }
             },
@@ -296,8 +289,7 @@
          "supervision_a2r": {
             "names": {
                "description": null,
-               "symbolic": "supervision_a2r",
-               "display": {
+               "label": {
                   "fr": "ACT 2 re\11us"
                }
             },
@@ -313,8 +305,7 @@
          "supervision_a2disp": {
             "names": {
                "description": null,
-               "symbolic": "supervision_a2disp",
-               "display": {
+               "label": {
                   "fr": "ACT 2 disponibles"
                }
             },
@@ -330,8 +321,7 @@
          "generic_stockout2": {
             "names": {
                "description": null,
-               "symbolic": "generic_stockout2",
-               "display": {
+               "label": {
                   "fr": "Rupture de stock"
                }
             },
@@ -363,8 +353,7 @@
          "supervision_a3r": {
             "names": {
                "description": null,
-               "symbolic": "supervision_a3r",
-               "display": {
+               "label": {
                   "fr": "SRO/Zinc re\11us"
                }
             },
@@ -380,8 +369,7 @@
          "supervision_a3disp": {
             "names": {
                "description": null,
-               "symbolic": "supervision_a3disp",
-               "display": {
+               "label": {
                   "fr": "SRO/Zinc disponibles"
                }
             },
@@ -397,8 +385,7 @@
          "generic_stockout3": {
             "names": {
                "description": null,
-               "symbolic": "generic_stockout3",
-               "display": {
+               "label": {
                   "fr": "Rupture de stock"
                }
             },
@@ -430,8 +417,7 @@
          "supervision_r1": {
             "names": {
                "description": null,
-               "symbolic": "supervision_r1",
-               "display": {
+               "label": {
                   "fr": "RC formés"
                }
             },
@@ -447,8 +433,7 @@
          "supervision_r2": {
             "names": {
                "description": null,
-               "symbolic": "supervision_r2",
-               "display": {
+               "label": {
                   "fr": "RC fonctionnels"
                }
             },
@@ -464,8 +449,7 @@
          "supervision_r3": {
             "names": {
                "description": null,
-               "symbolic": "supervision_r3",
-               "display": {
+               "label": {
                   "fr": "RC supervisés"
                }
             },
@@ -481,8 +465,7 @@
          "supervision_r4": {
             "names": {
                "description": null,
-               "symbolic": "supervision_r4",
-               "display": {
+               "label": {
                   "fr": "Algorithme, # l'utilisant correctement"
                }
             },
@@ -498,8 +481,7 @@
          "supervision_r5": {
             "names": {
                "description": null,
-               "symbolic": "supervision_r5",
-               "display": {
+               "label": {
                   "fr": "Signes de danger, # capable d'en citer 5 ou plus"
                }
             },
@@ -515,8 +497,7 @@
          "supervision_r6": {
             "names": {
                "description": null,
-               "symbolic": "supervision_r6",
-               "display": {
+               "label": {
                   "fr": "ACT1, # ayant rupture de stock plus de 3 jours"
                }
             },
@@ -532,8 +513,7 @@
          "supervision_r6b": {
             "names": {
                "description": null,
-               "symbolic": "supervision_r6b",
-               "display": {
+               "label": {
                   "fr": "ACT2, # ayant rupture de stock plus de 3 jours"
                }
             },
@@ -549,8 +529,7 @@
          "supervision_r7": {
             "names": {
                "description": null,
-               "symbolic": "supervision_r7",
-               "display": {
+               "label": {
                   "fr": "SRO/Zinc, # ayant rupture de stock plus de 3 jours"
                }
             },
@@ -566,8 +545,7 @@
          "supervision_p1": {
             "names": {
                "description": null,
-               "symbolic": "supervision_p1",
-               "display": {
+               "label": {
                   "fr": "# interrogées"
                }
             },
@@ -583,8 +561,7 @@
          "supervision_p2": {
             "names": {
                "description": null,
-               "symbolic": "supervision_p2",
-               "display": {
+               "label": {
                   "fr": "# qui rapportent les services rendus par le RC au sein de la communauté"
                }
             },
@@ -600,8 +577,7 @@
          "supervision_p3": {
             "names": {
                "description": null,
-               "symbolic": "supervision_p3",
-               "display": {
+               "label": {
                   "fr": "# administré un traitement à leur enfant chaque fois qu'il est malade"
                }
             },
@@ -617,8 +593,7 @@
          "supervision_p4": {
             "names": {
                "description": null,
-               "symbolic": "supervision_p4",
-               "display": {
+               "label": {
                   "fr": "# rencontré le RC lorsqu'ils étaient dans le besoin"
                }
             },
@@ -634,8 +609,7 @@
          "supervision_v1": {
             "names": {
                "description": null,
-               "symbolic": "supervision_v1",
-               "display": {
+               "label": {
                   "fr": "Malades vus, toutes causes confondues"
                }
             },
@@ -651,8 +625,7 @@
          "supervision_v2": {
             "names": {
                "description": null,
-               "symbolic": "supervision_v2",
-               "display": {
+               "label": {
                   "fr": "Palu vus"
                }
             },
@@ -668,8 +641,7 @@
          "supervision_v3": {
             "names": {
                "description": null,
-               "symbolic": "supervision_v3",
-               "display": {
+               "label": {
                   "fr": "Diarrhées vues"
                }
             },
@@ -685,8 +657,7 @@
          "supervision_t1": {
             "names": {
                "description": null,
-               "symbolic": "supervision_t1",
-               "display": {
+               "label": {
                   "fr": "Palu traités total"
                }
             },
@@ -702,8 +673,7 @@
          "supervision_t1a": {
             "names": {
                "description": null,
-               "symbolic": "supervision_t1a",
-               "display": {
+               "label": {
                   "fr": "Palu traités < 24h"
                }
             },
@@ -719,8 +689,7 @@
          "supervision_t1b": {
             "names": {
                "description": null,
-               "symbolic": "supervision_t1b",
-               "display": {
+               "label": {
                   "fr": "Palu traités 24-48h"
                }
             },
@@ -736,8 +705,7 @@
          "supervision_t2": {
             "names": {
                "description": null,
-               "symbolic": "supervision_t2",
-               "display": {
+               "label": {
                   "fr": "Diarrhées traitées"
                }
             },
@@ -753,8 +721,7 @@
          "supervision_ref1": {
             "names": {
                "description": null,
-               "symbolic": "supervision_ref1",
-               "display": {
+               "label": {
                   "fr": "Cas référés par RC au AS"
                }
             },
@@ -770,8 +737,7 @@
          "supervision_ref2": {
             "names": {
                "description": null,
-               "symbolic": "supervision_ref2",
-               "display": {
+               "label": {
                   "fr": "Cas référés par AS au DS"
                }
             },
@@ -787,8 +753,7 @@
          "supervision_d1": {
             "names": {
                "description": null,
-               "symbolic": "supervision_d1",
-               "display": {
+               "label": {
                   "fr": "Décès < 5 ans"
                }
             },
@@ -811,8 +776,7 @@
          "synthese_year": {
             "names": {
                "description": null,
-               "symbolic": "synthese_year",
-               "display": {
+               "label": {
                   "fr": "Année"
                }
             },
@@ -830,8 +794,7 @@
          "synthese_month": {
             "names": {
                "description": null,
-               "symbolic": "synthese_month",
-               "display": {
+               "label": {
                   "fr": "Mois"
                }
             },
@@ -923,8 +886,7 @@
          "synthese_district": {
             "names": {
                "description": null,
-               "symbolic": "synthese_district",
-               "display": {
+               "label": {
                   "fr": "District de santé"
                }
             },
@@ -1064,8 +1026,7 @@
          "synthese_area": {
             "names": {
                "description": null,
-               "symbolic": "synthese_area",
-               "display": {
+               "label": {
                   "fr": "Aire de santé"
                }
             },
@@ -1081,8 +1042,7 @@
          "synthese_village_as": {
             "names": {
                "description": null,
-               "symbolic": "synthese_village_as",
-               "display": {
+               "label": {
                   "fr": "# de villages"
                }
             },
@@ -1098,8 +1058,7 @@
          "synthese_name_as": {
             "names": {
                "description": null,
-               "symbolic": "synthese_name_as",
-               "display": {
+               "label": {
                   "fr": "Nom du chef AS"
                }
             },
@@ -1115,8 +1074,7 @@
          "synthese_v1": {
             "names": {
                "description": null,
-               "symbolic": "synthese_v1",
-               "display": {
+               "label": {
                   "fr": "Malades vus, toutes causes confondues"
                }
             },
@@ -1132,8 +1090,7 @@
          "synthese_v2": {
             "names": {
                "description": null,
-               "symbolic": "synthese_v2",
-               "display": {
+               "label": {
                   "fr": "Palu vus"
                }
             },
@@ -1149,8 +1106,7 @@
          "synthese_v3": {
             "names": {
                "description": null,
-               "symbolic": "synthese_v3",
-               "display": {
+               "label": {
                   "fr": "Diarrhées vues"
                }
             },
@@ -1166,8 +1122,7 @@
          "synthese_v5": {
             "names": {
                "description": null,
-               "symbolic": "synthese_v5",
-               "display": {
+               "label": {
                   "fr": "Autres causes vues"
                }
             },
@@ -1183,8 +1138,7 @@
          "synthese_t1": {
             "names": {
                "description": null,
-               "symbolic": "synthese_t1",
-               "display": {
+               "label": {
                   "fr": "Palu traités total"
                }
             },
@@ -1200,8 +1154,7 @@
          "synthese_t1a": {
             "names": {
                "description": null,
-               "symbolic": "synthese_t1a",
-               "display": {
+               "label": {
                   "fr": "Palu traités < 24h"
                }
             },
@@ -1217,8 +1170,7 @@
          "synthese_t1b": {
             "names": {
                "description": null,
-               "symbolic": "synthese_t1b",
-               "display": {
+               "label": {
                   "fr": "Palu traités 24-48h"
                }
             },
@@ -1234,8 +1186,7 @@
          "synthese_t2": {
             "names": {
                "description": null,
-               "symbolic": "synthese_t2",
-               "display": {
+               "label": {
                   "fr": "Diarrhées traitées"
                }
             },
@@ -1251,8 +1202,7 @@
          "synthese_r1": {
             "names": {
                "description": null,
-               "symbolic": "synthese_r1",
-               "display": {
+               "label": {
                   "fr": "Palu référés au CSI"
                }
             },
@@ -1268,8 +1218,7 @@
          "synthese_r2": {
             "names": {
                "description": null,
-               "symbolic": "synthese_r2",
-               "display": {
+               "label": {
                   "fr": "Diarrhées référées au CSI"
                }
             },
@@ -1285,8 +1234,7 @@
          "synthese_r4": {
             "names": {
                "description": null,
-               "symbolic": "synthese_r4",
-               "display": {
+               "label": {
                   "fr": "Autres causes référées au CSI"
                }
             },
@@ -1302,8 +1250,7 @@
          "synthese_r5": {
             "names": {
                "description": null,
-               "symbolic": "synthese_r5",
-               "display": {
+               "label": {
                   "fr": "Cas contre-référés par le CSI"
                }
             },
@@ -1319,8 +1266,7 @@
          "synthese_a1d": {
             "names": {
                "description": null,
-               "symbolic": "synthese_a1d",
-               "display": {
+               "label": {
                   "fr": "ACT1 distribués"
                }
             },
@@ -1336,8 +1282,7 @@
          "synthese_a1f": {
             "names": {
                "description": null,
-               "symbolic": "synthese_a1f",
-               "display": {
+               "label": {
                   "fr": "ACT1 disponibles fin du mois"
                }
             },
@@ -1353,8 +1298,7 @@
          "generic_stockout1": {
             "names": {
                "description": null,
-               "symbolic": "generic_stockout1",
-               "display": {
+               "label": {
                   "fr": "Rupture de stock"
                }
             },
@@ -1386,8 +1330,7 @@
          "synthese_a2d": {
             "names": {
                "description": null,
-               "symbolic": "synthese_a2d",
-               "display": {
+               "label": {
                   "fr": "ACT2 distribués"
                }
             },
@@ -1403,8 +1346,7 @@
          "synthese_a2f": {
             "names": {
                "description": null,
-               "symbolic": "synthese_a2f",
-               "display": {
+               "label": {
                   "fr": "ACT2 disponibles fin du mois"
                }
             },
@@ -1420,8 +1362,7 @@
          "generic_stockout2": {
             "names": {
                "description": null,
-               "symbolic": "generic_stockout2",
-               "display": {
+               "label": {
                   "fr": "Rupture de stock"
                }
             },
@@ -1453,8 +1394,7 @@
          "synthese_sd": {
             "names": {
                "description": null,
-               "symbolic": "synthese_sd",
-               "display": {
+               "label": {
                   "fr": "SRO/ZINC distribués"
                }
             },
@@ -1470,8 +1410,7 @@
          "synthese_sf": {
             "names": {
                "description": null,
-               "symbolic": "synthese_sf",
-               "display": {
+               "label": {
                   "fr": "SRO/ZINC disponibles fin du mois"
                }
             },
@@ -1487,8 +1426,7 @@
          "generic_stockout3": {
             "names": {
                "description": null,
-               "symbolic": "generic_stockout3",
-               "display": {
+               "label": {
                   "fr": "Rupture de stock"
                }
             },
@@ -1520,8 +1458,7 @@
          "synthese_d1": {
             "names": {
                "description": null,
-               "symbolic": "synthese_d1",
-               "display": {
+               "label": {
                   "fr": "Décès < 5 ans"
                }
             },
