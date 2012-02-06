@@ -4,37 +4,49 @@
          "code": "PSMM"
       },
       "fields": {
-         "lc_monthly_id": {
+         "monthly_id": {
             "names": {
                "description": null,
-               "tiny": "monthly_id",
-               "display": "Village Clinic ID"
+               "symbolic": "monthly_id",
+               "display": {
+                  "en": "Village Clinic ID"
+               }
             },
             "position": 0,
             "type": "string",
             "length": [
                6,
                8
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_year": {
+         "monthly_year": {
             "names": {
                "description": null,
-               "tiny": "monthly_year",
-               "display": "Year Reporting"
+               "symbolic": "monthly_year",
+               "display": {
+                  "en": "Year Reporting"
+               }
             },
             "position": 1,
             "type": "integer",
             "length": [
                4,
                4
-            ]
+            ],
+            "validate": {
+               "is_numeric_year": true
+            },
+            "flags": {}
          },
-         "lc_monthly_month": {
+         "monthly_month": {
             "names": {
                "description": null,
-               "tiny": "monthly_month",
-               "display": "Month Reporting"
+               "symbolic": "monthly_month",
+               "display": {
+                  "en": "Month Reporting"
+               }
             },
             "position": 2,
             "type": "integer",
@@ -42,342 +54,458 @@
                1,
                2
             ],
+            "validate": {
+               "is_numeric_month": true
+            },
+            "flags": {},
             "choices": [
                [
                   1,
-                  "January"
+                  {
+                     "en": "January"
+                  }
                ],
                [
                   2,
-                  "February"
+                  {
+                     "en": "February"
+                  }
                ],
                [
                   3,
-                  "March"
+                  {
+                     "en": "March"
+                  }
                ],
                [
                   4,
-                  "April"
+                  {
+                     "en": "April"
+                  }
                ],
                [
                   5,
-                  "May"
+                  {
+                     "en": "May"
+                  }
                ],
                [
                   6,
-                  "June"
+                  {
+                     "en": "June"
+                  }
                ],
                [
                   7,
-                  "July"
+                  {
+                     "en": "July"
+                  }
                ],
                [
                   8,
-                  "August"
+                  {
+                     "en": "August"
+                  }
                ],
                [
                   9,
-                  "September"
+                  {
+                     "en": "September"
+                  }
                ],
                [
                   10,
-                  "October"
+                  {
+                     "en": "October"
+                  }
                ],
                [
                   11,
-                  "November"
+                  {
+                     "en": "November"
+                  }
                ],
                [
                   12,
-                  "December"
+                  {
+                     "en": "December"
+                  }
                ]
             ]
          },
-         "lc_monthly_residence": {
+         "monthly_residence": {
             "names": {
                "description": null,
-               "tiny": "monthly_residence",
-               "display": "Live in village served?"
+               "symbolic": "monthly_residence",
+               "display": {
+                  "en": "Live in village served?"
+               }
             },
             "position": 3,
             "type": "boolean",
             "length": [
                0,
                0
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_f1": {
+         "monthly_f1": {
             "names": {
                "description": null,
-               "tiny": "monthly_f1",
-               "display": "< 1 days Fever cases"
+               "symbolic": "monthly_f1",
+               "display": {
+                  "en": "< 1 days Fever cases"
+               }
             },
             "position": 4,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_f2": {
+         "monthly_f2": {
             "names": {
                "description": null,
-               "tiny": "monthly_f2",
-               "display": "< 2 days Fever cases"
+               "symbolic": "monthly_f2",
+               "display": {
+                  "en": "< 2 days Fever cases"
+               }
             },
             "position": 5,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_f3": {
+         "monthly_f3": {
             "names": {
                "description": null,
-               "tiny": "monthly_f3",
-               "display": "> 3 days Fever cases"
+               "symbolic": "monthly_f3",
+               "display": {
+                  "en": "> 3 days Fever cases"
+               }
             },
             "position": 6,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_d1": {
+         "monthly_d1": {
             "names": {
                "description": null,
-               "tiny": "monthly_d1",
-               "display": "< 1 days Diarrhea cases"
+               "symbolic": "monthly_d1",
+               "display": {
+                  "en": "< 1 days Diarrhea cases"
+               }
             },
             "position": 7,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_d2": {
+         "monthly_d2": {
             "names": {
                "description": null,
-               "tiny": "monthly_d2",
-               "display": "< 2 days Diarrhea cases"
+               "symbolic": "monthly_d2",
+               "display": {
+                  "en": "< 2 days Diarrhea cases"
+               }
             },
             "position": 8,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_d3": {
+         "monthly_d3": {
             "names": {
                "description": null,
-               "tiny": "monthly_d3",
-               "display": "> 3 days Diarrhea cases"
+               "symbolic": "monthly_d3",
+               "display": {
+                  "en": "> 3 days Diarrhea cases"
+               }
             },
             "position": 9,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_b1": {
+         "monthly_b1": {
             "names": {
                "description": null,
-               "tiny": "monthly_b1",
-               "display": "< 1 days Fast breath cases"
+               "symbolic": "monthly_b1",
+               "display": {
+                  "en": "< 1 days Fast breath cases"
+               }
             },
             "position": 10,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_b2": {
+         "monthly_b2": {
             "names": {
                "description": null,
-               "tiny": "monthly_b2",
-               "display": "< 2 days Fast breath cases"
+               "symbolic": "monthly_b2",
+               "display": {
+                  "en": "< 2 days Fast breath cases"
+               }
             },
             "position": 11,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_b3": {
+         "monthly_b3": {
             "names": {
                "description": null,
-               "tiny": "monthly_b3",
-               "display": "> 3 days Fast breath cases"
+               "symbolic": "monthly_b3",
+               "display": {
+                  "en": "> 3 days Fast breath cases"
+               }
             },
             "position": 12,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_sv": {
+         "monthly_sv": {
             "names": {
                "description": null,
-               "tiny": "monthly_sv",
-               "display": "Supervisor visits"
+               "symbolic": "monthly_sv",
+               "display": {
+                  "en": "Supervisor visits"
+               }
             },
             "position": 13,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_ms": {
+         "monthly_ms": {
             "names": {
                "description": null,
-               "tiny": "monthly_ms",
-               "display": "Mentorship sessions"
+               "symbolic": "monthly_ms",
+               "display": {
+                  "en": "Mentorship sessions"
+               }
             },
             "position": 14,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_s1": {
+         "monthly_s1": {
             "names": {
                "description": null,
-               "tiny": "monthly_s1",
-               "display": "LA 6x1 days stocked out"
+               "symbolic": "monthly_s1",
+               "display": {
+                  "en": "LA 6x1 days stocked out"
+               }
             },
             "position": 15,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_s2": {
+         "monthly_s2": {
             "names": {
                "description": null,
-               "tiny": "monthly_s2",
-               "display": "LA 6x2 days stocked out"
+               "symbolic": "monthly_s2",
+               "display": {
+                  "en": "LA 6x2 days stocked out"
+               }
             },
             "position": 16,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_s3": {
+         "monthly_s3": {
             "names": {
                "description": null,
-               "tiny": "monthly_s3",
-               "display": "ORS days stocked out"
+               "symbolic": "monthly_s3",
+               "display": {
+                  "en": "ORS days stocked out"
+               }
             },
             "position": 17,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_s4": {
+         "monthly_s4": {
             "names": {
                "description": null,
-               "tiny": "monthly_s4",
-               "display": "Cotrimoxazole days stocked out"
+               "symbolic": "monthly_s4",
+               "display": {
+                  "en": "Cotrimoxazole days stocked out"
+               }
             },
             "position": 18,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_s5": {
+         "monthly_s5": {
             "names": {
                "description": null,
-               "tiny": "monthly_s5",
-               "display": "Zinc days stocked out"
+               "symbolic": "monthly_s5",
+               "display": {
+                  "en": "Zinc days stocked out"
+               }
             },
             "position": 19,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_s6": {
+         "monthly_s6": {
             "names": {
                "description": null,
-               "tiny": "monthly_s6",
-               "display": "Eye Ointment days stocked out"
+               "symbolic": "monthly_s6",
+               "display": {
+                  "en": "Eye Ointment days stocked out"
+               }
             },
             "position": 20,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_referral_s1": {
+         "referral_s1": {
             "names": {
                "description": null,
-               "tiny": "referral_s1",
-               "display": "Referral 2-11 month total"
+               "symbolic": "referral_s1",
+               "display": {
+                  "en": "Referral 2-11 month total"
+               }
             },
             "position": 21,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_referral_s2": {
+         "referral_s2": {
             "names": {
                "description": null,
-               "tiny": "referral_s2",
-               "display": "Referral 12-59 month total"
+               "symbolic": "referral_s2",
+               "display": {
+                  "en": "Referral 12-59 month total"
+               }
             },
             "position": 22,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_deaths_s1": {
+         "deaths_s1": {
             "names": {
                "description": null,
-               "tiny": "deaths_s1",
-               "display": "Deaths 2-11 month total"
+               "symbolic": "deaths_s1",
+               "display": {
+                  "en": "Deaths 2-11 month total"
+               }
             },
             "position": 23,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_deaths_s2": {
+         "deaths_s2": {
             "names": {
                "description": null,
-               "tiny": "deaths_s2",
-               "display": "Deaths 12-59 month total"
+               "symbolic": "deaths_s2",
+               "display": {
+                  "en": "Deaths 12-59 month total"
+               }
             },
             "position": 24,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          }
       }
    },
@@ -386,37 +514,49 @@
          "code": "PSMS"
       },
       "fields": {
-         "lc_stocks_id": {
+         "stocks_id": {
             "names": {
                "description": null,
-               "tiny": "stocks_id",
-               "display": "Health Facility ID"
+               "symbolic": "stocks_id",
+               "display": {
+                  "en": "Health Facility ID"
+               }
             },
             "position": 0,
             "type": "string",
             "length": [
                6,
                8
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_year": {
+         "stocks_year": {
             "names": {
                "description": null,
-               "tiny": "stocks_year",
-               "display": "Year Reporting"
+               "symbolic": "stocks_year",
+               "display": {
+                  "en": "Year Reporting"
+               }
             },
             "position": 1,
             "type": "integer",
             "length": [
                4,
                4
-            ]
+            ],
+            "validate": {
+               "is_numeric_year": true
+            },
+            "flags": {}
          },
-         "lc_stocks_month": {
+         "stocks_month": {
             "names": {
                "description": null,
-               "tiny": "stocks_month",
-               "display": "Month Reporting"
+               "symbolic": "stocks_month",
+               "display": {
+                  "en": "Month Reporting"
+               }
             },
             "position": 2,
             "type": "integer",
@@ -424,212 +564,288 @@
                1,
                2
             ],
+            "validate": {
+               "is_numeric_month": true
+            },
+            "flags": {},
             "choices": [
                [
                   1,
-                  "January"
+                  {
+                     "en": "January"
+                  }
                ],
                [
                   2,
-                  "February"
+                  {
+                     "en": "February"
+                  }
                ],
                [
                   3,
-                  "March"
+                  {
+                     "en": "March"
+                  }
                ],
                [
                   4,
-                  "April"
+                  {
+                     "en": "April"
+                  }
                ],
                [
                   5,
-                  "May"
+                  {
+                     "en": "May"
+                  }
                ],
                [
                   6,
-                  "June"
+                  {
+                     "en": "June"
+                  }
                ],
                [
                   7,
-                  "July"
+                  {
+                     "en": "July"
+                  }
                ],
                [
                   8,
-                  "August"
+                  {
+                     "en": "August"
+                  }
                ],
                [
                   9,
-                  "September"
+                  {
+                     "en": "September"
+                  }
                ],
                [
                   10,
-                  "October"
+                  {
+                     "en": "October"
+                  }
                ],
                [
                   11,
-                  "November"
+                  {
+                     "en": "November"
+                  }
                ],
                [
                   12,
-                  "December"
+                  {
+                     "en": "December"
+                  }
                ]
             ]
          },
-         "lc_stocks_t1": {
+         "stocks_t1": {
             "names": {
                "description": null,
-               "tiny": "stocks_t1",
-               "display": "LA 6x1 dispensed total"
+               "symbolic": "stocks_t1",
+               "display": {
+                  "en": "LA 6x1 dispensed total"
+               }
             },
             "position": 3,
             "type": "integer",
             "length": [
                1,
                4
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_t2": {
+         "stocks_t2": {
             "names": {
                "description": null,
-               "tiny": "stocks_t2",
-               "display": "LA 6x2 dispensed total"
+               "symbolic": "stocks_t2",
+               "display": {
+                  "en": "LA 6x2 dispensed total"
+               }
             },
             "position": 4,
             "type": "integer",
             "length": [
                1,
                4
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_t3": {
+         "stocks_t3": {
             "names": {
                "description": null,
-               "tiny": "stocks_t3",
-               "display": "Cotrimoxazole dispensed total"
+               "symbolic": "stocks_t3",
+               "display": {
+                  "en": "Cotrimoxazole dispensed total"
+               }
             },
             "position": 5,
             "type": "integer",
             "length": [
                1,
                4
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_t4": {
+         "stocks_t4": {
             "names": {
                "description": null,
-               "tiny": "stocks_t4",
-               "display": "Zinc dispensed total"
+               "symbolic": "stocks_t4",
+               "display": {
+                  "en": "Zinc dispensed total"
+               }
             },
             "position": 6,
             "type": "integer",
             "length": [
                1,
                4
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_t5": {
+         "stocks_t5": {
             "names": {
                "description": null,
-               "tiny": "stocks_t5",
-               "display": "ORS dispensed total"
+               "symbolic": "stocks_t5",
+               "display": {
+                  "en": "ORS dispensed total"
+               }
             },
             "position": 7,
             "type": "integer",
             "length": [
                1,
                4
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_t6": {
+         "stocks_t6": {
             "names": {
                "description": null,
-               "tiny": "stocks_t6",
-               "display": "Eye Ointment dispensed total"
+               "symbolic": "stocks_t6",
+               "display": {
+                  "en": "Eye Ointment dispensed total"
+               }
             },
             "position": 8,
             "type": "integer",
             "length": [
                1,
                4
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_d1": {
+         "stocks_d1": {
             "names": {
                "description": null,
-               "tiny": "stocks_d1",
-               "display": "LA 6x1 days stocked out"
+               "symbolic": "stocks_d1",
+               "display": {
+                  "en": "LA 6x1 days stocked out"
+               }
             },
             "position": 9,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_d2": {
+         "stocks_d2": {
             "names": {
                "description": null,
-               "tiny": "stocks_d2",
-               "display": "LA 6x2 days stocked out"
+               "symbolic": "stocks_d2",
+               "display": {
+                  "en": "LA 6x2 days stocked out"
+               }
             },
             "position": 10,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_d3": {
+         "stocks_d3": {
             "names": {
                "description": null,
-               "tiny": "stocks_d3",
-               "display": "Cotrimoxazole days stocked out"
+               "symbolic": "stocks_d3",
+               "display": {
+                  "en": "Cotrimoxazole days stocked out"
+               }
             },
             "position": 11,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_d4": {
+         "stocks_d4": {
             "names": {
                "description": null,
-               "tiny": "stocks_d4",
-               "display": "Zinc days stocked out"
+               "symbolic": "stocks_d4",
+               "display": {
+                  "en": "Zinc days stocked out"
+               }
             },
             "position": 12,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_d5": {
+         "stocks_d5": {
             "names": {
                "description": null,
-               "tiny": "stocks_d5",
-               "display": "ORS days stocked out"
+               "symbolic": "stocks_d5",
+               "display": {
+                  "en": "ORS days stocked out"
+               }
             },
             "position": 13,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_stocks_d6": {
+         "stocks_d6": {
             "names": {
                "description": null,
-               "tiny": "stocks_d6",
-               "display": "Eye Ointment days stocked out"
+               "symbolic": "stocks_d6",
+               "display": {
+                  "en": "Eye Ointment days stocked out"
+               }
             },
             "position": 14,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          }
       }
    }

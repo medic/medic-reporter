@@ -4,24 +4,32 @@
          "code": "MSBR"
       },
       "fields": {
-         "lc_ref_year": {
+         "ref_year": {
             "names": {
                "description": null,
-               "tiny": "ref_year",
-               "display": "Année"
+               "symbolic": "ref_year",
+               "display": {
+                  "fr": "Année"
+               }
             },
             "position": 0,
             "type": "integer",
             "length": [
                4,
                4
-            ]
+            ],
+            "validate": {
+               "is_numeric_year": true
+            },
+            "flags": {}
          },
-         "lc_ref_month": {
+         "ref_month": {
             "names": {
                "description": null,
-               "tiny": "ref_month",
-               "display": "Mois"
+               "symbolic": "ref_month",
+               "display": {
+                  "fr": "Mois"
+               }
             },
             "position": 1,
             "type": "integer",
@@ -29,127 +37,183 @@
                1,
                2
             ],
+            "validate": {
+               "is_numeric_month": true
+            },
+            "flags": {},
             "choices": [
                [
                   1,
-                  "Janvier"
+                  {
+                     "fr": "Janvier"
+                  }
                ],
                [
                   2,
-                  "Février"
+                  {
+                     "fr": "Février"
+                  }
                ],
                [
                   3,
-                  "Mars"
+                  {
+                     "fr": "Mars"
+                  }
                ],
                [
                   4,
-                  "Avril"
+                  {
+                     "fr": "Avril"
+                  }
                ],
                [
                   5,
-                  "Mai"
+                  {
+                     "fr": "Mai"
+                  }
                ],
                [
                   6,
-                  "Juin"
+                  {
+                     "fr": "Juin"
+                  }
                ],
                [
                   7,
-                  "Juillet"
+                  {
+                     "fr": "Juillet"
+                  }
                ],
                [
                   8,
-                  "Aout"
+                  {
+                     "fr": "Aout"
+                  }
                ],
                [
                   9,
-                  "Septembre"
+                  {
+                     "fr": "Septembre"
+                  }
                ],
                [
                   10,
-                  "Octobre"
+                  {
+                     "fr": "Octobre"
+                  }
                ],
                [
                   11,
-                  "Novembre"
+                  {
+                     "fr": "Novembre"
+                  }
                ],
                [
                   12,
-                  "Décembre"
+                  {
+                     "fr": "Décembre"
+                  }
                ]
             ]
          },
-         "lc_ref_day": {
+         "ref_day": {
             "names": {
                "description": null,
-               "tiny": "ref_day",
-               "display": "Jour"
+               "symbolic": "ref_day",
+               "display": {
+                  "fr": "Jour"
+               }
             },
             "position": 2,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {
+               "is_numeric_day": true
+            },
+            "flags": {}
          },
-         "lc_ref_rc": {
+         "ref_rc": {
             "names": {
                "description": null,
-               "tiny": "ref_rc",
-               "display": "Code du RC"
+               "symbolic": "ref_rc",
+               "display": {
+                  "fr": "Code du RC"
+               }
             },
             "position": 3,
             "type": "string",
             "length": [
                11,
                11
-            ]
+            ],
+            "validate": {},
+            "flags": {
+               "input_digits_only": true
+            }
          },
-         "lc_ref_hour": {
+         "ref_hour": {
             "names": {
                "description": null,
-               "tiny": "ref_hour",
-               "display": "Heure de départ"
+               "symbolic": "ref_hour",
+               "display": {
+                  "fr": "Heure de départ"
+               }
             },
             "position": 4,
             "type": "integer",
             "length": [
                3,
                4
-            ]
+            ],
+            "validate": {
+               "is_valid_time": true
+            },
+            "flags": {}
          },
-         "lc_ref_name": {
+         "ref_name": {
             "names": {
                "description": null,
-               "tiny": "ref_name",
-               "display": "Nom"
+               "symbolic": "ref_name",
+               "display": {
+                  "fr": "Nom"
+               }
             },
             "position": 5,
             "type": "string",
             "length": [
                0,
                20
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_ref_age": {
+         "ref_age": {
             "names": {
                "description": null,
-               "tiny": "ref_age",
-               "display": "Age"
+               "symbolic": "ref_age",
+               "display": {
+                  "fr": "Age"
+               }
             },
             "position": 6,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_ref_reason": {
+         "ref_reason": {
             "names": {
                "description": null,
-               "tiny": "ref_reason",
-               "display": "Motif référence"
+               "symbolic": "ref_reason",
+               "display": {
+                  "fr": "Motif référence"
+               }
             },
             "position": 7,
             "type": "integer",
@@ -157,69 +221,99 @@
                1,
                2
             ],
+            "validate": {},
+            "flags": {},
             "choices": [
                [
                   1,
-                  "Fme encnte malade"
+                  {
+                     "fr": "Fme encnte malade"
+                  }
                ],
                [
                   2,
-                  "Accouchmnt difficile"
+                  {
+                     "fr": "Accouchmnt difficile"
+                  }
                ],
                [
                   3,
-                  "Accouchée malade"
+                  {
+                     "fr": "Accouchée malade"
+                  }
                ],
                [
                   4,
-                  "Nouveau-né malade"
+                  {
+                     "fr": "Nouveau-né malade"
+                  }
                ],
                [
                   5,
-                  "Enfant SG/SGD"
+                  {
+                     "fr": "Enfant SG/SGD"
+                  }
                ],
                [
                   6,
-                  "Trté pas mieux"
+                  {
+                     "fr": "Trté pas mieux"
+                  }
                ],
                [
                   7,
-                  "Mnque médicament"
+                  {
+                     "fr": "Mnque médicament"
+                  }
                ],
                [
                   8,
-                  "TB rouge"
+                  {
+                     "fr": "TB rouge"
+                  }
                ],
                [
                   9,
-                  "Palu grave"
+                  {
+                     "fr": "Palu grave"
+                  }
                ],
                [
                   10,
-                  "Diarrhée grave"
+                  {
+                     "fr": "Diarrhée grave"
+                  }
                ],
                [
                   11,
-                  "Malnutrition"
+                  {
+                     "fr": "Malnutrition"
+                  }
                ],
                [
                   12,
-                  "Autre"
+                  {
+                     "fr": "Autre"
+                  }
                ]
             ]
          },
-         "lc_ref_reason_other": {
+         "ref_reason_other": {
             "names": {
                "description": null,
-               "tiny": "ref_reason_other",
-               "display": "Si 'autre', précisez motif référence"
+               "symbolic": "ref_reason_other",
+               "display": {
+                  "fr": "Si 'autre', précisez motif référence"
+               }
             },
             "position": 8,
             "type": "string",
             "length": [
                0,
                60
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          }
       }
    },
@@ -228,24 +322,32 @@
          "code": "MSBM"
       },
       "fields": {
-         "lc_med_year": {
+         "med_year": {
             "names": {
                "description": null,
-               "tiny": "med_year",
-               "display": "Année"
+               "symbolic": "med_year",
+               "display": {
+                  "fr": "Année"
+               }
             },
             "position": 0,
             "type": "integer",
             "length": [
                4,
                4
-            ]
+            ],
+            "validate": {
+               "is_numeric_year": true
+            },
+            "flags": {}
          },
-         "lc_med_month": {
+         "med_month": {
             "names": {
                "description": null,
-               "tiny": "med_month",
-               "display": "Mois"
+               "symbolic": "med_month",
+               "display": {
+                  "fr": "Mois"
+               }
             },
             "position": 1,
             "type": "integer",
@@ -253,212 +355,292 @@
                1,
                2
             ],
+            "validate": {
+               "is_numeric_month": true
+            },
+            "flags": {},
             "choices": [
                [
                   1,
-                  "Janvier"
+                  {
+                     "fr": "Janvier"
+                  }
                ],
                [
                   2,
-                  "Février"
+                  {
+                     "fr": "Février"
+                  }
                ],
                [
                   3,
-                  "Mars"
+                  {
+                     "fr": "Mars"
+                  }
                ],
                [
                   4,
-                  "Avril"
+                  {
+                     "fr": "Avril"
+                  }
                ],
                [
                   5,
-                  "Mai"
+                  {
+                     "fr": "Mai"
+                  }
                ],
                [
                   6,
-                  "Juin"
+                  {
+                     "fr": "Juin"
+                  }
                ],
                [
                   7,
-                  "Juillet"
+                  {
+                     "fr": "Juillet"
+                  }
                ],
                [
                   8,
-                  "Aout"
+                  {
+                     "fr": "Aout"
+                  }
                ],
                [
                   9,
-                  "Septembre"
+                  {
+                     "fr": "Septembre"
+                  }
                ],
                [
                   10,
-                  "Octobre"
+                  {
+                     "fr": "Octobre"
+                  }
                ],
                [
                   11,
-                  "Novembre"
+                  {
+                     "fr": "Novembre"
+                  }
                ],
                [
                   12,
-                  "Décembre"
+                  {
+                     "fr": "Décembre"
+                  }
                ]
             ]
          },
-         "lc_med_day": {
+         "med_day": {
             "names": {
                "description": null,
-               "tiny": "med_day",
-               "display": "Jour"
+               "symbolic": "med_day",
+               "display": {
+                  "fr": "Jour"
+               }
             },
             "position": 2,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {
+               "is_numeric_day": true
+            },
+            "flags": {}
          },
-         "lc_med_rc": {
+         "med_rc": {
             "names": {
                "description": null,
-               "tiny": "med_rc",
-               "display": "Code du RC"
+               "symbolic": "med_rc",
+               "display": {
+                  "fr": "Code du RC"
+               }
             },
             "position": 3,
             "type": "string",
             "length": [
                11,
                11
-            ]
+            ],
+            "validate": {},
+            "flags": {
+               "input_digits_only": true
+            }
          },
-         "lc_med_cta_a": {
+         "med_cta_a": {
             "names": {
                "description": null,
-               "tiny": "med_cta_a",
-               "display": "CTA actuel"
+               "symbolic": "med_cta_a",
+               "display": {
+                  "fr": "CTA actuel"
+               }
             },
             "position": 4,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_med_cta_c": {
+         "med_cta_c": {
             "names": {
                "description": null,
-               "tiny": "med_cta_c",
-               "display": "CTA commandé"
+               "symbolic": "med_cta_c",
+               "display": {
+                  "fr": "CTA commandé"
+               }
             },
             "position": 5,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_med_tdr_a": {
+         "med_tdr_a": {
             "names": {
                "description": null,
-               "tiny": "med_tdr_a",
-               "display": "TDR actuel"
+               "symbolic": "med_tdr_a",
+               "display": {
+                  "fr": "TDR actuel"
+               }
             },
             "position": 6,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_med_tdr_c": {
+         "med_tdr_c": {
             "names": {
                "description": null,
-               "tiny": "med_tdr_c",
-               "display": "TDR commandé"
+               "symbolic": "med_tdr_c",
+               "display": {
+                  "fr": "TDR commandé"
+               }
             },
             "position": 7,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_med_ctm_a": {
+         "med_ctm_a": {
             "names": {
                "description": null,
-               "tiny": "med_ctm_a",
-               "display": "CTM 480 actuel"
+               "symbolic": "med_ctm_a",
+               "display": {
+                  "fr": "CTM 480 actuel"
+               }
             },
             "position": 8,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_med_ctm_c": {
+         "med_ctm_c": {
             "names": {
                "description": null,
-               "tiny": "med_ctm_c",
-               "display": "CTM 480 commandé"
+               "symbolic": "med_ctm_c",
+               "display": {
+                  "fr": "CTM 480 commandé"
+               }
             },
             "position": 9,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_med_sro_a": {
+         "med_sro_a": {
             "names": {
                "description": null,
-               "tiny": "med_sro_a",
-               "display": "SRO/Zinc actuel"
+               "symbolic": "med_sro_a",
+               "display": {
+                  "fr": "SRO/Zinc actuel"
+               }
             },
             "position": 10,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_med_sro_c": {
+         "med_sro_c": {
             "names": {
                "description": null,
-               "tiny": "med_sro_c",
-               "display": "SRO/Zinc commandé"
+               "symbolic": "med_sro_c",
+               "display": {
+                  "fr": "SRO/Zinc commandé"
+               }
             },
             "position": 11,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_med_para_a": {
+         "med_para_a": {
             "names": {
                "description": null,
-               "tiny": "med_para_a",
-               "display": "PARA actuel"
+               "symbolic": "med_para_a",
+               "display": {
+                  "fr": "PARA actuel"
+               }
             },
             "position": 12,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_med_para_c": {
+         "med_para_c": {
             "names": {
                "description": null,
-               "tiny": "med_para_c",
-               "display": "PARA commandé"
+               "symbolic": "med_para_c",
+               "display": {
+                  "fr": "PARA commandé"
+               }
             },
             "position": 13,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          }
       }
    },
@@ -467,24 +649,32 @@
          "code": "MSBP"
       },
       "fields": {
-         "lc_case_year": {
+         "case_year": {
             "names": {
                "description": null,
-               "tiny": "case_year",
-               "display": "Année"
+               "symbolic": "case_year",
+               "display": {
+                  "fr": "Année"
+               }
             },
             "position": 0,
             "type": "integer",
             "length": [
                4,
                4
-            ]
+            ],
+            "validate": {
+               "is_numeric_year": true
+            },
+            "flags": {}
          },
-         "lc_case_month": {
+         "case_month": {
             "names": {
                "description": null,
-               "tiny": "case_month",
-               "display": "Mois"
+               "symbolic": "case_month",
+               "display": {
+                  "fr": "Mois"
+               }
             },
             "position": 1,
             "type": "integer",
@@ -492,290 +682,394 @@
                1,
                2
             ],
+            "validate": {
+               "is_numeric_month": true
+            },
+            "flags": {},
             "choices": [
                [
                   1,
-                  "Janvier"
+                  {
+                     "fr": "Janvier"
+                  }
                ],
                [
                   2,
-                  "Février"
+                  {
+                     "fr": "Février"
+                  }
                ],
                [
                   3,
-                  "Mars"
+                  {
+                     "fr": "Mars"
+                  }
                ],
                [
                   4,
-                  "Avril"
+                  {
+                     "fr": "Avril"
+                  }
                ],
                [
                   5,
-                  "Mai"
+                  {
+                     "fr": "Mai"
+                  }
                ],
                [
                   6,
-                  "Juin"
+                  {
+                     "fr": "Juin"
+                  }
                ],
                [
                   7,
-                  "Juillet"
+                  {
+                     "fr": "Juillet"
+                  }
                ],
                [
                   8,
-                  "Aout"
+                  {
+                     "fr": "Aout"
+                  }
                ],
                [
                   9,
-                  "Septembre"
+                  {
+                     "fr": "Septembre"
+                  }
                ],
                [
                   10,
-                  "Octobre"
+                  {
+                     "fr": "Octobre"
+                  }
                ],
                [
                   11,
-                  "Novembre"
+                  {
+                     "fr": "Novembre"
+                  }
                ],
                [
                   12,
-                  "Décembre"
+                  {
+                     "fr": "Décembre"
+                  }
                ]
             ]
          },
-         "lc_case_day": {
+         "case_day": {
             "names": {
                "description": null,
-               "tiny": "case_day",
-               "display": "Jour"
+               "symbolic": "case_day",
+               "display": {
+                  "fr": "Jour"
+               }
             },
             "position": 2,
             "type": "integer",
             "length": [
                1,
                2
-            ]
+            ],
+            "validate": {
+               "is_numeric_day": true
+            },
+            "flags": {}
          },
-         "lc_case_rc": {
+         "case_rc": {
             "names": {
                "description": null,
-               "tiny": "case_rc",
-               "display": "Code du RC"
+               "symbolic": "case_rc",
+               "display": {
+                  "fr": "Code du RC"
+               }
             },
             "position": 3,
             "type": "string",
             "length": [
                11,
                11
-            ]
+            ],
+            "validate": {},
+            "flags": {
+               "input_digits_only": true
+            }
          },
-         "lc_case_pec_m": {
+         "case_pec_m": {
             "names": {
                "description": null,
-               "tiny": "case_pec_m",
-               "display": "M - 0 à 5 ans PEC"
+               "symbolic": "case_pec_m",
+               "display": {
+                  "fr": "M - 0 à 5 ans PEC"
+               }
             },
             "position": 4,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_pec_f": {
+         "case_pec_f": {
             "names": {
                "description": null,
-               "tiny": "case_pec_f",
-               "display": "F - 0 à 5 ans PEC"
+               "symbolic": "case_pec_f",
+               "display": {
+                  "fr": "F - 0 à 5 ans PEC"
+               }
             },
             "position": 5,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_urg_m": {
+         "case_urg_m": {
             "names": {
                "description": null,
-               "tiny": "case_urg_m",
-               "display": "M - 0 à 5 ans référé en urgence"
+               "symbolic": "case_urg_m",
+               "display": {
+                  "fr": "M - 0 à 5 ans référé en urgence"
+               }
             },
             "position": 6,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_urg_f": {
+         "case_urg_f": {
             "names": {
                "description": null,
-               "tiny": "case_urg_f",
-               "display": "F - 0 à 5 ans référé en urgence"
+               "symbolic": "case_urg_f",
+               "display": {
+                  "fr": "F - 0 à 5 ans référé en urgence"
+               }
             },
             "position": 7,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_tdr": {
+         "case_tdr": {
             "names": {
                "description": null,
-               "tiny": "case_tdr",
-               "display": "TDR de palu réalisé"
+               "symbolic": "case_tdr",
+               "display": {
+                  "fr": "TDR de palu réalisé"
+               }
             },
             "position": 8,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_palu_m": {
+         "case_palu_m": {
             "names": {
                "description": null,
-               "tiny": "case_palu_m",
-               "display": "M - Palu simple traité"
+               "symbolic": "case_palu_m",
+               "display": {
+                  "fr": "M - Palu simple traité"
+               }
             },
             "position": 9,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_palu_f": {
+         "case_palu_f": {
             "names": {
                "description": null,
-               "tiny": "case_palu_f",
-               "display": "F - Palu simple traité"
+               "symbolic": "case_palu_f",
+               "display": {
+                  "fr": "F - Palu simple traité"
+               }
             },
             "position": 10,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_dia_m": {
+         "case_dia_m": {
             "names": {
                "description": null,
-               "tiny": "case_dia_m",
-               "display": "M - Diarrhée simple traité"
+               "symbolic": "case_dia_m",
+               "display": {
+                  "fr": "M - Diarrhée simple traité"
+               }
             },
             "position": 11,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_dia_f": {
+         "case_dia_f": {
             "names": {
                "description": null,
-               "tiny": "case_dia_f",
-               "display": "F - Diarrhée simple traité"
+               "symbolic": "case_dia_f",
+               "display": {
+                  "fr": "F - Diarrhée simple traité"
+               }
             },
             "position": 12,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_pneu_m": {
+         "case_pneu_m": {
             "names": {
                "description": null,
-               "tiny": "case_pneu_m",
-               "display": "M - Pneumonie traité"
+               "symbolic": "case_pneu_m",
+               "display": {
+                  "fr": "M - Pneumonie traité"
+               }
             },
             "position": 13,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_pneu_f": {
+         "case_pneu_f": {
             "names": {
                "description": null,
-               "tiny": "case_pneu_f",
-               "display": "F - Pneumonie traité"
+               "symbolic": "case_pneu_f",
+               "display": {
+                  "fr": "F - Pneumonie traité"
+               }
             },
             "position": 14,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_mal_m": {
+         "case_mal_m": {
             "names": {
                "description": null,
-               "tiny": "case_mal_m",
-               "display": "M - Malnutrition dépistée"
+               "symbolic": "case_mal_m",
+               "display": {
+                  "fr": "M - Malnutrition dépistée"
+               }
             },
             "position": 15,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_mal_f": {
+         "case_mal_f": {
             "names": {
                "description": null,
-               "tiny": "case_mal_f",
-               "display": "F - Malnutrition dépistée"
+               "symbolic": "case_mal_f",
+               "display": {
+                  "fr": "F - Malnutrition dépistée"
+               }
             },
             "position": 16,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_rev": {
+         "case_rev": {
             "names": {
                "description": null,
-               "tiny": "case_rev",
-               "display": "0 à 5 ans revu pour suivi des soins"
+               "symbolic": "case_rev",
+               "display": {
+                  "fr": "0 à 5 ans revu pour suivi des soins"
+               }
             },
             "position": 17,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_vad": {
+         "case_vad": {
             "names": {
                "description": null,
-               "tiny": "case_vad",
-               "display": "0 à 5 ans vu au cours VAD"
+               "symbolic": "case_vad",
+               "display": {
+                  "fr": "0 à 5 ans vu au cours VAD"
+               }
             },
             "position": 18,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_case_edu": {
+         "case_edu": {
             "names": {
                "description": null,
-               "tiny": "case_edu",
-               "display": "Séance éducative réalisée"
+               "symbolic": "case_edu",
+               "display": {
+                  "fr": "Séance éducative réalisée"
+               }
             },
             "position": 19,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          }
       }
    },
@@ -784,24 +1078,32 @@
          "code": "MSBG"
       },
       "fields": {
-         "lc_case_year": {
+         "case_year": {
             "names": {
                "description": null,
-               "tiny": "case_year",
-               "display": "Année"
+               "symbolic": "case_year",
+               "display": {
+                  "fr": "Année"
+               }
             },
             "position": 0,
             "type": "integer",
             "length": [
                4,
                4
-            ]
+            ],
+            "validate": {
+               "is_numeric_year": true
+            },
+            "flags": {}
          },
-         "lc_case_month": {
+         "case_month": {
             "names": {
                "description": null,
-               "tiny": "case_month",
-               "display": "Mois"
+               "symbolic": "case_month",
+               "display": {
+                  "fr": "Mois"
+               }
             },
             "position": 1,
             "type": "integer",
@@ -809,186 +1111,256 @@
                1,
                2
             ],
+            "validate": {
+               "is_numeric_month": true
+            },
+            "flags": {},
             "choices": [
                [
                   1,
-                  "Janvier"
+                  {
+                     "fr": "Janvier"
+                  }
                ],
                [
                   2,
-                  "Février"
+                  {
+                     "fr": "Février"
+                  }
                ],
                [
                   3,
-                  "Mars"
+                  {
+                     "fr": "Mars"
+                  }
                ],
                [
                   4,
-                  "Avril"
+                  {
+                     "fr": "Avril"
+                  }
                ],
                [
                   5,
-                  "Mai"
+                  {
+                     "fr": "Mai"
+                  }
                ],
                [
                   6,
-                  "Juin"
+                  {
+                     "fr": "Juin"
+                  }
                ],
                [
                   7,
-                  "Juillet"
+                  {
+                     "fr": "Juillet"
+                  }
                ],
                [
                   8,
-                  "Aout"
+                  {
+                     "fr": "Aout"
+                  }
                ],
                [
                   9,
-                  "Septembre"
+                  {
+                     "fr": "Septembre"
+                  }
                ],
                [
                   10,
-                  "Octobre"
+                  {
+                     "fr": "Octobre"
+                  }
                ],
                [
                   11,
-                  "Novembre"
+                  {
+                     "fr": "Novembre"
+                  }
                ],
                [
                   12,
-                  "Décembre"
+                  {
+                     "fr": "Décembre"
+                  }
                ]
             ]
          },
-         "lc_monthly_rc": {
+         "monthly_rc": {
             "names": {
                "description": null,
-               "tiny": "monthly_rc",
-               "display": "Code du RC"
+               "symbolic": "monthly_rc",
+               "display": {
+                  "fr": "Code du RC"
+               }
             },
             "position": 2,
             "type": "string",
             "length": [
                11,
                11
-            ]
+            ],
+            "validate": {},
+            "flags": {
+               "input_digits_only": true
+            }
          },
-         "lc_monthly_cta1": {
+         "monthly_cta1": {
             "names": {
                "description": null,
-               "tiny": "monthly_cta1",
-               "display": "CTA au début de mois"
+               "symbolic": "monthly_cta1",
+               "display": {
+                  "fr": "CTA au début de mois"
+               }
             },
             "position": 3,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_cta2": {
+         "monthly_cta2": {
             "names": {
                "description": null,
-               "tiny": "monthly_cta2",
-               "display": "CTA cédés dans le mois"
+               "symbolic": "monthly_cta2",
+               "display": {
+                  "fr": "CTA cédés dans le mois"
+               }
             },
             "position": 4,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_cta3": {
+         "monthly_cta3": {
             "names": {
                "description": null,
-               "tiny": "monthly_cta3",
-               "display": "CTA restants à la fin du mois"
+               "symbolic": "monthly_cta3",
+               "display": {
+                  "fr": "CTA restants à la fin du mois"
+               }
             },
             "position": 5,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_sro1": {
+         "monthly_sro1": {
             "names": {
                "description": null,
-               "tiny": "monthly_sro1",
-               "display": "SRO/Zinc au début de mois"
+               "symbolic": "monthly_sro1",
+               "display": {
+                  "fr": "SRO/Zinc au début de mois"
+               }
             },
             "position": 6,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_sro2": {
+         "monthly_sro2": {
             "names": {
                "description": null,
-               "tiny": "monthly_sro2",
-               "display": "SRO/Zinc cédés dans le mois"
+               "symbolic": "monthly_sro2",
+               "display": {
+                  "fr": "SRO/Zinc cédés dans le mois"
+               }
             },
             "position": 7,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_sro3": {
+         "monthly_sro3": {
             "names": {
                "description": null,
-               "tiny": "monthly_sro3",
-               "display": "SRO/Zinc restants à la fin du mois"
+               "symbolic": "monthly_sro3",
+               "display": {
+                  "fr": "SRO/Zinc restants à la fin du mois"
+               }
             },
             "position": 8,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_ctm1": {
+         "monthly_ctm1": {
             "names": {
                "description": null,
-               "tiny": "monthly_ctm1",
-               "display": "CTM 480mg au début de mois"
+               "symbolic": "monthly_ctm1",
+               "display": {
+                  "fr": "CTM 480mg au début de mois"
+               }
             },
             "position": 9,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_ctm2": {
+         "monthly_ctm2": {
             "names": {
                "description": null,
-               "tiny": "monthly_ctm2",
-               "display": "CTM 480mg cédés dans le mois"
+               "symbolic": "monthly_ctm2",
+               "display": {
+                  "fr": "CTM 480mg cédés dans le mois"
+               }
             },
             "position": 10,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          },
-         "lc_monthly_ctm3": {
+         "monthly_ctm3": {
             "names": {
                "description": null,
-               "tiny": "monthly_ctm3",
-               "display": "CTM 480mg restants à la fin du mois"
+               "symbolic": "monthly_ctm3",
+               "display": {
+                  "fr": "CTM 480mg restants à la fin du mois"
+               }
             },
             "position": 11,
             "type": "integer",
             "length": [
                1,
                3
-            ]
+            ],
+            "validate": {},
+            "flags": {}
          }
       }
    }
