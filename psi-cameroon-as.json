@@ -231,7 +231,7 @@
                "long": null,
                "description": null,
                "short": {
-                  "fr": "ACT 1 re\11us"
+                  "fr": "ACT 1 reçus"
                }
             },
             "position": 4,
@@ -298,7 +298,7 @@
                "long": null,
                "description": null,
                "short": {
-                  "fr": "ACT 2 re\11us"
+                  "fr": "ACT 2 reçus"
                }
             },
             "position": 7,
@@ -365,7 +365,7 @@
                "long": null,
                "description": null,
                "short": {
-                  "fr": "SRO/Zinc re\11us"
+                  "fr": "SRO/Zinc reçus"
                }
             },
             "position": 10,
