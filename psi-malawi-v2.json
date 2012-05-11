@@ -1,0 +1,1312 @@
+[
+    {
+       "meta": {
+          "code": "PSSV"
+       },
+       "fields": {
+          "vc": {
+             "labels": {
+                "short": {
+                   "en": "VC Name"
+                }
+             },
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "year": {
+             "labels": {
+                "short": {
+                   "en": "Reporting Year"
+                }
+             },
+             "type": "choice",
+             "choices": [
+                [
+                   2012,
+                   {
+                      "en": "2012"
+                   }
+                ],
+                [
+                   2013,
+                   {
+                      "en": "2013"
+                   }
+                ],
+                [
+                   2014,
+                   {
+                      "en": "2014"
+                   }
+                ],
+                [
+                   2015,
+                   {
+                      "en": "2015"
+                   }
+                ]
+             ]
+          },
+          "month": {
+             "labels": {
+                "short": {
+                   "en": "Reporting month"
+                }
+             },
+             "type": "choice",
+             "choices": [
+                [
+                   1,
+                   {
+                      "en": "January"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "February"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "March"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "April"
+                   }
+                ],
+                [
+                   5,
+                   {
+                      "en": "May"
+                   }
+                ],
+                [
+                   6,
+                   {
+                      "en": "June"
+                   }
+                ],
+                [
+                   7,
+                   {
+                      "en": "July"
+                   }
+                ],
+                [
+                   8,
+                   {
+                      "en": "August"
+                   }
+                ],
+                [
+                   9,
+                   {
+                      "en": "September"
+                   }
+                ],
+                [
+                   10,
+                   {
+                      "en": "October"
+                   }
+                ],
+                [
+                   11,
+                   {
+                      "en": "November"
+                   }
+                ],
+                [
+                   12,
+                   {
+                      "en": "December"
+                   }
+                ]
+             ]
+          },
+          "approver": {
+             "labels": {
+                "short": {
+                   "en": "Name of Approving Officer"
+                }
+             },
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "hsa": {
+             "labels": {
+                "short": {
+                   "en": "Name of HSA"
+                }
+             },
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "local": {
+             "labels": {
+                "short": {
+                   "en": "Does HSA stay in the catchment area?"
+                }
+             },
+             "type": "boolean"
+          },
+          "district": {
+             "labels": {
+                "short": {
+                   "en": "District"
+                }
+             },
+             "type": "string",
+             "length": [
+                3,
+                10
+             ]
+          },
+          "facility": {
+             "labels": {
+                "short": {
+                   "en": "Nearest Health Facility"
+                }
+             },
+             "type": "string",
+             "length": [
+                3,
+                10
+             ]
+          },
+          "supervised": {
+             "labels": {
+                "short": {
+                   "en": "How many times supervised this month?"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                1
+             ]
+          },
+          "mentored": {
+             "labels": {
+                "short": {
+                   "en": "How many times mentored this month?"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                1
+             ]
+          },
+          "new_fever_2_4": {
+             "labels": {
+                "short": {
+                   "en": "New cases\nFever 2-4 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_fever_5_35": {
+             "labels": {
+                "short": {
+                   "en": "New cases\nFever 5-35 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_fever_36_59": {
+             "labels": {
+                "short": {
+                   "en": "New cases\nFever 36-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_diar_2_11": {
+             "labels": {
+                "short": {
+                   "en": "New cases\nDiarrhoea 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_diar_12_59": {
+             "labels": {
+                "short": {
+                   "en": "New cases\nDiarrhoea 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_breath_2_11": {
+             "labels": {
+                "short": {
+                   "en": "New cases\nFast Breathing 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_breath_12_59": {
+             "labels": {
+                "short": {
+                   "en": "New cases\nFast Breathing 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_eye_2_11": {
+             "labels": {
+                "short": {
+                   "en": "New cases\nRed eye 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_eye_12_59": {
+             "labels": {
+                "short": {
+                   "en": "New cases\nRed eye 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_fever_2_4": {
+             "labels": {
+                "short": {
+                   "en": "Referrals with danger signs\nFever 2-4 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_fever_5_35": {
+             "labels": {
+                "short": {
+                   "en": "Referrals with danger signs\nFever 5-35 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_fever_36_59": {
+             "labels": {
+                "short": {
+                   "en": "Referrals with danger signs\nFever 36-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_dia_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Referrals with danger signs\nDiarrhoea 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_dia_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Referrals with danger signs\nDiarrhoea 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_breath_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Referrals with danger signs\nFast Breathing 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_breath_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Referrals with danger signs\nFast Breathing 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_eye_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Referrals with danger signs\nRed eye 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_eye_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Referrals with danger signs\nRed eye 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_fever_2_4": {
+             "labels": {
+                "short": {
+                   "en": "Referral for Drug Stockout\nFever 2-4 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_fever_5_35": {
+             "labels": {
+                "short": {
+                   "en": "Referral for Drug Stockout\nFever 5-35 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_fever_36_59": {
+             "labels": {
+                "short": {
+                   "en": "Referral for Drug Stockout\nFever 36-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_dia_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Referral for Drug Stockout\nDiarrhoea 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_dia_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Referral for Drug Stockout\nDiarrhoea 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_breath_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Referral for Drug Stockout\nFast Breathing 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_breath_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Referral for Drug Stockout\nFast Breathing 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_eye_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Referral for Drug Stockout\nRed eye 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_eye_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Referral for Drug Stockout\nRed eye 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_fever_2_4": {
+             "labels": {
+                "short": {
+                   "en": "Death within 7 days treatment at VC\nFever 2-4 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_fever_5_35": {
+             "labels": {
+                "short": {
+                   "en": "Death within 7 days treatment at VC\nFever 5-35 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_fever_36_59": {
+             "labels": {
+                "short": {
+                   "en": "Death within 7 days treatment at VC\nFever 36-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_dia_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Death within 7 days treatment at VC\nDiarrhoea 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_dia_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Death within 7 days treatment at VC\nDiarrhoea 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_breath_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Death within 7 days treatment at VC\nFast Breathing 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_breath_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Death within 7 days treatment at VC\nFast Breathing 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_eye_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Death within 7 days treatment at VC\nRed eye 2-11 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_red_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Death within 7 days treatment at VC\nRed eye 12-59 months"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_cases_male": {
+             "labels": {
+                "short": {
+                   "en": "New cases males"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_cases_f": {
+             "labels": {
+                "short": {
+                   "en": "New cases females"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          }
+       }
+    },
+    {
+       "meta": {
+          "code": "PSST"
+       },
+       "fields": {
+          "vc": {
+             "labels": {
+                "short": {
+                   "en": "VC Name"
+                }
+             },
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "year": {
+             "labels": {
+                "short": {
+                   "en": "Reporting Year"
+                }
+             },
+             "type": "choice",
+             "choices": [
+                [
+                   2012,
+                   {
+                      "en": "2012"
+                   }
+                ],
+                [
+                   2013,
+                   {
+                      "en": "2013"
+                   }
+                ],
+                [
+                   2014,
+                   {
+                      "en": "2014"
+                   }
+                ],
+                [
+                   2015,
+                   {
+                      "en": "2015"
+                   }
+                ]
+             ]
+          },
+          "month": {
+             "labels": {
+                "short": {
+                   "en": "Reporting month"
+                }
+             },
+             "type": "choice",
+             "choices": [
+                [
+                   1,
+                   {
+                      "en": "January"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "February"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "March"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "April"
+                   }
+                ],
+                [
+                   5,
+                   {
+                      "en": "May"
+                   }
+                ],
+                [
+                   6,
+                   {
+                      "en": "June"
+                   }
+                ],
+                [
+                   7,
+                   {
+                      "en": "July"
+                   }
+                ],
+                [
+                   8,
+                   {
+                      "en": "August"
+                   }
+                ],
+                [
+                   9,
+                   {
+                      "en": "September"
+                   }
+                ],
+                [
+                   10,
+                   {
+                      "en": "October"
+                   }
+                ],
+                [
+                   11,
+                   {
+                      "en": "November"
+                   }
+                ],
+                [
+                   12,
+                   {
+                      "en": "December"
+                   }
+                ]
+             ]
+          },
+          "qty_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Quantity on hand\nLA6x1"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Quantity on hand\nLA6x2"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_apap": {
+             "labels": {
+                "short": {
+                   "en": "Quantity on hand\nParacetamol"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Quantity on hand\nCotrimoxazole"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Quantity on hand\nZinc"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_ors": {
+             "labels": {
+                "short": {
+                   "en": "Quantity on hand\nORS"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_eye": {
+             "labels": {
+                "short": {
+                   "en": "Quantity on hand\nEye ointment"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Quantity dispensed\nLA6x1"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Quantity dispensed\nLA6x2"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_apap": {
+             "labels": {
+                "short": {
+                   "en": "Quantity dispensed\nParacetamol"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_ord": {
+             "labels": {
+                "short": {
+                   "en": "Quantity dispensed\nORS"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Quantity dispensed\nZinc"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Quantity dispensed\nCotrimoxazole"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_eye": {
+             "labels": {
+                "short": {
+                   "en": "Quantity dispensed\nEye ointment"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "loss_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Losses\nLA6x1"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Losses\nLA6x2"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_apap": {
+             "labels": {
+                "short": {
+                   "en": "Losses\nParacetamol"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_ors": {
+             "labels": {
+                "short": {
+                   "en": "Losses\nORS"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Losses\nZinc"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Losses\nCotrimoxazole"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_eye": {
+             "labels": {
+                "short": {
+                   "en": "Losses\nEye ointment"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "recv_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\nLA6x1"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\nLA6x2"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_apap": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\nParacetamol"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_ors": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\nORS"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\nZinc"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\nCotrimoxazole"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_eye": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\nEye ointment"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "days_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Days out of stock in a month\nLA6x1"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Days out of stock in a month\nLA6x2"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_apap": {
+             "labels": {
+                "short": {
+                   "en": "Days out of stock in a month\nParacetamol"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Days out of stock in a month\nCotrimoxazole"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Days out of stock in a month\nZinc"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_ors": {
+             "labels": {
+                "short": {
+                   "en": "Days out of stock in a month\nORS"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_eye": {
+             "labels": {
+                "short": {
+                   "en": "Days out of stock in a month\nEye ointment"
+                }
+             },
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "so_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Did stock out last 7 days\nLA6x1"
+                }
+             },
+             "type": "boolean"
+          },
+          "so_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Did stock out last 7 days\nLA6x2"
+                }
+             },
+             "type": "boolean"
+          },
+          "so_apap": {
+             "labels": {
+                "short": {
+                   "en": "Did stock out last 7 days\nParacetamol"
+                }
+             },
+             "type": "boolean"
+          },
+          "so_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Did stock out last 7 days\nCotrimoxazole"
+                }
+             },
+             "type": "boolean"
+          },
+          "so_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Did stock out last 7 days\nZinc"
+                }
+             },
+             "type": "boolean"
+          },
+          "so_ors": {
+             "labels": {
+                "short": {
+                   "en": "Did stock out last 7 days\nORS"
+                }
+             },
+             "type": "boolean"
+          },
+          "so_eye": {
+             "labels": {
+                "short": {
+                   "en": "Did stock out last 7 days\nEye ointment"
+                }
+             },
+             "type": "boolean"
+          }
+       }
+    }
+]
