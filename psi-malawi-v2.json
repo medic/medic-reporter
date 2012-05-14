@@ -10,6 +10,7 @@
                    "en": "VC Name"
                 }
              },
+             "position": 1,
              "type": "string",
              "length": [
                 3,
@@ -22,6 +23,7 @@
                    "en": "Reporting Year"
                 }
              },
+             "position": 2,
              "type": "choice",
              "choices": [
                 [
@@ -56,6 +58,7 @@
                    "en": "Reporting month"
                 }
              },
+             "position": 3,
              "type": "choice",
              "choices": [
                 [
@@ -138,6 +141,7 @@
                    "en": "Name of Approving Officer"
                 }
              },
+             "position": 4,
              "type": "string",
              "length": [
                 3,
@@ -150,6 +154,7 @@
                    "en": "Name of HSA"
                 }
              },
+             "position": 5,
              "type": "string",
              "length": [
                 3,
@@ -162,6 +167,7 @@
                    "en": "Does HSA stay in the catchment area?"
                 }
              },
+             "position": 6,
              "type": "boolean"
           },
           "district": {
@@ -170,6 +176,7 @@
                    "en": "District"
                 }
              },
+             "position": 7,
              "type": "string",
              "length": [
                 3,
@@ -182,6 +189,7 @@
                    "en": "Nearest Health Facility"
                 }
              },
+             "position": 8,
              "type": "string",
              "length": [
                 3,
@@ -194,6 +202,7 @@
                    "en": "How many times supervised this month?"
                 }
              },
+             "position": 9,
              "type": "integer",
              "length": [
                 1,
@@ -206,6 +215,7 @@
                    "en": "How many times mentored this month?"
                 }
              },
+             "position": 10,
              "type": "integer",
              "length": [
                 1,
@@ -218,6 +228,7 @@
                    "en": "New cases\nFever 2-4 months"
                 }
              },
+             "position": 11,
              "type": "integer",
              "length": [
                 1,
@@ -230,6 +241,7 @@
                    "en": "New cases\nFever 5-35 months"
                 }
              },
+             "position": 12,
              "type": "integer",
              "length": [
                 1,
@@ -242,6 +254,7 @@
                    "en": "New cases\nFever 36-59 months"
                 }
              },
+             "position": 13,
              "type": "integer",
              "length": [
                 1,
@@ -254,6 +267,7 @@
                    "en": "New cases\nDiarrhoea 2-11 months"
                 }
              },
+             "position": 14,
              "type": "integer",
              "length": [
                 1,
@@ -266,6 +280,7 @@
                    "en": "New cases\nDiarrhoea 12-59 months"
                 }
              },
+             "position": 15,
              "type": "integer",
              "length": [
                 1,
@@ -278,6 +293,7 @@
                    "en": "New cases\nFast Breathing 2-11 months"
                 }
              },
+             "position": 16,
              "type": "integer",
              "length": [
                 1,
@@ -290,6 +306,7 @@
                    "en": "New cases\nFast Breathing 12-59 months"
                 }
              },
+             "position": 17,
              "type": "integer",
              "length": [
                 1,
@@ -302,6 +319,7 @@
                    "en": "New cases\nRed eye 2-11 months"
                 }
              },
+             "position": 18,
              "type": "integer",
              "length": [
                 1,
@@ -314,6 +332,7 @@
                    "en": "New cases\nRed eye 12-59 months"
                 }
              },
+             "position": 19,
              "type": "integer",
              "length": [
                 1,
@@ -326,6 +345,7 @@
                    "en": "Referrals with danger signs\nFever 2-4 months"
                 }
              },
+             "position": 20,
              "type": "integer",
              "length": [
                 1,
@@ -338,6 +358,7 @@
                    "en": "Referrals with danger signs\nFever 5-35 months"
                 }
              },
+             "position": 21,
              "type": "integer",
              "length": [
                 1,
@@ -350,6 +371,7 @@
                    "en": "Referrals with danger signs\nFever 36-59 months"
                 }
              },
+             "position": 22,
              "type": "integer",
              "length": [
                 1,
@@ -362,6 +384,7 @@
                    "en": "Referrals with danger signs\nDiarrhoea 2-11 months"
                 }
              },
+             "position": 23,
              "type": "integer",
              "length": [
                 1,
@@ -374,6 +397,7 @@
                    "en": "Referrals with danger signs\nDiarrhoea 12-59 months"
                 }
              },
+             "position": 24,
              "type": "integer",
              "length": [
                 1,
@@ -386,6 +410,7 @@
                    "en": "Referrals with danger signs\nFast Breathing 2-11 months"
                 }
              },
+             "position": 25,
              "type": "integer",
              "length": [
                 1,
@@ -398,6 +423,7 @@
                    "en": "Referrals with danger signs\nFast Breathing 12-59 months"
                 }
              },
+             "position": 26,
              "type": "integer",
              "length": [
                 1,
@@ -410,6 +436,7 @@
                    "en": "Referrals with danger signs\nRed eye 2-11 months"
                 }
              },
+             "position": 27,
              "type": "integer",
              "length": [
                 1,
@@ -422,6 +449,7 @@
                    "en": "Referrals with danger signs\nRed eye 12-59 months"
                 }
              },
+             "position": 28,
              "type": "integer",
              "length": [
                 1,
@@ -434,6 +462,7 @@
                    "en": "Referral for Drug Stockout\nFever 2-4 months"
                 }
              },
+             "position": 29,
              "type": "integer",
              "length": [
                 1,
@@ -446,6 +475,7 @@
                    "en": "Referral for Drug Stockout\nFever 5-35 months"
                 }
              },
+             "position": 30,
              "type": "integer",
              "length": [
                 1,
@@ -458,6 +488,7 @@
                    "en": "Referral for Drug Stockout\nFever 36-59 months"
                 }
              },
+             "position": 31,
              "type": "integer",
              "length": [
                 1,
@@ -470,6 +501,7 @@
                    "en": "Referral for Drug Stockout\nDiarrhoea 2-11 months"
                 }
              },
+             "position": 32,
              "type": "integer",
              "length": [
                 1,
@@ -482,6 +514,7 @@
                    "en": "Referral for Drug Stockout\nDiarrhoea 12-59 months"
                 }
              },
+             "position": 33,
              "type": "integer",
              "length": [
                 1,
@@ -494,6 +527,7 @@
                    "en": "Referral for Drug Stockout\nFast Breathing 2-11 months"
                 }
              },
+             "position": 34,
              "type": "integer",
              "length": [
                 1,
@@ -506,6 +540,7 @@
                    "en": "Referral for Drug Stockout\nFast Breathing 12-59 months"
                 }
              },
+             "position": 35,
              "type": "integer",
              "length": [
                 1,
@@ -518,6 +553,7 @@
                    "en": "Referral for Drug Stockout\nRed eye 2-11 months"
                 }
              },
+             "position": 36,
              "type": "integer",
              "length": [
                 1,
@@ -530,6 +566,7 @@
                    "en": "Referral for Drug Stockout\nRed eye 12-59 months"
                 }
              },
+             "position": 37,
              "type": "integer",
              "length": [
                 1,
@@ -542,6 +579,7 @@
                    "en": "Death within 7 days treatment at VC\nFever 2-4 months"
                 }
              },
+             "position": 38,
              "type": "integer",
              "length": [
                 1,
@@ -554,6 +592,7 @@
                    "en": "Death within 7 days treatment at VC\nFever 5-35 months"
                 }
              },
+             "position": 39,
              "type": "integer",
              "length": [
                 1,
@@ -566,6 +605,7 @@
                    "en": "Death within 7 days treatment at VC\nFever 36-59 months"
                 }
              },
+             "position": 40,
              "type": "integer",
              "length": [
                 1,
@@ -578,6 +618,7 @@
                    "en": "Death within 7 days treatment at VC\nDiarrhoea 2-11 months"
                 }
              },
+             "position": 41,
              "type": "integer",
              "length": [
                 1,
@@ -590,6 +631,7 @@
                    "en": "Death within 7 days treatment at VC\nDiarrhoea 12-59 months"
                 }
              },
+             "position": 42,
              "type": "integer",
              "length": [
                 1,
@@ -602,6 +644,7 @@
                    "en": "Death within 7 days treatment at VC\nFast Breathing 2-11 months"
                 }
              },
+             "position": 43,
              "type": "integer",
              "length": [
                 1,
@@ -614,6 +657,7 @@
                    "en": "Death within 7 days treatment at VC\nFast Breathing 12-59 months"
                 }
              },
+             "position": 44,
              "type": "integer",
              "length": [
                 1,
@@ -626,6 +670,7 @@
                    "en": "Death within 7 days treatment at VC\nRed eye 2-11 months"
                 }
              },
+             "position": 45,
              "type": "integer",
              "length": [
                 1,
@@ -638,6 +683,7 @@
                    "en": "Death within 7 days treatment at VC\nRed eye 12-59 months"
                 }
              },
+             "position": 46,
              "type": "integer",
              "length": [
                 1,
@@ -650,6 +696,7 @@
                    "en": "New cases males"
                 }
              },
+             "position": 47,
              "type": "integer",
              "length": [
                 1,
@@ -662,6 +709,7 @@
                    "en": "New cases females"
                 }
              },
+             "position": 48,
              "type": "integer",
              "length": [
                 1,

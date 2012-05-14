@@ -9,7 +9,8 @@
                "long": null,
                "description": null,
                "short": {
-                  "fr": "Année"
+                  "fr": "Année",
+                  "en": "Year"
                }
             },
             "position": 0,
@@ -28,7 +29,8 @@
                "long": null,
                "description": null,
                "short": {
-                  "fr": "Trimestre"
+                  "fr": "Trimestre",
+                  "en": "Quarter"
                }
             },
             "position": 1,
@@ -73,7 +75,8 @@
                "long": null,
                "description": null,
                "short": {
-                  "fr": "District de santé"
+                  "fr": "District de santé",
+                  "en": "Health District"
                }
             },
             "position": 2,
