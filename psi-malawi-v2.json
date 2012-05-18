@@ -64,73 +64,85 @@
                 [
                    1,
                    {
-                      "en": "January"
+                      "en": "January",
+                      "fr": "Janvier"
                    }
                 ],
                 [
                    2,
                    {
-                      "en": "February"
+                      "en": "February",
+                      "fr": "Février"
                    }
                 ],
                 [
                    3,
                    {
-                      "en": "March"
+                      "en": "March",
+                      "fr": "Mars"
                    }
                 ],
                 [
                    4,
                    {
-                      "en": "April"
+                      "en": "April",
+                      "fr": "Avril"
                    }
                 ],
                 [
                    5,
                    {
-                      "en": "May"
+                      "en": "May",
+                      "fr": "Mai"
                    }
                 ],
                 [
                    6,
                    {
-                      "en": "June"
+                      "en": "June",
+                      "fr": "Juin"
                    }
                 ],
                 [
                    7,
                    {
-                      "en": "July"
+                      "en": "July",
+                      "fr": "Juillet"
                    }
                 ],
                 [
                    8,
                    {
-                      "en": "August"
+                      "en": "August",
+                      "fr": "Aout"
                    }
                 ],
                 [
                    9,
                    {
-                      "en": "September"
+                      "en": "September",
+                      "fr": "Septembre"
                    }
                 ],
                 [
                    10,
                    {
-                      "en": "October"
+                      "en": "October",
+                      "fr": "Octobre"
                    }
                 ],
                 [
                    11,
                    {
-                      "en": "November"
+                      "en": "November",
+                      "fr": "Novembre"
                    }
                 ],
                 [
                    12,
                    {
-                      "en": "December"
+                      "en": "December",
+                      "fr": "Décembre"
                    }
                 ]
              ]
@@ -225,7 +237,7 @@
           "new_fever_2_4": {
              "labels": {
                 "short": {
-                   "en": "New cases\nFever 2-4 months"
+                   "en": "New cases\\nFever 2-4 months"
                 }
              },
              "position": 11,
@@ -238,7 +250,7 @@
           "new_fever_5_35": {
              "labels": {
                 "short": {
-                   "en": "New cases\nFever 5-35 months"
+                   "en": "New cases\\nFever 5-35 months"
                 }
              },
              "position": 12,
@@ -251,7 +263,7 @@
           "new_fever_36_59": {
              "labels": {
                 "short": {
-                   "en": "New cases\nFever 36-59 months"
+                   "en": "New cases\\nFever 36-59 months"
                 }
              },
              "position": 13,
@@ -264,7 +276,7 @@
           "new_diar_2_11": {
              "labels": {
                 "short": {
-                   "en": "New cases\nDiarrhoea 2-11 months"
+                   "en": "New cases\\nDiarrhoea 2-11 months"
                 }
              },
              "position": 14,
@@ -277,7 +289,7 @@
           "new_diar_12_59": {
              "labels": {
                 "short": {
-                   "en": "New cases\nDiarrhoea 12-59 months"
+                   "en": "New cases\\nDiarrhoea 12-59 months"
                 }
              },
              "position": 15,
@@ -290,7 +302,7 @@
           "new_breath_2_11": {
              "labels": {
                 "short": {
-                   "en": "New cases\nFast Breathing 2-11 months"
+                   "en": "New cases\\nFast Breathing 2-11 months"
                 }
              },
              "position": 16,
@@ -303,7 +315,7 @@
           "new_breath_12_59": {
              "labels": {
                 "short": {
-                   "en": "New cases\nFast Breathing 12-59 months"
+                   "en": "New cases\\nFast Breathing 12-59 months"
                 }
              },
              "position": 17,
@@ -316,7 +328,7 @@
           "new_eye_2_11": {
              "labels": {
                 "short": {
-                   "en": "New cases\nRed eye 2-11 months"
+                   "en": "New cases\\nRed eye 2-11 months"
                 }
              },
              "position": 18,
@@ -329,7 +341,7 @@
           "new_eye_12_59": {
              "labels": {
                 "short": {
-                   "en": "New cases\nRed eye 12-59 months"
+                   "en": "New cases\\nRed eye 12-59 months"
                 }
              },
              "position": 19,
@@ -342,7 +354,7 @@
           "ref_fever_2_4": {
              "labels": {
                 "short": {
-                   "en": "Referrals with danger signs\nFever 2-4 months"
+                   "en": "Referrals with danger signs\\nFever 2-4 months"
                 }
              },
              "position": 20,
@@ -355,7 +367,7 @@
           "ref_fever_5_35": {
              "labels": {
                 "short": {
-                   "en": "Referrals with danger signs\nFever 5-35 months"
+                   "en": "Referrals with danger signs\\nFever 5-35 months"
                 }
              },
              "position": 21,
@@ -368,7 +380,7 @@
           "ref_fever_36_59": {
              "labels": {
                 "short": {
-                   "en": "Referrals with danger signs\nFever 36-59 months"
+                   "en": "Referrals with danger signs\\nFever 36-59 months"
                 }
              },
              "position": 22,
@@ -381,7 +393,7 @@
           "ref_dia_2_11": {
              "labels": {
                 "short": {
-                   "en": "Referrals with danger signs\nDiarrhoea 2-11 months"
+                   "en": "Referrals with danger signs\\nDiarrhoea 2-11 months"
                 }
              },
              "position": 23,
@@ -394,7 +406,7 @@
           "ref_dia_12_59": {
              "labels": {
                 "short": {
-                   "en": "Referrals with danger signs\nDiarrhoea 12-59 months"
+                   "en": "Referrals with danger signs\\nDiarrhoea 12-59 months"
                 }
              },
              "position": 24,
@@ -407,7 +419,7 @@
           "ref_breath_2_11": {
              "labels": {
                 "short": {
-                   "en": "Referrals with danger signs\nFast Breathing 2-11 months"
+                   "en": "Referrals with danger signs\\nFast Breathing 2-11 months"
                 }
              },
              "position": 25,
@@ -420,7 +432,7 @@
           "ref_breath_12_59": {
              "labels": {
                 "short": {
-                   "en": "Referrals with danger signs\nFast Breathing 12-59 months"
+                   "en": "Referrals with danger signs\\nFast Breathing 12-59 months"
                 }
              },
              "position": 26,
@@ -433,7 +445,7 @@
           "ref_eye_2_11": {
              "labels": {
                 "short": {
-                   "en": "Referrals with danger signs\nRed eye 2-11 months"
+                   "en": "Referrals with danger signs\\nRed eye 2-11 months"
                 }
              },
              "position": 27,
@@ -446,7 +458,7 @@
           "ref_eye_12_59": {
              "labels": {
                 "short": {
-                   "en": "Referrals with danger signs\nRed eye 12-59 months"
+                   "en": "Referrals with danger signs\\nRed eye 12-59 months"
                 }
              },
              "position": 28,
@@ -459,7 +471,7 @@
           "so_fever_2_4": {
              "labels": {
                 "short": {
-                   "en": "Referral for Drug Stockout\nFever 2-4 months"
+                   "en": "Referral for Drug Stockout\\nFever 2-4 months"
                 }
              },
              "position": 29,
@@ -472,7 +484,7 @@
           "so_fever_5_35": {
              "labels": {
                 "short": {
-                   "en": "Referral for Drug Stockout\nFever 5-35 months"
+                   "en": "Referral for Drug Stockout\\nFever 5-35 months"
                 }
              },
              "position": 30,
@@ -485,7 +497,7 @@
           "so_fever_36_59": {
              "labels": {
                 "short": {
-                   "en": "Referral for Drug Stockout\nFever 36-59 months"
+                   "en": "Referral for Drug Stockout\\nFever 36-59 months"
                 }
              },
              "position": 31,
@@ -498,7 +510,7 @@
           "so_dia_2_11": {
              "labels": {
                 "short": {
-                   "en": "Referral for Drug Stockout\nDiarrhoea 2-11 months"
+                   "en": "Referral for Drug Stockout\\nDiarrhoea 2-11 months"
                 }
              },
              "position": 32,
@@ -511,7 +523,7 @@
           "so_dia_12_59": {
              "labels": {
                 "short": {
-                   "en": "Referral for Drug Stockout\nDiarrhoea 12-59 months"
+                   "en": "Referral for Drug Stockout\\nDiarrhoea 12-59 months"
                 }
              },
              "position": 33,
@@ -524,7 +536,7 @@
           "so_breath_2_11": {
              "labels": {
                 "short": {
-                   "en": "Referral for Drug Stockout\nFast Breathing 2-11 months"
+                   "en": "Referral for Drug Stockout\\nFast Breathing 2-11 months"
                 }
              },
              "position": 34,
@@ -537,7 +549,7 @@
           "so_breath_12_59": {
              "labels": {
                 "short": {
-                   "en": "Referral for Drug Stockout\nFast Breathing 12-59 months"
+                   "en": "Referral for Drug Stockout\\nFast Breathing 12-59 months"
                 }
              },
              "position": 35,
@@ -550,7 +562,7 @@
           "so_eye_2_11": {
              "labels": {
                 "short": {
-                   "en": "Referral for Drug Stockout\nRed eye 2-11 months"
+                   "en": "Referral for Drug Stockout\\nRed eye 2-11 months"
                 }
              },
              "position": 36,
@@ -563,7 +575,7 @@
           "so_eye_12_59": {
              "labels": {
                 "short": {
-                   "en": "Referral for Drug Stockout\nRed eye 12-59 months"
+                   "en": "Referral for Drug Stockout\\nRed eye 12-59 months"
                 }
              },
              "position": 37,
@@ -576,7 +588,7 @@
           "death_fever_2_4": {
              "labels": {
                 "short": {
-                   "en": "Death within 7 days treatment at VC\nFever 2-4 months"
+                   "en": "Death within 7 days treatment at VC\\nFever 2-4 months"
                 }
              },
              "position": 38,
@@ -589,7 +601,7 @@
           "death_fever_5_35": {
              "labels": {
                 "short": {
-                   "en": "Death within 7 days treatment at VC\nFever 5-35 months"
+                   "en": "Death within 7 days treatment at VC\\nFever 5-35 months"
                 }
              },
              "position": 39,
@@ -602,7 +614,7 @@
           "death_fever_36_59": {
              "labels": {
                 "short": {
-                   "en": "Death within 7 days treatment at VC\nFever 36-59 months"
+                   "en": "Death within 7 days treatment at VC\\nFever 36-59 months"
                 }
              },
              "position": 40,
@@ -615,7 +627,7 @@
           "death_dia_2_11": {
              "labels": {
                 "short": {
-                   "en": "Death within 7 days treatment at VC\nDiarrhoea 2-11 months"
+                   "en": "Death within 7 days treatment at VC\\nDiarrhoea 2-11 months"
                 }
              },
              "position": 41,
@@ -628,7 +640,7 @@
           "death_dia_12_59": {
              "labels": {
                 "short": {
-                   "en": "Death within 7 days treatment at VC\nDiarrhoea 12-59 months"
+                   "en": "Death within 7 days treatment at VC\\nDiarrhoea 12-59 months"
                 }
              },
              "position": 42,
@@ -641,7 +653,7 @@
           "death_breath_2_11": {
              "labels": {
                 "short": {
-                   "en": "Death within 7 days treatment at VC\nFast Breathing 2-11 months"
+                   "en": "Death within 7 days treatment at VC\\nFast Breathing 2-11 months"
                 }
              },
              "position": 43,
@@ -654,7 +666,7 @@
           "death_breath_12_59": {
              "labels": {
                 "short": {
-                   "en": "Death within 7 days treatment at VC\nFast Breathing 12-59 months"
+                   "en": "Death within 7 days treatment at VC\\nFast Breathing 12-59 months"
                 }
              },
              "position": 44,
@@ -667,7 +679,7 @@
           "death_eye_2_11": {
              "labels": {
                 "short": {
-                   "en": "Death within 7 days treatment at VC\nRed eye 2-11 months"
+                   "en": "Death within 7 days treatment at VC\\nRed eye 2-11 months"
                 }
              },
              "position": 45,
@@ -680,7 +692,7 @@
           "death_red_12_59": {
              "labels": {
                 "short": {
-                   "en": "Death within 7 days treatment at VC\nRed eye 12-59 months"
+                   "en": "Death within 7 days treatment at VC\\nRed eye 12-59 months"
                 }
              },
              "position": 46,
@@ -854,7 +866,7 @@
           "qty_la6x1": {
              "labels": {
                 "short": {
-                   "en": "Quantity on hand\nLA6x1"
+                   "en": "Quantity on hand\\nLA6x1"
                 }
              },
              "type": "integer",
@@ -866,7 +878,7 @@
           "qty_la6x2": {
              "labels": {
                 "short": {
-                   "en": "Quantity on hand\nLA6x2"
+                   "en": "Quantity on hand\\nLA6x2"
                 }
              },
              "type": "integer",
@@ -878,7 +890,7 @@
           "qty_apap": {
              "labels": {
                 "short": {
-                   "en": "Quantity on hand\nParacetamol"
+                   "en": "Quantity on hand\\nParacetamol"
                 }
              },
              "type": "integer",
@@ -890,7 +902,7 @@
           "qty_cotrx": {
              "labels": {
                 "short": {
-                   "en": "Quantity on hand\nCotrimoxazole"
+                   "en": "Quantity on hand\\nCotrimoxazole"
                 }
              },
              "type": "integer",
@@ -902,7 +914,7 @@
           "qty_zinc": {
              "labels": {
                 "short": {
-                   "en": "Quantity on hand\nZinc"
+                   "en": "Quantity on hand\\nZinc"
                 }
              },
              "type": "integer",
@@ -914,7 +926,7 @@
           "qty_ors": {
              "labels": {
                 "short": {
-                   "en": "Quantity on hand\nORS"
+                   "en": "Quantity on hand\\nORS"
                 }
              },
              "type": "integer",
@@ -926,7 +938,7 @@
           "qty_eye": {
              "labels": {
                 "short": {
-                   "en": "Quantity on hand\nEye ointment"
+                   "en": "Quantity on hand\\nEye ointment"
                 }
              },
              "type": "integer",
@@ -938,7 +950,7 @@
           "disp_la6x1": {
              "labels": {
                 "short": {
-                   "en": "Quantity dispensed\nLA6x1"
+                   "en": "Quantity dispensed\\nLA6x1"
                 }
              },
              "type": "integer",
@@ -950,7 +962,7 @@
           "disp_la6x2": {
              "labels": {
                 "short": {
-                   "en": "Quantity dispensed\nLA6x2"
+                   "en": "Quantity dispensed\\nLA6x2"
                 }
              },
              "type": "integer",
@@ -962,7 +974,7 @@
           "disp_apap": {
              "labels": {
                 "short": {
-                   "en": "Quantity dispensed\nParacetamol"
+                   "en": "Quantity dispensed\\nParacetamol"
                 }
              },
              "type": "integer",
@@ -974,7 +986,7 @@
           "disp_ord": {
              "labels": {
                 "short": {
-                   "en": "Quantity dispensed\nORS"
+                   "en": "Quantity dispensed\\nORS"
                 }
              },
              "type": "integer",
@@ -986,7 +998,7 @@
           "disp_zinc": {
              "labels": {
                 "short": {
-                   "en": "Quantity dispensed\nZinc"
+                   "en": "Quantity dispensed\\nZinc"
                 }
              },
              "type": "integer",
@@ -998,7 +1010,7 @@
           "disp_cotrx": {
              "labels": {
                 "short": {
-                   "en": "Quantity dispensed\nCotrimoxazole"
+                   "en": "Quantity dispensed\\nCotrimoxazole"
                 }
              },
              "type": "integer",
@@ -1010,7 +1022,7 @@
           "disp_eye": {
              "labels": {
                 "short": {
-                   "en": "Quantity dispensed\nEye ointment"
+                   "en": "Quantity dispensed\\nEye ointment"
                 }
              },
              "type": "integer",
@@ -1022,7 +1034,7 @@
           "loss_la6x1": {
              "labels": {
                 "short": {
-                   "en": "Losses\nLA6x1"
+                   "en": "Losses\\nLA6x1"
                 }
              },
              "type": "integer",
@@ -1034,7 +1046,7 @@
           "loss_la6x2": {
              "labels": {
                 "short": {
-                   "en": "Losses\nLA6x2"
+                   "en": "Losses\\nLA6x2"
                 }
              },
              "type": "integer",
@@ -1046,7 +1058,7 @@
           "loss_apap": {
              "labels": {
                 "short": {
-                   "en": "Losses\nParacetamol"
+                   "en": "Losses\\nParacetamol"
                 }
              },
              "type": "integer",
@@ -1058,7 +1070,7 @@
           "loss_ors": {
              "labels": {
                 "short": {
-                   "en": "Losses\nORS"
+                   "en": "Losses\\nORS"
                 }
              },
              "type": "integer",
@@ -1070,7 +1082,7 @@
           "loss_zinc": {
              "labels": {
                 "short": {
-                   "en": "Losses\nZinc"
+                   "en": "Losses\\nZinc"
                 }
              },
              "type": "integer",
@@ -1082,7 +1094,7 @@
           "loss_cotrx": {
              "labels": {
                 "short": {
-                   "en": "Losses\nCotrimoxazole"
+                   "en": "Losses\\nCotrimoxazole"
                 }
              },
              "type": "integer",
@@ -1094,7 +1106,7 @@
           "loss_eye": {
              "labels": {
                 "short": {
-                   "en": "Losses\nEye ointment"
+                   "en": "Losses\\nEye ointment"
                 }
              },
              "type": "integer",
@@ -1106,7 +1118,7 @@
           "recv_la6x1": {
              "labels": {
                 "short": {
-                   "en": "Quantity received\nLA6x1"
+                   "en": "Quantity received\\nLA6x1"
                 }
              },
              "type": "integer",
@@ -1118,7 +1130,7 @@
           "recv_la6x2": {
              "labels": {
                 "short": {
-                   "en": "Quantity received\nLA6x2"
+                   "en": "Quantity received\\nLA6x2"
                 }
              },
              "type": "integer",
@@ -1130,7 +1142,7 @@
           "recv_apap": {
              "labels": {
                 "short": {
-                   "en": "Quantity received\nParacetamol"
+                   "en": "Quantity received\\nParacetamol"
                 }
              },
              "type": "integer",
@@ -1142,7 +1154,7 @@
           "recv_ors": {
              "labels": {
                 "short": {
-                   "en": "Quantity received\nORS"
+                   "en": "Quantity received\\nORS"
                 }
              },
              "type": "integer",
@@ -1154,7 +1166,7 @@
           "recv_zinc": {
              "labels": {
                 "short": {
-                   "en": "Quantity received\nZinc"
+                   "en": "Quantity received\\nZinc"
                 }
              },
              "type": "integer",
@@ -1166,7 +1178,7 @@
           "recv_cotrx": {
              "labels": {
                 "short": {
-                   "en": "Quantity received\nCotrimoxazole"
+                   "en": "Quantity received\\nCotrimoxazole"
                 }
              },
              "type": "integer",
@@ -1178,7 +1190,7 @@
           "recv_eye": {
              "labels": {
                 "short": {
-                   "en": "Quantity received\nEye ointment"
+                   "en": "Quantity received\\nEye ointment"
                 }
              },
              "type": "integer",
@@ -1190,7 +1202,7 @@
           "days_la6x1": {
              "labels": {
                 "short": {
-                   "en": "Days out of stock in a month\nLA6x1"
+                   "en": "Days out of stock in a month\\nLA6x1"
                 }
              },
              "type": "integer",
@@ -1206,7 +1218,7 @@
           "days_la6x2": {
              "labels": {
                 "short": {
-                   "en": "Days out of stock in a month\nLA6x2"
+                   "en": "Days out of stock in a month\\nLA6x2"
                 }
              },
              "type": "integer",
@@ -1222,7 +1234,7 @@
           "days_apap": {
              "labels": {
                 "short": {
-                   "en": "Days out of stock in a month\nParacetamol"
+                   "en": "Days out of stock in a month\\nParacetamol"
                 }
              },
              "type": "integer",
@@ -1238,7 +1250,7 @@
           "days_cotrx": {
              "labels": {
                 "short": {
-                   "en": "Days out of stock in a month\nCotrimoxazole"
+                   "en": "Days out of stock in a month\\nCotrimoxazole"
                 }
              },
              "type": "integer",
@@ -1254,7 +1266,7 @@
           "days_zinc": {
              "labels": {
                 "short": {
-                   "en": "Days out of stock in a month\nZinc"
+                   "en": "Days out of stock in a month\\nZinc"
                 }
              },
              "type": "integer",
@@ -1270,7 +1282,7 @@
           "days_ors": {
              "labels": {
                 "short": {
-                   "en": "Days out of stock in a month\nORS"
+                   "en": "Days out of stock in a month\\nORS"
                 }
              },
              "type": "integer",
@@ -1286,7 +1298,7 @@
           "days_eye": {
              "labels": {
                 "short": {
-                   "en": "Days out of stock in a month\nEye ointment"
+                   "en": "Days out of stock in a month\\nEye ointment"
                 }
              },
              "type": "integer",
@@ -1302,7 +1314,7 @@
           "so_la6x1": {
              "labels": {
                 "short": {
-                   "en": "Did stock out last 7 days\nLA6x1"
+                   "en": "Did stock out last 7 days\\nLA6x1"
                 }
              },
              "type": "boolean"
@@ -1310,7 +1322,7 @@
           "so_la6x2": {
              "labels": {
                 "short": {
-                   "en": "Did stock out last 7 days\nLA6x2"
+                   "en": "Did stock out last 7 days\\nLA6x2"
                 }
              },
              "type": "boolean"
@@ -1318,7 +1330,7 @@
           "so_apap": {
              "labels": {
                 "short": {
-                   "en": "Did stock out last 7 days\nParacetamol"
+                   "en": "Did stock out last 7 days\\nParacetamol"
                 }
              },
              "type": "boolean"
@@ -1326,7 +1338,7 @@
           "so_cotrx": {
              "labels": {
                 "short": {
-                   "en": "Did stock out last 7 days\nCotrimoxazole"
+                   "en": "Did stock out last 7 days\\nCotrimoxazole"
                 }
              },
              "type": "boolean"
@@ -1334,7 +1346,7 @@
           "so_zinc": {
              "labels": {
                 "short": {
-                   "en": "Did stock out last 7 days\nZinc"
+                   "en": "Did stock out last 7 days\\nZinc"
                 }
              },
              "type": "boolean"
@@ -1342,7 +1354,7 @@
           "so_ors": {
              "labels": {
                 "short": {
-                   "en": "Did stock out last 7 days\nORS"
+                   "en": "Did stock out last 7 days\\nORS"
                 }
              },
              "type": "boolean"
@@ -1350,7 +1362,7 @@
           "so_eye": {
              "labels": {
                 "short": {
-                   "en": "Did stock out last 7 days\nEye ointment"
+                   "en": "Did stock out last 7 days\\nEye ointment"
                 }
              },
              "type": "boolean"
