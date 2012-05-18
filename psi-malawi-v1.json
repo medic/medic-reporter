@@ -58,7 +58,7 @@
                "is_numeric_month": true
             },
             "flags": {},
-            "choices": [
+            "list": [
                [
                   1,
                   {
@@ -568,7 +568,7 @@
                "is_numeric_month": true
             },
             "flags": {},
-            "choices": [
+            "list": [
                [
                   1,
                   {

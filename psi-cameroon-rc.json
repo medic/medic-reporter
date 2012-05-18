@@ -41,7 +41,7 @@
                "is_numeric_month": true
             },
             "flags": {},
-            "choices": [
+            "list": [
                [
                   1,
                   {
@@ -134,7 +134,7 @@
                "is_numeric_district": true
             },
             "flags": {},
-            "choices": [
+            "list": [
                [
                   1,
                   {
@@ -564,7 +564,7 @@
                "is_boolean_list": true
             },
             "flags": {},
-            "choices": [
+            "list": [
                [
                   1,
                   {
@@ -631,7 +631,7 @@
                "is_boolean_list": true
             },
             "flags": {},
-            "choices": [
+            "list": [
                [
                   1,
                   {
@@ -698,7 +698,7 @@
                "is_boolean_list": true
             },
             "flags": {},
-            "choices": [
+            "list": [
                [
                   1,
                   {

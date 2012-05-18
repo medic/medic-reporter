@@ -24,8 +24,8 @@
                 }
              },
              "position": 2,
-             "type": "choice",
-             "choices": [
+             "type": "select",
+             "list": [
                 [
                    2012,
                    {
@@ -59,8 +59,8 @@
                 }
              },
              "position": 3,
-             "type": "choice",
-             "choices": [
+             "type": "select",
+             "list": [
                 [
                    1,
                    {
@@ -753,8 +753,8 @@
                    "en": "Reporting Year"
                 }
              },
-             "type": "choice",
-             "choices": [
+             "type": "select",
+             "list": [
                 [
                    2012,
                    {
@@ -787,8 +787,8 @@
                    "en": "Reporting month"
                 }
              },
-             "type": "choice",
-             "choices": [
+             "type": "select",
+             "list": [
                 [
                    1,
                    {
