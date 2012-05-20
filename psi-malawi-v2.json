@@ -741,6 +741,7 @@
                    "en": "VC Name"
                 }
              },
+             "position": 1,
              "type": "string",
              "length": [
                 3,
@@ -753,6 +754,7 @@
                    "en": "Reporting Year"
                 }
              },
+             "position": 2,
              "type": "select",
              "list": [
                 [
@@ -787,6 +789,7 @@
                    "en": "Reporting month"
                 }
              },
+             "position": 3,
              "type": "select",
              "list": [
                 [
@@ -869,6 +872,7 @@
                    "en": "Quantity on hand\\nLA6x1"
                 }
              },
+             "position": 4,
              "type": "integer",
              "length": [
                 1,
@@ -881,6 +885,7 @@
                    "en": "Quantity on hand\\nLA6x2"
                 }
              },
+             "position": 5,
              "type": "integer",
              "length": [
                 1,
@@ -893,6 +898,7 @@
                    "en": "Quantity on hand\\nParacetamol"
                 }
              },
+             "position": 6,
              "type": "integer",
              "length": [
                 1,
@@ -905,6 +911,7 @@
                    "en": "Quantity on hand\\nCotrimoxazole"
                 }
              },
+             "position": 7,
              "type": "integer",
              "length": [
                 1,
@@ -917,6 +924,7 @@
                    "en": "Quantity on hand\\nZinc"
                 }
              },
+             "position": 8,
              "type": "integer",
              "length": [
                 1,
@@ -929,6 +937,7 @@
                    "en": "Quantity on hand\\nORS"
                 }
              },
+             "position": 9,
              "type": "integer",
              "length": [
                 1,
@@ -941,6 +950,7 @@
                    "en": "Quantity on hand\\nEye ointment"
                 }
              },
+             "position": 10,
              "type": "integer",
              "length": [
                 1,
@@ -953,6 +963,7 @@
                    "en": "Quantity dispensed\\nLA6x1"
                 }
              },
+             "position": 11,
              "type": "integer",
              "length": [
                 1,
@@ -965,6 +976,7 @@
                    "en": "Quantity dispensed\\nLA6x2"
                 }
              },
+             "position": 12,
              "type": "integer",
              "length": [
                 1,
@@ -977,6 +989,7 @@
                    "en": "Quantity dispensed\\nParacetamol"
                 }
              },
+             "position": 13,
              "type": "integer",
              "length": [
                 1,
@@ -989,6 +1002,7 @@
                    "en": "Quantity dispensed\\nORS"
                 }
              },
+             "position": 14,
              "type": "integer",
              "length": [
                 1,
@@ -1001,6 +1015,7 @@
                    "en": "Quantity dispensed\\nZinc"
                 }
              },
+             "position": 15,
              "type": "integer",
              "length": [
                 1,
@@ -1013,6 +1028,7 @@
                    "en": "Quantity dispensed\\nCotrimoxazole"
                 }
              },
+             "position": 16,
              "type": "integer",
              "length": [
                 1,
@@ -1025,6 +1041,7 @@
                    "en": "Quantity dispensed\\nEye ointment"
                 }
              },
+             "position": 17,
              "type": "integer",
              "length": [
                 1,
@@ -1037,6 +1054,7 @@
                    "en": "Losses\\nLA6x1"
                 }
              },
+             "position": 18,
              "type": "integer",
              "length": [
                 1,
@@ -1049,6 +1067,7 @@
                    "en": "Losses\\nLA6x2"
                 }
              },
+             "position": 19,
              "type": "integer",
              "length": [
                 1,
@@ -1061,6 +1080,7 @@
                    "en": "Losses\\nParacetamol"
                 }
              },
+             "position": 20,
              "type": "integer",
              "length": [
                 1,
@@ -1073,6 +1093,7 @@
                    "en": "Losses\\nORS"
                 }
              },
+             "position": 21,
              "type": "integer",
              "length": [
                 1,
@@ -1085,6 +1106,7 @@
                    "en": "Losses\\nZinc"
                 }
              },
+             "position": 22,
              "type": "integer",
              "length": [
                 1,
@@ -1097,6 +1119,7 @@
                    "en": "Losses\\nCotrimoxazole"
                 }
              },
+             "position": 23,
              "type": "integer",
              "length": [
                 1,
@@ -1109,6 +1132,7 @@
                    "en": "Losses\\nEye ointment"
                 }
              },
+             "position": 24,
              "type": "integer",
              "length": [
                 1,
@@ -1121,6 +1145,7 @@
                    "en": "Quantity received\\nLA6x1"
                 }
              },
+             "position": 25,
              "type": "integer",
              "length": [
                 1,
@@ -1133,6 +1158,7 @@
                    "en": "Quantity received\\nLA6x2"
                 }
              },
+             "position": 26,
              "type": "integer",
              "length": [
                 1,
@@ -1145,6 +1171,7 @@
                    "en": "Quantity received\\nParacetamol"
                 }
              },
+             "position": 27,
              "type": "integer",
              "length": [
                 1,
@@ -1157,6 +1184,7 @@
                    "en": "Quantity received\\nORS"
                 }
              },
+             "position": 28,
              "type": "integer",
              "length": [
                 1,
@@ -1169,6 +1197,7 @@
                    "en": "Quantity received\\nZinc"
                 }
              },
+             "position": 29,
              "type": "integer",
              "length": [
                 1,
@@ -1181,6 +1210,7 @@
                    "en": "Quantity received\\nCotrimoxazole"
                 }
              },
+             "position": 30,
              "type": "integer",
              "length": [
                 1,
@@ -1193,6 +1223,7 @@
                    "en": "Quantity received\\nEye ointment"
                 }
              },
+             "position": 31,
              "type": "integer",
              "length": [
                 1,
@@ -1205,6 +1236,7 @@
                    "en": "Days out of stock in a month\\nLA6x1"
                 }
              },
+             "position": 32,
              "type": "integer",
              "length": [
                 1,
@@ -1221,6 +1253,7 @@
                    "en": "Days out of stock in a month\\nLA6x2"
                 }
              },
+             "position": 33,
              "type": "integer",
              "length": [
                 1,
@@ -1237,6 +1270,7 @@
                    "en": "Days out of stock in a month\\nParacetamol"
                 }
              },
+             "position": 34,
              "type": "integer",
              "length": [
                 1,
@@ -1253,6 +1287,7 @@
                    "en": "Days out of stock in a month\\nCotrimoxazole"
                 }
              },
+             "position": 35,
              "type": "integer",
              "length": [
                 1,
@@ -1269,6 +1304,7 @@
                    "en": "Days out of stock in a month\\nZinc"
                 }
              },
+             "position": 36,
              "type": "integer",
              "length": [
                 1,
@@ -1285,6 +1321,7 @@
                    "en": "Days out of stock in a month\\nORS"
                 }
              },
+             "position": 37,
              "type": "integer",
              "length": [
                 1,
@@ -1301,6 +1338,7 @@
                    "en": "Days out of stock in a month\\nEye ointment"
                 }
              },
+             "position": 38,
              "type": "integer",
              "length": [
                 1,
@@ -1317,6 +1355,7 @@
                    "en": "Did stock out last 7 days\\nLA6x1"
                 }
              },
+             "position": 39,
              "type": "boolean"
           },
           "so_la6x2": {
@@ -1325,6 +1364,7 @@
                    "en": "Did stock out last 7 days\\nLA6x2"
                 }
              },
+             "position": 40,
              "type": "boolean"
           },
           "so_apap": {
@@ -1333,6 +1373,7 @@
                    "en": "Did stock out last 7 days\\nParacetamol"
                 }
              },
+             "position": 41,
              "type": "boolean"
           },
           "so_cotrx": {
@@ -1341,6 +1382,7 @@
                    "en": "Did stock out last 7 days\\nCotrimoxazole"
                 }
              },
+             "position": 42,
              "type": "boolean"
           },
           "so_zinc": {
@@ -1349,6 +1391,7 @@
                    "en": "Did stock out last 7 days\\nZinc"
                 }
              },
+             "position": 43,
              "type": "boolean"
           },
           "so_ors": {
@@ -1357,6 +1400,7 @@
                    "en": "Did stock out last 7 days\\nORS"
                 }
              },
+             "position": 44,
              "type": "boolean"
           },
           "so_eye": {
@@ -1365,6 +1409,7 @@
                    "en": "Did stock out last 7 days\\nEye ointment"
                 }
              },
+             "position": 45,
              "type": "boolean"
           }
        }
