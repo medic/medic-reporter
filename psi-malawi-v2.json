@@ -60,6 +60,9 @@
              },
              "position": 3,
              "type": "select",
+             "validate": {
+                 "is_numeric_month": true
+             },
              "list": [
                 [
                    1,
@@ -790,6 +793,9 @@
                 }
              },
              "position": 3,
+             "validate": {
+                 "is_numeric_month": true
+             },
              "type": "select",
              "list": [
                 [
