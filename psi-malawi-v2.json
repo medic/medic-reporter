@@ -2,7 +2,7 @@
     {
        "meta": {
           "code": "PVCA",
-          "label": "VC Statistics #1"
+          "label": "VC Stats #1"
        },
        "fields": {
           "vc": {
@@ -142,7 +142,7 @@
           "approver": {
              "labels": {
                 "short": {
-                   "en": "Name of Approving Officer"
+                   "en": "Approving Officer"
                 }
              },
              "position": 4,
@@ -168,7 +168,7 @@
           "local": {
              "labels": {
                 "short": {
-                   "en": "Does HSA stay in the catchment area?"
+                   "en": "HSA in catchment area?"
                 }
              },
              "position": 6,
@@ -348,7 +348,7 @@
     {
        "meta": {
           "code": "PVCB",
-          "label": "VC Statistics #2"
+          "label": "VC Stats #2"
        },
        "fields": {
           "vc": {
