@@ -1,7 +1,8 @@
 [
     {
        "meta": {
-          "code": "PSSV"
+          "code": "PVCA",
+          "label": "VC Stats #1"
        },
        "fields": {
           "vc": {
@@ -67,85 +68,73 @@
                 [
                    1,
                    {
-                      "en": "January",
-                      "fr": "Janvier"
+                      "en": "January"
                    }
                 ],
                 [
                    2,
                    {
-                      "en": "February",
-                      "fr": "Février"
+                      "en": "February"
                    }
                 ],
                 [
                    3,
                    {
-                      "en": "March",
-                      "fr": "Mars"
+                      "en": "March"
                    }
                 ],
                 [
                    4,
                    {
-                      "en": "April",
-                      "fr": "Avril"
+                      "en": "April"
                    }
                 ],
                 [
                    5,
                    {
-                      "en": "May",
-                      "fr": "Mai"
+                      "en": "May"
                    }
                 ],
                 [
                    6,
                    {
-                      "en": "June",
-                      "fr": "Juin"
+                      "en": "June"
                    }
                 ],
                 [
                    7,
                    {
-                      "en": "July",
-                      "fr": "Juillet"
+                      "en": "July"
                    }
                 ],
                 [
                    8,
                    {
-                      "en": "August",
-                      "fr": "Aout"
+                      "en": "August"
                    }
                 ],
                 [
                    9,
                    {
-                      "en": "September",
-                      "fr": "Septembre"
+                      "en": "September"
                    }
                 ],
                 [
                    10,
                    {
-                      "en": "October",
-                      "fr": "Octobre"
+                      "en": "October"
                    }
                 ],
                 [
                    11,
                    {
-                      "en": "November",
-                      "fr": "Novembre"
+                      "en": "November"
                    }
                 ],
                 [
                    12,
                    {
-                      "en": "December",
-                      "fr": "Décembre"
+                      "en": "December"
                    }
                 ]
              ]
@@ -352,6 +341,148 @@
              "length": [
                 1,
                 3
+             ]
+          }
+       }
+    },
+    {
+       "meta": {
+          "code": "PVCB",
+          "label": "VC Stats #2"
+       },
+       "fields": {
+          "vc": {
+             "labels": {
+                "short": {
+                   "en": "VC Name"
+                }
+             },
+             "position": 1,
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "year": {
+             "labels": {
+                "short": {
+                   "en": "Reporting Year"
+                }
+             },
+             "position": 2,
+             "type": "select",
+             "list": [
+                [
+                   2012,
+                   {
+                      "en": "2012"
+                   }
+                ],
+                [
+                   2013,
+                   {
+                      "en": "2013"
+                   }
+                ],
+                [
+                   2014,
+                   {
+                      "en": "2014"
+                   }
+                ],
+                [
+                   2015,
+                   {
+                      "en": "2015"
+                   }
+                ]
+             ]
+          },
+          "month": {
+             "labels": {
+                "short": {
+                   "en": "Reporting month"
+                }
+             },
+             "position": 3,
+             "type": "select",
+             "validate": {
+                 "is_numeric_month": true
+             },
+             "list": [
+                [
+                   1,
+                   {
+                      "en": "January"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "February"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "March"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "April"
+                   }
+                ],
+                [
+                   5,
+                   {
+                      "en": "May"
+                   }
+                ],
+                [
+                   6,
+                   {
+                      "en": "June"
+                   }
+                ],
+                [
+                   7,
+                   {
+                      "en": "July"
+                   }
+                ],
+                [
+                   8,
+                   {
+                      "en": "August"
+                   }
+                ],
+                [
+                   9,
+                   {
+                      "en": "September"
+                   }
+                ],
+                [
+                   10,
+                   {
+                      "en": "October"
+                   }
+                ],
+                [
+                   11,
+                   {
+                      "en": "November"
+                   }
+                ],
+                [
+                   12,
+                   {
+                      "en": "December"
+                   }
+                ]
              ]
           },
           "ref_fever_2_4": {
@@ -735,7 +866,8 @@
     },
     {
        "meta": {
-          "code": "PSST"
+          "code": "PSTA",
+          "label": "VC Stocks #1"
        },
        "fields": {
           "vc": {
@@ -1143,6 +1275,148 @@
              "length": [
                 1,
                 3
+             ]
+          }
+       }
+    },
+    {
+       "meta": {
+          "code": "PSTB",
+          "label": "VC Stocks #2"
+       },
+       "fields": {
+          "vc": {
+             "labels": {
+                "short": {
+                   "en": "VC Name"
+                }
+             },
+             "position": 1,
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "year": {
+             "labels": {
+                "short": {
+                   "en": "Reporting Year"
+                }
+             },
+             "position": 2,
+             "type": "select",
+             "list": [
+                [
+                   2012,
+                   {
+                      "en": "2012"
+                   }
+                ],
+                [
+                   2013,
+                   {
+                      "en": "2013"
+                   }
+                ],
+                [
+                   2014,
+                   {
+                      "en": "2014"
+                   }
+                ],
+                [
+                   2015,
+                   {
+                      "en": "2015"
+                   }
+                ]
+             ]
+          },
+          "month": {
+             "labels": {
+                "short": {
+                   "en": "Reporting month"
+                }
+             },
+             "position": 3,
+             "validate": {
+                 "is_numeric_month": true
+             },
+             "type": "select",
+             "list": [
+                [
+                   1,
+                   {
+                      "en": "January"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "February"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "March"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "April"
+                   }
+                ],
+                [
+                   5,
+                   {
+                      "en": "May"
+                   }
+                ],
+                [
+                   6,
+                   {
+                      "en": "June"
+                   }
+                ],
+                [
+                   7,
+                   {
+                      "en": "July"
+                   }
+                ],
+                [
+                   8,
+                   {
+                      "en": "August"
+                   }
+                ],
+                [
+                   9,
+                   {
+                      "en": "September"
+                   }
+                ],
+                [
+                   10,
+                   {
+                      "en": "October"
+                   }
+                ],
+                [
+                   11,
+                   {
+                      "en": "November"
+                   }
+                ],
+                [
+                   12,
+                   {
+                      "en": "December"
+                   }
+                ]
              ]
           },
           "recv_la6x1": {
