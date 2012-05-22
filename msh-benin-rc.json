@@ -1,7 +1,10 @@
 [
    {
       "meta": {
-         "code": "MSBR"
+         "code": "MSBR",
+         "label": {
+            "fr": "Alerte référence"
+         }
       },
       "fields": {
          "ref_year": {
@@ -319,7 +322,10 @@
    },
    {
       "meta": {
-         "code": "MSBM"
+         "code": "MSBM",
+         "label": {
+            "fr": "Alerte besoin médicaments"
+         }
       },
       "fields": {
          "med_year": {
@@ -646,7 +652,10 @@
    },
    {
       "meta": {
-         "code": "MSBP"
+         "code": "MSBP",
+         "label": {
+            "fr": "Synthese des cas pris en charge"
+         }
       },
       "fields": {
          "case_year": {
@@ -1075,7 +1084,10 @@
    },
    {
       "meta": {
-         "code": "MSBG"
+         "code": "MSBG",
+         "label": {
+            "fr": "Rapport mensuel de gestion des médicaments"
+         }
       },
       "fields": {
          "case_year": {
