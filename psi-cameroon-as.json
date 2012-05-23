@@ -1,7 +1,10 @@
 [
    {
       "meta": {
-         "code": "PSCQ"
+         "code": "PSCQ",
+         "label": {
+            "fr": "Supervision trimestriel"
+         }
       },
       "fields": {
          "supervision_year": {
@@ -808,7 +811,10 @@
    },
    {
       "meta": {
-         "code": "PSCA"
+         "code": "PSCA",
+         "label": {
+            "fr": "Synthèse mensuelle des aires de sant"
+         }
       },
       "fields": {
          "synthese_year": {

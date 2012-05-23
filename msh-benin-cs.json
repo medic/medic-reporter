@@ -1,7 +1,10 @@
 [
    {
       "meta": {
-         "code": "MSBB"
+         "code": "MSBB",
+         "label": {
+            "fr": "Alerte référence"
+         }
       },
       "fields": {
          "ref_year": {
@@ -337,7 +340,10 @@
    },
    {
       "meta": {
-         "code": "MSBC"
+         "code": "MSBC",
+         "label": {
+            "fr": "Contre-référence"
+         }
       },
       "fields": {
          "cref_year": {

@@ -1,7 +1,10 @@
 [
    {
       "meta": {
-         "code": "PSCR"
+         "code": "PSCR",
+         "label": {
+            "fr": "Synthèse mensuelle des relais communautaires"
+         }
       },
       "fields": {
          "synthese_year": {
