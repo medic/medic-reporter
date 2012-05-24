@@ -25,7 +25,7 @@
                 }
              },
              "position": 2,
-             "type": "select",
+             "type": "integer",
              "list": [
                 [
                    2012,
@@ -60,7 +60,7 @@
                 }
              },
              "position": 3,
-             "type": "select",
+             "type": "integer",
              "validate": {
                  "is_numeric_month": true
              },
@@ -371,7 +371,7 @@
                 }
              },
              "position": 2,
-             "type": "select",
+             "type": "integer",
              "list": [
                 [
                    2012,
@@ -406,7 +406,7 @@
                 }
              },
              "position": 3,
-             "type": "select",
+             "type": "integer",
              "validate": {
                  "is_numeric_month": true
              },
@@ -890,7 +890,7 @@
                 }
              },
              "position": 2,
-             "type": "select",
+             "type": "integer",
              "list": [
                 [
                    2012,
@@ -928,7 +928,7 @@
              "validate": {
                  "is_numeric_month": true
              },
-             "type": "select",
+             "type": "integer",
              "list": [
                 [
                    1,
@@ -1305,7 +1305,7 @@
                 }
              },
              "position": 2,
-             "type": "select",
+             "type": "integer",
              "list": [
                 [
                    2012,
@@ -1343,7 +1343,7 @@
              "validate": {
                  "is_numeric_month": true
              },
-             "type": "select",
+             "type": "integer",
              "list": [
                 [
                    1,
