@@ -13,7 +13,7 @@
                35
             ],
             "position": 0,
-            "type": "",
+            "type": "string",
             "labels": {
                "short": {
                   "en": "Patient Name"
@@ -561,13 +561,13 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "en": ""
+                  "en": "Birth site"
                },
                "tiny": {
                   "en": "SITE"
                },
                "description": {
-                  "en": ""
+                  "en": "Site of birth"
                }
             },
             "list": [
