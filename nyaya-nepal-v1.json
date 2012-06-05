@@ -1,0 +1,307 @@
+[{
+		"meta" : {
+			"code" : "NYAA",
+			"label" : "Community Health Surveillance Data"
+		},
+		"fields" : {
+			"daysoverdue" : {
+				"labels" : {
+					"short" : {
+						"en" : "Days since report end date"
+					}
+				},
+				"position" : 1,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"location" : {
+				"labels" : {
+					"short" : {
+						"en" : "Location (ward)"
+					}
+				},
+				"position" : 2,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"age" : {
+				"labels" : {
+					"short" : {
+						"en" : "Age (years)"
+					}
+				},
+				"position" : 3,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"condition" : {
+				"labels" : {
+					"short" : {
+						"en" : "Condition"
+					}
+				},
+				"position" : 4,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"gender" : {
+				"labels" : {
+					"short" : {
+						"en" : "Gender"
+					}
+				},
+				"position" : 5,
+				"type" : "integer",
+				"list" : [[1, {
+							"en" : "Female"
+						}
+					], [2, {
+							"en" : "Male"
+						}
+					]]
+			},
+			"newpatient" : {
+				"labels" : {
+					"short" : {
+						"en" : "New?"
+					}
+				},
+				"position" : 6,
+				"type" : "integer",
+				"list" : [[1, {
+							"en" : "Yes"
+						}
+					], [2, {
+							"en" : "No"
+						}
+					]]
+			},
+			"referred" : {
+				"labels" : {
+					"short" : {
+						"en" : "Referred to"
+					}
+				},
+				"position" : 7,
+				"type" : "integer",
+				"list" : [[1, {
+							"en" : "BH"
+						}
+					], [2, {
+							"en" : "Health Post"
+						}
+					], [3, {
+							"en" : "None"
+						}
+					]]
+			}
+		}
+	}, {
+		"meta" : {
+			"code" : "NYAB",
+			"label" : "Health Post Quality and Utilization Data"
+		},
+		"fields" : {
+			"daysoverdue" : {
+				"labels" : {
+					"short" : {
+						"en" : "Days since report end date"
+					}
+				},
+				"position" : 1,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q1" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of non-expired liquid bottles amoxicillin"
+					}
+				},
+				"position" : 2,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q2" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of non-expired tetanus vaccines"
+					}
+				},
+				"position" : 3,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q3" : {
+				"labels" : {
+					"short" : {
+						"en" : "Presence of non-expired chlorhexidine wash in delivery suite"
+					}
+				},
+				"position" : 4,
+				"type" : "integer",
+				"list" : [[1, {
+							"en" : "Yes"
+						}
+					], [2, {
+							"en" : "No"
+						}
+					]]
+			},
+			"q4" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of safe delivery kits available"
+					}
+				},
+				"position" : 5,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q5" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of non-expired misoprostol pills"
+					}
+				},
+				"position" : 6,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q6" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of non-expired ceftriaxone vials"
+					}
+				},
+				"position" : 7,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q7" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of plumpynut bars"
+					}
+				},
+				"position" : 8,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q8" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of jeevan jaal (ORS) sachets"
+					}
+				},
+				"position" : 9,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q9" : {
+				"labels" : {
+					"short" : {
+						"en" : "Is the highest level staff present this week?"
+					}
+				},
+				"position" : 10,
+				"type" : "integer",
+				"list" : [[1, {
+							"en" : "Yes"
+						}
+					], [2, {
+							"en" : "No"
+						}
+					]]
+			},
+			"q10" : {
+				"labels" : {
+					"short" : {
+						"en" : "Are sharps boxes available and in use for needles?"
+					}
+				},
+				"position" : 11,
+				"type" : "integer",
+				"list" : [[1, {
+							"en" : "Yes"
+						}
+					], [2, {
+							"en" : "No"
+						}
+					]]
+			},
+			"q11" : {
+				"labels" : {
+					"short" : {
+						"en" : "Is a water supply available?"
+					}
+				},
+				"position" : 12,
+				"type" : "integer",
+				"list" : [[1, {
+							"en" : "Yes"
+						}
+					], [2, {
+							"en" : "No"
+						}
+					]]
+			},
+			"q12" : {
+				"labels" : {
+					"short" : {
+						"en" : "Is electricity supply available and working?"
+					}
+				},
+				"position" : 13,
+				"type" : "integer",
+				"list" : [[1, {
+							"en" : "Yes"
+						}
+					], [2, {
+							"en" : "No"
+						}
+					]]
+			},
+			"q13" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of deliveries conducted"
+					}
+				},
+				"position" : 14,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q14" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of new antenatal visits"
+					}
+				},
+				"position" : 15,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q15" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of total outpatient visits"
+					}
+				},
+				"position" : 16,
+				"type" : "integer",
+				"length" : [1, 2]
+			},
+			"q16" : {
+				"labels" : {
+					"short" : {
+						"en" : "Number of pediatric outpatient visits"
+					}
+				},
+				"position" : 17,
+				"type" : "integer",
+				"length" : [1, 2]
+			}
+		}
+	}
+]
