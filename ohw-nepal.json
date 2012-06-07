@@ -1,0 +1,685 @@
+[
+   {
+      "meta": {
+         "label": {
+            "en": "New Pregnancy"
+         },
+         "code": "ORPT"
+      },
+      "fields": {
+         "patient_name": {
+            "length": [
+               5,
+               35
+            ],
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient Name"
+               },
+               "tiny": {
+                  "en": "NAME"
+               },
+               "description": {
+                  "en": "Name of new pregnant patient"
+               }
+            }
+         },
+         "last_menstrual_period": {
+            "position": 1,
+            "type": "date",
+            "labels": {
+               "short": {
+                  "en": "Date of last period"
+               },
+               "tiny": {
+                  "en": "LMP"
+               },
+               "description": {
+                  "en": "Date of most-recent menstrual period"
+               }
+            },
+            "validate": {
+               "is_valid_date": true
+            }
+         }
+      }
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "Danger Signs"
+         },
+         "code": "ODGR"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient's unique identifier"
+               }
+            },
+            "validate": {
+               "is_valid_patient": true
+            }
+         },
+         "page_number": {
+            "length": [
+               1,
+               3
+            ],
+            "range": [
+               1,
+               999
+            ],
+            "position": 1,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Page number"
+               },
+               "tiny": {
+                  "en": "PAGE"
+               },
+               "description": {
+                  "en": "Page number containing danger sign"
+               }
+            }
+         },
+         "sign_number": {
+            "length": [
+               1,
+               2
+            ],
+            "range": [
+               1,
+               99
+            ],
+            "position": 2,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Item number"
+               },
+               "tiny": {
+                  "en": "NUM"
+               },
+               "description": {
+                  "en": "Danger sign number, from current page"
+               }
+            }
+         },
+         "outcome": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               2
+            ],
+            "position": 3,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Outcome"
+               },
+               "tiny": {
+                  "en": "OUT"
+               },
+               "description": {
+                  "en": "Outcome of danger sign"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Referred"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Resolved"
+                  }
+               ]
+            ]
+         }
+      }
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "Visit Report"
+         },
+         "code": "OANC"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient's unique identifier"
+               }
+            },
+            "validate": {
+               "is_valid_patient": true
+            }
+         },
+         "visit_date": {
+            "position": 1,
+            "type": "date",
+            "labels": {
+               "short": {
+                  "en": "Visit date"
+               },
+               "tiny": {
+                  "en": "DATE"
+               },
+               "description": {
+                  "en": "Date of this antenatal/postnatal visit"
+               }
+            },
+            "validate": {
+               "is_valid_date": true
+            }
+         },
+         "visit_type": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 2,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Visit type"
+               },
+               "tiny": {
+                  "en": "TYPE"
+               },
+               "description": {
+                  "en": "Type of this antenatal/postnatal care visit"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Antenatal"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Postnatal"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Danger sign"
+                  }
+               ]
+            ]
+         },
+         "page_number": {
+            "length": [
+               1,
+               3
+            ],
+            "range": [
+               1,
+               999
+            ],
+            "position": 3,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Page number"
+               },
+               "tiny": {
+                  "en": "PAGE"
+               },
+               "description": {
+                  "en": "Page number containing danger sign, if applicable"
+               }
+            },
+            "condition": {
+               "is_danger_sign_visit": true
+            }
+         },
+         "sign_number": {
+            "length": [
+               1,
+               2
+            ],
+            "range": [
+               1,
+               99
+            ],
+            "position": 4,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Item number"
+               },
+               "tiny": {
+                  "en": "NUM"
+               },
+               "description": {
+                  "en": "Danger sign number from current page, if applicable"
+               }
+            },
+            "condition": {
+               "is_danger_sign_visit": true
+            }
+         },
+         "visit_place": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               4
+            ],
+            "position": 5,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Place of visit"
+               },
+               "tiny": {
+                  "en": "PL"
+               },
+               "description": {
+                  "en": "Place/location where this visit is being performed"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Patient's Home"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "FCHV's Home"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Health Facility"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "en": "Other"
+                  }
+               ]
+            ]
+         },
+         "outcome": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               2
+            ],
+            "position": 6,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Outcome"
+               },
+               "tiny": {
+                  "en": "OUT"
+               },
+               "description": {
+                  "en": "Outcome of this visit"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Referred"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Resolved"
+                  }
+               ]
+            ]
+         }
+      }
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "Birth Report"
+         },
+         "code": "OBIR"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient's unique identifier"
+               }
+            },
+            "validate": {
+               "is_valid_patient": true
+            }
+         },
+         "visit_date": {
+            "position": 1,
+            "type": "date",
+            "labels": {
+               "short": {
+                  "en": "Delivery date"
+               },
+               "tiny": {
+                  "en": "DATE"
+               },
+               "description": {
+                  "en": "Date of patient's delivery"
+               }
+            },
+            "validate": {
+               "is_valid_date": true
+            }
+         },
+         "outcome_mother": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               2
+            ],
+            "position": 2,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Mother's outcome"
+               },
+               "tiny": {
+                  "en": "MOM"
+               },
+               "description": {
+                  "en": "Post-delivery outcome for mother"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Alive"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Deceased"
+                  }
+               ]
+            ]
+         },
+         "outcome_child": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               2
+            ],
+            "position": 3,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Newborn's outcome"
+               },
+               "tiny": {
+                  "en": "KID"
+               },
+               "description": {
+                  "en": "Post-delivery outcome for newborn child"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Alive"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Deceased"
+                  }
+               ]
+            ]
+         },
+         "birth_weight": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 4,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Birth weight"
+               },
+               "tiny": {
+                  "en": "WT"
+               },
+               "description": {
+                  "en": "Weight of newborn child at birth"
+               }
+            },
+            "condition": {
+               "is_child_alive": true
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Low - Yellow"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Very Low - Red"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Normal"
+                  }
+               ]
+            ]
+         },
+         "birth_site": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               5
+            ],
+            "position": 5,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Birth site"
+               },
+               "tiny": {
+                  "en": "SITE"
+               },
+               "description": {
+                  "en": "Site of birth"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "At family home"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "At FCHV's home"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "En route to facility"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "en": "At health facility"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "en": "Other place"
+                  }
+               ]
+            ]
+         },
+         "persons_present": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               6
+            ],
+            "position": 6,
+            "multiple": true,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Person(s) present"
+               },
+               "tiny": {
+                  "en": "PPL"
+               },
+               "description": {
+                  "en": "Person or people present during delivery"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "ANM"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "SBA"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "FCHV"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "en": "Relatives/friends"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "en": "Nobody"
+                  }
+               ],
+               [
+                  6,
+                  {
+                     "en": "Other person"
+                  }
+               ]
+            ]
+         },
+         "misoprostol_administered": {
+            "position": 7,
+            "type": "boolean",
+            "labels": {
+               "short": {
+                  "en": "Misoprostol?"
+               },
+               "tiny": {
+                  "en": "MIS"
+               },
+               "description": {
+                  "en": "Was misoprostol administered?"
+               }
+            }
+         }
+      }
+   }
+]

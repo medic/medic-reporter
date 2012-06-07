@@ -1,0 +1,241 @@
+[
+   {
+      "meta": {
+         "code": "CNPW",
+         "label": {
+            "en": "CDC Weekly Report"
+         }
+      },
+      "fields": {
+         "week_number": {
+            "labels": {
+               "tiny": {
+                  "en": "WKN"
+               },
+               "description": {
+                  "en": "Week number for start of report"
+               },
+               "short": {
+                  "en": "Week number"
+               }
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "range": [
+               1,
+               52
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "weeks_duration": {
+            "labels": {
+               "tiny": {
+                  "en": "WKS"
+               },
+               "description": {
+                  "en": "Number of weeks, including start week, covered by this report"
+               },
+               "short": {
+                  "en": "Number of weeks"
+               }
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               9
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "afp_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "AFP"
+               },
+               "description": {
+                  "en": "Number of acute flaccid paralysis (AFP) cases"
+               },
+               "short": {
+                  "en": "Number of AFP cases"
+               }
+            },
+            "position": 2,
+            "type": "integer",
+            "required": false,
+            "length": [
+               1,
+               8
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "nnt_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "NNT"
+               },
+               "description": {
+                  "en": "Number of neonatal tetanus cases encountered"
+               },
+               "short": {
+                  "en": "Number of NNT cases"
+               }
+            },
+            "position": 3,
+            "type": "integer",
+            "required": false,
+            "length": [
+               1,
+               8
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "msl_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "MSL"
+               },
+               "description": {
+                  "en": "Number of measles cases encountered"
+               },
+               "short": {
+                  "en": "Number of MSL cases"
+               }
+            },
+            "position": 4,
+            "type": "integer",
+            "required": false,
+            "length": [
+               1,
+               8
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "aes_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "AES"
+               },
+               "description": {
+                  "en": "Number of acute encephalitis syndrome (AES) cases encountered"
+               },
+               "short": {
+                  "en": "Number of AES cases"
+               }
+            },
+            "position": 5,
+            "type": "integer",
+            "required": false,
+            "length": [
+               1,
+               8
+            ],
+            "validate": {},
+            "flags": {}
+         }
+      }
+   },
+   {
+      "meta": {
+         "code": "CNPA",
+         "label": {
+            "en": "CDC Outbreak Report"
+         }
+      },
+      "fields": {
+         "vdc": {
+            "labels": {
+               "tiny": {
+                  "en": "VDC"
+               },
+               "description": {
+                  "en": "Village development committee (VDC) name"
+               },
+               "short": {
+                  "en": "Village/VDC name"
+               }
+            },
+            "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               30
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "ward": {
+            "labels": {
+               "tiny": {
+                  "en": "WRD"
+               },
+               "description": {
+                  "en": "Ward identification number"
+               },
+               "short": {
+                  "en": "Ward number"
+               }
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "range": [
+               1,
+               999
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "afp_present": {
+            "labels": {
+               "tiny": {
+                  "en": "AFP"
+               },
+               "description": {
+                  "en": "Acute flaccid paralysis (AFP) case present?"
+               },
+               "short": {
+                  "en": "AFP case?"
+               }
+            },
+            "position": 2,
+            "type": "boolean",
+            "validate": {},
+            "flags": {}
+         },
+         "msl_present": {
+            "labels": {
+               "tiny": {
+                  "en": "MSL"
+               },
+               "description": {
+                  "en": "Measles (MSL) case present?"
+               },
+               "short": {
+                  "en": "Measles case?"
+               }
+            },
+            "position": 3,
+            "type": "boolean",
+            "validate": {},
+            "flags": {}
+         }
+      }
+   }
+]
+

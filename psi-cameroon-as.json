@@ -1,0 +1,1548 @@
+[
+   {
+      "meta": {
+         "code": "PSCQ",
+         "label": {
+            "fr": "Supervision trimestriel"
+         }
+      },
+      "fields": {
+         "supervision_year": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Année",
+                  "en": "Year"
+               }
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ],
+            "validate": {
+               "is_numeric_year": true
+            },
+            "flags": {}
+         },
+         "supervision_trimester": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Trimestre",
+                  "en": "Quarter"
+               }
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "validate": {
+               "is_numeric_quarter": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Janvier à Mars"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Avril à Juin"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Juillet à Septembre"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "fr": "Octobre à Décembre"
+                  }
+               ]
+            ]
+         },
+         "supervision_district": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "District de santé",
+                  "en": "Health District"
+               }
+            },
+            "position": 2,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "validate": {
+               "is_numeric_district": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Abong Mbang"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Awaé"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Bafang"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "fr": "Bafia"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "fr": "Bangangté"
+                  }
+               ],
+               [
+                  6,
+                  {
+                     "fr": "Batouri"
+                  }
+               ],
+               [
+                  7,
+                  {
+                     "fr": "Doumé"
+                  }
+               ],
+               [
+                  8,
+                  {
+                     "fr": "Ebebda"
+                  }
+               ],
+               [
+                  9,
+                  {
+                     "fr": "Esse"
+                  }
+               ],
+               [
+                  10,
+                  {
+                     "fr": "Mbalmayo"
+                  }
+               ],
+               [
+                  11,
+                  {
+                     "fr": "Mbankomo"
+                  }
+               ],
+               [
+                  12,
+                  {
+                     "fr": "Mfou"
+                  }
+               ],
+               [
+                  13,
+                  {
+                     "fr": "Monatélé"
+                  }
+               ],
+               [
+                  14,
+                  {
+                     "fr": "Ndikinimeki"
+                  }
+               ],
+               [
+                  15,
+                  {
+                     "fr": "Ngogmapoubi"
+                  }
+               ],
+               [
+                  16,
+                  {
+                     "fr": "Ngoumou"
+                  }
+               ],
+               [
+                  17,
+                  {
+                     "fr": "Nguelemendouka"
+                  }
+               ],
+               [
+                  18,
+                  {
+                     "fr": "Okola"
+                  }
+               ],
+               [
+                  19,
+                  {
+                     "fr": "Pouma"
+                  }
+               ],
+               [
+                  20,
+                  {
+                     "fr": "Sa'a"
+                  }
+               ]
+            ]
+         },
+         "supervision_area": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Aire de santé"
+               }
+            },
+            "position": 3,
+            "type": "string",
+            "length": [
+               1,
+               12
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_a1r": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT 1 reçus"
+               }
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_a1disp": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT 1 disponibles"
+               }
+            },
+            "position": 5,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "generic_stockout1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Rupture de stock"
+               }
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "validate": {
+               "is_boolean_list": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Aucune rupture"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "ACT1 rupture 3 jours ou plus"
+                  }
+               ]
+            ]
+         },
+         "supervision_a2r": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT 2 reçus"
+               }
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_a2disp": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT 2 disponibles"
+               }
+            },
+            "position": 8,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "generic_stockout2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Rupture de stock"
+               }
+            },
+            "position": 9,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "validate": {
+               "is_boolean_list": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Aucune rupture"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "ACT2 rupture 3 jours ou plus"
+                  }
+               ]
+            ]
+         },
+         "supervision_a3r": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "SRO/Zinc reçus"
+               }
+            },
+            "position": 10,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_a3disp": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "SRO/Zinc disponibles"
+               }
+            },
+            "position": 11,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "generic_stockout3": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Rupture de stock"
+               }
+            },
+            "position": 12,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "validate": {
+               "is_boolean_list": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Aucune rupture"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "SRO/ZINC rupture 3 jours ou plus"
+                  }
+               ]
+            ]
+         },
+         "supervision_r1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "RC formés"
+               }
+            },
+            "position": 13,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_r2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "RC fonctionnels"
+               }
+            },
+            "position": 14,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_r3": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "RC supervisés"
+               }
+            },
+            "position": 15,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_r4": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Algorithme, # l'utilisant correctement"
+               }
+            },
+            "position": 16,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_r5": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Signes de danger, # capable d'en citer 5 ou plus"
+               }
+            },
+            "position": 17,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_r6": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT1, # ayant rupture de stock plus de 3 jours"
+               }
+            },
+            "position": 18,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_r6b": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT2, # ayant rupture de stock plus de 3 jours"
+               }
+            },
+            "position": 19,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_r7": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "SRO/Zinc, # ayant rupture de stock plus de 3 jours"
+               }
+            },
+            "position": 20,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_p1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "# interrogées"
+               }
+            },
+            "position": 21,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_p2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "# qui rapportent les services rendus par le RC au sein de la communauté"
+               }
+            },
+            "position": 22,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_p3": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "# administré un traitement à leur enfant chaque fois qu'il est malade"
+               }
+            },
+            "position": 23,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_p4": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "# rencontré le RC lorsqu'ils étaient dans le besoin"
+               }
+            },
+            "position": 24,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_v1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Malades vus, toutes causes confondues"
+               }
+            },
+            "position": 25,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_v2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Palu vus"
+               }
+            },
+            "position": 26,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_v3": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Diarrhées vues"
+               }
+            },
+            "position": 27,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_t1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Palu traités total"
+               }
+            },
+            "position": 28,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_t1a": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Palu traités < 24h"
+               }
+            },
+            "position": 29,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_t1b": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Palu traités 24-48h"
+               }
+            },
+            "position": 30,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_t2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Diarrhées traitées"
+               }
+            },
+            "position": 31,
+            "type": "integer",
+            "length": [
+               1,
+               4
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_ref1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Cas référés par RC au AS"
+               }
+            },
+            "position": 32,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_ref2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Cas référés par AS au DS"
+               }
+            },
+            "position": 33,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "supervision_d1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Décès < 5 ans"
+               }
+            },
+            "position": 34,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "validate": {},
+            "flags": {}
+         }
+      }
+   },
+   {
+      "meta": {
+         "code": "PSCA",
+         "label": {
+            "fr": "Synthèse mensuelle des aires de sant"
+         }
+      },
+      "fields": {
+         "synthese_year": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Année"
+               }
+            },
+            "position": 0,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ],
+            "validate": {
+               "is_numeric_year": true
+            },
+            "flags": {}
+         },
+         "synthese_month": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Mois"
+               }
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "validate": {
+               "is_numeric_month": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Janvier"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Février"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Mars"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "fr": "Avril"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "fr": "Mai"
+                  }
+               ],
+               [
+                  6,
+                  {
+                     "fr": "Juin"
+                  }
+               ],
+               [
+                  7,
+                  {
+                     "fr": "Juillet"
+                  }
+               ],
+               [
+                  8,
+                  {
+                     "fr": "Aout"
+                  }
+               ],
+               [
+                  9,
+                  {
+                     "fr": "Septembre"
+                  }
+               ],
+               [
+                  10,
+                  {
+                     "fr": "Octobre"
+                  }
+               ],
+               [
+                  11,
+                  {
+                     "fr": "Novembre"
+                  }
+               ],
+               [
+                  12,
+                  {
+                     "fr": "Décembre"
+                  }
+               ]
+            ]
+         },
+         "synthese_district": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "District de santé"
+               }
+            },
+            "position": 2,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "validate": {
+               "is_numeric_district": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Abong Mbang"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Awaé"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Bafang"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "fr": "Bafia"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "fr": "Bangangté"
+                  }
+               ],
+               [
+                  6,
+                  {
+                     "fr": "Batouri"
+                  }
+               ],
+               [
+                  7,
+                  {
+                     "fr": "Doumé"
+                  }
+               ],
+               [
+                  8,
+                  {
+                     "fr": "Ebebda"
+                  }
+               ],
+               [
+                  9,
+                  {
+                     "fr": "Esse"
+                  }
+               ],
+               [
+                  10,
+                  {
+                     "fr": "Mbalmayo"
+                  }
+               ],
+               [
+                  11,
+                  {
+                     "fr": "Mbankomo"
+                  }
+               ],
+               [
+                  12,
+                  {
+                     "fr": "Mfou"
+                  }
+               ],
+               [
+                  13,
+                  {
+                     "fr": "Monatélé"
+                  }
+               ],
+               [
+                  14,
+                  {
+                     "fr": "Ndikinimeki"
+                  }
+               ],
+               [
+                  15,
+                  {
+                     "fr": "Ngogmapoubi"
+                  }
+               ],
+               [
+                  16,
+                  {
+                     "fr": "Ngoumou"
+                  }
+               ],
+               [
+                  17,
+                  {
+                     "fr": "Nguelemendouka"
+                  }
+               ],
+               [
+                  18,
+                  {
+                     "fr": "Okola"
+                  }
+               ],
+               [
+                  19,
+                  {
+                     "fr": "Pouma"
+                  }
+               ],
+               [
+                  20,
+                  {
+                     "fr": "Sa'a"
+                  }
+               ]
+            ]
+         },
+         "synthese_area": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Aire de santé"
+               }
+            },
+            "position": 3,
+            "type": "string",
+            "length": [
+               1,
+               12
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_village_as": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "# de villages"
+               }
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_name_as": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Nom du chef AS"
+               }
+            },
+            "position": 5,
+            "type": "string",
+            "length": [
+               0,
+               20
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_v1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Malades vus, toutes causes confondues"
+               }
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_v2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Palu vus"
+               }
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_v3": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Diarrhées vues"
+               }
+            },
+            "position": 8,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_v5": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Autres causes vues"
+               }
+            },
+            "position": 9,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_t1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Palu traités total"
+               }
+            },
+            "position": 10,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_t1a": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Palu traités < 24h"
+               }
+            },
+            "position": 11,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_t1b": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Palu traités 24-48h"
+               }
+            },
+            "position": 12,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_t2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Diarrhées traitées"
+               }
+            },
+            "position": 13,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_r1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Palu référés au CSI"
+               }
+            },
+            "position": 14,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_r2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Diarrhées référées au CSI"
+               }
+            },
+            "position": 15,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_r4": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Autres causes référées au CSI"
+               }
+            },
+            "position": 16,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_r5": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Cas contre-référés par le CSI"
+               }
+            },
+            "position": 17,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_a1d": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT1 distribués"
+               }
+            },
+            "position": 18,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_a1f": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT1 disponibles fin du mois"
+               }
+            },
+            "position": 19,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "generic_stockout1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Rupture de stock"
+               }
+            },
+            "position": 20,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "validate": {
+               "is_boolean_list": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Aucune rupture"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "ACT1 rupture 3 jours ou plus"
+                  }
+               ]
+            ]
+         },
+         "synthese_a2d": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT2 distribués"
+               }
+            },
+            "position": 21,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_a2f": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "ACT2 disponibles fin du mois"
+               }
+            },
+            "position": 22,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "generic_stockout2": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Rupture de stock"
+               }
+            },
+            "position": 23,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "validate": {
+               "is_boolean_list": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Aucune rupture"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "ACT2 rupture 3 jours ou plus"
+                  }
+               ]
+            ]
+         },
+         "synthese_sd": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "SRO/ZINC distribués"
+               }
+            },
+            "position": 24,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "synthese_sf": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "SRO/ZINC disponibles fin du mois"
+               }
+            },
+            "position": 25,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "generic_stockout3": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Rupture de stock"
+               }
+            },
+            "position": 26,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "validate": {
+               "is_boolean_list": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Aucune rupture"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "SRO/ZINC rupture 3 jours ou plus"
+                  }
+               ]
+            ]
+         },
+         "synthese_d1": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Décès < 5 ans"
+               }
+            },
+            "position": 27,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "validate": {},
+            "flags": {}
+         }
+      }
+   }
+]

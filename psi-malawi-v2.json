@@ -1,0 +1,1697 @@
+[
+    {
+       "meta": {
+          "code": "PVCA",
+          "label": "VC Stats #1"
+       },
+       "fields": {
+          "vc": {
+             "labels": {
+                "short": {
+                   "en": "VC Name"
+                }
+             },
+             "position": 1,
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "year": {
+             "labels": {
+                "short": {
+                   "en": "Reporting Year"
+                }
+             },
+             "position": 2,
+             "type": "integer",
+             "list": [
+                [
+                   2012,
+                   {
+                      "en": "2012"
+                   }
+                ],
+                [
+                   2013,
+                   {
+                      "en": "2013"
+                   }
+                ],
+                [
+                   2014,
+                   {
+                      "en": "2014"
+                   }
+                ],
+                [
+                   2015,
+                   {
+                      "en": "2015"
+                   }
+                ]
+             ]
+          },
+          "month": {
+             "labels": {
+                "short": {
+                   "en": "Reporting month"
+                }
+             },
+             "position": 3,
+             "type": "integer",
+             "validate": {
+                 "is_numeric_month": true
+             },
+             "list": [
+                [
+                   1,
+                   {
+                      "en": "January"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "February"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "March"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "April"
+                   }
+                ],
+                [
+                   5,
+                   {
+                      "en": "May"
+                   }
+                ],
+                [
+                   6,
+                   {
+                      "en": "June"
+                   }
+                ],
+                [
+                   7,
+                   {
+                      "en": "July"
+                   }
+                ],
+                [
+                   8,
+                   {
+                      "en": "August"
+                   }
+                ],
+                [
+                   9,
+                   {
+                      "en": "September"
+                   }
+                ],
+                [
+                   10,
+                   {
+                      "en": "October"
+                   }
+                ],
+                [
+                   11,
+                   {
+                      "en": "November"
+                   }
+                ],
+                [
+                   12,
+                   {
+                      "en": "December"
+                   }
+                ]
+             ]
+          },
+          "approver": {
+             "labels": {
+                "short": {
+                   "en": "Approving Officer"
+                }
+             },
+             "position": 4,
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "hsa": {
+             "labels": {
+                "short": {
+                   "en": "Name of HSA"
+                }
+             },
+             "position": 5,
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "local": {
+             "labels": {
+                "short": {
+                   "en": "HSA in catchment area?"
+                }
+             },
+             "position": 6,
+             "type": "boolean"
+          },
+          "district": {
+             "labels": {
+                "short": {
+                   "en": "District"
+                }
+             },
+             "position": 7,
+             "type": "string",
+             "length": [
+                3,
+                10
+             ]
+          },
+          "facility": {
+             "labels": {
+                "short": {
+                   "en": "Nearest Health Facility"
+                }
+             },
+             "position": 8,
+             "type": "string",
+             "length": [
+                3,
+                10
+             ]
+          },
+          "supervised": {
+             "labels": {
+                "short": {
+                   "en": "# times supervised this month?"
+                }
+             },
+             "position": 9,
+             "type": "integer",
+             "length": [
+                1,
+                1
+             ]
+          },
+          "mentored": {
+             "labels": {
+                "short": {
+                   "en": "# times mentored this month?"
+                }
+             },
+             "position": 10,
+             "type": "integer",
+             "length": [
+                1,
+                1
+             ]
+          },
+          "new_fever_2_4": {
+             "labels": {
+                "short": {
+                   "en": "New case\\n2-4m Fever"
+                }
+             },
+             "position": 11,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_fever_5_35": {
+             "labels": {
+                "short": {
+                   "en": "New case\\n5-35m Fever "
+                }
+             },
+             "position": 12,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_fever_36_59": {
+             "labels": {
+                "short": {
+                   "en": "New case\\n36-59m Fever"
+                }
+             },
+             "position": 13,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_diar_2_11": {
+             "labels": {
+                "short": {
+                   "en": "New case\\n2-11m Diarrhoea"
+                }
+             },
+             "position": 14,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_diar_12_59": {
+             "labels": {
+                "short": {
+                   "en": "New case\\n12-59m Diarrhoea"
+                }
+             },
+             "position": 15,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_breath_2_11": {
+             "labels": {
+                "short": {
+                   "en": "New case\\n2-11m Fast Breath"
+                }
+             },
+             "position": 16,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_breath_12_59": {
+             "labels": {
+                "short": {
+                   "en": "New case\\n12-59m Fast Breath"
+                }
+             },
+             "position": 17,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_eye_2_11": {
+             "labels": {
+                "short": {
+                   "en": "New case\\n2-11m Red eye"
+                }
+             },
+             "position": 18,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_eye_12_59": {
+             "labels": {
+                "short": {
+                   "en": "New case\\n12-59m Red eye"
+                }
+             },
+             "position": 19,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          }
+       }
+    },
+    {
+       "meta": {
+          "code": "PVCB",
+          "label": "VC Stats #2"
+       },
+       "fields": {
+          "vc": {
+             "labels": {
+                "short": {
+                   "en": "VC Name"
+                }
+             },
+             "position": 1,
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "year": {
+             "labels": {
+                "short": {
+                   "en": "Reporting Year"
+                }
+             },
+             "position": 2,
+             "type": "integer",
+             "list": [
+                [
+                   2012,
+                   {
+                      "en": "2012"
+                   }
+                ],
+                [
+                   2013,
+                   {
+                      "en": "2013"
+                   }
+                ],
+                [
+                   2014,
+                   {
+                      "en": "2014"
+                   }
+                ],
+                [
+                   2015,
+                   {
+                      "en": "2015"
+                   }
+                ]
+             ]
+          },
+          "month": {
+             "labels": {
+                "short": {
+                   "en": "Reporting month"
+                }
+             },
+             "position": 3,
+             "type": "integer",
+             "validate": {
+                 "is_numeric_month": true
+             },
+             "list": [
+                [
+                   1,
+                   {
+                      "en": "January"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "February"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "March"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "April"
+                   }
+                ],
+                [
+                   5,
+                   {
+                      "en": "May"
+                   }
+                ],
+                [
+                   6,
+                   {
+                      "en": "June"
+                   }
+                ],
+                [
+                   7,
+                   {
+                      "en": "July"
+                   }
+                ],
+                [
+                   8,
+                   {
+                      "en": "August"
+                   }
+                ],
+                [
+                   9,
+                   {
+                      "en": "September"
+                   }
+                ],
+                [
+                   10,
+                   {
+                      "en": "October"
+                   }
+                ],
+                [
+                   11,
+                   {
+                      "en": "November"
+                   }
+                ],
+                [
+                   12,
+                   {
+                      "en": "December"
+                   }
+                ]
+             ]
+          },
+          "ref_fever_2_4": {
+             "labels": {
+                "short": {
+                   "en": "Danger sign referrals\\n2-4m Fever"
+                }
+             },
+             "position": 20,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_fever_5_35": {
+             "labels": {
+                "short": {
+                   "en": "Danger sign referrals\\n5-35m Fever"
+                }
+             },
+             "position": 21,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_fever_36_59": {
+             "labels": {
+                "short": {
+                   "en": "Danger sign referrals\\n36-59m months"
+                }
+             },
+             "position": 22,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_dia_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Danger sign referrals\\n2-11m Diarrhoea"
+                }
+             },
+             "position": 23,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_dia_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Danger sign referrals\\n12-59m Diarrhoea"
+                }
+             },
+             "position": 24,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_breath_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Danger sign referrals\\n2-11m Fast Breath"
+                }
+             },
+             "position": 25,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_breath_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Danger sign referrals\\n12-59m Fast Breath"
+                }
+             },
+             "position": 26,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_eye_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Danger sign referrals\\n2-11m Red eye"
+                }
+             },
+             "position": 27,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "ref_eye_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Danger sign referrals\\n12-59m Red eye"
+                }
+             },
+             "position": 28,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_fever_2_4": {
+             "labels": {
+                "short": {
+                   "en": "Stockout Referral\\n2-4m Fever"
+                }
+             },
+             "position": 29,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_fever_5_35": {
+             "labels": {
+                "short": {
+                   "en": "Stockout Referral\\n5-35m Fever"
+                }
+             },
+             "position": 30,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_fever_36_59": {
+             "labels": {
+                "short": {
+                   "en": "Stockout Referral\\n36-59m Fever"
+                }
+             },
+             "position": 31,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_dia_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Stockout Referral\\n2-11m Diarrhoea"
+                }
+             },
+             "position": 32,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_dia_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Stockout Referral\\n12-59m Diarrhoea"
+                }
+             },
+             "position": 33,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_breath_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Stockout Referral\\n2-11m Fast Breath"
+                }
+             },
+             "position": 34,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_breath_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Stockout Referral\\n12-59m Fast Breath"
+                }
+             },
+             "position": 35,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_eye_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Stockout Referral\\n2-11m Red eye"
+                }
+             },
+             "position": 36,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "so_eye_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Stockout Referral\\n12-59m Red eye"
+                }
+             },
+             "position": 37,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_fever_2_4": {
+             "labels": {
+                "short": {
+                   "en": "Death in 7d post-Tx\\n2-4m Fever"
+                }
+             },
+             "position": 38,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_fever_5_35": {
+             "labels": {
+                "short": {
+                   "en": "Death in 7d post-Tx\\n5-35m Fever"
+                }
+             },
+             "position": 39,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_fever_36_59": {
+             "labels": {
+                "short": {
+                   "en": "Death in 7d post-Tx\\n36-59m Fever"
+                }
+             },
+             "position": 40,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_dia_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Death in 7d post-Tx\\n2-11m Diarrhoea"
+                }
+             },
+             "position": 41,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_dia_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Death in 7d post-Tx\\n12-59m Diarrhoea"
+                }
+             },
+             "position": 42,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_breath_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Death in 7d post-Tx\\n2-11m Fast Breath"
+                }
+             },
+             "position": 43,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_breath_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Death in 7d post-Tx\\n12-59m Fast Breath"
+                }
+             },
+             "position": 44,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_eye_2_11": {
+             "labels": {
+                "short": {
+                   "en": "Death in 7d post-Tx\\n2-11m Red eye"
+                }
+             },
+             "position": 45,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "death_red_12_59": {
+             "labels": {
+                "short": {
+                   "en": "Death in 7d post-Tx\\n12-59m Red eye"
+                }
+             },
+             "position": 46,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_cases_male": {
+             "labels": {
+                "short": {
+                   "en": "New case\\nMales"
+                }
+             },
+             "position": 47,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "new_cases_f": {
+             "labels": {
+                "short": {
+                   "en": "New case\\nFemales"
+                }
+             },
+             "position": 48,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          }
+       }
+    },
+    {
+       "meta": {
+          "code": "PSTA",
+          "label": "VC Stocks #1"
+       },
+       "fields": {
+          "vc": {
+             "labels": {
+                "short": {
+                   "en": "VC Name"
+                }
+             },
+             "position": 1,
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "year": {
+             "labels": {
+                "short": {
+                   "en": "Reporting Year"
+                }
+             },
+             "position": 2,
+             "type": "integer",
+             "list": [
+                [
+                   2012,
+                   {
+                      "en": "2012"
+                   }
+                ],
+                [
+                   2013,
+                   {
+                      "en": "2013"
+                   }
+                ],
+                [
+                   2014,
+                   {
+                      "en": "2014"
+                   }
+                ],
+                [
+                   2015,
+                   {
+                      "en": "2015"
+                   }
+                ]
+             ]
+          },
+          "month": {
+             "labels": {
+                "short": {
+                   "en": "Reporting month"
+                }
+             },
+             "position": 3,
+             "validate": {
+                 "is_numeric_month": true
+             },
+             "type": "integer",
+             "list": [
+                [
+                   1,
+                   {
+                      "en": "January"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "February"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "March"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "April"
+                   }
+                ],
+                [
+                   5,
+                   {
+                      "en": "May"
+                   }
+                ],
+                [
+                   6,
+                   {
+                      "en": "June"
+                   }
+                ],
+                [
+                   7,
+                   {
+                      "en": "July"
+                   }
+                ],
+                [
+                   8,
+                   {
+                      "en": "August"
+                   }
+                ],
+                [
+                   9,
+                   {
+                      "en": "September"
+                   }
+                ],
+                [
+                   10,
+                   {
+                      "en": "October"
+                   }
+                ],
+                [
+                   11,
+                   {
+                      "en": "November"
+                   }
+                ],
+                [
+                   12,
+                   {
+                      "en": "December"
+                   }
+                ]
+             ]
+          },
+          "qty_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "On hand\\nLA6x1"
+                }
+             },
+             "position": 4,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "On hand\\nLA6x2"
+                }
+             },
+             "position": 5,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_apap": {
+             "labels": {
+                "short": {
+                   "en": "On hand\\nParacetamol"
+                }
+             },
+             "position": 6,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "On hand\\nCotrimoxazole"
+                }
+             },
+             "position": 7,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_zinc": {
+             "labels": {
+                "short": {
+                   "en": "On hand\\nZinc"
+                }
+             },
+             "position": 8,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_ors": {
+             "labels": {
+                "short": {
+                   "en": "On hand\\nORS"
+                }
+             },
+             "position": 9,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_eye": {
+             "labels": {
+                "short": {
+                   "en": "On hand\\nEye ointment"
+                }
+             },
+             "position": 10,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed\\nLA6x1"
+                }
+             },
+             "position": 11,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed\\nLA6x2"
+                }
+             },
+             "position": 12,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_apap": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed\\nParacetamol"
+                }
+             },
+             "position": 13,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_ord": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed\\nORS"
+                }
+             },
+             "position": 14,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed\\nZinc"
+                }
+             },
+             "position": 15,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed\\nCotrimoxazole"
+                }
+             },
+             "position": 16,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_eye": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed\\nEye ointment"
+                }
+             },
+             "position": 17,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "loss_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Losses\\nLA6x1"
+                }
+             },
+             "position": 18,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Losses\\nLA6x2"
+                }
+             },
+             "position": 19,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_apap": {
+             "labels": {
+                "short": {
+                   "en": "Losses\\nParacetamol"
+                }
+             },
+             "position": 20,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_ors": {
+             "labels": {
+                "short": {
+                   "en": "Losses\\nORS"
+                }
+             },
+             "position": 21,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Losses\\nZinc"
+                }
+             },
+             "position": 22,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Losses\\nCotrimoxazole"
+                }
+             },
+             "position": 23,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_eye": {
+             "labels": {
+                "short": {
+                   "en": "Losses\\nEye ointment"
+                }
+             },
+             "position": 24,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          }
+       }
+    },
+    {
+       "meta": {
+          "code": "PSTB",
+          "label": "VC Stocks #2"
+       },
+       "fields": {
+          "vc": {
+             "labels": {
+                "short": {
+                   "en": "VC Name"
+                }
+             },
+             "position": 1,
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "year": {
+             "labels": {
+                "short": {
+                   "en": "Reporting Year"
+                }
+             },
+             "position": 2,
+             "type": "integer",
+             "list": [
+                [
+                   2012,
+                   {
+                      "en": "2012"
+                   }
+                ],
+                [
+                   2013,
+                   {
+                      "en": "2013"
+                   }
+                ],
+                [
+                   2014,
+                   {
+                      "en": "2014"
+                   }
+                ],
+                [
+                   2015,
+                   {
+                      "en": "2015"
+                   }
+                ]
+             ]
+          },
+          "month": {
+             "labels": {
+                "short": {
+                   "en": "Reporting month"
+                }
+             },
+             "position": 3,
+             "validate": {
+                 "is_numeric_month": true
+             },
+             "type": "integer",
+             "list": [
+                [
+                   1,
+                   {
+                      "en": "January"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "February"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "March"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "April"
+                   }
+                ],
+                [
+                   5,
+                   {
+                      "en": "May"
+                   }
+                ],
+                [
+                   6,
+                   {
+                      "en": "June"
+                   }
+                ],
+                [
+                   7,
+                   {
+                      "en": "July"
+                   }
+                ],
+                [
+                   8,
+                   {
+                      "en": "August"
+                   }
+                ],
+                [
+                   9,
+                   {
+                      "en": "September"
+                   }
+                ],
+                [
+                   10,
+                   {
+                      "en": "October"
+                   }
+                ],
+                [
+                   11,
+                   {
+                      "en": "November"
+                   }
+                ],
+                [
+                   12,
+                   {
+                      "en": "December"
+                   }
+                ]
+             ]
+          },
+          "recv_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\\nLA6x1"
+                }
+             },
+             "position": 25,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\\nLA6x2"
+                }
+             },
+             "position": 26,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_apap": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\\nParacetamol"
+                }
+             },
+             "position": 27,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_ors": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\\nORS"
+                }
+             },
+             "position": 28,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\\nZinc"
+                }
+             },
+             "position": 29,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\\nCotrimoxazole"
+                }
+             },
+             "position": 30,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "recv_eye": {
+             "labels": {
+                "short": {
+                   "en": "Quantity received\\nEye ointment"
+                }
+             },
+             "position": 31,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "days_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Days stockout\\nLA6x1"
+                }
+             },
+             "position": 32,
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Days stockout\\nLA6x2"
+                }
+             },
+             "position": 33,
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_apap": {
+             "labels": {
+                "short": {
+                   "en": "Days stockout\\nParacetamol"
+                }
+             },
+             "position": 34,
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Days stockout\\nCotrimoxazole"
+                }
+             },
+             "position": 35,
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Days stockout\\nZinc"
+                }
+             },
+             "position": 36,
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_ors": {
+             "labels": {
+                "short": {
+                   "en": "Days stockout\\nORS"
+                }
+             },
+             "position": 37,
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "days_eye": {
+             "labels": {
+                "short": {
+                   "en": "Days stockout\\nEye ointment"
+                }
+             },
+             "position": 38,
+             "type": "integer",
+             "length": [
+                1,
+                2
+             ],
+             "range": [
+                0,
+                31
+             ]
+          },
+          "so_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Stockout last 7d?\\nLA6x1"
+                }
+             },
+             "position": 39,
+             "type": "boolean"
+          },
+          "so_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Stockout last 7d?\\nLA6x2"
+                }
+             },
+             "position": 40,
+             "type": "boolean"
+          },
+          "so_apap": {
+             "labels": {
+                "short": {
+                   "en": "Stockout last 7d?\\nParacetamol"
+                }
+             },
+             "position": 41,
+             "type": "boolean"
+          },
+          "so_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Stockout last 7d?\\nCotrimoxazole"
+                }
+             },
+             "position": 42,
+             "type": "boolean"
+          },
+          "so_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Stockout last 7d?\\nZinc"
+                }
+             },
+             "position": 43,
+             "type": "boolean"
+          },
+          "so_ors": {
+             "labels": {
+                "short": {
+                   "en": "Stockout last 7d?\\nORS"
+                }
+             },
+             "position": 44,
+             "type": "boolean"
+          },
+          "so_eye": {
+             "labels": {
+                "short": {
+                   "en": "Stockout last 7d?\\nEye ointment"
+                }
+             },
+             "position": 45,
+             "type": "boolean"
+          }
+       }
+    }
+]
