@@ -239,5 +239,173 @@
             "flags": {}
          }
       }
+   },
+   {
+      "meta": {
+         "code": "VLDP",
+         "label": {
+            "en": "Virtual LDP Team Report"
+         }
+      },
+       "fields": {
+         "name": {
+            "labels": {
+               "tiny": {
+                  "en": "NAME"
+               },
+               "description": {
+                  "en": "Name of person reporting for Virtual Leadership Development Program (VLDP) Team"
+               },
+               "short": {
+                  "en": "Name of reporter"
+               }
+            },
+            "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               30
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "team": {
+            "labels": {
+               "tiny": {
+                  "en": "TEAM"
+               },
+               "description": {
+                  "en": "Virtual Leadership Development Program (LDP) team name"
+               },
+               "short": {
+                  "en": "Name of team"
+               }
+            },
+            "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               30
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "result": {
+             "labels": {
+                "tiny": {
+                   "en": "RES"
+                },
+                "short": {
+                   "en": "result"
+                }
+             },
+             "position": 3,
+             "type": "integer",
+             "list": [
+                [
+                   1,
+                   {
+                      "en": "On track"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "Delayed"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "Cancelled"
+                   }
+                ]
+             ]
+          },
+          "description": {
+            "labels": {
+               "tiny": {
+                  "en": "DSCR"
+               },
+               "description": {
+                  "en": "Describe results achieved last month"
+               },
+               "short": {
+                  "en": "Describe results"
+               }
+            },
+            "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               40
+            ],
+            "validate": {},
+            "flags": {}
+         },
+          "obstacles": {
+            "labels": {
+               "tiny": {
+                  "en": "OBST"
+               },
+               "description": {
+                  "en": "Identified obstacles to achieving results"
+               },
+               "short": {
+                  "en": "Identified obstacles"
+               }
+            },
+            "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               40
+            ],
+            "validate": {},
+            "flags": {}
+         },
+          "next": {
+            "labels": {
+               "tiny": {
+                  "en": "NEXT"
+               },
+               "description": {
+                  "en": "Next steps or what participant will do differently next time"
+               },
+               "short": {
+                  "en": "Next steps"
+               }
+            },
+            "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               40
+            ],
+            "validate": {},
+            "flags": {}
+         },
+          "help": {
+            "labels": {
+               "tiny": {
+                  "en": "HELP"
+               },
+               "description": {
+                  "en": "Request feedback, support or help from a facilitator"
+               },
+               "short": {
+                  "en": "Help request"
+               }
+            },
+            "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               20
+            ],
+            "validate": {},
+            "flags": {}
+         }
+      }
    }
 ]
