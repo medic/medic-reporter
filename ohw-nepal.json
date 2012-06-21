@@ -28,21 +28,19 @@
          },
          "last_menstrual_period": {
             "position": 1,
-            "type": "date",
+            "type": "integer",
             "labels": {
                "short": {
-                  "en": "Date of last period"
+                  "en": "Weeks since LMP"
                },
                "tiny": {
                   "en": "LMP"
                },
                "description": {
-                  "en": "Date of most-recent menstrual period"
+                  "en": "Weeks since most-recent menstrual period"
                }
             },
-            "validate": {
-               "is_valid_date": true
-            }
+            "validate": { }
          }
       },
       "use-sentinel": true
