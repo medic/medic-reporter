@@ -44,7 +44,8 @@
                "is_valid_date": true
             }
          }
-      }
+      },
+      "use-sentinel": true
    },
    {
       "meta": {
