@@ -41,6 +41,22 @@
                }
             },
             "validate": { }
+         },
+         "patient_identifiers": {
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient Identifier"
+               }
+            },
+            "validate": {}
+
          }
       },
       "use-sentinel": true
