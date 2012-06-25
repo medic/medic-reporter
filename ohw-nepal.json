@@ -175,7 +175,7 @@
    {
       "meta": {
          "label": {
-            "en": "Visit Report"
+            "en": "ANC Counseling Form"
          },
          "code": "OANC"
       },
@@ -191,213 +191,147 @@
                   "en": "ID"
                },
                "description": {
-                  "en": "Patient's unique identifier"
+                  "en": "Patient Identifier"
                }
             },
             "validate": {
                "is_valid_patient": true
             }
          },
-         "visit_date": {
-            "position": 1,
-            "type": "date",
-            "labels": {
-               "short": {
-                  "en": "Visit date"
-               },
-               "tiny": {
-                  "en": "DATE"
-               },
-               "description": {
-                  "en": "Date of this antenatal/postnatal visit"
-               }
-            },
-            "validate": {
-               "is_valid_date": true
-            }
-         },
-         "visit_type": {
+         "deworming_tablet": {
             "length": [
                1,
                1
             ],
-            "range": [
+            "position": 1,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Deworming tablet"
+               },
+               "tiny": {
+                  "en": "Deworm"
+               },
+               "description": {
+                  "en": "Deworming tablet taken?"
+               }
+            },
+            "list": [
+               [
+                  "Y",
+                  {
+                     "en": "Yes"
+                  }
+               ],
+               [
+                  "N",
+                  {
+                     "en": "No"
+                  }
+               ]
+            ]
+         },
+         "iron_tablet": {
+            "length": [
                1,
-               3
+               1
             ],
             "position": 2,
-            "type": "integer",
+            "type": "string",
             "labels": {
                "short": {
-                  "en": "Visit type"
+                  "en": "Iron tablet"
                },
                "tiny": {
-                  "en": "TYPE"
+                  "en": "Iron"
                },
                "description": {
-                  "en": "Type of this antenatal/postnatal care visit"
+                  "en": "Iron tablets given on this visit?"
                }
             },
             "list": [
                [
-                  1,
+                  "Y",
                   {
-                     "en": "Antenatal"
+                     "en": "Yes"
                   }
                ],
                [
-                  2,
+                  "N",
                   {
-                     "en": "Postnatal"
-                  }
-               ],
-               [
-                  3,
-                  {
-                     "en": "Danger sign"
+                     "en": "No"
                   }
                ]
             ]
          },
-         "page_number": {
+         "tetanus_toxoid": {
             "length": [
                1,
-               3
-            ],
-            "range": [
-               1,
-               999
+               1
             ],
             "position": 3,
-            "type": "integer",
+            "type": "string",
             "labels": {
                "short": {
-                  "en": "Page number"
+                  "en": "TT"
                },
                "tiny": {
-                  "en": "PAGE"
+                  "en": "TT"
                },
                "description": {
-                  "en": "Page number containing danger sign, if applicable"
-               }
-            },
-            "condition": {
-               "is_danger_sign_visit": true
-            }
-         },
-         "sign_number": {
-            "length": [
-               1,
-               2
-            ],
-            "range": [
-               1,
-               99
-            ],
-            "position": 4,
-            "type": "integer",
-            "labels": {
-               "short": {
-                  "en": "Item number"
-               },
-               "tiny": {
-                  "en": "NUM"
-               },
-               "description": {
-                  "en": "Danger sign number from current page, if applicable"
-               }
-            },
-            "condition": {
-               "is_danger_sign_visit": true
-            }
-         },
-         "visit_place": {
-            "length": [
-               1,
-               1
-            ],
-            "range": [
-               1,
-               4
-            ],
-            "position": 5,
-            "type": "integer",
-            "labels": {
-               "short": {
-                  "en": "Place of visit"
-               },
-               "tiny": {
-                  "en": "PL"
-               },
-               "description": {
-                  "en": "Place/location where this visit is being performed"
+                  "en": "Tetanus toxoid received?"
                }
             },
             "list": [
                [
-                  1,
+                  "Y",
                   {
-                     "en": "Patient's Home"
+                     "en": "Yes"
                   }
                ],
                [
-                  2,
+                  "N",
                   {
-                     "en": "FCHV's Home"
-                  }
-               ],
-               [
-                  3,
-                  {
-                     "en": "Health Facility"
-                  }
-               ],
-               [
-                  4,
-                  {
-                     "en": "Other"
+                     "en": "No"
                   }
                ]
             ]
          },
-         "outcome": {
+         "misoprostol": {
             "length": [
                1,
                1
             ],
-            "range": [
-               1,
-               2
-            ],
-            "position": 6,
-            "type": "integer",
+            "position": 4,
+            "type": "string",
             "labels": {
                "short": {
-                  "en": "Outcome"
+                  "en": "Misoprostol"
                },
                "tiny": {
-                  "en": "OUT"
+                  "en": "Miso"
                },
                "description": {
-                  "en": "Outcome of this visit"
+                  "en": "Misoprostol given on this visit?"
                }
             },
             "list": [
                [
-                  1,
+                  "Y",
                   {
-                     "en": "Referred"
+                     "en": "Yes"
                   }
                ],
                [
-                  2,
+                  "N",
                   {
-                     "en": "Resolved"
+                     "en": "No"
                   }
                ]
             ]
          }
-      }
+      },
+      "use-sentinel": true
    },
    {
       "meta": {
