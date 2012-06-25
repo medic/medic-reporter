@@ -1,7 +1,8 @@
 [
    {
       "meta": {
-         "code": "PSMM"
+         "code": "PSMM",
+         "label": "VC Monthly Report"
       },
       "fields": {
          "monthly_id": {
@@ -511,7 +512,8 @@
    },
    {
       "meta": {
-         "code": "PSMS"
+         "code": "PSMS",
+         "label": "VC Stocks"
       },
       "fields": {
          "stocks_id": {
