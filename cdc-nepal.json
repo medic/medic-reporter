@@ -1,25 +1,44 @@
 [
    {
       "meta": {
-         "code": "CNPW",
+         "code": "VPD",
          "label": {
             "en": "CDC Weekly Report"
          }
       },
       "fields": {
-         "week_number": {
+         "id": {
             "labels": {
                "tiny": {
-                  "en": "WKN"
+                 "en": "ID"
                },
                "description": {
-                  "en": "Week number for start of report"
+                  "en": "Reporting Unit ID"
                },
                "short": {
-                  "en": "Week number"
+                  "en": "Unit ID"
                }
             },
             "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               8
+            ]
+         },
+         "week": {
+            "labels": {
+               "tiny": {
+                  "en": "WEEK"
+               },
+               "description": {
+                  "en": "Epi-week number for report"
+               },
+               "short": {
+                  "en": "Epi-week number"
+               }
+            },
+            "position": 1,
             "type": "integer",
             "length": [
                1,
@@ -27,35 +46,32 @@
             ],
             "range": [
                1,
-               52
+               53
             ],
             "validate": {},
             "flags": {}
          },
-         "weeks_duration": {
+         "year": {
             "labels": {
                "tiny": {
-                  "en": "WKS"
+                 "en": "YEAR"
                },
                "description": {
-                  "en": "Number of weeks, including start week, covered by this report"
+                  "en": "Year of report"
                },
                "short": {
-                  "en": "Number of weeks"
+                  "en": "Year"
                }
             },
-            "position": 1,
+            "position": 2,
             "type": "integer",
             "length": [
-               1,
-               1
+               4,
+               4
             ],
-            "range": [
-               1,
-               9
-            ],
-            "validate": {},
-            "flags": {}
+            "validate": {
+               "is_numeric_year": true
+            }
          },
          "afp_cases": {
             "labels": {
@@ -69,7 +85,7 @@
                   "en": "Number of AFP cases"
                }
             },
-            "position": 2,
+            "position": 3,
             "type": "integer",
             "required": false,
             "length": [
@@ -91,7 +107,7 @@
                   "en": "Number of NNT cases"
                }
             },
-            "position": 3,
+            "position": 4,
             "type": "integer",
             "required": false,
             "length": [
@@ -113,7 +129,7 @@
                   "en": "Number of MSL cases"
                }
             },
-            "position": 4,
+            "position": 5,
             "type": "integer",
             "required": false,
             "length": [
@@ -135,7 +151,7 @@
                   "en": "Number of AES cases"
                }
             },
-            "position": 5,
+            "position": 6,
             "type": "integer",
             "required": false,
             "length": [
