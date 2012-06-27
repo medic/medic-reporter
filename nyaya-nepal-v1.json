@@ -7,22 +7,22 @@
 		    }
         },
 		"fields" : {
-			"daysoverdue" : {
+			"location" : {
 				"labels" : {
 					"short" : {
-						"en" : "Days since report end date",
-                        "ne" : "ढिलाई दिन"
+						"en" : "Location (ward)",
+                        "ne" : "ठेगाना"
 					}
 				},
 				"position" : 1,
 				"type" : "integer",
 				"length" : [1, 2]
 			},
-			"location" : {
+			"daysoverdue" : {
 				"labels" : {
 					"short" : {
-						"en" : "Location (ward)",
-                        "ne" : "ठेगाना"
+						"en" : "Days since report end date",
+                        "ne" : "कति दिन अगाडी बिरामीलाई भेट्नु भयो?"
 					}
 				},
 				"position" : 2,
@@ -159,7 +159,7 @@
 				"labels" : {
 					"short" : {
 						"en" : "Presence of non-expired chlorhexidine wash in delivery suite",
-                        "ne" : "क्लोरहेक्सिडिन"
+                        "ne" : "मिति नसकिएको क्लोरहेक्सिडिन वास डेलिभरि कोठामा छ?"
 					}
 				},
 				"position" : 4,
@@ -178,7 +178,7 @@
 				"labels" : {
 					"short" : {
 						"en" : "Number of safe delivery kits available",
-                        "ne" : "सुरक्षित गर्वधारणको सामाग्रि वा किट"
+                        "ne" : "सुरक्षित सुत्केरी सामाग्रीको सङ्ख्या"
 					}
 				},
 				"position" : 5,
@@ -233,7 +233,7 @@
                 "labels" : {
                     "short" : {
                         "en" : "# ANMs/MCH present",
-                        "ne" : "सेल्फ्रियाक्सोन भाएल"
+                        "ne" : "अ.न.मी/ मा.सि.काको उपस्थिति"
                     }
                 },
                 "position" : 10,
@@ -244,7 +244,7 @@
                 "labels" : {
                     "short" : {
                         "en" : "# AHWs/HAs present",
-                        "ne" : "सेल्फ्रियाक्सोन भाएल"
+                        "ne" : "अ.हे.ब/एच्.एको उपस्थिति"
                     }
                 },
                 "position" : 11,
@@ -312,7 +312,7 @@
 				"labels" : {
 					"short" : {
 						"en" : "Number of deliveries conducted",
-                        "ne" : "कति गर्वधारण गरियो?"
+                        "ne" : "कतिवटा डेलिभरि गरियो?"
 					}
 				},
 				"position" : 15,
@@ -334,7 +334,7 @@
 				"labels" : {
 					"short" : {
 						"en" : "Number of total outpatient visits",
-                        "ne" : "कति बिरामीलाई ओपिडिमा जाँचियो"
+                        "ne" : "कतिजना बिरामीलाई ओपिडिमा जाँचियो?"
 					}
 				},
 				"position" : 17,
@@ -345,7 +345,7 @@
 				"labels" : {
 					"short" : {
 						"en" : "Number of pediatric outpatient visits",
-                        "ne" : "कति शिसुलाई ओपिडिमा जाँचियो"
+                        "ne" : "कतिजना शिसुलाई ओपिडिमा जाँचियो?"
 					}
 				},
 				"position" : 18,

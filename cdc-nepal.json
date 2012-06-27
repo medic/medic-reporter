@@ -29,7 +29,7 @@
          "week": {
             "labels": {
                "tiny": {
-                  "en": "WEEK"
+                  "en": "WKN"
                },
                "description": {
                   "en": "Epi-week number for report"
