@@ -80,14 +80,14 @@
                   "en": "ID"
                },
                "description": {
-                  "en": "Patient's unique identifier"
+                  "en": "Patient Identifier"
                }
             },
             "validate": {
                "is_valid_patient": true
             }
          },
-         "page_number": {
+         "danger_sign": {
             "length": [
                1,
                3
@@ -100,77 +100,18 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Page number"
+                  "en": "Danger Sign"
                },
                "tiny": {
-                  "en": "PAGE"
+                  "en": "DANGER"
                },
                "description": {
-                  "en": "Page number containing danger sign"
+                  "en": "Number of danger sign observed"
                }
             }
-         },
-         "sign_number": {
-            "length": [
-               1,
-               2
-            ],
-            "range": [
-               1,
-               99
-            ],
-            "position": 2,
-            "type": "integer",
-            "labels": {
-               "short": {
-                  "en": "Item number"
-               },
-               "tiny": {
-                  "en": "NUM"
-               },
-               "description": {
-                  "en": "Danger sign number, from current page"
-               }
-            }
-         },
-         "outcome": {
-            "length": [
-               1,
-               1
-            ],
-            "range": [
-               1,
-               2
-            ],
-            "position": 3,
-            "type": "integer",
-            "labels": {
-               "short": {
-                  "en": "Outcome"
-               },
-               "tiny": {
-                  "en": "OUT"
-               },
-               "description": {
-                  "en": "Outcome of danger sign"
-               }
-            },
-            "list": [
-               [
-                  1,
-                  {
-                     "en": "Referred"
-                  }
-               ],
-               [
-                  2,
-                  {
-                     "en": "Resolved"
-                  }
-               ]
-            ]
          }
-      }
+      },
+      "use-sentinel": true
    },
    {
       "meta": {
