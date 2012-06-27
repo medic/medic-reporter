@@ -277,6 +277,49 @@
    {
       "meta": {
          "label": {
+            "en": "Labor Report"
+         },
+         "code": "OLAB"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient's unique identifier"
+               }
+            },
+            "validate": {
+               "is_valid_patient": true
+            }
+         },
+         "hours_labor": {
+            "position": 1,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Hours of labor"
+               },
+               "tiny": {
+                  "en": "HOURS"
+               },
+               "description": {
+                  "en": "How many hours has the patient been in labor?"
+               }
+            }
+         }
+      }
+   }
+   {
+      "meta": {
+         "label": {
             "en": "Birth Report"
          },
          "code": "OBIR"
