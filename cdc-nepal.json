@@ -165,7 +165,7 @@
    },
    {
       "meta": {
-         "code": "CNPA",
+         "code": "IMD",
          "label": {
             "en": "CDC Outbreak Report"
          }
@@ -248,6 +248,48 @@
             },
             "position": 3,
             "type": "boolean",
+            "validate": {},
+            "flags": {}
+         },
+         "phone_number": {
+            "labels": {
+               "tiny": {
+                  "en": "NUM"
+               },
+               "description": {
+                  "en": "Patient contact phone number"
+               },
+               "short": {
+                  "en": "Patient phone"
+               }
+            },
+            "position": 4,
+            "type": "string",
+            "length": [
+               7,
+               20
+            ],
+            "validate": {},
+            "flags": {}
+         },
+         "location": {
+            "labels": {
+               "tiny": {
+                  "en": "LOC"
+               },
+               "description": {
+                  "en": "Location of reported case"
+               },
+               "short": {
+                  "en": "Case location"
+               }
+            },
+            "position": 5,
+            "type": "string",
+            "length": [
+               0,
+               30
+            ],
             "validate": {},
             "flags": {}
          }
