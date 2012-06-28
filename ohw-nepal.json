@@ -343,23 +343,113 @@
                "is_valid_patient": true
             }
          },
-         "visit_date": {
+         "days_since_delivery": {
             "position": 1,
-            "type": "date",
+            "type": "integer",
             "labels": {
                "short": {
-                  "en": "Delivery date"
+                  "en": "Days since delivery"
                },
                "tiny": {
-                  "en": "DATE"
+                  "en": "DAYS"
                },
                "description": {
-                  "en": "Date of patient's delivery"
+                  "en": "Days since delivery"
+               }
+            }
+         },
+         "birth_site": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 2,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Birth site"
+               },
+               "tiny": {
+                  "en": "SITE"
+               },
+               "description": {
+                  "en": "Site of birth"
                }
             },
-            "validate": {
-               "is_valid_date": true
-            }
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Home"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Health Facility"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Other"
+                  }
+               ]
+            ]
+         },
+         "persons_present": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               6
+            ],
+            "position": 3,
+            "multiple": true,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Person(s) present"
+               },
+               "tiny": {
+                  "en": "PPL"
+               },
+               "description": {
+                  "en": "Person or people present during delivery"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Skilled birth attendant"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "FCHV"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Family member"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "en": "No one"
+                  }
+               ]
+            ]
          },
          "outcome_mother": {
             "length": [
@@ -368,9 +458,9 @@
             ],
             "range": [
                1,
-               2
+               3
             ],
-            "position": 2,
+            "position": 4,
             "type": "integer",
             "labels": {
                "short": {
@@ -387,11 +477,17 @@
                [
                   1,
                   {
-                     "en": "Alive"
+                     "en": "Alive and well"
                   }
                ],
                [
                   2,
+                  {
+                     "en": "Alive and sick"
+                  }
+               ],
+               [
+                  3,
                   {
                      "en": "Deceased"
                   }
@@ -405,9 +501,9 @@
             ],
             "range": [
                1,
-               2
+               3
             ],
-            "position": 3,
+            "position": 5,
             "type": "integer",
             "labels": {
                "short": {
@@ -424,11 +520,17 @@
                [
                   1,
                   {
-                     "en": "Alive"
+                     "en": "Alive and well"
                   }
                ],
                [
                   2,
+                  {
+                     "en": "Alive and sick"
+                  }
+               ],
+               [
+                  3,
                   {
                      "en": "Deceased"
                   }
@@ -444,7 +546,7 @@
                1,
                3
             ],
-            "position": 4,
+            "position": 6,
             "type": "integer",
             "labels": {
                "short": {
@@ -477,123 +579,6 @@
                   3,
                   {
                      "en": "Normal"
-                  }
-               ]
-            ]
-         },
-         "birth_site": {
-            "length": [
-               1,
-               1
-            ],
-            "range": [
-               1,
-               5
-            ],
-            "position": 5,
-            "type": "integer",
-            "labels": {
-               "short": {
-                  "en": "Birth site"
-               },
-               "tiny": {
-                  "en": "SITE"
-               },
-               "description": {
-                  "en": "Site of birth"
-               }
-            },
-            "list": [
-               [
-                  1,
-                  {
-                     "en": "At family home"
-                  }
-               ],
-               [
-                  2,
-                  {
-                     "en": "At FCHV's home"
-                  }
-               ],
-               [
-                  3,
-                  {
-                     "en": "En route to facility"
-                  }
-               ],
-               [
-                  4,
-                  {
-                     "en": "At health facility"
-                  }
-               ],
-               [
-                  5,
-                  {
-                     "en": "Other place"
-                  }
-               ]
-            ]
-         },
-         "persons_present": {
-            "length": [
-               1,
-               1
-            ],
-            "range": [
-               1,
-               6
-            ],
-            "position": 6,
-            "multiple": true,
-            "type": "integer",
-            "labels": {
-               "short": {
-                  "en": "Person(s) present"
-               },
-               "tiny": {
-                  "en": "PPL"
-               },
-               "description": {
-                  "en": "Person or people present during delivery"
-               }
-            },
-            "list": [
-               [
-                  1,
-                  {
-                     "en": "ANM"
-                  }
-               ],
-               [
-                  2,
-                  {
-                     "en": "SBA"
-                  }
-               ],
-               [
-                  3,
-                  {
-                     "en": "FCHV"
-                  }
-               ],
-               [
-                  4,
-                  {
-                     "en": "Relatives/friends"
-                  }
-               ],
-               [
-                  5,
-                  {
-                     "en": "Nobody"
-                  }
-               ],
-               [
-                  6,
-                  {
-                     "en": "Other person"
                   }
                ]
             ]
