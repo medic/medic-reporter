@@ -3,7 +3,7 @@
             "code" : "NYAA",
             "label" : {
                 "en" : "Community Health Survey",
-                "ne" : "सामुदायिक स्वास्थ्य सर्वे"
+                "ne" : "CHW"
             }
         },
         "fields" : {
@@ -118,7 +118,7 @@
 			"code" : "NYAB",
 			"label" : {
                 "en" : "Health Post Survey",
-                "ne" : "स्वा. चौ"
+                "ne" : "Health Post"
             }
         },
         "fields" : {

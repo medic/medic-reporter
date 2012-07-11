@@ -2,7 +2,8 @@
    {
       "meta": {
          "label": {
-            "en": "New Pregnancy"
+            "en": "Register Pregnancy",
+            "ne": "गर्भवती दर्ता फारम"
          },
          "code": "ORPT"
       },
@@ -12,41 +13,57 @@
                5,
                35
             ],
-            "position": 0,
+            "position": 1,
             "type": "string",
             "labels": {
                "short": {
-                  "en": "Patient Name"
+                  "en": "Patient's Name",
+                  "ne": "गर्भवती महिलाको नाम/थर"
                },
                "tiny": {
                   "en": "NAME"
                },
                "description": {
-                  "en": "Name of new pregnant patient"
+                  "en": "Name of new pregnant woman"
                }
             }
          },
          "last_menstrual_period": {
-            "position": 1,
+            "position": 2,
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Weeks since LMP"
+                  "en": "Estimate weeks pregnant",
+                  "ne": "अनुमानित गर्भको समय (महिनामा)"
                },
                "tiny": {
-                  "en": "LMP"
+                  "en": "WKS"
                },
                "description": {
-                  "en": "Weeks since most-recent menstrual period"
+                  "en": "Weeks since last menstrual period"
                }
             },
             "validate": { }
+         }
+      },
+      "use-sentinel": true
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "ANC Counseling Form",
+            "ne": "गर्भवती परामर्श फारम"
          },
-         "patient_identifiers": {
+         "code": "OANC"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
             "type": "string",
             "labels": {
                "short": {
-                  "en": "Patient ID"
+                  "en": "Patient ID",
+                  "ne": "गर्भवती महिलाको दर्ता"
                },
                "tiny": {
                   "en": "ID"
@@ -55,8 +72,195 @@
                   "en": "Patient Identifier"
                }
             },
-            "validate": {}
-
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                7, 7
+            ]
+         },
+         "deworming_tablet": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 1,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Deworming tablet taken?",
+                  "ne": "जुकाको औषधि खाएको ?"
+               },
+               "tiny": {
+                  "en": "WORM"
+               },
+               "description": {
+                  "en": "Deworming tablet taken?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ]
+         },
+         "iron_tablet": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 2,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Iron tablets given on this visit?",
+                  "ne": "यो भेटमा आईरन चक्की दिएको ?"
+               },
+               "tiny": {
+                  "en": "Iron"
+               },
+               "description": {
+                  "en": "Iron tablets given on this visit?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ]
+         },
+         "tetanus_toxoid": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 3,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "TT received?",
+                  "ne": "टि.टि खोप लगाएको ?"
+               },
+               "tiny": {
+                  "en": "TT"
+               },
+               "description": {
+                  "en": "Tetanus toxoid received?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ]
+         },
+         "misoprostol": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 4,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Misoprostol given on this visit?",
+                  "ne": "यो भेटमा मात्री-सुरक्षा चक्की दिएको ?"
+               },
+               "tiny": {
+                  "en": "Miso"
+               },
+               "description": {
+                  "en": "Misoprostol given on this visit?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ],
+            "validate": {
+                "confirm_misoprostol": true
+            }
+         },
+         "misoprostol_confirm": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 5,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Still give it?",
+                  "ne": "अझै तपाईं यो दिन चाहनु हुन्छ ?"
+               },
+               "tiny": {
+                  "en": "STILL"
+               },
+               "description": {
+                  "en": "Still give Misoprostol?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ]
          }
       },
       "use-sentinel": true
@@ -64,7 +268,8 @@
    {
       "meta": {
          "label": {
-            "en": "Danger Signs"
+            "en": "Danger Signs",
+            "ne": "खतराका चिन्हहरुको प्रतिबेदन"
          },
          "code": "ODGR"
       },
@@ -74,7 +279,8 @@
             "type": "string",
             "labels": {
                "short": {
-                  "en": "Patient ID"
+                  "en": "Patient ID",
+                  "ne": "गर्भवती महिलाको दर्ता"
                },
                "tiny": {
                   "en": "ID"
@@ -83,9 +289,12 @@
                   "en": "Patient Identifier"
                }
             },
-            "validate": {
-               "is_valid_patient": true
-            }
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                7, 7
+            ]
          },
          "danger_sign": {
             "length": [
@@ -100,10 +309,11 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Danger Sign"
+                  "en": "Danger Sign Number",
+                  "ne": "अबलोकन गरेका खतरा का चिन्हहरु लाई नम्बर राखनुहोस"
                },
                "tiny": {
-                  "en": "DANGER"
+                  "en": "SIGN"
                },
                "description": {
                   "en": "Number of danger sign observed"
@@ -116,168 +326,8 @@
    {
       "meta": {
          "label": {
-            "en": "ANC Counseling Form"
-         },
-         "code": "OANC"
-      },
-      "fields": {
-         "patient_id": {
-            "position": 0,
-            "type": "string",
-            "labels": {
-               "short": {
-                  "en": "Patient ID"
-               },
-               "tiny": {
-                  "en": "ID"
-               },
-               "description": {
-                  "en": "Patient Identifier"
-               }
-            },
-            "validate": {
-               "is_valid_patient": true
-            }
-         },
-         "deworming_tablet": {
-            "length": [
-               1,
-               1
-            ],
-            "position": 1,
-            "type": "string",
-            "labels": {
-               "short": {
-                  "en": "Deworming tablet"
-               },
-               "tiny": {
-                  "en": "Deworm"
-               },
-               "description": {
-                  "en": "Deworming tablet taken?"
-               }
-            },
-            "list": [
-               [
-                  "Y",
-                  {
-                     "en": "Yes"
-                  }
-               ],
-               [
-                  "N",
-                  {
-                     "en": "No"
-                  }
-               ]
-            ]
-         },
-         "iron_tablet": {
-            "length": [
-               1,
-               1
-            ],
-            "position": 2,
-            "type": "string",
-            "labels": {
-               "short": {
-                  "en": "Iron tablet"
-               },
-               "tiny": {
-                  "en": "Iron"
-               },
-               "description": {
-                  "en": "Iron tablets given on this visit?"
-               }
-            },
-            "list": [
-               [
-                  "Y",
-                  {
-                     "en": "Yes"
-                  }
-               ],
-               [
-                  "N",
-                  {
-                     "en": "No"
-                  }
-               ]
-            ]
-         },
-         "tetanus_toxoid": {
-            "length": [
-               1,
-               1
-            ],
-            "position": 3,
-            "type": "string",
-            "labels": {
-               "short": {
-                  "en": "TT"
-               },
-               "tiny": {
-                  "en": "TT"
-               },
-               "description": {
-                  "en": "Tetanus toxoid received?"
-               }
-            },
-            "list": [
-               [
-                  "Y",
-                  {
-                     "en": "Yes"
-                  }
-               ],
-               [
-                  "N",
-                  {
-                     "en": "No"
-                  }
-               ]
-            ]
-         },
-         "misoprostol": {
-            "length": [
-               1,
-               1
-            ],
-            "position": 4,
-            "type": "string",
-            "labels": {
-               "short": {
-                  "en": "Misoprostol"
-               },
-               "tiny": {
-                  "en": "Miso"
-               },
-               "description": {
-                  "en": "Misoprostol given on this visit?"
-               }
-            },
-            "list": [
-               [
-                  "Y",
-                  {
-                     "en": "Yes"
-                  }
-               ],
-               [
-                  "N",
-                  {
-                     "en": "No"
-                  }
-               ]
-            ]
-         }
-      },
-      "use-sentinel": true
-   },
-   {
-      "meta": {
-         "label": {
-            "en": "Labor Report"
+            "en": "Labor Report",
+            "ne": "प्रशव प्रतिबेदन"
          },
          "code": "OLAB"
       },
@@ -287,7 +337,8 @@
             "type": "string",
             "labels": {
                "short": {
-                  "en": "Patient ID"
+                  "en": "Patient ID",
+                  "ne": "गर्भवती महिलाको दर्ता"
                },
                "tiny": {
                   "en": "ID"
@@ -296,16 +347,20 @@
                   "en": "Patient's unique identifier"
                }
             },
-            "validate": {
-               "is_valid_patient": true
-            }
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                7, 7
+            ]
          },
          "hours_labor": {
             "position": 1,
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Hours of labor"
+                  "en": "How many hours has patient been in labor?",
+                  "ne": "बिरामी लाई कति घण्टा सम्म प्रशव व्यथा लागेको थियो ?"
                },
                "tiny": {
                   "en": "HOURS"
@@ -320,7 +375,8 @@
    {
       "meta": {
          "label": {
-            "en": "Birth Report"
+            "en": "Birth Outcome Report",
+            "ne": "जन्मअवस्थाको प्रतिबेदन"
          },
          "code": "OBIR"
       },
@@ -330,7 +386,8 @@
             "type": "string",
             "labels": {
                "short": {
-                  "en": "Patient ID"
+                  "en": "Patient ID",
+                  "ne": "गर्भवती महिलाको दर्ता"
                },
                "tiny": {
                   "en": "ID"
@@ -339,27 +396,140 @@
                   "en": "Patient's unique identifier"
                }
             },
-            "validate": {
-               "is_valid_patient": true
-            }
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                7, 7
+            ]
          },
          "visit_date": {
             "position": 1,
-            "type": "date",
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "range": [
+               0,
+               99
+            ],
             "labels": {
                "short": {
-                  "en": "Delivery date"
+                  "en": "Days since delivery",
+                  "ne": "सुत्केरीपछिको ... औं दिन"
                },
                "tiny": {
-                  "en": "DATE"
+                  "en": "DAYS"
                },
                "description": {
-                  "en": "Date of patient's delivery"
+                  "en": "Days since patient's delivery"
                }
             },
             "validate": {
-               "is_valid_date": true
             }
+         },
+         "birth_site": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 2,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Place of Delivery",
+                  "ne": "प्रशुती भएको ठाउँ"
+               },
+               "tiny": {
+                  "en": "SITE"
+               },
+               "description": {
+                  "en": "Site of birth"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Home",
+                     "ne": "घर"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Health Facility",
+                     "ne": "स्वास्थ्य संस्था"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Other Place",
+                     "ne": "अन्य ठाउँ"
+                  }
+               ]
+            ]
+         },
+         "persons_present": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               4
+            ],
+            "position": 3,
+            "multiple": true,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Who was present at delivery?",
+                  "ne": "प्रशुती गराउदा को उपस्थित हुनु भएको थियो ?"
+               },
+               "tiny": {
+                  "en": "PPL"
+               },
+               "description": {
+                  "en": "Person or people present during delivery"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Skilled Birth Attendant",
+                     "ne": "दक्ष प्रसुतिकर्मी"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "FCHV",
+                     "ne": "म.स्वा.स्वं.से."
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Family Member",
+                     "ne": "परिवारका सदस्य"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "en": "No One",
+                     "ne": "कोही पनि थिएनन"
+                  }
+               ]
+            ]
          },
          "outcome_mother": {
             "length": [
@@ -368,13 +538,14 @@
             ],
             "range": [
                1,
-               2
+               3
             ],
-            "position": 2,
+            "position": 4,
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Mother's outcome"
+                  "en": "Outcome for Mother",
+                  "ne": "आमा को अबस्था"
                },
                "tiny": {
                   "en": "MOM"
@@ -387,13 +558,22 @@
                [
                   1,
                   {
-                     "en": "Alive"
+                     "en": "Alive and Well",
+                     "ne": "जीवित र स्वस्थ"
                   }
                ],
                [
                   2,
                   {
-                     "en": "Deceased"
+                     "en": "Alive and Sick",
+                     "ne": "जीवित र बिरामी"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Deceased",
+                     "ne": "मृत्यु"
                   }
                ]
             ]
@@ -407,30 +587,33 @@
                1,
                2
             ],
-            "position": 3,
+            "position": 5,
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Newborn's outcome"
+                  "en": "Outcome for Baby",
+                  "ne": "बच्चाको अबस्था"
                },
                "tiny": {
                   "en": "KID"
                },
                "description": {
-                  "en": "Post-delivery outcome for newborn child"
+                  "en": "Post-delivery outcome for newborn baby"
                }
             },
             "list": [
                [
                   1,
                   {
-                     "en": "Alive"
+                     "en": "Alive and Well",
+                     "ne": "जीवित र स्वस्थ"
                   }
                ],
                [
                   2,
                   {
-                     "en": "Deceased"
+                     "en": "Alive and Sick",
+                     "ne": "जीवित र बिरामी"
                   }
                ]
             ]
@@ -444,166 +627,51 @@
                1,
                3
             ],
-            "position": 4,
+            "position": 6,
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Birth weight"
+                  "en": "Low Birth Weight?",
+                  "ne": "कम जन्म तौल ?"
                },
                "tiny": {
                   "en": "WT"
                },
                "description": {
-                  "en": "Weight of newborn child at birth"
-               }
-            },
-            "condition": {
-               "is_child_alive": true
-            },
-            "list": [
-               [
-                  1,
-                  {
-                     "en": "Low - Yellow"
-                  }
-               ],
-               [
-                  2,
-                  {
-                     "en": "Very Low - Red"
-                  }
-               ],
-               [
-                  3,
-                  {
-                     "en": "Normal"
-                  }
-               ]
-            ]
-         },
-         "birth_site": {
-            "length": [
-               1,
-               1
-            ],
-            "range": [
-               1,
-               5
-            ],
-            "position": 5,
-            "type": "integer",
-            "labels": {
-               "short": {
-                  "en": "Birth site"
-               },
-               "tiny": {
-                  "en": "SITE"
-               },
-               "description": {
-                  "en": "Site of birth"
+                  "en": "Low weight of newborn child at birth?"
                }
             },
             "list": [
                [
                   1,
                   {
-                     "en": "At family home"
+                     "en": "Yes - Yellow",
+                     "ne": "छ - पहेंलो"
                   }
                ],
                [
                   2,
                   {
-                     "en": "At FCHV's home"
+                     "en": "Yes - Red",
+                     "ne": "छ - रातो"
                   }
                ],
                [
                   3,
                   {
-                     "en": "En route to facility"
-                  }
-               ],
-               [
-                  4,
-                  {
-                     "en": "At health facility"
-                  }
-               ],
-               [
-                  5,
-                  {
-                     "en": "Other place"
-                  }
-               ]
-            ]
-         },
-         "persons_present": {
-            "length": [
-               1,
-               1
-            ],
-            "range": [
-               1,
-               6
-            ],
-            "position": 6,
-            "multiple": true,
-            "type": "integer",
-            "labels": {
-               "short": {
-                  "en": "Person(s) present"
-               },
-               "tiny": {
-                  "en": "PPL"
-               },
-               "description": {
-                  "en": "Person or people present during delivery"
-               }
-            },
-            "list": [
-               [
-                  1,
-                  {
-                     "en": "ANM"
-                  }
-               ],
-               [
-                  2,
-                  {
-                     "en": "SBA"
-                  }
-               ],
-               [
-                  3,
-                  {
-                     "en": "FCHV"
-                  }
-               ],
-               [
-                  4,
-                  {
-                     "en": "Relatives/friends"
-                  }
-               ],
-               [
-                  5,
-                  {
-                     "en": "Nobody"
-                  }
-               ],
-               [
-                  6,
-                  {
-                     "en": "Other person"
+                     "en": "No",
+                     "ne": "छैन"
                   }
                ]
             ]
          },
          "misoprostol_administered": {
             "position": 7,
-            "type": "boolean",
+            "type": "integer",
             "labels": {
                "short": {
-                  "en": "Misoprostol?"
+                  "en": "Was Misoprostol Administered?",
+                  "ne": "के मात्री-सुरक्षा चक्की खुवाएको थियो ?"
                },
                "tiny": {
                   "en": "MIS"
@@ -611,7 +679,288 @@
                "description": {
                   "en": "Was misoprostol administered?"
                }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ]
+         }
+      }
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "PNC Counseling",
+            "ne": "सुत्केरी जांच सम्बन्धि परामर्श फारम"
+         },
+         "code": "OPNC"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID",
+                  "ne": "गर्भवती महिलाको दर्ता"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient Identifier"
+               }
+            },
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                7, 7
+            ]
+         },
+         "days_since_birth": {
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "range": [
+               0,
+               99
+            ],
+            "labels": {
+               "short": {
+                  "en": "Days since birth",
+                  "ne": "जन्मेको ... औं दिन"
+               },
+               "tiny": {
+                  "en": "DAYS"
+               },
+               "description": {
+                  "en": "Days since baby's birth"
+               }
+            },
+            "validate": {
             }
+         },
+         "vitamins": {
+            "position": 2,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Vitamins Given?",
+                  "ne": ""
+               },
+               "tiny": {
+                  "en": "VIT"
+               },
+               "description": {
+                  "en": "Were vitamins given to the patient?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ]
+         },
+         "weight": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 6,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Weight of Baby",
+                  "ne": ""
+               },
+               "tiny": {
+                  "en": "WT"
+               },
+               "description": {
+                  "en": "Category for baby's current weight"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yellow",
+                     "ne": ""
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Red",
+                     "ne": ""
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Green",
+                     "ne": ""
+                  }
+               ]
+            ]
+         }
+      }
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "Notifications",
+            "ne": "बिरामी सुचना सुरु/बन्द"
+         },
+         "code": "ONOT"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID",
+                  "ne": "गर्भवती महिलाको दर्ता"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient Identifier"
+               }
+            },
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                7, 7
+            ]
+         },
+         "notifications": {
+            "position": 1,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Notifications?",
+                  "ne": "सुचनाहरु?"
+               },
+               "tiny": {
+                  "en": "SMS"
+               },
+               "description": {
+                  "en": "Change state of FCHV notifications"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "On",
+                     "ne": "सुरु"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Off",
+                     "ne": "बन्द"
+                  }
+               ]
+            ]
+         },
+         "reason": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               4
+            ],
+            "position": 2,
+            "multiple": true,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Reason For Deactivation",
+                  "ne": "सुचना निस्क्रिय पार्नुको कारणहरु"
+               },
+               "tiny": {
+                  "en": "WHY"
+               },
+               "description": {
+                  "en": "Reason for deactivation of reminders"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Cannot be found",
+                     "ne": "पत्ता लगाउन नसकेर"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Deceased",
+                     "ne": "मृत्यु भएर"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Refuses care",
+                     "ne": "स्याहार अस्वीकार भएर"
+                  }
+               ],
+              [
+                  4,
+                  {
+                     "en": "Miscarriage",
+                     "ne": "गर्भ तुहिएर"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "en": "No Reason Given",
+                     "ne": "कारण नदिइएको"
+                  }
+               ]
+            ]
          }
       }
    }
