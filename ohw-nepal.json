@@ -13,7 +13,7 @@
                5,
                35
             ],
-            "position": 1,
+            "position": 0,
             "type": "string",
             "labels": {
                "short": {
@@ -29,7 +29,7 @@
             }
          },
          "last_menstrual_period": {
-            "position": 2,
+            "position": 1,
             "type": "integer",
             "labels": {
                "short": {
@@ -85,7 +85,7 @@
                1
             ],
             "position": 1,
-            "type": "string",
+            "type": "integer",
             "labels": {
                "short": {
                   "en": "Deworming tablet taken?",
@@ -121,7 +121,7 @@
                1
             ],
             "position": 2,
-            "type": "string",
+            "type": "integer",
             "labels": {
                "short": {
                   "en": "Iron tablets given on this visit?",
@@ -157,7 +157,7 @@
                1
             ],
             "position": 3,
-            "type": "string",
+            "type": "integer",
             "labels": {
                "short": {
                   "en": "TT received?",
@@ -193,7 +193,7 @@
                1
             ],
             "position": 4,
-            "type": "string",
+            "type": "integer",
             "labels": {
                "short": {
                   "en": "Misoprostol given on this visit?",
@@ -232,7 +232,7 @@
                1
             ],
             "position": 5,
-            "type": "string",
+            "type": "integer",
             "labels": {
                "short": {
                   "en": "Still give it?",
@@ -403,7 +403,7 @@
                 7, 7
             ]
          },
-         "visit_date": {
+         "days_since_delivery": {
             "position": 1,
             "type": "integer",
             "length": [
@@ -762,7 +762,7 @@
             "labels": {
                "short": {
                   "en": "Vitamins Given?",
-                  "ne": ""
+                  "ne": "भिटामिन दिएको ?"
                },
                "tiny": {
                   "en": "VIT"
@@ -797,12 +797,12 @@
                1,
                3
             ],
-            "position": 6,
+            "position": 3,
             "type": "integer",
             "labels": {
                "short": {
                   "en": "Weight of Baby",
-                  "ne": ""
+                  "ne": "बच्चाको तौल"
                },
                "tiny": {
                   "en": "WT"
@@ -816,21 +816,21 @@
                   1,
                   {
                      "en": "Yellow",
-                     "ne": ""
+                     "ne": "पहेंलो"
                   }
                ],
                [
                   2,
                   {
                      "en": "Red",
-                     "ne": ""
+                     "ne": "रातो"
                   }
                ],
                [
                   3,
                   {
                      "en": "Green",
-                     "ne": ""
+                     "ne": "हरियो"
                   }
                ]
             ]
