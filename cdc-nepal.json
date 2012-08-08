@@ -24,7 +24,8 @@
             "length": [
                1,
                8
-            ]
+            ],
+            "required": true
          },
          "week": {
             "labels": {
@@ -49,12 +50,13 @@
                53
             ],
             "validate": {},
-            "flags": {}
+            "flags": {},
+            "required": true
          },
          "year": {
             "labels": {
                "tiny": {
-                 "en": "YEAR"
+                 "en": "YR"
                },
                "description": {
                   "en": "Year of report"
@@ -71,7 +73,8 @@
             ],
             "validate": {
                "is_numeric_year": true
-            }
+            },
+            "required": true
          },
          "afp_cases": {
             "labels": {
@@ -87,13 +90,13 @@
             },
             "position": 3,
             "type": "integer",
-            "required": false,
             "length": [
                1,
                8
             ],
             "validate": {},
-            "flags": {}
+            "flags": {},
+            "required": true
          },
          "nnt_cases": {
             "labels": {
@@ -109,13 +112,13 @@
             },
             "position": 4,
             "type": "integer",
-            "required": false,
             "length": [
                1,
                8
             ],
             "validate": {},
-            "flags": {}
+            "flags": {},
+            "required": true
          },
          "msl_cases": {
             "labels": {
@@ -131,13 +134,13 @@
             },
             "position": 5,
             "type": "integer",
-            "required": false,
             "length": [
                1,
                8
             ],
             "validate": {},
-            "flags": {}
+            "flags": {},
+            "required": true
          },
          "aes_cases": {
             "labels": {
@@ -153,13 +156,13 @@
             },
             "position": 6,
             "type": "integer",
-            "required": false,
             "length": [
                1,
                8
             ],
             "validate": {},
-            "flags": {}
+            "flags": {},
+            "required": true
          }
       }
    },
@@ -190,7 +193,8 @@
                30
             ],
             "validate": {},
-            "flags": {}
+            "flags": {},
+            "required": true
          },
          "ward": {
             "labels": {
@@ -215,7 +219,8 @@
                999
             ],
             "validate": {},
-            "flags": {}
+            "flags": {},
+            "required": true
          },
          "afp_present": {
             "labels": {
