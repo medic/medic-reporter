@@ -27,7 +27,7 @@
             ],
             "required": true
          },
-         "week": {
+         "week_number": {
             "labels": {
                "tiny": {
                   "en": "WKN"
