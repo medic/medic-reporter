@@ -64,11 +64,11 @@
                 },
                 "position" : 5,
                 "type" : "integer",
-                "list" : [[1, {
+                "list" : [[2, {
                            "en" : "Female",
                            "ne" : "पुरुष"
                         }
-                    ], [2, {
+                    ], [1, {
                             "en" : "Male",
                             "ne" : "महिला"
                         }
