@@ -19,7 +19,7 @@
                6,
                8
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_year": {
@@ -36,7 +36,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             },
             "flags": {}
@@ -55,7 +55,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_month": true
             },
             "flags": {},
@@ -148,7 +148,7 @@
                0,
                0
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_f1": {
@@ -165,7 +165,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_f2": {
@@ -182,7 +182,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_f3": {
@@ -199,7 +199,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_d1": {
@@ -216,7 +216,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_d2": {
@@ -233,7 +233,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_d3": {
@@ -250,7 +250,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_b1": {
@@ -267,7 +267,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_b2": {
@@ -284,7 +284,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_b3": {
@@ -301,7 +301,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_sv": {
@@ -318,7 +318,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_ms": {
@@ -335,7 +335,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_s1": {
@@ -352,7 +352,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_s2": {
@@ -369,7 +369,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_s3": {
@@ -386,7 +386,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_s4": {
@@ -403,7 +403,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_s5": {
@@ -420,7 +420,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_s6": {
@@ -437,7 +437,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "referral_s1": {
@@ -454,7 +454,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "referral_s2": {
@@ -471,7 +471,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "deaths_s1": {
@@ -488,7 +488,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "deaths_s2": {
@@ -505,7 +505,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }
@@ -530,7 +530,7 @@
                6,
                8
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_year": {
@@ -547,7 +547,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             },
             "flags": {}
@@ -566,7 +566,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_month": true
             },
             "flags": {},
@@ -659,7 +659,7 @@
                1,
                4
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_t2": {
@@ -676,7 +676,7 @@
                1,
                4
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_t3": {
@@ -693,7 +693,7 @@
                1,
                4
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_t4": {
@@ -710,7 +710,7 @@
                1,
                4
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_t5": {
@@ -727,7 +727,7 @@
                1,
                4
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_t6": {
@@ -744,7 +744,7 @@
                1,
                4
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_d1": {
@@ -761,7 +761,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_d2": {
@@ -778,7 +778,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_d3": {
@@ -795,7 +795,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_d4": {
@@ -812,7 +812,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_d5": {
@@ -829,7 +829,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "stocks_d6": {
@@ -846,7 +846,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }

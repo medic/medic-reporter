@@ -45,7 +45,7 @@
                   "en": "Weeks since last menstrual period"
                }
             },
-            "validate": { }
+            "validations": { }
          }
       },
       "use-sentinel": true
@@ -290,7 +290,7 @@
                   }
                ]
             ],
-            "validate": {
+            "validations": {
                 "confirm_misoprostol": true
             },
             "conditions": {
@@ -366,7 +366,7 @@
                   "en": "Days since baby's birth"
                }
             },
-            "validate": {
+            "validations": {
             },
             "conditions": {
                 "anc_pnc": 2
@@ -572,7 +572,7 @@
                 "anc_labor_pnc": 1,
                 "anc_labor_pnc": 3
             },
-            "condition-operator": "||"
+            "conditions-operator": "||"
          },
          "labor_danger": {
             "length": [
@@ -640,7 +640,7 @@
                 "anc_labor_pnc": 2,
                 "labor_danger": 1
             },
-            "condition-operator": "&&"
+            "conditions-operator": "&&"
          },
          "labor_hours": {
             "length": [
@@ -669,7 +669,7 @@
                 "anc_labor_pnc": 2,
                 "labor_danger": 2
             },
-            "condition-operator": "&&"
+            "conditions-operator": "&&"
          }
       },
       "use-sentinel": true
@@ -728,7 +728,7 @@
                   "en": "Days since patient's delivery"
                }
             },
-            "validate": {
+            "validations": {
             }
          },
          "birth_site": {

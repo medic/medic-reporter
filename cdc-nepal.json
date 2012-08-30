@@ -49,7 +49,7 @@
                1,
                53
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "required": true
          },
@@ -71,7 +71,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             },
             "required": true
@@ -94,7 +94,7 @@
                1,
                8
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "required": true
          },
@@ -116,7 +116,7 @@
                1,
                8
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "required": true
          },
@@ -138,7 +138,7 @@
                1,
                8
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "required": true
          },
@@ -160,7 +160,7 @@
                1,
                8
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "required": true
          }
@@ -192,7 +192,7 @@
                1,
                30
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "required": true
          },
@@ -218,7 +218,7 @@
                1,
                999
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "required": true
          },
@@ -236,7 +236,7 @@
             },
             "position": 2,
             "type": "boolean",
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "msl_present": {
@@ -253,7 +253,7 @@
             },
             "position": 3,
             "type": "boolean",
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "phone_number": {
@@ -274,7 +274,7 @@
                7,
                20
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "location": {
@@ -295,7 +295,7 @@
                0,
                30
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }

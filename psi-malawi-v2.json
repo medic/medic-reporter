@@ -61,7 +61,7 @@
              },
              "position": 3,
              "type": "integer",
-             "validate": {
+             "validations": {
                  "is_numeric_month": true
              },
              "list": [
@@ -407,7 +407,7 @@
              },
              "position": 3,
              "type": "integer",
-             "validate": {
+             "validations": {
                  "is_numeric_month": true
              },
              "list": [
@@ -925,7 +925,7 @@
                 }
              },
              "position": 3,
-             "validate": {
+             "validations": {
                  "is_numeric_month": true
              },
              "type": "integer",
@@ -1340,7 +1340,7 @@
                 }
              },
              "position": 3,
-             "validate": {
+             "validations": {
                  "is_numeric_month": true
              },
              "type": "integer",

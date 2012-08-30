@@ -43,7 +43,7 @@
                   "en": "Weeks since last menstrual period"
                }
             },
-            "validate": { }
+            "validations": { }
          }
       },
       "use-sentinel": true
@@ -222,7 +222,7 @@
                   }
                ]
             ],
-            "validate": {
+            "validations": {
                 "confirm_misoprostol": true
             }
          },
@@ -426,7 +426,7 @@
                   "en": "Days since patient's delivery"
                }
             },
-            "validate": {
+            "validations": {
             }
          },
          "birth_site": {
@@ -753,7 +753,7 @@
                   "en": "Days since baby's birth"
                }
             },
-            "validate": {
+            "validations": {
             }
          },
          "vitamins": {
