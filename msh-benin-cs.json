@@ -21,7 +21,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             },
             "flags": {}
@@ -40,7 +40,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_month": true
             },
             "flags": {},
@@ -133,7 +133,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_day": true
             },
             "flags": {}
@@ -152,7 +152,7 @@
                11,
                11
             ],
-            "validate": {},
+            "validations": {},
             "flags": {
                "input_digits_only": true
             }
@@ -171,7 +171,7 @@
                3,
                4
             ],
-            "validate": {
+            "validations": {
                "is_valid_time": true
             },
             "flags": {}
@@ -190,7 +190,7 @@
                0,
                20
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "ref_age": {
@@ -207,7 +207,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "ref_reason": {
@@ -224,7 +224,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "list": [
                [
@@ -333,7 +333,7 @@
                0,
                60
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }
@@ -360,7 +360,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             },
             "flags": {}
@@ -379,7 +379,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_month": true
             },
             "flags": {},
@@ -472,7 +472,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_day": true
             },
             "flags": {}
@@ -491,7 +491,7 @@
                11,
                11
             ],
-            "validate": {},
+            "validations": {},
             "flags": {
                "input_digits_only": true
             }
@@ -510,7 +510,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "list": [
                [
@@ -559,7 +559,7 @@
                0,
                20
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "cref_age": {
@@ -576,7 +576,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "cref_mom": {
@@ -593,7 +593,7 @@
                0,
                20
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "cref_treated": {
@@ -610,7 +610,7 @@
                0,
                20
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "cref_rec": {
@@ -627,7 +627,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "list": [
                [
@@ -712,7 +712,7 @@
                0,
                35
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "cref_agent": {
@@ -729,7 +729,7 @@
                0,
                20
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }

@@ -43,7 +43,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             }
          },
@@ -61,7 +61,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_month": true
             },
             "flags": {},

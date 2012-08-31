@@ -21,7 +21,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             },
             "flags": {}
@@ -40,7 +40,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_month": true
             },
             "flags": {},
@@ -133,7 +133,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_day": true
             },
             "flags": {}
@@ -152,7 +152,7 @@
                11,
                11
             ],
-            "validate": {},
+            "validations": {},
             "flags": {
                "input_digits_only": true
             }
@@ -171,7 +171,7 @@
                3,
                4
             ],
-            "validate": {
+            "validations": {
                "is_valid_time": true
             },
             "flags": {}
@@ -190,7 +190,7 @@
                0,
                20
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "ref_age": {
@@ -207,7 +207,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "ref_reason": {
@@ -224,7 +224,7 @@
                1,
                2
             ],
-            "validate": {},
+            "validations": {},
             "flags": {},
             "list": [
                [
@@ -315,7 +315,7 @@
                0,
                60
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }
@@ -342,7 +342,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             },
             "flags": {}
@@ -361,7 +361,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_month": true
             },
             "flags": {},
@@ -454,7 +454,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_day": true
             },
             "flags": {}
@@ -473,7 +473,7 @@
                11,
                11
             ],
-            "validate": {},
+            "validations": {},
             "flags": {
                "input_digits_only": true
             }
@@ -492,7 +492,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "med_cta_c": {
@@ -509,7 +509,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "med_tdr_a": {
@@ -526,7 +526,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "med_tdr_c": {
@@ -543,7 +543,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "med_ctm_a": {
@@ -560,7 +560,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "med_ctm_c": {
@@ -577,7 +577,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "med_sro_a": {
@@ -594,7 +594,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "med_sro_c": {
@@ -611,7 +611,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "med_para_a": {
@@ -628,7 +628,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "med_para_c": {
@@ -645,7 +645,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }
@@ -672,7 +672,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             },
             "flags": {}
@@ -691,7 +691,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_month": true
             },
             "flags": {},
@@ -784,7 +784,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_day": true
             },
             "flags": {}
@@ -803,7 +803,7 @@
                11,
                11
             ],
-            "validate": {},
+            "validations": {},
             "flags": {
                "input_digits_only": true
             }
@@ -822,7 +822,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_pec_f": {
@@ -839,7 +839,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_urg_m": {
@@ -856,7 +856,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_urg_f": {
@@ -873,7 +873,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_tdr": {
@@ -890,7 +890,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_palu_m": {
@@ -907,7 +907,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_palu_f": {
@@ -924,7 +924,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_dia_m": {
@@ -941,7 +941,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_dia_f": {
@@ -958,7 +958,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_pneu_m": {
@@ -975,7 +975,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_pneu_f": {
@@ -992,7 +992,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_mal_m": {
@@ -1009,7 +1009,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_mal_f": {
@@ -1026,7 +1026,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_rev": {
@@ -1043,7 +1043,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_vad": {
@@ -1060,7 +1060,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "case_edu": {
@@ -1077,7 +1077,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }
@@ -1104,7 +1104,7 @@
                4,
                4
             ],
-            "validate": {
+            "validations": {
                "is_numeric_year": true
             },
             "flags": {}
@@ -1123,7 +1123,7 @@
                1,
                2
             ],
-            "validate": {
+            "validations": {
                "is_numeric_month": true
             },
             "flags": {},
@@ -1216,7 +1216,7 @@
                11,
                11
             ],
-            "validate": {},
+            "validations": {},
             "flags": {
                "input_digits_only": true
             }
@@ -1235,7 +1235,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_cta2": {
@@ -1252,7 +1252,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_cta3": {
@@ -1269,7 +1269,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_sro1": {
@@ -1286,7 +1286,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_sro2": {
@@ -1303,7 +1303,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_sro3": {
@@ -1320,7 +1320,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_ctm1": {
@@ -1337,7 +1337,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_ctm2": {
@@ -1354,7 +1354,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "monthly_ctm3": {
@@ -1371,7 +1371,7 @@
                1,
                3
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }
