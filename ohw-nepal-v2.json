@@ -32,17 +32,17 @@
          },
          "last_menstrual_period": {
             "position": 1,
-            "type": "integer",
+            "type": "date",
             "labels": {
                "short": {
-                  "en": "Estimate weeks pregnant",
-                  "ne": "अनुमानित गर्भको समय (महिनामा)"
+                  "en": "Date of LMP",
+                  "ne": "अन्तिम महिनावारीको मिति"
                },
                "tiny": {
-                  "en": "WKS"
+                  "en": "LMP"
                },
                "description": {
-                  "en": "Weeks since last menstrual period"
+                  "en": "Date of last menstrual period"
                }
             },
             "validations": { }
@@ -268,7 +268,7 @@
                   "ne": "यो भेटमा मात्री-सुरक्षा चक्की बारे परामर्श दिएको?"
                },
                "tiny": {
-                  "en": "MisoCounsel"
+                  "en": "MISOC"
                },
                "description": {
                   "en": "Misoprostol counseling given on this visit?"
@@ -310,7 +310,7 @@
                   "ne": "यो भेटमा मातृ-सुरक्षा चक्की दिएको?"
                },
                "tiny": {
-                  "en": "MisoGiven"
+                  "en": "MISO"
                },
                "description": {
                   "en": "Misoprostol given on this visit?"
@@ -1011,7 +1011,12 @@
                      "ne": "छैन"
                   }
                ]
-            ]
+            ],
+            "conditions": {
+                "outcome_child": 1,
+                "outcome_child": 2
+            },
+            "conditions-operator": "||"
          },
          "misoprostol_administered": {
             "position": 8,
