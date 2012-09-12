@@ -121,7 +121,7 @@
 			}
 		},
         "validations" : {
-            "check1" : "function() { if (form_data['gender'] === 'Male' && form_data['condition'] === 50 ) { return 'Male cannot have this condition.'}; }"
+            "check1" : "function() { if (form_data['gender'] === 'Male' && [50,56,44].indexOf(form_data['condition']) !== -1 ) { return 'Male cannot have this condition.'}; }"
         }
 	}, {
 		"meta" : {
