@@ -298,6 +298,9 @@
             "validations": {},
             "flags": {}
          }
+      },
+      "validations": {
+          "afp_msl": "function() { if (form_data['msl_present'] === true && form_data['afp_present'] === true) return 'Please submit AFP and MSL reports separately.'; if (!form_data['msl_present'] && !form_data['afp_present']) return 'Please include a valid MSL or AFP report.'; }"
       }
    }
 ]
