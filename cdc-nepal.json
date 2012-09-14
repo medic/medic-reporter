@@ -176,23 +176,23 @@
          }
       },
       "fields": {
-         "vdc": {
+         "id": {
             "labels": {
                "tiny": {
-                  "en": "VDC"
+                  "en": "ID"
                },
                "description": {
-                  "en": "Village development committee (VDC) name"
+                  "en": "Reporting Unit ID"
                },
                "short": {
-                  "en": "Village/VDC name"
+                  "en": "Unit ID"
                }
             },
             "position": 0,
             "type": "string",
             "length": [
                1,
-               30
+               8
             ],
             "validations": {},
             "flags": {},
@@ -304,7 +304,7 @@
       "validations": {
           "afp_msl": "function() { if (form_data['msl_present'] === true && form_data['afp_present'] === true) return 'Please submit AFP and MSL reports separately.'; if (!form_data['msl_present'] && !form_data['afp_present']) return 'Please include a valid MSL or AFP report.'; }"
       },
-      "reference_field": "vdc",
+      "reference_field": "id",
       "use-sentinel": true
    }
 ]
