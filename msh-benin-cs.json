@@ -336,7 +336,8 @@
             "validations": {},
             "flags": {}
          }
-      }
+      },
+      "reference_field": "ref_rc"
    },
    {
       "meta": {
@@ -732,6 +733,7 @@
             "validations": {},
             "flags": {}
          }
-      }
+      },
+      "reference_field": "cref_rc"
    }
 ]
