@@ -541,7 +541,7 @@
          }
 
       },
-      "use-sentinel": true
+      "use-sentinel": false
    },
    {
       "meta": {
@@ -949,6 +949,6 @@
             ]
          }
       },
-      "use-sentinel": true
+      "use-sentinel": false
    }
 ]
