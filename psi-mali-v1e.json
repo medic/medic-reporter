@@ -1,0 +1,954 @@
+[
+   {
+      "meta": {
+         "label": {
+            "fr": "Rapport RC"
+         },
+         "code": "PMRC"
+      },
+       "fields": {         
+         "year": {
+            "position": 0,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Année du rapport"
+               },
+               "description": {
+                  "fr": "Année du rapport"
+               }
+            },
+            "length": [
+                4, 4
+            ],
+            "list": [
+               [
+                  2012,
+                  {
+                     "fr": "2012"
+                  }
+               ],
+               [
+                  2013,
+                  {
+                     "fr": "2013"
+                  }
+               ],
+               [
+                  2014,
+                  {
+                     "fr": "2014"
+                  }
+               ],
+               [
+                  2015,
+                  {
+                     "fr": "2015"
+                  }
+               ],
+               [
+                  2016,
+                  {
+                     "fr": "2016"
+                  }
+               ],
+               [
+                  2017,
+                  {
+                     "fr": "2017"
+                  }
+               ],
+               [
+                  2018,
+                  {
+                     "fr": "2018"
+                  }
+               ],
+               [
+                  2019,
+                  {
+                     "fr": "2019"
+                  }
+               ],
+               [
+                  2020,
+                  {
+                     "fr": "2020"
+                  }
+               ]
+            ]
+         },
+         "month": {
+            "position": 1,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Mois du rapport"
+               },
+               "description": {
+                  "fr": "Mois du rapport"
+               }
+            },
+            "length": [
+                1, 2
+            ],
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Janvier",
+                     "en": "January"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Février",
+                     "en": "February"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Mars",
+                     "en": "March"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "fr": "Avril",
+                     "en": "April"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "fr": "Mai",
+                     "en": "May"
+                  }
+               ],
+               [
+                  6,
+                  {
+                     "fr": "Juin",
+                     "en": "June"
+                  }
+               ],
+               [
+                  7,
+                  {
+                     "fr": "Juillet",
+                     "en": "July"
+                  }
+               ],
+               [
+                  8,
+                  {
+                     "fr": "Aout",
+                     "en": "August"
+                  }
+               ],
+               [
+                  9,
+                  {
+                     "fr": "Septembre",
+                     "en": "September"
+                  }
+               ],
+               [
+                  10,
+                  {
+                     "fr": "Octobre",
+                     "en": "October"
+                  }
+               ],
+               [
+                  11,
+                  {
+                     "fr": "Novembre",
+                     "en": "November"
+                  }
+               ],
+               [
+                  12,
+                  {
+                     "fr": "Décembre",
+                     "en": "December"
+                  }
+               ]
+            ]
+         },
+         "village": {
+            "position": 2,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "fr": "Village"
+               },
+               "description": {
+                  "fr": "Village"
+               }
+            },
+            "length": [
+                2, 13
+            ]
+         },
+         "name": {
+            "position": 3,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "fr": "Nom du relais"
+               },
+               "description": {
+                  "fr": "Nom du relais"
+               }
+            },
+            "length": [
+                2, 20
+            ]
+         },
+         "children_received": {
+            "position": 4,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Enfants reçus"
+               },
+               "description": {
+                  "fr": "Nombre d’enfants reçus"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "children_referred": {
+            "position": 5,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Enfants référés"
+               },
+               "description": {
+                  "fr": "Nombre d’enfants référés"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "children_conterreferred": {
+            "position": 6,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Enfants contre-référés reçus"
+               },
+               "description": {
+                  "fr": "Nombre d’enfants contre référés reçus"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "fever_24": {
+            "position": 7,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Fièvres <24h"
+               },
+               "description": {
+                  "fr": "Fièvres <24h"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "fever_24_48": {
+            "position": 8,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Fièvres 24-48h"
+               },
+               "description": {
+                  "fr": "Fièvres 24-48h"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "fever_48": {
+            "position": 9,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Fièvres >48h"
+               },
+               "description": {
+                  "fr": "Fièvres >48h"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "male": {
+            "position": 10,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Sexe M"
+               },
+               "description": {
+                  "fr": "Sexe M"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "female": {
+            "position": 11,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Sexe F"
+               },
+               "description": {
+                  "fr": "Sexe F"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "age6_11m": {
+            "position": 12,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Ages 6-11M"
+               },
+               "description": {
+                  "fr": "Ages 6-11M"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "age12_35m": {
+            "position": 13,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Ages 12-35M"
+               },
+               "description": {
+                  "fr": "Ages 12-35M"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "age36_59m": {
+            "position": 14,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Ages 36-59M"
+               },
+               "description": {
+                  "fr": "Ages 36-59M"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "cta_yellow_start": {
+            "position": 15,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "CTA Jn Début"
+               },
+               "description": {
+                  "fr": "CTA Jaune - Début"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "cta_yellow_received": {
+            "position": 16,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "CTA Jn Entrées"
+               },
+               "description": {
+                  "fr": "CTA Jaune - Entrées"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "cta_yellow_distributed": {
+            "position": 17,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "CTA Jn Sorties"
+               },
+               "description": {
+                  "fr": "CTA Jaune - Sorties"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "cta_yellow_remaining": {
+            "position": 18,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "CTA Jn Restants"
+               },
+               "description": {
+                  "fr": "CTA Jaune - Restants"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "cta_blue_start": {
+            "position": 19,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "CTA Bl Début"
+               },
+               "description": {
+                  "fr": "CTA Bleue - Début"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "cta_blue_received": {
+            "position": 20,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "CTA Bl Entrées"
+               },
+               "description": {
+                  "fr": "CTA Bleue - Entrées"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "cta_blue_distributed": {
+            "position": 21,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "CTA Bl Sorties"
+               },
+               "description": {
+                  "fr": "CTA Bleue - Sorties"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "cta_blue_remaining": {
+            "position": 22,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "CTA Bl Restants"
+               },
+               "description": {
+                  "fr": "CTA Bleue - Restants"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "home_visits": {
+            "position": 23,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "No. visite à domicile"
+               },
+               "description": {
+                  "fr": "Nombre de visite de suivi à domicile"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "meetings": {
+            "position": 24,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "No. causeries réalisées"
+               },
+               "description": {
+                  "fr": "Nombre causeries réalisées"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "participants": {
+            "position": 25,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "No. participants total"
+               },
+               "description": {
+                  "fr": "Nombre total de participants"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         }
+
+      },
+      "use-sentinel": true
+   },
+   {
+      "meta": {
+         "label": {
+            "fr": "Rapport CSCom"
+         },
+         "code": "PMCS"
+      },
+      "fields": {
+         "year": {
+            "position": 0,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Année du rapport"
+               },
+               "description": {
+                  "fr": "Année du rapport"
+               }
+            },
+            "length": [
+                4, 4
+            ],
+            "list": [
+               [
+                  2012,
+                  {
+                     "fr": "2012"
+                  }
+               ],
+               [
+                  2013,
+                  {
+                     "fr": "2013"
+                  }
+               ],
+               [
+                  2014,
+                  {
+                     "fr": "2014"
+                  }
+               ],
+               [
+                  2015,
+                  {
+                     "fr": "2015"
+                  }
+               ],
+               [
+                  2016,
+                  {
+                     "fr": "2016"
+                  }
+               ],
+               [
+                  2017,
+                  {
+                     "fr": "2017"
+                  }
+               ],
+               [
+                  2018,
+                  {
+                     "fr": "2018"
+                  }
+               ],
+               [
+                  2019,
+                  {
+                     "fr": "2019"
+                  }
+               ],
+               [
+                  2020,
+                  {
+                     "fr": "2020"
+                  }
+               ]
+            ]
+         },
+         "month": {
+            "position": 1,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Mois du rapport"
+               },
+               "description": {
+                  "fr": "Mois du rapport"
+               }
+            },
+            "length": [
+                2, 2
+            ],
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Janvier",
+                     "en": "January"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Février",
+                     "en": "February"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Mars",
+                     "en": "March"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "fr": "Avril",
+                     "en": "April"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "fr": "Mai",
+                     "en": "May"
+                  }
+               ],
+               [
+                  6,
+                  {
+                     "fr": "Juin",
+                     "en": "June"
+                  }
+               ],
+               [
+                  7,
+                  {
+                     "fr": "Juillet",
+                     "en": "July"
+                  }
+               ],
+               [
+                  8,
+                  {
+                     "fr": "Aout",
+                     "en": "August"
+                  }
+               ],
+               [
+                  9,
+                  {
+                     "fr": "Septembre",
+                     "en": "September"
+                  }
+               ],
+               [
+                  10,
+                  {
+                     "fr": "Octobre",
+                     "en": "October"
+                  }
+               ],
+               [
+                  11,
+                  {
+                     "fr": "Novembre",
+                     "en": "October"
+                  }
+               ],
+               [
+                  12,
+                  {
+                     "fr": "Décembre",
+                     "en": "December"
+                  }
+               ]
+            ]
+         },
+         "cscom": {
+            "position": 2,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "fr": "CSCom de"
+               },
+               "description": {
+                  "fr": "CSCom de"
+               }
+            },
+            "length": [
+                2, 12
+            ]
+         },
+         "name": {
+            "position": 3,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "fr": "Nom du CPM"
+               },
+               "description": {
+                  "fr": "Nom du CPM"
+               }
+            },
+            "length": [
+                2, 20
+            ]
+         },
+         "children_received": {
+            "position": 4,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Enfants reçus"
+               },
+               "description": {
+                  "fr": "Nombre d'enfants reçus"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "children_referred_received": {
+            "position": 5,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Enfants référés reçus"
+               },
+               "description": {
+                  "fr": "Nombre d’enfants référés reçus"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "dv_cta_stock": {
+            "position": 6,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "DV- Stock CTA"
+               },
+               "description": {
+                  "fr": "DV- Stock CTA"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "packs_x6": {
+            "position": 7,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Plaquettes 6 comp"
+               },
+               "description": {
+                  "fr": "Plaquettes de 6 comp"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "packs_x12": {
+            "position": 8,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "Plaquettes 12 comp"
+               },
+               "description": {
+                  "fr": "Plaquettes de 12 comp"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "meetings": {
+            "position": 9,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "No. de causeries"
+               },
+               "description": {
+                  "fr": "Nombre de causeries"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "vad": {
+            "position": 10,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "No. de VAD"
+               },
+               "description": {
+                  "fr": "Nombre de VAD"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "asc_supervised": {
+            "position": 11,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "No. d'ASC supervisés"
+               },
+               "description": {
+                  "fr": "Nombre d'ASC supervisés"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "asc_total": {
+            "position": 12,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "No. total d'ASC"
+               },
+               "description": {
+                  "fr": "Nombre total d'ASC"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "rc_supervised": {
+            "position": 13,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "No. de relais supervisés"
+               },
+               "description": {
+                  "fr": "Nombre de relais supervisés"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "rc_total": {
+            "position": 14,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "No. total de relais"
+               },
+               "description": {
+                  "fr": "nombre total de relais"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "stock_outs": {
+            "position": 15,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "fr": "RC/ASC rupture stock CTA 2+ jours"
+               },
+               "description": {
+                  "fr": "Nombre de relai/ASC en rupture de stock CTA de plus(+) de 2 jours"
+               }
+            },
+            "length": [
+                1, 3
+            ]
+         },
+         "observations": {
+            "position": 16,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "fr": "Observations"
+               },
+               "description": {
+                  "fr": "Observations"
+               }
+            },
+            "length": [
+                0, 60
+            ]
+         }
+      },
+      "use-sentinel": true
+   }
+]
