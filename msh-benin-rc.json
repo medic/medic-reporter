@@ -319,7 +319,7 @@
             "flags": {}
          }
       },
-      "reference_field": "ref_rc"
+      "facility_reference": "ref_rc"
    },
    {
       "meta": {

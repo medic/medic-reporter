@@ -337,7 +337,7 @@
             "flags": {}
          }
       },
-      "reference_field": "ref_rc"
+      "facility_reference": "ref_rc"
    },
    {
       "meta": {
@@ -734,6 +734,6 @@
             "flags": {}
          }
       },
-      "reference_field": "cref_rc"
+      "facility_reference": "cref_rc"
    }
 ]
