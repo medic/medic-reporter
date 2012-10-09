@@ -12,10 +12,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "AnnÃ©e du rapport"
+                  "fr": "Année du rapport"
                },
                "description": {
-                  "fr": "AnnÃ©e du rapport"
+                  "fr": "Année du rapport"
                }
             },
             "length": [
@@ -103,7 +103,7 @@
                [
                   2,
                   {
-                     "fr": "FÃ©vrier",
+                     "fr": "Février",
                      "en": "February"
                   }
                ],
@@ -173,7 +173,7 @@
                [
                   12,
                   {
-                     "fr": "DÃ©cembre",
+                     "fr": "Décembre",
                      "en": "December"
                   }
                ]
@@ -214,10 +214,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "Enfants reÃ§us"
+                  "fr": "Enfants reçus"
                },
                "description": {
-                  "fr": "Nombre dâ€™enfants reÃ§us"
+                  "fr": "Nombre d’enfants reçus"
                }
             },
             "length": [
@@ -229,10 +229,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "Enfants rÃ©fÃ©rÃ©s"
+                  "fr": "Enfants référés"
                },
                "description": {
-                  "fr": "Nombre dâ€™enfants rÃ©fÃ©rÃ©s"
+                  "fr": "Nombre d’enfants référés"
                }
             },
             "length": [
@@ -244,10 +244,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "Enfants contre-rÃ©fÃ©rÃ©s reÃ§us"
+                  "fr": "Enfants contre-référés reçus"
                },
                "description": {
-                  "fr": "Nombre dâ€™enfants contre rÃ©fÃ©rÃ©s reÃ§us"
+                  "fr": "Nombre d’enfants contre référés reçus"
                }
             },
             "length": [
@@ -259,10 +259,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "FiÃ¨vres <24h"
+                  "fr": "Fièvres <24h"
                },
                "description": {
-                  "fr": "FiÃ¨vres <24h"
+                  "fr": "Fièvres <24h"
                }
             },
             "length": [
@@ -274,10 +274,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "FiÃ¨vres 24-48h"
+                  "fr": "Fièvres 24-48h"
                },
                "description": {
-                  "fr": "FiÃ¨vres 24-48h"
+                  "fr": "Fièvres 24-48h"
                }
             },
             "length": [
@@ -289,10 +289,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "FiÃ¨vres >48h"
+                  "fr": "Fièvres >48h"
                },
                "description": {
-                  "fr": "FiÃ¨vres >48h"
+                  "fr": "Fièvres >48h"
                }
             },
             "length": [
@@ -379,10 +379,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "CTA Jn DÃ©but"
+                  "fr": "CTA Jn Début"
                },
                "description": {
-                  "fr": "CTA Jaune - DÃ©but"
+                  "fr": "CTA Jaune - Début"
                }
             },
             "length": [
@@ -394,10 +394,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "CTA Jn EntrÃ©es"
+                  "fr": "CTA Jn Entrées"
                },
                "description": {
-                  "fr": "CTA Jaune - EntrÃ©es"
+                  "fr": "CTA Jaune - Entrées"
                }
             },
             "length": [
@@ -439,10 +439,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "CTA Bl DÃ©but"
+                  "fr": "CTA Bl Début"
                },
                "description": {
-                  "fr": "CTA Bleue - DÃ©but"
+                  "fr": "CTA Bleue - Début"
                }
             },
             "length": [
@@ -454,10 +454,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "CTA Bl EntrÃ©es"
+                  "fr": "CTA Bl Entrées"
                },
                "description": {
-                  "fr": "CTA Bleue - EntrÃ©es"
+                  "fr": "CTA Bleue - Entrées"
                }
             },
             "length": [
@@ -499,10 +499,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "No. suivi Ã  domicile"
+                  "fr": "No. visite à domicile"
                },
                "description": {
-                  "fr": "Nombre de visites de suivi Ã  domicile"
+                  "fr": "Nombre de visite de suivi à domicile"
                }
             },
             "length": [
@@ -514,10 +514,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "No. causeries rÃ©alisÃ©es"
+                  "fr": "No. causeries réalisées"
                },
                "description": {
-                  "fr": "Nombre causeries rÃ©alisÃ©es"
+                  "fr": "Nombre causeries réalisées"
                }
             },
             "length": [
@@ -541,7 +541,7 @@
          }
 
       },
-      "use-sentinel": true
+      "use-sentinel": false
    },
    {
       "meta": {
@@ -556,10 +556,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "AnnÃ©e du rapport"
+                  "fr": "Année du rapport"
                },
                "description": {
-                  "fr": "AnnÃ©e du rapport"
+                  "fr": "Année du rapport"
                }
             },
             "length": [
@@ -647,7 +647,7 @@
                [
                   2,
                   {
-                     "fr": "FÃ©vrier",
+                     "fr": "Février",
                      "en": "February"
                   }
                ],
@@ -717,7 +717,7 @@
                [
                   12,
                   {
-                     "fr": "DÃ©cembre",
+                     "fr": "Décembre",
                      "en": "December"
                   }
                ]
@@ -758,10 +758,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "Enfants reÃ§us"
+                  "fr": "Enfants reçus"
                },
                "description": {
-                  "fr": "Nombre d'enfants reÃ§us"
+                  "fr": "Nombre d'enfants reçus"
                }
             },
             "length": [
@@ -773,10 +773,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "Enfants rÃ©fÃ©rÃ©s reÃ§us"
+                  "fr": "Enfants référés reçus"
                },
                "description": {
-                  "fr": "Nombre dâ€™enfants rÃ©fÃ©rÃ©s reÃ§us"
+                  "fr": "Nombre d’enfants référés reçus"
                }
             },
             "length": [
@@ -863,10 +863,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "No. d'ASC supervisÃ©s"
+                  "fr": "No. d'ASC supervisés"
                },
                "description": {
-                  "fr": "Nombre d'ASC supervisÃ©s"
+                  "fr": "Nombre d'ASC supervisés"
                }
             },
             "length": [
@@ -893,10 +893,10 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "fr": "No. de relais supervisÃ©s"
+                  "fr": "No. de relais supervisés"
                },
                "description": {
-                  "fr": "Nombre de relais supervisÃ©s"
+                  "fr": "Nombre de relais supervisés"
                }
             },
             "length": [
@@ -949,6 +949,6 @@
             ]
          }
       },
-      "use-sentinel": true
+      "use-sentinel": false
    }
 ]
