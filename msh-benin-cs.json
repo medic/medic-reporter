@@ -734,6 +734,7 @@
             "flags": {}
          }
       },
-      "messages_task": "function() { /* * return array of message objects, e.g: [{to: '+123', message: 'foo'},...] * context includes: phone, clinic, keys, labels, values * Health Center -> Clinic (or) Hospital -> Health Center */ var msg = [], ignore = [], hc_ph = clinic && clinic.parent && clinic.parent.contact && clinic.parent.contact.phone, cl_ph = clinic && clinic.contact && clinic.contact.phone, to = hc_ph; if (phone === hc_ph) { to = cl_ph; ignore.push('cref_treated'); } keys.forEach(function(key) { if (ignore.indexOf(key) === -1) { msg.push(labels.shift() + ': ' + values.shift()); } else { labels.shift(); values.shift(); } }); return {to:to, message:msg.join(', ')};}"
+      "facility_reference": "cref_rc",
+      "messages_task": "function() { /* * return array of message objects, e.g: [{to: '+123', message: 'foo'},...] * context includes: phone, clinic, keys, labels, values * Health Center -> Clinic (or) Hospital -> Health Center */ var msg = [], ignore = [], hc_ph = clinic && clinic.parent && clinic.parent.contact && clinic.parent.contact.phone, cl_ph = clinic && clinic.contact && clinic.contact.phone, to = hc_ph; if (cl_ph) { to = cl_ph; ignore.push('cref_treated'); } keys.forEach(function(key) { if (ignore.indexOf(key) === -1) { msg.push(labels.shift() + ': ' + values.shift()); } else { labels.shift(); values.shift(); } }); return {to:to, message:msg.join(', ')};}"
    }
 ]
