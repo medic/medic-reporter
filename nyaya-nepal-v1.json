@@ -16,7 +16,7 @@
                 },
                 "position" : 1,
                 "type" : "integer",
-                "length" : [1, 2],
+                "length" : [1, 1],
                 "required": true
             },
             "daysoverdue" : {
@@ -111,22 +111,30 @@
                     ], [2, {
                             "en" : "Health Post",
                             "ne" : "हेल्थ पोस्ट"
-						}
-					], [3, {
-							"en" : "Home Visit",
+                        }
+                    ], [3, {
+                            "en" : "Home Visit",
                             "ne" : "घर भेट"
-						}
-					]],
+                        }
+                    ], [4, {
+                            "en" : "Private Pharmacy",
+                            "ne" : "मेडिकल"
+                        }
+                    ], [5, {
+                            "en" : "Other",
+                            "ne" : "अन्य"
+                        }
+                    ]],
                 "required" : true
-			}
-		},
+            }
+        },
         "validations" : {
             "check1" : "function() { if (form_data['gender'] === 'Male' && [50,56,44].indexOf(form_data['condition']) !== -1 ) { return 'Male cannot have this condition.'}; }"
         }
-	}, {
-		"meta" : {
-			"code" : "NYAB",
-			"label" : {
+    }, {
+        "meta" : {
+            "code" : "NYAB",
+            "label" : {
                 "en" : "Health Post Survey",
                 "ne" : "Health Post"
             }
@@ -173,25 +181,25 @@
                     "short" : {
                         "en" : "Presence of non-expired chlorhexidine wash in delivery suite",
                         "ne" : "मिति नसकिएको क्लोरहेक्सिडिन वास डेलिभरि कोठामा छ?"
-					}
-				},
-				"position" : 4,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Have",
+                    }
+                },
+                "position" : 4,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Have",
                             "ne" : "छ"
-						}
-					], [2, {
+                        }
+                    ], [2, {
                             "en" : "Don't Have",
                             "ne" : "छैन"
-						}
-					]],
+                        }
+                    ]],
                 "required" : true
-			},
-			"q4" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of safe delivery kits available",
+            },
+            "q4" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of safe delivery kits available",
                         "ne" : "सुरक्षित सुत्केरी सामाग्रीको सङ्ख्या"
                     }
                 },
@@ -277,65 +285,65 @@
                     "short" : {
                         "en" : "Are sharps boxes available and in use for needles?",
                         "ne" : "धारिला सामाग्रिलाई फाल्ने भाँडो?"
-					}
-				},
-				"position" : 12,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Have",
+                    }
+                },
+                "position" : 12,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Have",
                             "ne" : "छ"
-						}
-					], [2, {
-							"en" : "Don't Have",
+                        }
+                    ], [2, {
+                            "en" : "Don't Have",
                             "ne" : "छैन"
-						}
-					]],
+                        }
+                    ]],
                 "required" : true
-			},
-			"q11" : {
-				"labels" : {
-					"short" : {
-						"en" : "Is a water supply available?",
+            },
+            "q11" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Is a water supply available?",
                         "ne" : "पानी छ?"
-					}
-				},
-				"position" : 13,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Have",
+                    }
+                },
+                "position" : 13,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Have",
                             "ne" : "छ"
-						}
-					], [2, {
-							"en" : "Don't Have",
+                        }
+                    ], [2, {
+                            "en" : "Don't Have",
                             "ne" : "छैन"
-						}
-					]],
+                        }
+                    ]],
                 "required" : true
-			},
-			"q12" : {
-				"labels" : {
-					"short" : {
-						"en" : "Is electricity supply available and working?",
+            },
+            "q12" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Is electricity supply available and working?",
                         "ne" : "बिजुली छ?"
-					}
-				},
-				"position" : 14,
-				"type" : "integer",
-				"list" : [[1, {
+                    }
+                },
+                "position" : 14,
+                "type" : "integer",
+                "list" : [[1, {
                            "en" : "Have",
                            "ne" : "छ"
-						}
-					], [2, {
+                        }
+                    ], [2, {
                            "en" : "Don't Have",
                            "ne" : "छैन"
-						}
-					]],
+                        }
+                    ]],
                 "required" : true
-			},
-			"q13" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of deliveries conducted",
+            },
+            "q13" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of deliveries conducted",
                         "ne" : "कतिवटा डेलिभरि गरियो?"
                     }
                 },
