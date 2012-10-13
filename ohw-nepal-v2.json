@@ -32,18 +32,21 @@
          },
          "last_menstrual_period": {
             "position": 1,
-            "type": "date",
+            "type": "integer",
             "labels": {
                "short": {
-                  "en": "Date of LMP",
+                  "en": "Weeks since LMP",
                   "ne": "अन्तिम महिनावारीको मिति"
                },
                "tiny": {
                   "en": "LMP"
                },
                "description": {
-                  "en": "Date of last menstrual period"
-               }
+                  "en": "Weeks since last menstrual period"
+               },
+               "length": [
+                   1, 2
+               ]
             },
             "validations": { }
          }
