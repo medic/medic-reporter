@@ -541,6 +541,6 @@
          }
 
       },
-      "use-sentinel": false
+      "use_sentinel": false
    }
 ]

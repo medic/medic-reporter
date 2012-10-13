@@ -48,7 +48,7 @@
             "validations": { }
          }
       },
-      "use-sentinel": true
+      "use_sentinel": true
    },
    {
       "meta": {
@@ -465,7 +465,7 @@
             }
          }
       },
-      "use-sentinel": true
+      "use_sentinel": true
    },
    {
       "meta": {
@@ -672,7 +672,7 @@
             "conditions-operator": "&&"
          }
       },
-      "use-sentinel": true
+      "use_sentinel": true
    },
    {
       "meta": {
