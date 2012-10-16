@@ -165,8 +165,7 @@
             "required": true
          }
       },
-      "facility_reference": "id",
-      "use_sentinel": true
+      "facility_reference": "id"
    },
    {
       "meta": {
