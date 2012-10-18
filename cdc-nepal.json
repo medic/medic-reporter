@@ -166,7 +166,7 @@
          }
       },
       "facility_reference": "id",
-      "use-sentinel": true
+      "use_sentinel": true
    },
    {
       "meta": {
@@ -305,7 +305,7 @@
           "afp_msl": "function() { if (form_data['msl_present'] === true && form_data['afp_present'] === true) return 'Please submit AFP and MSL reports separately.'; if (!form_data['msl_present'] && !form_data['afp_present']) return 'Please include a valid MSL or AFP report.'; }"
       },
       "facility_reference": "id",
-      "use-sentinel": true
+      "messages_task": "function() { /* * return array of message objects, e.g: [{to: '+123', message: 'foo'},...] * context includes: phone, clinic, keys, labels, values * Clinic -> Health Center & Hospital */ var ret = [], msg = [], ignore = [], hc_ph = clinic && clinic.parent && clinic.parent.contact && clinic.parent.contact.phone, dh_ph = clinic && clinic.parent && clinic.parent.parent && clinic.parent.parent.contact.phone; keys.forEach(function(key) { if (ignore.indexOf(key) === -1) { msg.push(labels.shift() + ': ' + values.shift()); } else { labels.shift(); values.shift(); } }); if (hc_ph) ret.push({to:hc_ph, message:msg.join(', ')}); if (dh_ph) ret.push({to:dh_ph, message:msg.join(', ')}); return ret; }"
    }
 ]
 
