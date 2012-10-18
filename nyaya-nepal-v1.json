@@ -64,12 +64,12 @@
                 },
                 "position" : 5,
                 "type" : "integer",
-                "list" : [[2, {
-                           "en" : "Female",
+                "list" : [[1, {
+                           "en" : "Male",
                            "ne" : "पुरुष"
                         }
-                    ], [1, {
-                            "en" : "Male",
+                    ], [2, {
+                            "en" : "Female",
                             "ne" : "महिला"
                         }
                     ]],
@@ -143,14 +143,17 @@
             "daysoverdue" : {
                 "labels" : {
                     "short" : {
-                        "en" : "Days since report end date",
+                        "en" : "Number of days since the patient was last seen",
                         "ne" : "रिपोर्ट बुझाउन कति दिन ढिलो भयो?"
                     }
                 },
                 "position" : 1,
                 "type" : "integer",
                 "length" : [1, 2],
-                "required" : true
+                "required" : true,
+                "validate": {
+                    "is_numeric_daysago": true
+                }
             },
             "q1" : {
                 "labels" : {
