@@ -146,14 +146,17 @@
             "daysoverdue" : {
                 "labels" : {
                     "short" : {
-                        "en" : "Days since report end date",
+                        "en" : "Number of days since the patient was last seen",
                         "ne" : "रिपोर्ट बुझाउन कति दिन ढिलो भयो?"
                     }
                 },
                 "position" : 1,
                 "type" : "integer",
                 "length" : [1, 2],
-                "required" : true
+                "required" : true,
+                "validate": {
+                    "is_numeric_daysago": true
+                }
             },
             "q1" : {
                 "labels" : {

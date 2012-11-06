@@ -36,7 +36,7 @@
             "labels": {
                "short": {
                   "en": "Weeks since LMP",
-                  "ne": "अन्तिम महिनावारीको मिति"
+                  "ne": "अन्तिम महिनावारी भएको कति हप्ता भयो?"
                },
                "tiny": {
                   "en": "LMP"
@@ -68,7 +68,7 @@
             "labels": {
                "short": {
                   "en": "Patient ID",
-                  "ne": "गर्भवती महिलाको दर्ता"
+                  "ne": "महिलाको दर्ता नं (५ अङ्क)"
                },
                "tiny": {
                   "en": "ID"
@@ -360,7 +360,7 @@
             "labels": {
                "short": {
                   "en": "Days since birth",
-                  "ne": "जन्मेको ... औं दिन"
+                  "ne": "बच्चा जन्मेको कति दिन भयो?"
                },
                "tiny": {
                   "en": "DAYS"
@@ -485,7 +485,7 @@
             "labels": {
                "short": {
                   "en": "Patient ID",
-                  "ne": "महिलाको दर्ता"
+                  "ne": "महिलाको दर्ता नं (५ अङ्क)"
                },
                "tiny": {
                   "en": "ID"
@@ -692,7 +692,7 @@
             "labels": {
                "short": {
                   "en": "Patient ID",
-                  "ne": "गर्भवती महिलाको दर्ता"
+                  "ne": "महिलाको दर्ता नं (५ अङ्क)"
                },
                "tiny": {
                   "en": "ID"
@@ -722,7 +722,7 @@
             "labels": {
                "short": {
                   "en": "Days since delivery",
-                  "ne": "सुत्केरीपछिको ... औं दिन"
+                  "ne": "प्रशुती भएको कति दिन भयो?"
                },
                "tiny": {
                   "en": "DAYS"
@@ -797,7 +797,7 @@
                   "ne": "के तपाई प्रशुती गराउदा उपस्थित हुनुहुन्थ्यो?"
                },
                "tiny": {
-                  "en": "Pres"
+                  "en": "PRES"
                },
                "description": {
                   "en": "Were you present at delivery?"
@@ -808,14 +808,14 @@
                   1,
                   {
                      "en": "Yes",
-                     "ne": "छ"
+                     "ne": "थिएँ"
                   }
                ],
                [
                   2,
                   {
                      "en": "No",
-                     "ne": "छैन"
+                     "ne": "थिइन"
                   }
                ]
             ]
@@ -982,36 +982,36 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Low Birth Weight?",
-                  "ne": "कम जन्म तौल ?"
+                  "en": "Weight of baby",
+                  "ne": "बच्चाको तौल"
                },
                "tiny": {
                   "en": "WT"
                },
                "description": {
-                  "en": "Low weight of newborn child at birth?"
+                  "en": "Weight of newborn child at birth"
                }
             },
             "list": [
                [
                   1,
                   {
-                     "en": "Yes - Yellow",
-                     "ne": "छ - पहेंलो"
+                     "en": "Yellow",
+                     "ne": "पहेंलो"
                   }
                ],
                [
                   2,
                   {
-                     "en": "Yes - Red",
-                     "ne": "छ - रातो"
+                     "en": "Red",
+                     "ne": "रातो"
                   }
                ],
                [
                   3,
                   {
-                     "en": "No",
-                     "ne": "छैन"
+                     "en": "Green",
+                     "ne": "हरियो"
                   }
                ]
             ],
@@ -1041,14 +1041,14 @@
                   1,
                   {
                      "en": "Yes",
-                     "ne": "छ"
+                     "ne": "थियो"
                   }
                ],
                [
                   2,
                   {
                      "en": "No",
-                     "ne": "छैन"
+                     "ne": "थिएन"
                   }
                ]
             ]
