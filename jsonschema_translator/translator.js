@@ -52,16 +52,21 @@
                 result.schema.name = form.meta.code;
                 result.key = form.meta.code;
             }
-
             if (form.meta.label) {
                 // use requested language
                 result.schema.description = getLabel(form.meta.label, lang);
-
             }
-
         }
 
 
+        // fields
+        if (form.fields) {
+            result.schema.properties = {};
+            var keys = Object.keys(form.fields);
+            keys.forEach(function(key) {
+                result.schema.properties[key] = convertProperty(key, form.fields[key], lang);
+            });
+        }
 
 
 
@@ -70,12 +75,46 @@
             if (form.meta && form.meta.code) {
                 doc.form = form.meta.code;
             }
+            callback(null, doc);
         }
 
         return result;
     }
 
 
+
+    function convertProperty(key, property, lang) {
+        var prop = {};
+
+        // seems equivalent
+        prop.type = property.type;
+        prop.title = getLabel(property.labels.short, lang);
+
+        if (property.required) prop.required = true;
+
+        if (property.type === "string") {
+            if (property.length) {
+                prop.minLength = property.length[0];
+                prop.maxLength = property.length[1];
+            }
+            if (property.flags) {
+                if (property.flags.input_digits_only) {
+                    prop.pattern = '[0-9]+'
+                }
+            }
+        }
+
+        if (property.type === "integer") {
+            if (property.length) {
+
+            }
+            if (property.range) {
+                prop.minimum = property.length[0];
+                prop.maximum = property.length[1];
+            }
+        }
+        return prop;
+    }
 
     function getLabel(label, lang) {
         // use requested language

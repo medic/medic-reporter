@@ -15,12 +15,22 @@ var jam = {
             "main": "jquery.lego.js"
         },
         {
+            "name": "json",
+            "location": "jam/json",
+            "main": "json.js"
+        },
+        {
             "name": "json.edit",
             "location": "jam/json.edit",
             "main": "json.edit.js"
+        },
+        {
+            "name": "text",
+            "location": "jam/text",
+            "main": "text.js"
         }
     ],
-    "version": "0.2.6",
+    "version": "0.2.11",
     "shim": {}
 };
 

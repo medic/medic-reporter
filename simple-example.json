@@ -1,0 +1,25 @@
+[{
+    "meta": {
+      "code": "VPD",
+      "label": {
+         "en": "CDC Weekly Report",
+         "fr": "Alerte référence"
+      }
+    },
+    "fields" : {
+        "id" : {
+            "labels": {
+               "tiny": {
+                 "en": "ID"
+               },
+               "description": {
+                  "en": "Reporting Unit ID"
+               },
+               "short": {
+                  "en": "Unit ID"
+               }
+            },
+            "type": "string"
+        }
+    }
+}]

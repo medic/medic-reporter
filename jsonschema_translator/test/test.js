@@ -25,6 +25,26 @@ var basicForm = [{
     }
 }];
 
+var basicStringField = {
+   "labels": {
+      "tiny": {
+        "en": "ID"
+      },
+      "description": {
+         "en": "Reporting Unit ID"
+      },
+      "short": {
+         "en": "Unit ID"
+      }
+   },
+   "type": "string"
+};
+
+
+// super lazy clone
+function cheapClone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}
 
 
 describe('Meta', function() {
@@ -55,15 +75,70 @@ describe('Meta', function() {
 })
 
 
+describe('Properties', function() {
+    describe('String', function() {
+        it("should handle a basic string property", function() {
+            var form = cheapClone(basicForm);
+            form[0].fields = {
+                id : cheapClone(basicStringField)
+            };
+            var tl = translator(form, 'en');
+            assert.ok(tl.VPD.schema.properties);
+            assert.ok(tl.VPD.schema.properties.id);
+            assert.equal(tl.VPD.schema.properties.id.type, 'string');
+            assert.equal(tl.VPD.schema.properties.id.title, 'Unit ID');
+        })
+
+        it('should handle min,max settings', function() {
+            var form = cheapClone(basicForm);
+            var id = cheapClone(basicStringField);
+            id.length = [1, 2]
+            form[0].fields = {
+                id : id
+            };
+            var tl = translator(form, 'en');
+            assert.equal(tl.VPD.schema.properties.id.minLength, 1);
+            assert.equal(tl.VPD.schema.properties.id.maxLength, 2);
+        })
+
+        it('should handle required fields', function() {
+            var form = cheapClone(basicForm);
+            var id = cheapClone(basicStringField);
+            id.required = true;
+            form[0].fields = {
+                id : id
+            };
+            var tl = translator(form, 'en');
+            assert.ok(tl.VPD.schema.properties.id.required);
+        })
+
+        it('should handle number only string fields', function() {
+            var form = cheapClone(basicForm);
+            var id = cheapClone(basicStringField);
+            id.flags = {
+                input_digits_only : true
+            };
+            form[0].fields = {
+                id : id
+            };
+            var tl = translator(form, 'en');
+            assert.equal(tl.VPD.schema.properties.id.pattern, '[0-9]+');
+        })
+    })
+})
+
+
+
 
 describe('Post Save', function() {
     describe('form type', function() {
 
-        it('should add the doc.form from the meta.code', function() {
+        it('should add the doc.form from the meta.code', function(done) {
             var tl = translator(basicForm);
             var doc = {};
             tl.VPD.post_save(doc, function(err, doc) {
                 assert.equal(doc.form, 'VPD');
+                done();
             })
         })
 
