@@ -1115,7 +1115,7 @@
                 "outcome_child": 2
             },
             "conditions-operator": "||"
-         }
+         },
          "misoprostol_administered": {
             "position": 10,
             "type": "integer",
