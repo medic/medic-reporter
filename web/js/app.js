@@ -3,10 +3,52 @@
  * Date: 12-11-02
  * Time: 2:03 PM
  */
-define(['jquery', 'json.edit', '../../jsonschema_translator/translator', 'json!../../simple-example.json'], function ($, jsonEdit, translator, example) {
+define([
+    'jquery',
+    'json.edit',
+    '../../jsonschema_translator/translator',
+    'json!../../simple-example.json'
+], function ($, jsonEdit, translator, example) {
+
+
     var exports = {};
 
+    exports.init = function () {
 
+        // on first load, just show the example json form VPD, in english
+        showForm(example, 'VPD', 'en');
+    };
+
+
+    // Render and bind a form
+    function showForm(forms, code, lang) {
+        var schemafied = translator(forms, lang);
+        var rendered = jsonEdit('form', schemafied[code].schema);
+        $('form').on('submit', function () {
+            var err_alert = $('.alert');
+
+            err_alert.hide(10);
+
+            var data = rendered.collect();
+            if (!data.result.ok) {
+
+                err_alert.show(200)
+                    .find('button.close')
+                    .on('click', function () { err_alert.hide(); })
+                err_alert.find('h4')
+                     .text(data.result.msg);
+                return false;
+            }
+            schemafied[code].post_save(data.data, function(err, doc){
+                $('.results').val(JSON.stringify(doc));
+                console.log(err, doc);
+            })
+
+            return false;
+        });
+    }
+
+    // Used to find all the .json files in the root of this project
     function findAvailableJson(callback) {
         var results = [];
         $.get('../', function(data) {
@@ -21,40 +63,5 @@ define(['jquery', 'json.edit', '../../jsonschema_translator/translator', 'json!.
         });
     }
 
-
-    function showForm(forms, code) {
-        var tl = translator(forms);
-        var editor = jsonEdit('form', tl[code].schema);
-        $('form').on('submit', function () {
-            var err_alert = $('.alert');
-
-            err_alert.hide(10);
-
-            var data = editor.collect();
-            if (!data.result.ok) {
-
-                err_alert.show(200)
-                    .find('button.close')
-                    .on('click', function () { err_alert.hide(); })
-                err_alert.find('h4')
-                     .text(data.result.msg);
-                return false;
-            }
-            tl[code].post_save(data.data, function(err, doc){
-                $('.results').val(JSON.stringify(doc));
-                console.log(err, doc);
-            })
-
-            return false;
-        });
-    }
-
-
-    exports.init = function () {
-
-        console.log(example);
-        showForm(example, 'VPD');
-
-    };
     return exports;
 });
