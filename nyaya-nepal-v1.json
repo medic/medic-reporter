@@ -28,7 +28,7 @@
                 },
                 "position" : 2,
                 "type" : "integer",
-                "length" : [1, 2],
+                "length" : [1, 1],
                 "required" : true,
                 "validations": {
                     "is_numeric_daysago": true
