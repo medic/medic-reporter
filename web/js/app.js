@@ -6,6 +6,7 @@
 define([
     'jquery',
     'underscore',
+    'director',
     'json.edit',
     'codemirror',
     '../../jsonschema_translator/translator',
@@ -13,26 +14,73 @@ define([
     'json!../../simple-example.json',
     'select2',
     'jam/codemirror/mode/javascript/javascript',
-], function ($, _, jsonEdit, CodeMirror, translator, json_format, example) {
+    'domReady!'
+], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, example) {
 
 
     var exports = {},
+        routes = {
+            '/' : no_form_selected,
+            '/*/*/*' : form_and_code,
+            '/*/*' : form_and_code,
+            '/*' : form_only
+        },
+        router = director.Router(routes),
         editor,
+        schema_used,
         selected_form;
 
     exports.init = function () {
 
+
         init_json_display();
         initNameSelect();
 
-        // on first load, just show the example json form VPD, in english
-        showForm(example, 'VPD', 'en');
-
         findAvailableJson(function(err, data){
             renderSelect(data);
+            router.init('/');
         })
 
     };
+
+
+    function no_form_selected() {
+        // on first load, just show the example json form VPD, in english
+        showForm(example, 'VPD', 'en');
+    }
+
+    function form_only(form_name, callback) {
+        $('#choose-form').select2('val', form_name);
+        var form_url = resolve_form_url(form_name);
+        getForm(form_url, function(err, form) {
+            var codes = getFormCodes(form);
+            renderFormNameSelect(form_name, codes);
+
+            if (_.isFunction(callback)) {
+                callback(null, {
+                   form_url : form_url,
+                    form : form,
+                    codes : codes
+                });
+            }
+
+        });
+    }
+
+
+    function form_and_code(form_name, code, /*optional*/ lang) {
+        if (!lang) lang = 'en';
+        form_only(form_name, function(err, details){
+            $('#choose-name').select2('val', code);
+            showForm(details.form, code, lang);
+        })
+
+    }
+
+
+    function resolve_form_url(form_name) {
+        return '../' + form_name;
+    }
 
 
     // Render and bind a form
@@ -40,8 +88,9 @@ define([
         $form_fields = $('#form_fields');
         $form_fields.empty();
         var schemafied = translator(forms, lang);
+        schema_used.setValue(json_format(JSON.stringify(schemafied[code].schema)));
         var rendered = jsonEdit('form_fields', schemafied[code].schema);
-        $('form.main').live('submit', function () {
+        $('form.main').on('submit', function () {
             var err_alert = $('.alert');
 
             err_alert.hide(10);
@@ -74,7 +123,7 @@ define([
                 var href = $(row).attr('href');
                 if (href.indexOf('.json', href.length - 5) !== -1) {
                     results.push({
-                        id : '../' + href,
+                        id :  href,
                         text : href
                     });
                 }
@@ -91,16 +140,30 @@ define([
             mode : {name: "javascript", json: true}
         });
         editor.setSize(null, 400 );
+
+
+        var elem2 = $('.schema_used').get()[0];
+        schema_used = CodeMirror(elem2, {
+            value : '',
+            readOnly : true,
+            theme : 'monokai',
+            mode : {name: "javascript", json: true}
+        });
+        schema_used.setSize(null, 400 );
+
     }
 
     function renderSelect(data){
         $('#choose-form').select2({
-            data : data
+            data : data,
+            initSelection : function(element, callback) {
+                var val = $(element).val();
+                var data = {id: val, text: val};
+                callback(data);
+            }
         }).on('change', function(){
             var val = $(this).val();
-            getForm(val, function(err, form){
-                renderFormNameSelect(form);
-            });
+            router.setRoute('/' + val);
         })
     }
 
@@ -112,14 +175,8 @@ define([
     }
 
 
-    function initNameSelect(){
-        $('#choose-name').select2({
-            data : []
-        }).select2('disable');
-    }
-
-    function renderFormNameSelect(form) {
-        var codes = _.map(form, function(entry){
+    function getFormCodes(form) {
+        return _.map(form, function(entry){
             if (entry.meta && entry.meta.code) {
                 return {
                     id: entry.meta.code,
@@ -127,13 +184,28 @@ define([
                 }
             }
         });
+    }
+
+    function initNameSelect(){
         $('#choose-name').select2({
-            data : codes
+            data : [],
+        }).select2('disable');
+    }
+
+    function renderFormNameSelect(form_name, codes) {
+
+        $('#choose-name').select2({
+            data : codes,
+            initSelection : function(element, callback) {
+                var val = $(element).val();
+                var data = {id: val, text: val};
+                callback(data);
+            }
         })
             .select2('enable')
             .on('change', function(){
                 var code = $(this).val();
-                showForm(form, code, 'en');
+                router.setRoute('/' + form_name + '/' + code);
             })
     }
 

@@ -2052,6 +2052,16 @@ var jam = {
             "main": "lib/codemirror.js"
         },
         {
+            "name": "director",
+            "location": "jam/director",
+            "main": "director.js"
+        },
+        {
+            "name": "domReady",
+            "location": "jam/domReady",
+            "main": "domReady.js"
+        },
+        {
             "name": "jquery",
             "location": "jam/jquery",
             "main": "jquery.js"
@@ -2088,7 +2098,11 @@ var jam = {
         }
     ],
     "version": "0.2.11",
-    "shim": {}
+    "shim": {
+        "director": {
+            "exports": "Router"
+        }
+    }
 };
 
 if (typeof require !== "undefined" && require.config) {

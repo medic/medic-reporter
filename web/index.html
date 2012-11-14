@@ -18,10 +18,11 @@
   <div class="container">
       <span class="row">
           <span class="span7 offset2 well">
-              <h2>Choose Form</h2>
               <form class="form">
-                  <input type="text" class="input-xxlarge" id="choose-form" /><br/>
-                  <input type="text" class="input-xxlarge" id="choose-name" /><br/>
+                  <label>File</label>
+                  <input type="text" class="input-xxlarge" id="choose-form" />
+                  <label>Code</label>
+                  <input type="text" class="input-xxlarge" id="choose-name" />
               </form>
           </span>
       </span>
@@ -43,8 +44,16 @@
           <button class="btn btn-success">Save</button>
       </form>
 
-      <h2>Result Data</h2>
-      <div class="results"></div>
+      <div class="row">
+          <h2>Result Data</h2>
+          <div class="results"></div>
+      </div>
+      <div class="row">
+          <h2>Schema Used</h2>
+          <div class="schema_used"></div>
+      </div>
+
+
   </div>
 
 
