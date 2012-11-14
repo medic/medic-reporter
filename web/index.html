@@ -9,7 +9,9 @@
 
     <link rel="stylesheet" type="text/css" href="jam/bootstrap/docs/assets/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="jam/json.edit/json.edit.bootstrap.css" />
-      <link rel="stylesheet" type="text/css" href="jam/select2/select2.css" />
+    <link rel="stylesheet" type="text/css" href="jam/select2/select2.css" />
+    <link type="text/css" rel="stylesheet" href="jam/codemirror/lib/codemirror.css">
+    <link type="text/css" rel="stylesheet" href="jam/codemirror/theme/monokai.css">
   </head>
   <body>
 
@@ -17,7 +19,10 @@
       <span class="row">
           <span class="span7 offset2 well">
               <h2>Choose Form</h2>
-              <input type="text" class="input-xxlarge" id="choose-form" />
+              <form class="form">
+                  <input type="text" class="input-xxlarge" id="choose-form" /><br/>
+                  <input type="text" class="input-xxlarge" id="choose-name" /><br/>
+              </form>
           </span>
       </span>
 
@@ -25,21 +30,21 @@
 
 
   <div class="container">
-      <form class="form">
+      <form class="form main">
 
           <fieldset>
-          <div id="form"></div>
+          <div id="form_fields"></div>
           </fieldset>
           <div class="alert alert-block hide">
             <button type="button" class="close" data-dismiss="alert">×</button>
             <h4 class="head"></h4>
             <div class="msg"></div>
           </div>
-          <button class="btn btn-primary">Save</button>
+          <button class="btn btn-success">Save</button>
       </form>
 
       <h2>Result Data</h2>
-      <textarea class="results"></textarea>
+      <div class="results"></div>
   </div>
 
 

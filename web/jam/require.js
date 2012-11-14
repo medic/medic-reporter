@@ -2047,6 +2047,11 @@ var jam = {
             "location": "jam/bootstrap"
         },
         {
+            "name": "codemirror",
+            "location": "jam/codemirror",
+            "main": "lib/codemirror.js"
+        },
+        {
             "name": "jquery",
             "location": "jam/jquery",
             "main": "jquery.js"
@@ -2075,6 +2080,11 @@ var jam = {
             "name": "text",
             "location": "jam/text",
             "main": "text.js"
+        },
+        {
+            "name": "underscore",
+            "location": "jam/underscore",
+            "main": "underscore.js"
         }
     ],
     "version": "0.2.11",
