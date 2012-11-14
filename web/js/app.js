@@ -7,7 +7,8 @@ define([
     'jquery',
     'json.edit',
     '../../jsonschema_translator/translator',
-    'json!../../simple-example.json'
+    'json!../../simple-example.json',
+    'select2'
 ], function ($, jsonEdit, translator, example) {
 
 
@@ -17,6 +18,11 @@ define([
 
         // on first load, just show the example json form VPD, in english
         showForm(example, 'VPD', 'en');
+
+        findAvailableJson(function(err, data){
+            renderSelect(data);
+        })
+
     };
 
 
@@ -56,12 +62,27 @@ define([
             $root.find('li a').each(function(i, row) {
                 var href = $(row).attr('href');
                 if (href.indexOf('.json', href.length - 5) !== -1) {
-                    results.push(href);
+                    results.push({
+                        id : href,
+                        text : href
+                    });
                 }
             })
             callback(null, results);
         });
     }
+
+
+    function renderSelect(data){
+        $('#choose-form').select2({
+            data : data
+        }).on('change', function(){
+            var val = $(this).val();
+            console.log(val);
+        })
+    }
+
+
 
     return exports;
 });
