@@ -55,7 +55,7 @@ define([
         getForm(form_url, function(err, form) {
             var codes = getFormCodes(form);
             renderFormNameSelect(form_name, codes);
-
+            //$('#choose-form').select2('val', '');
             if (_.isFunction(callback)) {
                 callback(null, {
                    form_url : form_url,
@@ -91,28 +91,49 @@ define([
         schema_used.setValue(json_format(JSON.stringify(schemafied[code].schema)));
         var rendered = jsonEdit('form_fields', schemafied[code].schema);
         $('form.main').on('submit', function () {
-            var err_alert = $('.alert');
+            try {
+                var err_alert = $('.alert');
 
-            err_alert.hide(10);
+                err_alert.hide(10);
 
-            var data = rendered.collect();
-            if (!data.result.ok) {
+                var data = rendered.collect();
+                if (!data.result.ok) {
 
-                err_alert.show(200)
-                    .find('button.close')
-                    .on('click', function () { err_alert.hide(); })
-                err_alert.find('h4')
-                     .text(data.result.msg);
-                return false;
+                    var msg = generateFieldErrorMsg(data.result, schemafied[code].schema);
+
+
+                    err_alert.show(200)
+                        .find('button.close')
+                        .on('click', function () { err_alert.hide(); })
+                    err_alert.find('h4')
+                         .html(data.result.msg + '<br/>' +  msg);
+                    return false;
+                }
+                schemafied[code].post_save(data.data, function(err, doc){
+                    editor.setValue(json_format(JSON.stringify(doc)));
+                    console.log(err, doc);
+                })
+            } catch (e) {
+                console.log(e);
             }
-            schemafied[code].post_save(data.data, function(err, doc){
-                editor.setValue(json_format(JSON.stringify(doc)));
-                console.log(err, doc);
-            })
-
             return false;
         });
     }
+
+
+    function generateFieldErrorMsg(result, schema) {
+        var error = [];
+        _.each(result.data, function(value, key){
+            if (!value.ok) {
+                var msg = value.msg;
+                var title = schema.properties[key].title;
+                error.push('<b>'+ title+ '</b> ' + msg );
+            }
+        });
+        return error.join('<br/>');
+
+    }
+
 
     // Used to find all the .json files in the root of this project
     function findAvailableJson(callback) {
