@@ -20,6 +20,85 @@
                }
             },
             "type": "string"
+        },
+        "birth_site2": {
+           "position": 2,
+           "type": "string",
+           "labels": {
+              "short": {
+                 "en": "Place of Delivery",
+                 "ne": "प्रशुती भएको ठाउँ"
+              },
+              "tiny": {
+                 "en": "SITE"
+              },
+              "description": {
+                 "en": "Site of birth"
+              }
+           },
+           "list": [
+              [
+                 "1",
+                 {
+                    "en": "Home",
+                    "ne": "घर"
+                 }
+              ],
+              [
+                 "2",
+                 {
+                    "en": "Health Facility",
+                    "ne": "स्वास्थ्य संस्था"
+                 }
+              ],
+              [
+                 "3",
+                 {
+                    "en": "Other Place",
+                    "ne": "अन्य ठाउँ"
+                 }
+              ]
+           ]
+        },
+        "birth_site": {
+           "position": 2,
+           "type": "integer",
+           "labels": {
+              "short": {
+                 "en": "Place of Delivery",
+                 "ne": "प्रशुती भएको ठाउँ"
+              },
+              "tiny": {
+                 "en": "SITE"
+              },
+              "description": {
+                 "en": "Site of birth"
+              }
+           },
+           "list": [
+              [
+                 1,
+                 {
+                    "en": "Home",
+                    "ne": "घर"
+                 }
+              ],
+              [
+                 2,
+                 {
+                    "en": "Health Facility",
+                    "ne": "स्वास्थ्य संस्था"
+                 }
+              ],
+              [
+                 3,
+                 {
+                    "en": "Other Place",
+                    "ne": "अन्य ठाउँ"
+                 }
+              ]
+           ]
         }
+
     }
 }]

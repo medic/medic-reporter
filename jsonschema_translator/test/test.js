@@ -40,6 +40,38 @@ var basicStringField = {
    "type": "string"
 };
 
+var listField = {
+      "type": "integer",
+      "labels": {
+         "short": {
+            "en": "Place of Delivery"
+         }
+      },
+      "list": [
+         [
+            1,
+            {
+               "en": "Home",
+               "ne": "घर"
+            }
+         ],
+         [
+            2,
+            {
+               "en": "Health Facility",
+               "ne": "स्वास्थ्य संस्था"
+            }
+         ],
+         [
+            3,
+            {
+               "en": "Other Place",
+               "ne": "अन्य ठाउँ"
+            }
+         ]
+      ]
+};
+
 
 // super lazy clone
 function cheapClone(obj) {
@@ -127,7 +159,22 @@ describe('Properties', function() {
     })
 })
 
-
+describe('Lists', function(){
+    it('should convert a list to an enum with jehint', function(){
+        var form = cheapClone(basicForm);
+        form[0].fields = {
+            place : cheapClone(listField)
+        };
+        var tl = translator(form, 'en');
+        var conveted_prop = tl.VPD.schema.properties.place;
+        assert.equal(conveted_prop['je:hint'], 'enumlabels');
+        assert.equal(conveted_prop['je:enumlabels'][1], 'Home');
+        assert.equal(conveted_prop['je:enumlabels'][2], 'Health Facility');
+        assert.equal(conveted_prop['je:enumlabels'][3], 'Other Place');
+        assert.equal(conveted_prop.enum.length,3 );
+        assert.deepEqual(conveted_prop.enum, [1,2,3] );
+    })
+})
 
 
 describe('Post Save', function() {

@@ -14,7 +14,8 @@ define([
     'json!../../simple-example.json',
     'select2',
     'jam/codemirror/mode/javascript/javascript',
-    'domReady!'
+    'domReady!',
+    'jam/json.edit/addons/enumlabels'
 ], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, example) {
 
 

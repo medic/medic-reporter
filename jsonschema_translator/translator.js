@@ -106,13 +106,29 @@
 
         if (property.type === "integer") {
             if (property.length) {
-
+                prop.minLength = property.length[0];
+                prop.maxLength = property.length[1];
             }
             if (property.range) {
-                prop.minimum = property.length[0];
-                prop.maximum = property.length[1];
+                prop.minimum = property.range[0];
+                prop.maximum = property.range[1];
             }
         }
+
+        if (property.list) {
+            prop['je:hint'] = 'enumlabels';
+            prop['je:enumlabels'] = {};
+            prop.enum = [];
+            for (var i=0; i < property.list.length; i++) {
+                var item_arr = property.list[i];
+                var val = item_arr[0];
+                var label = getLabel(item_arr[1]);
+                prop['je:enumlabels'][val] = label;
+                prop.enum.push(val);
+            }
+        }
+
+
         return prop;
     }
 
