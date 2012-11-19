@@ -3,11 +3,11 @@
     if (typeof exports === 'object') {
         module.exports = factory();
     } else if (typeof define === 'function' && define.amd) {
-        define(factory);
+        define(['./src/validations'],factory);
     } else {
-        root.returnExports = factory();
+        root.returnExports = factory(root.validations);
     }
-}(this, function () {
+}(this, function (validations) {
 
     return function(form, lang) {
         var result = {};
@@ -41,7 +41,7 @@
 
             },
             // validation hooks
-            validation : {},
+            validate : null,
             // ofter the save, run the doc through here
             post_save : null
         }
@@ -69,7 +69,32 @@
         }
 
 
+        result.validate = function(doc, callback) {
+            var errors = [];
 
+            _.each(result.schema.properties, function(prop_details, prop_name){
+                if (prop_details.validations) {
+                    _.each(prop_details.validations, function(validation_func, key) {
+                        var value = doc[prop_name];
+
+                        var result = validation_func(value)
+
+                        if (!result.ok) {
+                            var err = {
+                                msg : getLabel(result.error, lang),
+                                name  : prop_name,
+                                title : prop_details.title
+                            }
+
+                            errors.push(err);
+                        }
+                    })
+                }
+            });
+
+            if (errors.length > 0) return callback(errors);
+            callback(null);
+        }
 
         result.post_save = function(doc, callback) {
             if (form.meta && form.meta.code) {
@@ -128,6 +153,12 @@
             }
         }
 
+        if (property.validations && Object.keys(property.validations).length > 0) {
+            prop.validations = {};
+            _.each(property.validations, function(value, key){
+                prop.validations[key] = validations[key];
+            })
+        }
 
         return prop;
     }

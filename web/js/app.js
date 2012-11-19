@@ -110,15 +110,39 @@ define([
                          .html(data.result.msg + '<br/>' +  msg);
                     return false;
                 }
-                schemafied[code].post_save(data.data, function(err, doc){
-                    editor.setValue(json_format(JSON.stringify(doc)));
-                    console.log(err, doc);
+                schemafied[code].validate(data.data, function(err){
+
+                    if (err) {
+                        var msg = generateValidationErrorMsg(err);
+                        err_alert.show(200)
+                            .find('button.close')
+                            .on('click', function () { err_alert.hide(); })
+                        err_alert.find('h4')
+                             .html(msg);
+                        return false;
+                    }
+
+
+                    schemafied[code].post_save(data.data, function(err, doc){
+                        editor.setValue(json_format(JSON.stringify(doc)));
+                        console.log(err, doc);
+                    })
                 })
+
+
             } catch (e) {
                 console.log(e);
             }
             return false;
         });
+    }
+
+
+    function generateValidationErrorMsg(errors) {
+        var errs = _.map(errors, function(err) {
+            return '<b>'+ err.title+ '</b> ' + err.msg
+        });
+        return errs.join('<br/>');
     }
 
 
