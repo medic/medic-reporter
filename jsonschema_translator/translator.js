@@ -72,6 +72,7 @@
         result.validate = function(doc, callback) {
             var errors = [];
 
+            // check for validation functions on each property that need to be run
             _.each(result.schema.properties, function(prop_details, prop_name){
                 if (prop_details.validations) {
                     _.each(prop_details.validations, function(validation_func, key) {
@@ -91,6 +92,14 @@
                     })
                 }
             });
+
+            // check for form level validations
+            if (form.validations) {
+                _.each(form.validations, function(validation_function, key){
+                    // for now, don't do anything.
+                });
+            }
+
 
             if (errors.length > 0) return callback(errors);
             callback(null);
