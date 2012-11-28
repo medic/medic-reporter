@@ -132,7 +132,7 @@
             }
         },
         "validations" : {
-            "male_condition" : "function() { if (form_data['gender'] === 'Male' && [50,56,44].indexOf(form_data['condition']) !== -1 ) { return 'Male cannot have this condition.'}; }"
+            "male_condition" : "function() { if (form_data['gender'] === 'Male' && [50,56,53].indexOf(form_data['condition']) !== -1 ) { return 'Male cannot have this condition.'}; }"
         }
     }, {
         "meta" : {
