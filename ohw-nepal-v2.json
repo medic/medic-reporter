@@ -1148,7 +1148,8 @@
                ]
             ]
          }
-      }
+      },
+      "use_sentinel": true
    },
    {
       "meta": {
@@ -1278,6 +1279,7 @@
                 "notifications": 2
             }
          }
-      }
+      },
+      "use_sentinel": true
    }
 ]
