@@ -9,7 +9,7 @@ define([
     'director',
     'json.edit',
     'codemirror',
-    '../../jsonschema_translator/translator',
+    'schema-support',
     './json_format',
     'json!../../simple-example.json',
     'select2',

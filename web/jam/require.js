@@ -2082,6 +2082,11 @@ var jam = {
             "main": "json.edit.js"
         },
         {
+            "name": "schema-support",
+            "location": "jam/schema-support",
+            "main": "translator.js"
+        },
+        {
             "name": "select2",
             "location": "jam/select2",
             "main": "select2.js"
