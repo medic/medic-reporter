@@ -1,0 +1,30 @@
+{
+    "name": "json",
+    "version": "0.2.1",
+    "description": "RequireJS plugin for loading JSON files",
+    "categories": [
+        "Loader plugins"
+    ],
+    "dependencies": {
+        "text": null
+    },
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/millermedeiros/requirejs-plugins.git"
+    }],
+    "github": "https://github.com/millermedeiros/requirejs-plugins",
+    "maintainers": {
+        "name": "Miller Medeiros",
+        "web": "http://blog.millermedeiros.com/"
+    },
+    "licenses" : [
+        {
+            "type" : "MIT",
+            "url" : "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "bugs": {
+        "web": "https://github.com/millermedeiros/requirejs-plugins/issues"
+    },
+    "main": "json.js"
+}
