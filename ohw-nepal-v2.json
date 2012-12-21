@@ -625,7 +625,8 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Advice Recieved?"
+                  "en": "Advice Received?",
+                  "ne": "स्वास्थ्यकर्मि बाट सल्लाह लिनुभयो?"
                },
                "tiny": {
                   "en": "AdvRx"
