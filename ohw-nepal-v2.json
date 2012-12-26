@@ -130,7 +130,7 @@
             "labels": {
                "short": {
                   "en": "Deworming tablet taken?",
-                  "ne": "जुकाको औषधि खाएको ?"
+                  "ne": "जुकाको औषधि खाएको?"
                },
                "tiny": {
                   "en": "WORM"
@@ -175,8 +175,8 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Iron tablets given on this visit?",
-                  "ne": "यो भेटमा आईरन चक्की दिएको ?"
+                  "en": "Has the woman been taking iron tablets everyday?",
+                  "ne": "नियमित आईरन चक्की खाईरहेको?"
                },
                "tiny": {
                   "en": "Iron"
@@ -222,7 +222,7 @@
             "labels": {
                "short": {
                   "en": "TT received?",
-                  "ne": "टि.टि खोप लगाएको ?"
+                  "ne": "टि.टि खोप लगाएको?"
                },
                "tiny": {
                   "en": "TT"
@@ -381,7 +381,7 @@
             "labels": {
                "short": {
                   "en": "Vitamins Given?",
-                  "ne": "भिटामिन दिएको ?"
+                  "ne": "भिटामिन दिएको?"
                },
                "tiny": {
                   "en": "VIT"
@@ -444,15 +444,15 @@
                [
                   1,
                   {
-                     "en": "Yellow",
-                     "ne": "पहेंलो"
+                     "en": "Red",
+                     "ne": "रातो"
                   }
                ],
                [
                   2,
                   {
-                     "en": "Red",
-                     "ne": "रातो"
+                     "en": "Yellow",
+                     "ne": "पहेंलो"
                   }
                ],
                [
@@ -561,7 +561,7 @@
                   "ne": "खतराका चिन्ह देख्नुहुन्छ या देख्नुहुन्न?"
                },
                "tiny": {
-                  "en": "LbrDngr"
+                  "en": "DNGR"
                },
                "description": {
                   "en": "Danger sign?"
@@ -600,7 +600,7 @@
                   "ne": "स्वास्थ्यकर्मि बाट सल्लाह लिनुभयो?"
                },
                "tiny": {
-                  "en": "AdvRx"
+                  "en": "ADVRX"
                },
                "description": {
                   "en": "Have you received advice from a health worker yet?"
@@ -621,7 +621,15 @@
                      "ne": "छैन"
                   }
                ]
-            ]
+            ],
+            "conditions-operator": "||",
+            "conditions": {
+               "anc_labor_pnc": 2,
+               "labor_danger": 1
+            },
+            "validations": {
+              "confirm_advice_received": true
+            }
          },
          "patient_referred": {
             "length": [
@@ -636,7 +644,7 @@
                   "ne": "महिलालाई स्वास्थ्य संस्थामा रिफर गर्नुभयो?"
                },
                "tiny": {
-                  "en": "PatRef"
+                  "en": "PTREF"
                },
                "description": {
                   "en": "Patient referred to health facility?"
@@ -657,7 +665,13 @@
                      "ne": "छैन"
                   }
                ]
-            ]
+            ],
+            "conditions": {
+               "advice_received": 1
+            },
+            "validations": {
+               "confirm_patient_referred": true
+            }
          }
       },
       "use_sentinel": true
@@ -753,7 +767,7 @@
                [
                   2,
                   {
-                     "en": "Health Facility",
+                     "en": "Health facility",
                      "ne": "स्वास्थ्य संस्था"
                   }
                ],
@@ -767,7 +781,7 @@
                [
                   4,
                   {
-                     "en": "Other Place",
+                     "en": "Other place",
                      "ne": "अन्य ठाउँ"
                   }
                ]
@@ -876,7 +890,7 @@
                [
                   1,
                   {
-                     "en": "Skilled Birth Attendant",
+                     "en": "Skilled birth attendant",
                      "ne": "दक्ष प्रसुतिकर्मी"
                   }
                ],
@@ -890,15 +904,22 @@
                [
                   3,
                   {
-                     "en": "Family Member",
+                     "en": "Family member",
                      "ne": "परिवारका सदस्य"
                   }
                ],
                [
                   4,
                   {
-                     "en": "No One",
+                     "en": "No one",
                      "ne": "कोही पनि थिएनन"
+                  }
+               ],
+               [
+                  5,
+                  {
+                      "en": "Others",
+                      "ne": "अन्य"
                   }
                ]
             ]
@@ -1024,15 +1045,15 @@
                [
                   1,
                   {
-                     "en": "Yellow",
-                     "ne": "पहेंलो"
+                     "en": "Red",
+                     "ne": "रातो"
                   }
                ],
                [
                   2,
                   {
-                     "en": "Red",
-                     "ne": "रातो"
+                     "en": "Yellow",
+                     "ne": "पहेंलो"
                   }
                ],
                [
@@ -1106,8 +1127,8 @@
             "type": "integer",
             "labels": {
                "short": {
-                  "en": "Was Misoprostol Administered?",
-                  "ne": "के मात्री-सुरक्षा चक्की खुवाएको थियो ?"
+                  "en": "Was misoprostol administered?",
+                  "ne": "के मात्री-सुरक्षा चक्की खुवाएको थियो?"
                },
                "tiny": {
                   "en": "MIS"
@@ -1131,7 +1152,10 @@
                      "ne": "थिएन"
                   }
                ]
-            ]
+            ],
+            "validations": {
+               "confirm_misoprostol_return": true
+            }
          }
       },
       "use_sentinel": true
