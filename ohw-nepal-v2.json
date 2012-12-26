@@ -47,8 +47,7 @@
                "length": [
                    1, 2
                ]
-            },
-            "validations": { }
+            }
          }
       },
       "use_sentinel": true
@@ -368,8 +367,6 @@
                "description": {
                   "en": "Days since baby's birth"
                }
-            },
-            "validations": {
             },
             "conditions": {
                 "anc_pnc": 2
@@ -729,8 +726,6 @@
                "description": {
                   "en": "Days since patient's delivery"
                }
-            },
-            "validations": {
             }
          },
          "birth_site": {
@@ -1125,6 +1120,14 @@
          "misoprostol_administered": {
             "position": 10,
             "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
             "labels": {
                "short": {
                   "en": "Was misoprostol administered?",
@@ -1150,6 +1153,13 @@
                   {
                      "en": "No",
                      "ne": "थिएन"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Not Available",
+                     "ne": "उपलब्ध थिएन"
                   }
                ]
             ],
