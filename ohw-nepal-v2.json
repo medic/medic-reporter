@@ -661,7 +661,8 @@
                ]
             ],
             "conditions": {
-               "advice_received": 1
+               "anc_labor_pnc": 2,
+               "labor_danger": 1
             },
             "validations": {
                "confirm_patient_referred": true
