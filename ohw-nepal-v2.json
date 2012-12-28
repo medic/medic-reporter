@@ -660,6 +660,7 @@
                   }
                ]
             ],
+            "conditions-operator": "||",
             "conditions": {
                "anc_labor_pnc": 2,
                "labor_danger": 1
