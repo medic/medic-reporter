@@ -43,11 +43,11 @@
                },
                "description": {
                   "en": "Weeks since last menstrual period"
-               },
-               "length": [
-                   1, 2
-               ]
-            }
+               }
+            },
+            "length": [
+               1, 2
+            ]
          }
       },
       "use_sentinel": true
@@ -579,10 +579,7 @@
                      "ne": "छैन"
                   }
                ]
-            ],
-            "conditions": {
-                "anc_labor_pnc": 2
-            }
+            ]
          },
          "advice_received": {
             "length": [
