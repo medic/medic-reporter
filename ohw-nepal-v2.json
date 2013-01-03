@@ -891,7 +891,7 @@
                [
                   2,
                   {
-                     "en": "Traditional birth attendant",
+                     "en": "Birth attendant",
                      "ne": "प्रशुतीकर्मी"
                   }
                ],
@@ -1172,8 +1172,8 @@
    {
       "meta": {
          "label": {
-            "en": "Notifications",
-            "ne": "बिरामी सुचना सुरु/बन्द"
+            "en": "Start/Stop Notifications",
+            "ne": "सुचना सुरु / बन्द"
          },
          "code": "ONOT"
       },
