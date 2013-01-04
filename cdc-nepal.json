@@ -1,25 +1,45 @@
 [
    {
       "meta": {
-         "code": "CNPW",
+         "code": "VPD",
          "label": {
             "en": "CDC Weekly Report"
          }
       },
       "fields": {
+         "id": {
+            "labels": {
+               "tiny": {
+                 "en": "ID"
+               },
+               "description": {
+                  "en": "Reporting Unit ID"
+               },
+               "short": {
+                  "en": "Unit ID"
+               }
+            },
+            "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               8
+            ],
+            "required": true
+         },
          "week_number": {
             "labels": {
                "tiny": {
                   "en": "WKN"
                },
                "description": {
-                  "en": "Week number for start of report"
+                  "en": "Epi-week number for report"
                },
                "short": {
-                  "en": "Week number"
+                  "en": "Epi-week number"
                }
             },
-            "position": 0,
+            "position": 1,
             "type": "integer",
             "length": [
                1,
@@ -27,35 +47,34 @@
             ],
             "range": [
                1,
-               52
+               53
             ],
-            "validate": {},
-            "flags": {}
+            "validations": {},
+            "flags": {},
+            "required": true
          },
-         "weeks_duration": {
+         "year": {
             "labels": {
                "tiny": {
-                  "en": "WKS"
+                 "en": "YR"
                },
                "description": {
-                  "en": "Number of weeks, including start week, covered by this report"
+                  "en": "Year of report"
                },
                "short": {
-                  "en": "Number of weeks"
+                  "en": "Year"
                }
             },
-            "position": 1,
+            "position": 2,
             "type": "integer",
             "length": [
-               1,
-               1
+               4,
+               4
             ],
-            "range": [
-               1,
-               9
-            ],
-            "validate": {},
-            "flags": {}
+            "validations": {
+               "is_numeric_year": true
+            },
+            "required": true
          },
          "afp_cases": {
             "labels": {
@@ -69,15 +88,15 @@
                   "en": "Number of AFP cases"
                }
             },
-            "position": 2,
+            "position": 3,
             "type": "integer",
-            "required": false,
             "length": [
                1,
                8
             ],
-            "validate": {},
-            "flags": {}
+            "validations": {},
+            "flags": {},
+            "required": true
          },
          "nnt_cases": {
             "labels": {
@@ -91,15 +110,15 @@
                   "en": "Number of NNT cases"
                }
             },
-            "position": 3,
+            "position": 4,
             "type": "integer",
-            "required": false,
             "length": [
                1,
                8
             ],
-            "validate": {},
-            "flags": {}
+            "validations": {},
+            "flags": {},
+            "required": true
          },
          "msl_cases": {
             "labels": {
@@ -113,15 +132,15 @@
                   "en": "Number of MSL cases"
                }
             },
-            "position": 4,
+            "position": 5,
             "type": "integer",
-            "required": false,
             "length": [
                1,
                8
             ],
-            "validate": {},
-            "flags": {}
+            "validations": {},
+            "flags": {},
+            "required": true
          },
          "aes_cases": {
             "labels": {
@@ -135,46 +154,48 @@
                   "en": "Number of AES cases"
                }
             },
-            "position": 5,
+            "position": 6,
             "type": "integer",
-            "required": false,
             "length": [
                1,
                8
             ],
-            "validate": {},
-            "flags": {}
+            "validations": {},
+            "flags": {},
+            "required": true
          }
-      }
+      },
+      "facility_reference": "id"
    },
    {
       "meta": {
-         "code": "CNPA",
+         "code": "IMD",
          "label": {
             "en": "CDC Outbreak Report"
          }
       },
       "fields": {
-         "vdc": {
+         "id": {
             "labels": {
                "tiny": {
-                  "en": "VDC"
+                  "en": "ID"
                },
                "description": {
-                  "en": "Village development committee (VDC) name"
+                  "en": "Reporting Unit ID"
                },
                "short": {
-                  "en": "Village/VDC name"
+                  "en": "Unit ID"
                }
             },
             "position": 0,
             "type": "string",
             "length": [
                1,
-               30
+               8
             ],
-            "validate": {},
-            "flags": {}
+            "validations": {},
+            "flags": {},
+            "required": true
          },
          "ward": {
             "labels": {
@@ -198,8 +219,9 @@
                1,
                999
             ],
-            "validate": {},
-            "flags": {}
+            "validations": {},
+            "flags": {},
+            "required": true
          },
          "afp_present": {
             "labels": {
@@ -215,7 +237,7 @@
             },
             "position": 2,
             "type": "boolean",
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "msl_present": {
@@ -232,10 +254,57 @@
             },
             "position": 3,
             "type": "boolean",
-            "validate": {},
+            "validations": {},
+            "flags": {}
+         },
+         "phone_number": {
+            "labels": {
+               "tiny": {
+                  "en": "NUM"
+               },
+               "description": {
+                  "en": "Patient contact phone number"
+               },
+               "short": {
+                  "en": "Patient phone"
+               }
+            },
+            "position": 4,
+            "type": "string",
+            "length": [
+               7,
+               20
+            ],
+            "validations": {},
+            "flags": {}
+         },
+         "location": {
+            "labels": {
+               "tiny": {
+                  "en": "LOC"
+               },
+               "description": {
+                  "en": "Location of reported case"
+               },
+               "short": {
+                  "en": "Case location"
+               }
+            },
+            "position": 5,
+            "type": "string",
+            "length": [
+               0,
+               30
+            ],
+            "validations": {},
             "flags": {}
          }
-      }
+      },
+      "validations": {
+          "afp_msl": "function() { if (form_data['msl_present'] === true && form_data['afp_present'] === true) return 'Please submit AFP and MSL reports separately.'; if (!form_data['msl_present'] && !form_data['afp_present']) return 'Please include a valid MSL or AFP report.'; }"
+      },
+      "facility_reference": "id",
+      "messages_task": "function() { /* * return array of message objects, e.g: [{to: '+123', message: 'foo'},...] * context includes: phone, clinic, keys, labels, values * Clinic -> Health Center & Hospital */ var ret = [], msg = [], ignore = [], hc_ph = clinic && clinic.parent && clinic.parent.contact && clinic.parent.contact.phone, dh_ph = clinic && clinic.parent && clinic.parent.parent && clinic.parent.parent.contact.phone; keys.forEach(function(key) { if (ignore.indexOf(key) === -1) { msg.push(labels.shift() + ': ' + values.shift()); } else { labels.shift(); values.shift(); } }); ret.push({to:hc_ph, message:msg.join(', ')}, {to:dh_ph, message:msg.join(', ')}); return ret; }"
    }
 ]
 

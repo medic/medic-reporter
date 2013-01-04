@@ -1,307 +1,399 @@
 [{
-		"meta" : {
-			"code" : "NYAA",
-			"label" : "Community Health Surveillance Data"
-		},
-		"fields" : {
-			"daysoverdue" : {
-				"labels" : {
-					"short" : {
-						"en" : "Days since report end date"
-					}
-				},
-				"position" : 1,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"location" : {
-				"labels" : {
-					"short" : {
-						"en" : "Location (ward)"
-					}
-				},
-				"position" : 2,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"age" : {
-				"labels" : {
-					"short" : {
-						"en" : "Age (years)"
-					}
-				},
-				"position" : 3,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"condition" : {
-				"labels" : {
-					"short" : {
-						"en" : "Condition"
-					}
-				},
-				"position" : 4,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"gender" : {
-				"labels" : {
-					"short" : {
-						"en" : "Gender"
-					}
-				},
-				"position" : 5,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Female"
-						}
-					], [2, {
-							"en" : "Male"
-						}
-					]]
-			},
-			"newpatient" : {
-				"labels" : {
-					"short" : {
-						"en" : "New?"
-					}
-				},
-				"position" : 6,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Yes"
-						}
-					], [2, {
-							"en" : "No"
-						}
-					]]
-			},
-			"referred" : {
-				"labels" : {
-					"short" : {
-						"en" : "Referred to"
-					}
-				},
-				"position" : 7,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "BH"
-						}
-					], [2, {
-							"en" : "Health Post"
-						}
-					], [3, {
-							"en" : "None"
-						}
-					]]
-			}
-		}
-	}, {
-		"meta" : {
-			"code" : "NYAB",
-			"label" : "Health Post Quality and Utilization Data"
-		},
-		"fields" : {
-			"daysoverdue" : {
-				"labels" : {
-					"short" : {
-						"en" : "Days since report end date"
-					}
-				},
-				"position" : 1,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q1" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of non-expired liquid bottles amoxicillin"
-					}
-				},
-				"position" : 2,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q2" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of non-expired tetanus vaccines"
-					}
-				},
-				"position" : 3,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q3" : {
-				"labels" : {
-					"short" : {
-						"en" : "Presence of non-expired chlorhexidine wash in delivery suite"
-					}
-				},
-				"position" : 4,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Yes"
-						}
-					], [2, {
-							"en" : "No"
-						}
-					]]
-			},
-			"q4" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of safe delivery kits available"
-					}
-				},
-				"position" : 5,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q5" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of non-expired misoprostol pills"
-					}
-				},
-				"position" : 6,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q6" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of non-expired ceftriaxone vials"
-					}
-				},
-				"position" : 7,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q7" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of plumpynut bars"
-					}
-				},
-				"position" : 8,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q8" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of jeevan jaal (ORS) sachets"
-					}
-				},
-				"position" : 9,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q9" : {
-				"labels" : {
-					"short" : {
-						"en" : "Is the highest level staff present this week?"
-					}
-				},
-				"position" : 10,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Yes"
-						}
-					], [2, {
-							"en" : "No"
-						}
-					]]
-			},
-			"q10" : {
-				"labels" : {
-					"short" : {
-						"en" : "Are sharps boxes available and in use for needles?"
-					}
-				},
-				"position" : 11,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Yes"
-						}
-					], [2, {
-							"en" : "No"
-						}
-					]]
-			},
-			"q11" : {
-				"labels" : {
-					"short" : {
-						"en" : "Is a water supply available?"
-					}
-				},
-				"position" : 12,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Yes"
-						}
-					], [2, {
-							"en" : "No"
-						}
-					]]
-			},
-			"q12" : {
-				"labels" : {
-					"short" : {
-						"en" : "Is electricity supply available and working?"
-					}
-				},
-				"position" : 13,
-				"type" : "integer",
-				"list" : [[1, {
-							"en" : "Yes"
-						}
-					], [2, {
-							"en" : "No"
-						}
-					]]
-			},
-			"q13" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of deliveries conducted"
-					}
-				},
-				"position" : 14,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q14" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of new antenatal visits"
-					}
-				},
-				"position" : 15,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q15" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of total outpatient visits"
-					}
-				},
-				"position" : 16,
-				"type" : "integer",
-				"length" : [1, 2]
-			},
-			"q16" : {
-				"labels" : {
-					"short" : {
-						"en" : "Number of pediatric outpatient visits"
-					}
-				},
-				"position" : 17,
-				"type" : "integer",
-				"length" : [1, 2]
-			}
-		}
-	}
+        "meta" : {
+            "code" : "NYAA",
+            "label" : {
+                "en" : "Community Health Survey",
+                "ne" : "CHW"
+            }
+        },
+        "fields" : {
+            "location" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Location (ward)",
+                        "ne" : "ठेगाना"
+                    }
+                },
+                "position" : 1,
+                "type" : "integer",
+                "length" : [1, 1],
+                "required": true
+            },
+            "daysoverdue" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of days since patient was last seen",
+                        "ne" : "कति दिन अगाडी बिरामीलाई भेट्नु भयो?"
+                    }
+                },
+                "position" : 2,
+                "type" : "integer",
+                "length" : [1, 1],
+                "required" : true,
+                "validations": {
+                    "is_numeric_daysago": true
+                }
+            },
+            "age" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Age (years)",
+                        "ne" : "उमेर"
+                    }
+                },
+                "position" : 3,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "condition" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Condition",
+                        "ne" : "स्वास्थ्य स्थिति"
+                    }
+                },
+                "position" : 4,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "gender" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Gender",
+                        "ne" : "लिङ्ग"
+                    }
+                },
+                "position" : 5,
+                "type" : "integer",
+                "list" : [[1, {
+                           "en" : "Male",
+                           "ne" : "पुरुष"
+                        }
+                    ], [2, {
+                            "en" : "Female",
+                            "ne" : "महिला"
+                        }
+                    ]],
+                "required" : true
+            },
+            "newpatient" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "New?",
+                        "ne" : "नयाँ"
+                    }
+                },
+                "position" : 6,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "हो"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "होईन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "referred" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Referred to",
+                        "ne" : "रिफर गरिएको स्वास्थ्य संस्था"
+                    }
+                },
+                "position" : 7,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "BH",
+                            "ne" : "बयालपाटा अस्पताल"
+                        }
+                    ], [2, {
+                            "en" : "Health Post",
+                            "ne" : "हेल्थ पोस्ट"
+                        }
+                    ], [3, {
+                            "en" : "Home Visit",
+                            "ne" : "घर भेट"
+                        }
+                    ], [4, {
+                            "en" : "Private Pharmacy",
+                            "ne" : "मेडिकल"
+                        }
+                    ], [5, {
+                            "en" : "Other",
+                            "ne" : "अन्य"
+                        }
+                    ]],
+                "required" : true
+            }
+        },
+        "validations" : {
+            "male_condition" : "function() { if (form_data['gender'] === 'Male' && [50,57,44].indexOf(form_data['condition']) !== -1 ) { return 'Male cannot have this condition.'}; }"
+        }
+    }, {
+        "meta" : {
+            "code" : "NYAB",
+            "label" : {
+                "en" : "Health Post Survey",
+                "ne" : "Health Post"
+            }
+        },
+        "fields" : {
+            "daysoverdue" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of days since the patient was last seen",
+                        "ne" : "रिपोर्ट बुझाउन कति दिन ढिलो भयो?"
+                    }
+                },
+                "position" : 1,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true,
+                "validate": {
+                    "is_numeric_daysago": true
+                }
+            },
+            "q1" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of non-expired liquid bottles amoxicillin",
+                        "ne" : "झोल एमोक्सिसिलिन"
+                    }
+                },
+                "position" : 2,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "q2" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of non-expired tetanus vaccines",
+                        "ne" : "टिटानस खोप"
+                    }
+                },
+                "position" : 3,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "q3" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Presence of non-expired chlorhexidine wash in delivery suite",
+                        "ne" : "मिति नसकिएको क्लोरहेक्सिडिन वास डेलिभरि कोठामा छ?"
+                    }
+                },
+                "position" : 4,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Have",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "Don't Have",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "q4" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of safe delivery kits available",
+                        "ne" : "सुरक्षित सुत्केरी सामाग्रीको सङ्ख्या"
+                    }
+                },
+                "position" : 5,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "q5" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of non-expired misoprostol pills",
+                        "ne" : "मिसोप्रिस्टोल पिल्स"
+                    }
+                },
+                "position" : 6,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "q6" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of non-expired ceftriaxone vials",
+                        "ne" : "सेल्फ्रियाक्सोन भाएल"
+                    }
+                },
+                "position" : 7,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "q7" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of plumpynut bars",
+                        "ne" : "पल्मपि नट"
+                    }
+                },
+                "position" : 8,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "q8" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of jeevan jaal (ORS) sachets",
+                        "ne" : "जीवन जल"
+                    }
+                },
+                "position" : 9,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "q9a" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "# ANMs/MCH present",
+                        "ne" : "अ.न.मी/ मा.सि.काको उपस्थिति"
+                    }
+                },
+                "position" : 10,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+             "q9b" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "# AHWs/HAs present",
+                        "ne" : "अ.हे.ब/एच्.एको उपस्थिति"
+                    }
+                },
+                "position" : 11,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "q10" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Are sharps boxes available and in use for needles?",
+                        "ne" : "धारिला सामाग्रिलाई फाल्ने भाँडो?"
+                    }
+                },
+                "position" : 12,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Have",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "Don't Have",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "q11" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Is a water supply available?",
+                        "ne" : "पानी छ?"
+                    }
+                },
+                "position" : 13,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Have",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "Don't Have",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "q12" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Is electricity supply available and working?",
+                        "ne" : "बिजुली छ?"
+                    }
+                },
+                "position" : 14,
+                "type" : "integer",
+                "list" : [[1, {
+                           "en" : "Have",
+                           "ne" : "छ"
+                        }
+                    ], [2, {
+                           "en" : "Don't Have",
+                           "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "q13" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of deliveries conducted",
+                        "ne" : "कतिवटा डेलिभरि गरियो?"
+                    }
+                },
+                "position" : 15,
+                "type" : "integer",
+                "length" : [1, 3],
+                "required" : true
+            },
+            "q14" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of new antenatal visits",
+                        "ne" : "कति नयाँ ए यान सि गरियो?"
+                    }
+                },
+                "position" : 16,
+                "type" : "integer",
+                "length" : [1, 3],
+                "required" : true
+            },
+            "q15" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of total outpatient visits",
+                        "ne" : "कतिजना बिरामीलाई ओपिडिमा जाँचियो?"
+                    }
+                },
+                "position" : 17,
+                "type" : "integer",
+                "length" : [1, 3],
+                "required" : true
+            },
+            "q16" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of pediatric outpatient visits",
+                        "ne" : "कतिजना शिसुलाई ओपिडिमा जाँचियो?"
+                    }
+                },
+                "position" : 18,
+                "type" : "integer",
+                "length" : [1, 3],
+                "required" : true
+            }
+        }
+    }
 ]

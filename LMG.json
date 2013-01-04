@@ -25,7 +25,7 @@
                1,
                30
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "participant": {
@@ -46,7 +46,7 @@
                1,
                30
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "result": {
@@ -99,7 +99,7 @@
                1,
                40
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
           "suggestions": {
@@ -120,7 +120,7 @@
                1,
                40
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
           "activities": {
@@ -141,7 +141,7 @@
                1,
                40
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
           "next": {
@@ -162,7 +162,7 @@
                1,
                40
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
           "flag": {
@@ -183,7 +183,7 @@
                1,
                15
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "denominator": {
@@ -209,7 +209,7 @@
                1,
                999
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "numerator": {
@@ -235,7 +235,7 @@
                1,
                999
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }
@@ -266,7 +266,7 @@
                1,
                30
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "team": {
@@ -287,7 +287,7 @@
                1,
                30
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
          "result": {
@@ -340,7 +340,7 @@
                1,
                40
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
           "obstacles": {
@@ -361,7 +361,7 @@
                1,
                40
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
           "next": {
@@ -382,7 +382,7 @@
                1,
                40
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          },
           "help": {
@@ -403,7 +403,7 @@
                1,
                20
             ],
-            "validate": {},
+            "validations": {},
             "flags": {}
          }
       }

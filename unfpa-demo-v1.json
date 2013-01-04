@@ -1,0 +1,617 @@
+[
+   {
+      "meta": {
+         "code": "UNFP",
+         "label": "Produits Contraceptifs"
+      },
+      "fields": {
+         "name": {
+            "labels": {
+               "short": {
+                  "fr": "Nom du PPS"
+               }
+            },
+            "position": 1,
+            "type": "string",
+            "length": [
+               1,
+               20
+            ]
+         },
+         "reporter": {
+            "labels": {
+               "short": {
+                  "fr": "Rapporté par"
+               }
+            },
+            "position": 2,
+            "type": "string",
+            "length": [
+               1,
+               20
+            ]
+         },
+         "year": {
+            "labels": {
+               "short": {
+                  "fr": "Année du rapport"
+               }
+            },
+            "position": 3,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ],
+            "validations": {
+               "is_numeric_year": true
+            }
+         },
+         "month": {
+            "labels": {
+               "long": null,
+               "description": null,
+               "short": {
+                  "fr": "Mois"
+               }
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "validations": {
+               "is_numeric_month": true
+            },
+            "flags": {},
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Janvier"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Février"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Mars"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "fr": "Avril"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "fr": "Mai"
+                  }
+               ],
+               [
+                  6,
+                  {
+                     "fr": "Juin"
+                  }
+               ],
+               [
+                  7,
+                  {
+                     "fr": "Juillet"
+                  }
+               ],
+               [
+                  8,
+                  {
+                     "fr": "Aout"
+                  }
+               ],
+               [
+                  9,
+                  {
+                     "fr": "Septembre"
+                  }
+               ],
+               [
+                  10,
+                  {
+                     "fr": "Octobre"
+                  }
+               ],
+               [
+                  11,
+                  {
+                     "fr": "Novembre"
+                  }
+               ],
+               [
+                  12,
+                  {
+                     "fr": "Décembre"
+                  }
+               ]
+            ]
+         },
+         "q1a": {
+            "labels": {
+               "short": {
+                  "fr": "Fournit condoms masculin?"
+               }
+            },
+            "position": 5,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Yes"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "No"
+                  }
+               ]
+            ]
+         },
+         "q1b": {
+            "labels": {
+               "short": {
+                  "fr": "Pieces condoms masculin"
+               }
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q1a": 1
+            }
+         },
+         "q2a": {
+            "labels": {
+               "short": {
+                  "fr": "Fournit condoms féminin?"
+               }
+            },
+            "position": 7,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Yes"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "No"
+                  }
+               ]
+            ]
+         },
+         "q2b": {
+            "labels": {
+               "short": {
+                  "fr": "Pieces condoms féminin"
+               }
+            },
+            "position": 8,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q2a": 1
+            }
+         },
+         "q3a": {
+            "labels": {
+               "short": {
+                  "fr": "Fournit les pilules?"
+               }
+            },
+            "position": 9,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Yes"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "No"
+                  }
+               ]
+            ]
+         },
+         "q3b": {
+            "labels": {
+               "short": {
+                  "fr": "Cycles de pilules"
+               }
+            },
+            "position": 10,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q3a": 1
+            }
+         },
+         "q4a": {
+            "labels": {
+               "short": {
+                  "fr": "Fournit contraceptifs injectables?"
+               }
+            },
+            "position": 11,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Yes"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "No"
+                  }
+               ]
+            ]
+         },
+         "q4b": {
+            "labels": {
+               "short": {
+                  "fr": "Ampoules d'injectables"
+               }
+            },
+            "position": 12,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q4a": 1
+            }
+         },
+         "q5a": {
+            "labels": {
+               "short": {
+                  "fr": "Fournit intra utérins (DIU)?"
+               }
+            },
+            "position": 13,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Yes"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "No"
+                  }
+               ]
+            ]
+         },
+         "q5b": {
+            "labels": {
+               "short": {
+                  "fr": "No. DIU disponible"
+               }
+            },
+            "position": 14,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q5a": 1
+            }
+         },
+         "q5c": {
+            "labels": {
+               "short": {
+                  "fr": "No. kits disponible"
+               }
+            },
+            "position": 15,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q5a": 1
+            }
+         },
+         "q5d": {
+            "labels": {
+               "short": {
+                  "fr": "État kits DIU"
+               }
+            },
+            "position": 16,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Bon"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Passable"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Mauvais"
+                  }
+               ]
+            ],
+            "conditions": {
+                "q5a": 1
+            }
+         },
+         "q6a": {
+            "labels": {
+               "short": {
+                  "fr": "Fournit implants?"
+               }
+            },
+            "position": 17,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Yes"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "No"
+                  }
+               ]
+            ]
+         },
+         "q6b": {
+            "labels": {
+               "short": {
+                  "fr": "No. d'implants disponible"
+               }
+            },
+            "position": 18,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q6a": 1
+            }
+         },
+         "q6c": {
+            "labels": {
+               "short": {
+                  "fr": "No. kits disponible"
+               }
+            },
+            "position": 19,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q6a": 1
+            }
+         },
+         "q6d": {
+            "labels": {
+               "short": {
+                  "fr": "État kits d'implants"
+               }
+            },
+            "position": 20,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Bon"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Passable"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Mauvais"
+                  }
+               ]
+            ],
+            "conditions": {
+                "q6a": 1
+            }
+         },
+         "q7a": {
+            "labels": {
+               "short": {
+                  "fr": "Fournit stérilisation féminine?"
+               }
+            },
+            "position": 21,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Yes"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "No"
+                  }
+               ]
+            ]
+         },
+         "q7b": {
+            "labels": {
+               "short": {
+                  "fr": "Stér fem: matériels disponible "
+               }
+            },
+            "position": 22,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q7a": 1
+            }
+         },
+         "q7c": {
+            "labels": {
+               "short": {
+                  "fr": "Stér fem: état de matériels"
+               }
+            },
+            "position": 23,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Bon"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Passable"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Mauvais"
+                  }
+               ]
+            ],
+            "conditions": {
+                "q7a": 1
+            }
+         },
+         "q8a": {
+            "labels": {
+               "short": {
+                  "fr": "Fournit stérilisation masculine?"
+               }
+            },
+            "position": 24,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Yes"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "No"
+                  }
+               ]
+            ]
+         },
+         "q8b": {
+            "labels": {
+               "short": {
+                  "fr": "Stér masc: matériels disponible "
+               }
+            },
+            "position": 25,
+            "type": "integer",
+            "length": [
+               1,
+               3
+            ],
+            "conditions": {
+                "q8a": 1
+            }
+         },
+         "q8c": {
+            "labels": {
+               "short": {
+                  "fr": "Stér masc: état de matériels"
+               }
+            },
+            "position": 26,
+            "type": "integer",
+            "list": [
+               [
+                  1,
+                  {
+                     "fr": "Bon"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "fr": "Passable"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "fr": "Mauvais"
+                  }
+               ]
+            ],
+            "conditions": {
+                "q8a": 1
+            }
+         }
+      }
+   }
+]
