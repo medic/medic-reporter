@@ -28,7 +28,8 @@
             },
             "length": [
                 1, 2
-            ]
+            ],
+            "required": true
          },
          "last_menstrual_period": {
             "position": 1,
@@ -47,7 +48,8 @@
             },
             "length": [
                1, 2
-            ]
+            ],
+            "required": true
          }
       },
       "use_sentinel": true
