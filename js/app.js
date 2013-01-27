@@ -11,7 +11,7 @@ define([
     'codemirror',
     'schema-support',
     './json_format',
-    'json!../../simple-example.json',
+    'json!json-forms/simple-example.json',
     'select2',
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
@@ -27,6 +27,7 @@ define([
             '/*' : form_only
         },
         router = director.Router(routes),
+        json_forms_path = 'json-forms',
         editor,
         schema_used,
         selected_form;
@@ -47,7 +48,7 @@ define([
 
     function no_form_selected() {
         // on first load, just show the example json form VPD, in english
-        showForm(example, 'VPD', 'en');
+        showForm(example, 'ZZZZ', 'en');
     }
 
     function form_only(form_name, callback) {
@@ -80,7 +81,7 @@ define([
 
 
     function resolve_form_url(form_name) {
-        return '../' + form_name;
+        return json_forms_path + '/' + form_name;
     }
 
 
@@ -163,7 +164,7 @@ define([
     // Used to find all the .json files in the root of this project
     function findAvailableJson(callback) {
         var results = [];
-        $.get('../', function(data) {
+        $.get(json_forms_path, function(data) {
             var $root = $(data);
             $root.find('li a').each(function(i, row) {
                 var href = $(row).attr('href');
