@@ -1,13 +1,11 @@
-This is just a small example web project to test rendering the .json forms in this project.
+This is an example project using FF OS's manifest.webapp style of app development.
 
-To use it simply start a http server in the _root_ directory (one level up):
+To use it simply start a http server in the _root_ directory:
 
+    python run_server.py 
+    Manifest URL: http://0.0.0.0:9100/manifest.webapp
+    Serving app at http://0.0.0.0:9100/
 
-    python -m SimpleHTTPServer
+You will be shown the simple-example.json form and can select any other .json
+file in the dir to send SMS forms.
 
-
-then visit the following url:
-
-    http://localhost:8000/web/
-
-You will be shown the simple-example.json form. You will soon be able to select any other .json file in the root dir to test.
