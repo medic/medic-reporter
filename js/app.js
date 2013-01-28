@@ -90,14 +90,16 @@ define([
 
       console.log("Sending SMS to "+ num +"; message '"+ msg +"' ...");
 
+      var err;
+
       if (typeof num !== 'string' || !num)
-          return callback('Please include a number.');
+          err = 'Please include a number.';
+      else if (typeof msg !== 'string' || !msg)
+          err = 'Please include a message.';
+      else if (!navigator || !navigator.mozSms)
+          err = 'Mozilla SMS API not available.';
 
-      if (typeof msg !== 'string' || !msg)
-          return callback('Please include a message.');
-
-      if (!navigator || !navigator.mozSms)
-          return callback('Mozilla SMS API not available.');
+      if (err) return callback(err, msg);
 
       var r = navigator.mozSms.send(num, msg);
       r.onSuccess = callback(null, r.message);
@@ -159,8 +161,13 @@ define([
                         editor.setValue(json_format(JSON.stringify(doc)));
                         var msg = convertToMuvukuFormat(doc);
                         sendSMS(gateway_num, msg, function(err, data) {
-                            if (err) return console.error(err);
-                            console.log('sent '+data+' to '+gateway_num);
+                            if (err) {
+                                console.error(err);
+                                $('.sms_message .error').html('<p>'+err+'</p>');
+                            }
+                            $('.sms_message .message').html(
+                                '<p>'+gateway_num+': '+data+'</p>'
+                            );
                         });
                         console.log(err, doc);
                     });
