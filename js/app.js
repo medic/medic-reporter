@@ -28,6 +28,7 @@ define([
         },
         router = director.Router(routes),
         json_forms_path = 'json-forms',
+        gateway_num = '+13125551212', // todo: make option in app
         editor,
         schema_used,
         selected_form;
@@ -85,6 +86,25 @@ define([
     }
 
 
+    function sendSMS(num, msg, callback) {
+
+      console.log("Sending SMS to "+ num +"; message '"+ msg +"' ...");
+
+      if (typeof num !== 'string' || !num)
+          return callback('Please include a number.');
+
+      if (typeof msg !== 'string' || !msg)
+          return callback('Please include a message.');
+
+      if (!navigator || !navigator.mozSms)
+          return callback('Mozilla SMS API not available.');
+
+      var r = navigator.mozSms.send(num, msg);
+      r.onSuccess = callback(null, r.message);
+      r.onError = callback('SMS sending failed.');
+
+    }
+
     // Render and bind a form
     function showForm(forms, code, lang) {
         $form_fields = $('#form_fields');
@@ -92,6 +112,18 @@ define([
         var schemafied = translator(forms, lang);
         schema_used.setValue(json_format(JSON.stringify(schemafied[code].schema)));
         var rendered = jsonEdit('form_fields', schemafied[code].schema);
+
+        function convertToMuvukuFormat(data) {
+            var msg = '';
+            schemafied[code].schema.order.forEach(function(k) {
+                // handle msg header on first iteration
+                if (!msg)
+                    return msg = '1!'+code+'!'+data[k];
+                msg += '#'+ data[k];
+            });
+            return msg;
+        };
+
         $('form.main').on('submit', function () {
             try {
                 var err_alert = $('.alert');
@@ -102,7 +134,6 @@ define([
                 if (!data.result.ok) {
 
                     var msg = generateFieldErrorMsg(data.result, schemafied[code].schema);
-
 
                     err_alert.show(200)
                         .find('button.close')
@@ -124,10 +155,15 @@ define([
                     }
 
 
-                    schemafied[code].post_save(data.data, function(err, doc){
+                    schemafied[code].post_save(data.data, function(err, doc) {
                         editor.setValue(json_format(JSON.stringify(doc)));
+                        var msg = convertToMuvukuFormat(doc);
+                        sendSMS(gateway_num, msg, function(err, data) {
+                            if (err) return console.error(err);
+                            console.log('sent '+data+' to '+gateway_num);
+                        });
                         console.log(err, doc);
-                    })
+                    });
                 })
 
 
@@ -250,6 +286,7 @@ define([
             }
         })
             .select2('enable')
+            .off('change')
             .on('change', function(){
                 var code = $(this).val();
                 router.setRoute('/' + form_name + '/' + code);

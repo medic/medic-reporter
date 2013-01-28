@@ -62,10 +62,14 @@
         // fields
         if (form.fields) {
             result.schema.properties = {};
-            var keys = Object.keys(form.fields);
-            keys.forEach(function(key) {
-                result.schema.properties[key] = convertProperty(key, form.fields[key], lang);
-            });
+            result.schema.order = [];
+            // preserve ordering
+            for (var k in form.fields) {
+                result.schema.order.push(k);
+                result.schema.properties[k] = convertProperty(
+                    k, form.fields[k], lang
+                );
+            }
         }
 
 

@@ -1,12 +1,12 @@
 {
   "version": "0.1",
   "name": "Muvuku",
-  "description": "Submit Muvuku form data via SMS.",
+  "description": "Muvuku for mobile devices.",
   "icons": {
-    "16": "/img/icon-16.png",
-    "48": "/img/icon-48.png",
-    "128": "/img/icon-128.png"
+    "16": "/img/promo/icon_16.png",
+    "48": "/img/promo/icon_48.png",
+    "128": "/img/promo/icon_128.png"
   },
-  "launch_path": "web/index.html",
+  "launch_path": "index.html",
   "installs_allowed_from": ["*"]
 }
