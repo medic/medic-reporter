@@ -35,7 +35,6 @@ define([
 
     exports.init = function () {
 
-
         init_json_display();
         initNameSelect();
 
@@ -207,17 +206,18 @@ define([
     // Used to find all the .json files in the root of this project
     function findAvailableJson(callback) {
         var results = [];
-        $.get(json_forms_path, function(data) {
-            var $root = $(data);
-            $root.find('li a').each(function(i, row) {
-                var href = $(row).attr('href');
-                if (href.indexOf('.json', href.length - 5) !== -1) {
-                    results.push({
-                        id :  href,
-                        text : href
-                    });
-                }
-            })
+        $.get(json_forms_path+'/index.json', function(data) {
+            var index;
+            if (typeof data === 'string')
+                index = JSON.parse(data)[0];
+            else
+                index = data[0];
+            index.forEach(function(file) {
+                results.push({
+                    id: file,
+                    text: file
+                });
+            });
             callback(null, results);
         });
     }

@@ -6,8 +6,12 @@ To use it simply start a http server in the _root_ directory:
     Manifest URL: http://0.0.0.0:9100/manifest.webapp
     Serving app at http://0.0.0.0:9100/
 
-You will be shown the simple-example.json form and can select any other .json
+You should be shown the simple-example.json form and can select any other .json
 file in the dir to send SMS forms.
+
+You can also push this app with erica.
+
+    erica push http://localhost:5984/json-forms
 
 Todos
 =====
