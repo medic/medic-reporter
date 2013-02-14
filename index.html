@@ -17,60 +17,71 @@
         body {
             margin-bottom: 30px;
         }
+        .console {
+          height: 250px;
+          overflow: auto;
+        }
+        .schema_used {
+          height: 400px;
+          overflow: auto;
+        }
     </style>
   </head>
   <body>
 
-  <div class="container">
-      <span class="row">
-          <span class="span12 well">
-              <form class="form">
+  <div class="container-fluid">
+      <div class="row-fluid">
+          <div class="span4 well">
+            <div>
+              <form class="form main">
                 <div class="control">
                   <label>Form Definition</label>
-                  <input type="text" class="input-xxlarge" id="choose-form" />
+                  <input type="text" class="input-large" id="choose-form" />
                 </div>
                 <div class="control">
                   <label>Form Code</label>
-                  <input type="text" class="input-xxlarge" id="choose-name" />
+                  <input type="text" class="input" id="choose-name" />
                 </div>
+                <fieldset>
+                <div id="form_fields"></div>
+                </fieldset>
+                <div class="alert alert-block hide">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  <h4 class="head"></h4>
+                  <div class="msg"></div>
+                </div>
+                <button class="btn btn-success">Send</button>
               </form>
-          </span>
-      </span>
-
-  </div>
-
-
-  <div class="container">
-      <form class="form main">
-
-          <fieldset>
-          <div id="form_fields"></div>
-          </fieldset>
-          <div class="alert alert-block hide">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <h4 class="head"></h4>
-            <div class="msg"></div>
+            </div>
+            <div>
+              <h2>Settings</h2>
+              <form>
+                <fieldset>
+                  <label for="from">Phone number</label>
+                  <input name="from" value="+13125551212" />
+                </fieldset>
+              </form>
+            </div>
+            <div class="errors">
+                <h2>Errors</h2>
+                <div class="data"></div>
+            </div>
+        </div>
+        <div class="span8">
+          <div class="log">
+              <h2>Log</h2>
+              <div class="entry console"></div>
           </div>
-          <button class="btn btn-success">Send</button>
-      </form>
-
-      <div class="row sms_message">
-          <h2>SMS Message</h2>
-          <div class="message"></div>
-          <div class="error"></div>
-      </div>
-      <div class="row">
-          <h2>Result Data</h2>
-          <div class="results"></div>
-      </div>
-      <div class="row">
-          <h2>Schema Used</h2>
-          <div class="schema_used"></div>
-      </div>
-
-
+          <div>
+              <h2>Result Data</h2>
+              <div class="results console"></div>
+          </div>
+          <div>
+              <h2>Schema Used</h2>
+              <div class="schema_used console"></div>
+          </div>
+        </div>
   </div>
-
 
     <!-- Le javascript
     ================================================== -->

@@ -31,7 +31,8 @@ define([
         gateway_num = '+13125551212', // todo: make option in app
         editor,
         schema_used,
-        selected_form;
+        selected_form,
+        log;
 
     exports.init = function () {
 
@@ -79,32 +80,110 @@ define([
 
     }
 
-
     function resolve_form_url(form_name) {
         return json_forms_path + '/' + form_name;
     }
 
+    function formatDate(date) {
+        var year = date.getYear() - 100
+            month = date.getMonth() + 1
+            day = date.getDate()
+            hours = date.getHours()
+            minutes = date.getMinutes();
+        //return "#{month}-#{day}-#{year} #{hours}:#{minutes}"
+        return month+'-'+day+'-'+year+' '+hours+':'+minutes;
+    }
 
-    function sendSMS(num, msg, callback) {
+    function postToSMSSyncAPI(options, callback) {
+        var url = '/kujua-base/_design/kujua-base/_rewrite/add'
+        var data = {
+            message_id: Math.ceil(Math.random() * 100000),
+            //sent_timestamp: formatDate(new Date())
+            sent_timestamp: new Date().valueOf(),
+            message: options.message,
+            from: options.phone
+        };
 
-      console.log("Sending SMS to "+ num +"; message '"+ msg +"' ...");
+        //$('.log .console').prepend('<p>'+JSON.stringify(data)+'</p>');
+        var val = log.getValue();
+        log.setValue(json_format(JSON.stringify(data)) +'\n'+val);
 
-      var err;
+        $.ajax({
+            success: function(data, textStatus, xhr) {
+                callback(null, data);
+            },
+            error: function(xhr, textStatus, error) {
+                callback(textStatus);
+            },
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            url: url,
+            type: 'POST',
+            data: data
+        });
+    }
 
+    function hasSMSAPI() {
+      if (navigator && navigator.mozSms) return true;
+    }
+
+    function onSubmit(num, msg, callback) {
       if (typeof num !== 'string' || !num)
           err = 'Please include a number.';
       else if (typeof msg !== 'string' || !msg)
           err = 'Please include a message.';
-      else if (!navigator || !navigator.mozSms)
+    };
+
+    function sendSMS(options, callback) {
+
+      console.log("Sending SMS to "+ num +"; message '"+ msg +"' ...");
+
+      var err,
+          num = options.phone,
+          msg = options.message;
+
+      if (!navigator || !navigator.mozSms)
           err = 'Mozilla SMS API not available.';
 
-      if (err) return callback(err, msg);
+      if (err) return callback(err);
 
       var r = navigator.mozSms.send(num, msg);
       r.onSuccess = callback(null, r.message);
       r.onError = callback('SMS sending failed.');
 
     }
+
+    function handleError(data) {
+        console.log('handleError data', data);
+        var err;
+        try {
+            // response should be in JSON format
+            var err = JSON.parse(data);
+        } catch(e) {
+            //console.error(e);
+            err = 'Unkown error';
+        }
+        $('.errors .data').html('<p>'+err+'</p>');
+    };
+
+    function sendMessageCallback(err, data) {
+        console.log('sendMessageCallback data',data);
+        console.log('sendMessageCallback error',err);
+        if (err) {
+            console.error(err);
+            return handleError(err);
+        }
+        try {
+            // response should be in JSON format
+            var d = JSON.parse(data);
+        } catch(e) {
+            //console.error(e);
+            return handleError(data);
+        }
+        //$('.log').prepend('<p>'+data+'</p>');
+        var val = log.getValue();
+        log.setValue(json_format(data) +'\n'+val);
+    };
+
 
     // Render and bind a form
     function showForm(forms, code, lang) {
@@ -124,6 +203,7 @@ define([
             });
             return msg;
         };
+
 
         $('form.main').on('submit', function () {
             try {
@@ -155,19 +235,20 @@ define([
                         return false;
                     }
 
+                    console.log(data.data);
 
                     schemafied[code].post_save(data.data, function(err, doc) {
                         editor.setValue(json_format(JSON.stringify(doc)));
-                        var msg = convertToMuvukuFormat(doc);
-                        sendSMS(gateway_num, msg, function(err, data) {
-                            if (err) {
-                                console.error(err);
-                                $('.sms_message .error').html('<p>'+err+'</p>');
-                            }
-                            $('.sms_message .message').html(
-                                '<p>'+gateway_num+': '+data+'</p>'
-                            );
-                        });
+                        var msg = convertToMuvukuFormat(doc),
+                            doThis = postToSMSSyncAPI,
+                            callback = sendMessageCallback;
+
+                        if (hasSMSAPI()) doThis = sendSMS;
+
+                        var from = $('.settings form [name=from]').val();
+                        if (!from) from = gateway_num;
+
+                        doThis({phone: from, message:msg}, callback);
                         console.log(err, doc);
                     });
                 })
@@ -229,7 +310,7 @@ define([
             theme : 'monokai',
             mode : {name: "javascript", json: true}
         });
-        editor.setSize(null, 400 );
+        editor.setSize(null, 400);
 
 
         var elem2 = $('.schema_used').get()[0];
@@ -240,6 +321,15 @@ define([
             mode : {name: "javascript", json: true}
         });
         schema_used.setSize(null, 400 );
+
+        var elem3 = $('.log .entry').get()[0];
+        log = CodeMirror(elem3, {
+            value : '',
+            readOnly : true,
+            theme : 'monokai',
+            mode : {name: "javascript", json: true}
+        });
+        log.setSize(null, 400 );
 
     }
 
