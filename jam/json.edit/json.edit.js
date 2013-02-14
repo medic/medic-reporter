@@ -296,7 +296,7 @@
                 value = priv.collectField(key, field, schema);
             }
 
-            if (!value.result.ok) {
+            if (value.result && !value.result.ok) {
                 result.ok = false;
                 result.msg = "one or more errors in object fields";
                 result.data[key] = value.result;
