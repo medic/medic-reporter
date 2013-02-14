@@ -153,14 +153,14 @@ define([
     }
 
     function handleError(data) {
-        console.log('handleError data', data);
+        console.error('error data', data);
         var err;
         try {
             // response should be in JSON format
             var err = JSON.parse(data);
         } catch(e) {
             //console.error(e);
-            err = 'Unkown error';
+            err = 'Failed to parse response.';
         }
         $('.errors .data').html('<p>'+err+'</p>');
     };
@@ -205,8 +205,10 @@ define([
         };
 
 
-        $('form.main').on('submit', function () {
-            try {
+        $('form.main').off('submit');
+        $('form.main').on('submit', function (ev) {
+//            try {
+                ev.preventDefault();
                 var err_alert = $('.alert');
 
                 err_alert.hide(10);
@@ -238,6 +240,7 @@ define([
                     console.log(data.data);
 
                     schemafied[code].post_save(data.data, function(err, doc) {
+                        if (err) return handleError(err);
                         editor.setValue(json_format(JSON.stringify(doc)));
                         var msg = convertToMuvukuFormat(doc),
                             doThis = postToSMSSyncAPI,
@@ -249,14 +252,13 @@ define([
                         if (!from) from = gateway_num;
 
                         doThis({phone: from, message:msg}, callback);
-                        console.log(err, doc);
                     });
                 })
 
 
-            } catch (e) {
-                console.log(e);
-            }
+//            } catch (e) {
+//                console.log(e);
+//            }
             return false;
         });
     }
