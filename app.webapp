@@ -1,0 +1,22 @@
+{
+  "version": "0.0.1",
+  "name": "Kujua Forms Developer Tool",
+  "description": "Post and validate Medic JSON-form Schemas.",
+  "long_description" : "",
+  "launch_path": "/",
+  "url": "https://github.com/medic/json-forms",
+  "categories": ["health","sms"],
+  "icons": {
+         "16": "img/promo/icon_16.png",
+         "48": "img/promo/icon_48.png",
+         "96": "img/promo/icon_96.png",
+         "128": "img/promo/icon_128.png"
+  },
+  "promo_images": {
+         "small": "img/promo/promo_small.png"
+  },
+  "screenshots": [
+     "img/promo/screenshot1.png"
+  ],
+  "default_locale": "en"
+}
