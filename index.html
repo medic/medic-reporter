@@ -48,8 +48,8 @@
 
   <div class="container-fluid">
       <div class="row-fluid">
-          <div class="span4 well">
-            <div>
+          <div class="span4">
+            <div class="well">
               <form class="form main">
                 <div class="control">
                   <label>Form Definition</label>
@@ -70,17 +70,18 @@
                 <button class="btn btn-success">Send</button>
               </form>
             </div>
-            <div class="settings">
-              <h2>Settings</h2>
+            <div class="settings well">
               <form>
                 <fieldset>
-                  <label for="from">Phone number</label>
-                  <input name="from" value="+13125551212" />
+                    <label for="from">Phone number</label>
+                    <input class="input-medium" name="from" value="+13125551212" />
+                    <label for="path">Sync URL Path</label>
+                    <input class="input-xlarge" name="path" value="/kujua-base/_design/kujua-base/_rewrite/add" />
                 </fieldset>
               </form>
             </div>
-            <div class="errors">
-                <h2>Errors</h2>
+            <div class="errors hide alert">
+                <h3>Errors</h3>
                 <div class="data"></div>
             </div>
         </div>

@@ -95,7 +95,6 @@ define([
     }
 
     function postToSMSSyncAPI(options, callback) {
-        var url = '/kujua-base/_design/kujua-base/_rewrite/add'
         var data = {
             message_id: Math.ceil(Math.random() * 100000),
             //sent_timestamp: formatDate(new Date())
@@ -116,7 +115,7 @@ define([
                 callback(textStatus);
             },
             headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            url: url,
+            url: options.url,
             type: 'POST',
             data: data
         });
@@ -125,13 +124,6 @@ define([
     function hasSMSAPI() {
       if (navigator && navigator.mozSms) return true;
     }
-
-    function onSubmit(num, msg, callback) {
-      if (typeof num !== 'string' || !num)
-          err = 'Please include a number.';
-      else if (typeof msg !== 'string' || !msg)
-          err = 'Please include a message.';
-    };
 
     function sendSMS(options, callback) {
 
@@ -162,7 +154,8 @@ define([
             //console.error(e);
             err = 'Failed to parse response.';
         }
-        $('.errors .data').html('<p>'+err+'</p>');
+        $('.errors .data').html('<p>'+err+'</p>')
+            .closest('.errors').show();
     };
 
     function sendMessageCallback(err, data) {
@@ -212,6 +205,7 @@ define([
                 var err_alert = $('.alert');
 
                 err_alert.hide(10);
+                $('.errors').hide(10);
 
                 var data = rendered.collect();
                 if (!data.result.ok) {
@@ -243,15 +237,28 @@ define([
                         if (err) return handleError(err);
                         editor.setValue(json_format(JSON.stringify(doc)));
                         var msg = convertToMuvukuFormat(doc),
-                            doThis = postToSMSSyncAPI,
-                            callback = sendMessageCallback;
+                            fn = sendSMS,
+                            callback = sendMessageCallback,
+                            url = '/kujua-base/_design/kujua-base/_rewrite/add',
+                            path = $('.settings form [name=path]').val();
 
-                        if (hasSMSAPI()) doThis = sendSMS;
+                        if (!hasSMSAPI()) {
+                            fn = postToSMSSyncAPI;
+                            if (path) url = path;
+                            $('.settings form [name=path]').val(url);
+                        }
 
                         var from = $('.settings form [name=from]').val();
                         if (!from) from = gateway_num;
 
-                        doThis({phone: from, message:msg}, callback);
+                        var opts = {
+                            phone: from,
+                            url: url,
+                            message:msg
+                        };
+
+                        fn(opts, callback);
+
                     });
                 })
 
