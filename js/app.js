@@ -154,7 +154,7 @@ define([
             //console.error(e);
             err = 'Failed to parse response.';
         }
-        $('.errors .data').html('<p>'+err+'</p>')
+        $('.errors.alert .msg').html('<p>'+err+'</p>')
             .closest('.errors').show();
     };
 
@@ -202,10 +202,9 @@ define([
         $('form.main').on('submit', function (ev) {
 //            try {
                 ev.preventDefault();
-                var err_alert = $('.alert');
-
-                err_alert.hide(10);
-                $('.errors').hide(10);
+                var err_alert = $('.errors.alert');
+                err_alert.hide(10).find('.msg').html('');
+                err_alert.hide(10).find('.head').html('');
 
                 var data = rendered.collect();
                 if (!data.result.ok) {

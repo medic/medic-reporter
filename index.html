@@ -62,27 +62,25 @@
                 <fieldset>
                 <div id="form_fields"></div>
                 </fieldset>
-                <div class="alert alert-block hide">
-                  <button type="button" class="close" data-dismiss="alert">&times;</button>
-                  <h4 class="head"></h4>
-                  <div class="msg"></div>
-                </div>
                 <button class="btn btn-success">Send</button>
               </form>
+            </div>
+            <div class="errors hide alert alert-block">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <h4 class="head"></h4>
+                <div class="msg"></div>
             </div>
             <div class="settings well">
               <form>
                 <fieldset>
+                    <legend>Settings</legend>
                     <label for="from">Phone number</label>
-                    <input class="input-medium" name="from" value="+13125551212" />
+                    <input class="input-medium" name="from" value="+13125551212">
                     <label for="path">Sync URL Path</label>
-                    <input class="input-xlarge" name="path" value="/kujua-base/_design/kujua-base/_rewrite/add" />
+                    <input class="input-xlarge" name="path" value="/kujua-base/_design/kujua-base/_rewrite/add">
+                    <span class="help-block">Optional, for use with HTTP API.</span>
                 </fieldset>
               </form>
-            </div>
-            <div class="errors hide alert">
-                <h3>Errors</h3>
-                <div class="data"></div>
             </div>
         </div>
         <div class="span8">
