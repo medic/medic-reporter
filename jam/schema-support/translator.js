@@ -82,6 +82,7 @@
                     _.each(prop_details.validations, function(validation_func, key) {
                         var value = doc[prop_name];
 
+                        if (!validation_func) return;
                         var result = validation_func(value)
 
                         if (!result.ok) {
