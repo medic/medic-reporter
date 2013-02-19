@@ -1,0 +1,2408 @@
+[{
+   "meta": {
+      "label": "Analgesicos/Antipireticos",
+      "code": "CSD1"
+   },
+   "fields": {
+      "level_0101": {
+         "position": 0,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: ácido Acetilsalicílico 500mg"
+            },
+            "tiny": {
+               "es": "L0101"
+            },
+            "description": {
+               "es": "Inventario: ácido Acetilsalicílico 500mg"
+            }
+         }
+      },
+      "used_0101": {
+         "position": 1,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: ácido Acetilsalicílico 500mg"
+            },
+            "tiny": {
+               "es": "U0101"
+            },
+            "description": {
+               "es": "Utilizado 30d: ácido Acetilsalicílico 500mg"
+            }
+         }
+      },
+      "level_0103": {
+         "position": 2,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: ácido Acetilsalicílico 300mg"
+            },
+            "tiny": {
+               "es": "L0103"
+            },
+            "description": {
+               "es": "Inventario: ácido Acetilsalicílico 300mg"
+            }
+         }
+      },
+      "used_0103": {
+         "position": 3,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: ácido Acetilsalicílico 300mg"
+            },
+            "tiny": {
+               "es": "U0103"
+            },
+            "description": {
+               "es": "Utilizado 30d: ácido Acetilsalicílico 300mg"
+            }
+         }
+      },
+      "level_5501": {
+         "position": 4,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Diclofenaco Sódico"
+            },
+            "tiny": {
+               "es": "L5501"
+            },
+            "description": {
+               "es": "Inventario: Diclofenaco Sódico"
+            }
+         }
+      },
+      "used_5501": {
+         "position": 5,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Diclofenaco Sódico"
+            },
+            "tiny": {
+               "es": "U5501"
+            },
+            "description": {
+               "es": "Utilizado 30d: Diclofenaco Sódico"
+            }
+         }
+      },
+      "level_3422": {
+         "position": 6,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Ketorolaco Trometamina"
+            },
+            "tiny": {
+               "es": "L3422"
+            },
+            "description": {
+               "es": "Inventario: Ketorolaco Trometamina"
+            }
+         }
+      },
+      "used_3422": {
+         "position": 7,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Ketorolaco Trometamina"
+            },
+            "tiny": {
+               "es": "U3422"
+            },
+            "description": {
+               "es": "Utilizado 30d: Ketorolaco Trometamina"
+            }
+         }
+      },
+      "level_0108": {
+         "position": 8,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Metamizol Sódico 500mg"
+            },
+            "tiny": {
+               "es": "L0108"
+            },
+            "description": {
+               "es": "Inventario: Metamizol Sódico 500mg"
+            }
+         }
+      },
+      "used_0108": {
+         "position": 9,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Metamizol Sódico 500mg"
+            },
+            "tiny": {
+               "es": "U0108"
+            },
+            "description": {
+               "es": "Utilizado 30d: Metamizol Sódico 500mg"
+            }
+         }
+      },
+      "level_0109": {
+         "position": 10,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Metamizol Sódico 1000mg/2ml"
+            },
+            "tiny": {
+               "es": "L0109"
+            },
+            "description": {
+               "es": "Inventario: Metamizol Sódico 1000mg/2ml"
+            }
+         }
+      },
+      "used_0109": {
+         "position": 11,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Metamizol Sódico 1000mg/2ml"
+            },
+            "tiny": {
+               "es": "U0109"
+            },
+            "description": {
+               "es": "Utilizado 30d: Metamizol Sódico 1000mg/2ml"
+            }
+         }
+      },
+      "level_0106": {
+         "position": 12,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Paracetamol 100mg"
+            },
+            "tiny": {
+               "es": "L0106"
+            },
+            "description": {
+               "es": "Inventario: Paracetamol 100mg"
+            }
+         }
+      },
+      "used_0106": {
+         "position": 13,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Paracetamol 100mg"
+            },
+            "tiny": {
+               "es": "U0106"
+            },
+            "description": {
+               "es": "Utilizado 30d: Paracetamol 100mg"
+            }
+         }
+      },
+      "level_0105": {
+         "position": 14,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Paracetamol 300mg"
+            },
+            "tiny": {
+               "es": "L0105"
+            },
+            "description": {
+               "es": "Inventario: Paracetamol 300mg"
+            }
+         }
+      },
+      "used_0105": {
+         "position": 15,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Paracetamol 300mg"
+            },
+            "tiny": {
+               "es": "U0105"
+            },
+            "description": {
+               "es": "Utilizado 30d: Paracetamol 300mg"
+            }
+         }
+      },
+      "level_0104": {
+         "position": 16,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Paracetamol 500mg"
+            },
+            "tiny": {
+               "es": "L0104"
+            },
+            "description": {
+               "es": "Inventario: Paracetamol 500mg"
+            }
+         }
+      },
+      "used_0104": {
+         "position": 17,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Paracetamol 500mg"
+            },
+            "tiny": {
+               "es": "U0104"
+            },
+            "description": {
+               "es": "Utilizado 30d: Paracetamol 500mg"
+            }
+         }
+      }
+   }
+},
+{
+   "meta": {
+      "label": "Antibioticos",
+      "code": "CSD2"
+   },
+   "fields": {
+      "level_2128": {
+         "position": 0,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Amoxicilina Trihidratada 500mg"
+            },
+            "tiny": {
+               "es": "L2128"
+            },
+            "description": {
+               "es": "Inventario: Amoxicilina Trihidratada 500mg"
+            }
+         }
+      },
+      "used_2128": {
+         "position": 1,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Amoxicilina Trihidratada 500mg"
+            },
+            "tiny": {
+               "es": "U2128"
+            },
+            "description": {
+               "es": "Utilizado 30d: Amoxicilina Trihidratada 500mg"
+            }
+         }
+      },
+      "level_2127": {
+         "position": 2,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Amoxicilina Trihidratada 500mg/5ml"
+            },
+            "tiny": {
+               "es": "L2127"
+            },
+            "description": {
+               "es": "Inventario: Amoxicilina Trihidratada 500mg/5ml"
+            }
+         }
+      },
+      "used_2127": {
+         "position": 3,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Amoxicilina Trihidratada 500mg/5ml"
+            },
+            "tiny": {
+               "es": "U2127"
+            },
+            "description": {
+               "es": "Utilizado 30d: Amoxicilina Trihidratada 500mg/5ml"
+            }
+         }
+      },
+      "level_2129": {
+         "position": 4,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Amoxicilina Trihidratada - ácido Clavulánico (1500mg, 375mg)"
+            },
+            "tiny": {
+               "es": "L2129"
+            },
+            "description": {
+               "es": "Inventario: Amoxicilina Trihidratada - ácido Clavulánico (1500mg, 375mg)"
+            }
+         }
+      },
+      "used_2129": {
+         "position": 5,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Amoxicilina Trihidratada - ácido Clavulánico (1500mg, 375mg)"
+            },
+            "tiny": {
+               "es": "U2129"
+            },
+            "description": {
+               "es": "Utilizado 30d: Amoxicilina Trihidratada - ácido Clavulánico (1500mg, 375mg)"
+            }
+         }
+      },
+      "level_2230": {
+         "position": 6,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Amoxicilina Trihidratada - ácido Clavulánico (500mg, 125mg)"
+            },
+            "tiny": {
+               "es": "L2230"
+            },
+            "description": {
+               "es": "Inventario: Amoxicilina Trihidratada - ácido Clavulánico (500mg, 125mg)"
+            }
+         }
+      },
+      "used_2230": {
+         "position": 7,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Amoxicilina Trihidratada - ácido Clavulánico (500mg, 125mg)"
+            },
+            "tiny": {
+               "es": "U2230"
+            },
+            "description": {
+               "es": "Utilizado 30d: Amoxicilina Trihidratada - ácido Clavulánico (500mg, 125mg)"
+            }
+         }
+      },
+      "level_1930": {
+         "position": 8,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Ampicilina Trihidratada"
+            },
+            "tiny": {
+               "es": "L1930"
+            },
+            "description": {
+               "es": "Inventario: Ampicilina Trihidratada"
+            }
+         }
+      },
+      "used_1930": {
+         "position": 9,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Ampicilina Trihidratada"
+            },
+            "tiny": {
+               "es": "U1930"
+            },
+            "description": {
+               "es": "Utilizado 30d: Ampicilina Trihidratada"
+            }
+         }
+      },
+      "level_1923": {
+         "position": 10,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Bencilpenicilina Procaínica y Cristalina (100,000 UI)"
+            },
+            "tiny": {
+               "es": "L1923"
+            },
+            "description": {
+               "es": "Inventario: Bencilpenicilina Procaínica y Cristalina (100,000 UI)"
+            }
+         }
+      },
+      "used_1923": {
+         "position": 11,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Bencilpenicilina Procaínica y Cristalina (100,000 UI)"
+            },
+            "tiny": {
+               "es": "U1923"
+            },
+            "description": {
+               "es": "Utilizado 30d: Bencilpenicilina Procaínica y Cristalina (100,000 UI)"
+            }
+         }
+      },
+      "level_1924": {
+         "position": 12,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Bencilpenicilina Procaínica y Cristalina (200,000 UI)"
+            },
+            "tiny": {
+               "es": "L1924"
+            },
+            "description": {
+               "es": "Inventario: Bencilpenicilina Procaínica y Cristalina (200,000 UI)"
+            }
+         }
+      },
+      "used_1924": {
+         "position": 13,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Bencilpenicilina Procaínica y Cristalina (200,000 UI)"
+            },
+            "tiny": {
+               "es": "U1924"
+            },
+            "description": {
+               "es": "Utilizado 30d: Bencilpenicilina Procaínica y Cristalina (200,000 UI)"
+            }
+         }
+      },
+      "level_1925": {
+         "position": 14,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Benzatina Bencilpenicilina"
+            },
+            "tiny": {
+               "es": "L1925"
+            },
+            "description": {
+               "es": "Inventario: Benzatina Bencilpenicilina"
+            }
+         }
+      },
+      "used_1925": {
+         "position": 15,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Benzatina Bencilpenicilina"
+            },
+            "tiny": {
+               "es": "U1925"
+            },
+            "description": {
+               "es": "Utilizado 30d: Benzatina Bencilpenicilina"
+            }
+         }
+      },
+      "level_1939": {
+         "position": 16,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Cefalexina Monohidratada"
+            },
+            "tiny": {
+               "es": "L1939"
+            },
+            "description": {
+               "es": "Inventario: Cefalexina Monohidratada"
+            }
+         }
+      },
+      "used_1939": {
+         "position": 17,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Cefalexina Monohidratada"
+            },
+            "tiny": {
+               "es": "U1939"
+            },
+            "description": {
+               "es": "Utilizado 30d: Cefalexina Monohidratada"
+            }
+         }
+      },
+      "level_4255": {
+         "position": 18,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Ciprofloxacino Monohidratado, Clorhidrato de"
+            },
+            "tiny": {
+               "es": "L4255"
+            },
+            "description": {
+               "es": "Inventario: Ciprofloxacino Monohidratado, Clorhidrato de"
+            }
+         }
+      },
+      "used_4255": {
+         "position": 19,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Ciprofloxacino Monohidratado, Clorhidrato de"
+            },
+            "tiny": {
+               "es": "U4255"
+            },
+            "description": {
+               "es": "Utilizado 30d: Ciprofloxacino Monohidratado, Clorhidrato de"
+            }
+         }
+      },
+      "level_2132": {
+         "position": 20,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Claritromicina"
+            },
+            "tiny": {
+               "es": "L2132"
+            },
+            "description": {
+               "es": "Inventario: Claritromicina"
+            }
+         }
+      },
+      "used_2132": {
+         "position": 21,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Claritromicina"
+            },
+            "tiny": {
+               "es": "U2132"
+            },
+            "description": {
+               "es": "Utilizado 30d: Claritromicina"
+            }
+         }
+      },
+      "level_2133": {
+         "position": 22,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Clindamicina, Clorhidrato de"
+            },
+            "tiny": {
+               "es": "L2133"
+            },
+            "description": {
+               "es": "Inventario: Clindamicina, Clorhidrato de"
+            }
+         }
+      },
+      "used_2133": {
+         "position": 23,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Clindamicina, Clorhidrato de"
+            },
+            "tiny": {
+               "es": "U2133"
+            },
+            "description": {
+               "es": "Utilizado 30d: Clindamicina, Clorhidrato de"
+            }
+         }
+      },
+      "level_1926": {
+         "position": 24,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Dicloxacilina Sódica (500mg)"
+            },
+            "tiny": {
+               "es": "L1926"
+            },
+            "description": {
+               "es": "Inventario: Dicloxacilina Sódica (500mg)"
+            }
+         }
+      },
+      "used_1926": {
+         "position": 25,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Dicloxacilina Sódica (500mg)"
+            },
+            "tiny": {
+               "es": "U1926"
+            },
+            "description": {
+               "es": "Utilizado 30d: Dicloxacilina Sódica (500mg)"
+            }
+         }
+      }
+   }
+},
+{
+   "meta": {
+      "label": "Antiparasitario/Antimicotico",
+      "code": "CSD4"
+   },
+   "fields": {
+      "level_1345": {
+         "position": 0,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Albendazol 400mg/20ml"
+            },
+            "tiny": {
+               "es": "L1345"
+            },
+            "description": {
+               "es": "Inventario: Albendazol 400mg/20ml"
+            }
+         }
+      },
+      "used_1345": {
+         "position": 1,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Albendazol 400mg/20ml"
+            },
+            "tiny": {
+               "es": "U1345"
+            },
+            "description": {
+               "es": "Utilizado 30d: Albendazol 400mg/20ml"
+            }
+         }
+      },
+      "level_1344": {
+         "position": 2,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Albendazol 200mg"
+            },
+            "tiny": {
+               "es": "L1344"
+            },
+            "description": {
+               "es": "Inventario: Albendazol 200mg"
+            }
+         }
+      },
+      "used_1344": {
+         "position": 3,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Albendazol 200mg"
+            },
+            "tiny": {
+               "es": "U1344"
+            },
+            "description": {
+               "es": "Utilizado 30d: Albendazol 200mg"
+            }
+         }
+      },
+      "level_2018": {
+         "position": 4,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Itraconazol"
+            },
+            "tiny": {
+               "es": "L2018"
+            },
+            "description": {
+               "es": "Inventario: Itraconazol"
+            }
+         }
+      },
+      "used_2018": {
+         "position": 5,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Itraconazol"
+            },
+            "tiny": {
+               "es": "U2018"
+            },
+            "description": {
+               "es": "Utilizado 30d: Itraconazol"
+            }
+         }
+      },
+      "level_2136": {
+         "position": 6,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Mebendazol"
+            },
+            "tiny": {
+               "es": "L2136"
+            },
+            "description": {
+               "es": "Inventario: Mebendazol"
+            }
+         }
+      },
+      "used_2136": {
+         "position": 7,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Mebendazol"
+            },
+            "tiny": {
+               "es": "U2136"
+            },
+            "description": {
+               "es": "Utilizado 30d: Mebendazol"
+            }
+         }
+      },
+      "level_1561": {
+         "position": 8,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Metronidazol (vaginal)"
+            },
+            "tiny": {
+               "es": "L1561"
+            },
+            "description": {
+               "es": "Inventario: Metronidazol (vaginal)"
+            }
+         }
+      },
+      "used_1561": {
+         "position": 9,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Metronidazol (vaginal)"
+            },
+            "tiny": {
+               "es": "U1561"
+            },
+            "description": {
+               "es": "Utilizado 30d: Metronidazol (vaginal)"
+            }
+         }
+      },
+      "level_1308": {
+         "position": 10,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Metronidazol 500mg"
+            },
+            "tiny": {
+               "es": "L1308"
+            },
+            "description": {
+               "es": "Inventario: Metronidazol 500mg"
+            }
+         }
+      },
+      "used_1308": {
+         "position": 11,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Metronidazol 500mg"
+            },
+            "tiny": {
+               "es": "U1308"
+            },
+            "description": {
+               "es": "Utilizado 30d: Metronidazol 500mg"
+            }
+         }
+      },
+      "level_1310": {
+         "position": 12,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Metronidazol, Benzoilo de"
+            },
+            "tiny": {
+               "es": "L1310"
+            },
+            "description": {
+               "es": "Inventario: Metronidazol, Benzoilo de"
+            }
+         }
+      },
+      "used_1310": {
+         "position": 13,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Metronidazol, Benzoilo de"
+            },
+            "tiny": {
+               "es": "U1310"
+            },
+            "description": {
+               "es": "Utilizado 30d: Metronidazol, Benzoilo de"
+            }
+         }
+      },
+      "level_0891": {
+         "position": 14,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Miconazol, Nitrato de"
+            },
+            "tiny": {
+               "es": "L0891"
+            },
+            "description": {
+               "es": "Inventario: Miconazol, Nitrato de"
+            }
+         }
+      },
+      "used_0891": {
+         "position": 15,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Miconazol, Nitrato de"
+            },
+            "tiny": {
+               "es": "U0891"
+            },
+            "description": {
+               "es": "Utilizado 30d: Miconazol, Nitrato de"
+            }
+         }
+      },
+      "level_4260": {
+         "position": 16,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Nistatina"
+            },
+            "tiny": {
+               "es": "L4260"
+            },
+            "description": {
+               "es": "Inventario: Nistatina"
+            }
+         }
+      },
+      "used_4260": {
+         "position": 17,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Nistatina"
+            },
+            "tiny": {
+               "es": "U4260"
+            },
+            "description": {
+               "es": "Utilizado 30d: Nistatina"
+            }
+         }
+      }
+   }
+},
+{
+   "meta": {
+      "label": "DM2 y Lipidos",
+      "code": "CSD5"
+   },
+   "fields": {
+      "level_1042": {
+         "position": 0,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Glibenclamida"
+            },
+            "tiny": {
+               "es": "L1042"
+            },
+            "description": {
+               "es": "Inventario: Glibenclamida"
+            }
+         }
+      },
+      "used_1042": {
+         "position": 1,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Glibenclamida"
+            },
+            "tiny": {
+               "es": "U1042"
+            },
+            "description": {
+               "es": "Utilizado 30d: Glibenclamida"
+            }
+         }
+      },
+      "level_5165": {
+         "position": 2,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Metformina"
+            },
+            "tiny": {
+               "es": "L5165"
+            },
+            "description": {
+               "es": "Inventario: Metformina"
+            }
+         }
+      },
+      "used_5165": {
+         "position": 3,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Metformina"
+            },
+            "tiny": {
+               "es": "U5165"
+            },
+            "description": {
+               "es": "Utilizado 30d: Metformina"
+            }
+         }
+      },
+      "level_1050": {
+         "position": 4,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Insulina Humana Acción Intermedia NPH"
+            },
+            "tiny": {
+               "es": "L1050"
+            },
+            "description": {
+               "es": "Inventario: Insulina Humana Acción Intermedia NPH"
+            }
+         }
+      },
+      "used_1050": {
+         "position": 5,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Insulina Humana Acción Intermedia NPH"
+            },
+            "tiny": {
+               "es": "U1050"
+            },
+            "description": {
+               "es": "Utilizado 30d: Insulina Humana Acción Intermedia NPH"
+            }
+         }
+      },
+      "level_1051": {
+         "position": 6,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Insulina Humana Acción Rápida Regular"
+            },
+            "tiny": {
+               "es": "L1051"
+            },
+            "description": {
+               "es": "Inventario: Insulina Humana Acción Rápida Regular"
+            }
+         }
+      },
+      "used_1051": {
+         "position": 7,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Insulina Humana Acción Rápida Regular"
+            },
+            "tiny": {
+               "es": "U1051"
+            },
+            "description": {
+               "es": "Utilizado 30d: Insulina Humana Acción Rápida Regular"
+            }
+         }
+      },
+      "level_4157": {
+         "position": 8,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Insulina Humana Acción Intermedia Lenta"
+            },
+            "tiny": {
+               "es": "L4157"
+            },
+            "description": {
+               "es": "Inventario: Insulina Humana Acción Intermedia Lenta"
+            }
+         }
+      },
+      "used_4157": {
+         "position": 9,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Insulina Humana Acción Intermedia Lenta"
+            },
+            "tiny": {
+               "es": "U4157"
+            },
+            "description": {
+               "es": "Utilizado 30d: Insulina Humana Acción Intermedia Lenta"
+            }
+         }
+      },
+      "level_4158": {
+         "position": 10,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Insulina Glargina"
+            },
+            "tiny": {
+               "es": "L4158"
+            },
+            "description": {
+               "es": "Inventario: Insulina Glargina"
+            }
+         }
+      },
+      "used_4158": {
+         "position": 11,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Insulina Glargina"
+            },
+            "tiny": {
+               "es": "U4158"
+            },
+            "description": {
+               "es": "Utilizado 30d: Insulina Glargina"
+            }
+         }
+      },
+      "level_4162": {
+         "position": 12,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Insulina Lispro"
+            },
+            "tiny": {
+               "es": "L4162"
+            },
+            "description": {
+               "es": "Inventario: Insulina Lispro"
+            }
+         }
+      },
+      "used_4162": {
+         "position": 13,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Insulina Lispro"
+            },
+            "tiny": {
+               "es": "U4162"
+            },
+            "description": {
+               "es": "Utilizado 30d: Insulina Lispro"
+            }
+         }
+      },
+      "level_0657": {
+         "position": 14,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Pravastatina"
+            },
+            "tiny": {
+               "es": "L0657"
+            },
+            "description": {
+               "es": "Inventario: Pravastatina"
+            }
+         }
+      },
+      "used_0657": {
+         "position": 15,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Pravastatina"
+            },
+            "tiny": {
+               "es": "U0657"
+            },
+            "description": {
+               "es": "Utilizado 30d: Pravastatina"
+            }
+         }
+      },
+      "level_0655": {
+         "position": 16,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Bezafibrato"
+            },
+            "tiny": {
+               "es": "L0655"
+            },
+            "description": {
+               "es": "Inventario: Bezafibrato"
+            }
+         }
+      },
+      "used_0655": {
+         "position": 17,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Bezafibrato"
+            },
+            "tiny": {
+               "es": "U0655"
+            },
+            "description": {
+               "es": "Utilizado 30d: Bezafibrato"
+            }
+         }
+      },
+      "level_0103": {
+         "position": 18,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Acido Acetil Salicílico"
+            },
+            "tiny": {
+               "es": "L0103"
+            },
+            "description": {
+               "es": "Inventario: Acido Acetil Salicílico"
+            }
+         }
+      },
+      "used_0103": {
+         "position": 19,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Acido Acetil Salicílico"
+            },
+            "tiny": {
+               "es": "U0103"
+            },
+            "description": {
+               "es": "Utilizado 30d: Acido Acetil Salicílico"
+            }
+         }
+      }
+   }
+},
+{
+   "meta": {
+      "label": "Gastrointestinal",
+      "code": "CSD6"
+   },
+   "fields": {
+      "level_3623": {
+         "position": 0,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Electrolitos Orales"
+            },
+            "tiny": {
+               "es": "L3623"
+            },
+            "description": {
+               "es": "Inventario: Electrolitos Orales"
+            }
+         }
+      },
+      "used_3623": {
+         "position": 1,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Electrolitos Orales"
+            },
+            "tiny": {
+               "es": "U3623"
+            },
+            "description": {
+               "es": "Utilizado 30d: Electrolitos Orales"
+            }
+         }
+      },
+      "level_5186": {
+         "position": 2,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Omeprazol"
+            },
+            "tiny": {
+               "es": "L5186"
+            },
+            "description": {
+               "es": "Inventario: Omeprazol"
+            }
+         }
+      },
+      "used_5186": {
+         "position": 3,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Omeprazol"
+            },
+            "tiny": {
+               "es": "U5186"
+            },
+            "description": {
+               "es": "Utilizado 30d: Omeprazol"
+            }
+         }
+      },
+      "level_1206": {
+         "position": 4,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Butilhioscina, Bromuro de"
+            },
+            "tiny": {
+               "es": "L1206"
+            },
+            "description": {
+               "es": "Inventario: Butilhioscina, Bromuro de"
+            }
+         }
+      },
+      "used_1206": {
+         "position": 5,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Butilhioscina, Bromuro de"
+            },
+            "tiny": {
+               "es": "U1206"
+            },
+            "description": {
+               "es": "Utilizado 30d: Butilhioscina, Bromuro de"
+            }
+         }
+      },
+      "level_1233": {
+         "position": 6,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Ranitidina, Clorhidrato de"
+            },
+            "tiny": {
+               "es": "L1233"
+            },
+            "description": {
+               "es": "Inventario: Ranitidina, Clorhidrato de"
+            }
+         }
+      },
+      "used_1233": {
+         "position": 7,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Ranitidina, Clorhidrato de"
+            },
+            "tiny": {
+               "es": "U1233"
+            },
+            "description": {
+               "es": "Utilizado 30d: Ranitidina, Clorhidrato de"
+            }
+         }
+      },
+      "level_1271": {
+         "position": 8,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Plántago Psyllium"
+            },
+            "tiny": {
+               "es": "L1271"
+            },
+            "description": {
+               "es": "Inventario: Plántago Psyllium"
+            }
+         }
+      },
+      "used_1271": {
+         "position": 9,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Plántago Psyllium"
+            },
+            "tiny": {
+               "es": "U1271"
+            },
+            "description": {
+               "es": "Utilizado 30d: Plántago Psyllium"
+            }
+         }
+      },
+      "level_1207": {
+         "position": 10,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Butilhioscina, Bromuro de"
+            },
+            "tiny": {
+               "es": "L1207"
+            },
+            "description": {
+               "es": "Inventario: Butilhioscina, Bromuro de"
+            }
+         }
+      },
+      "used_1207": {
+         "position": 11,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Butilhioscina, Bromuro de"
+            },
+            "tiny": {
+               "es": "U1207"
+            },
+            "description": {
+               "es": "Utilizado 30d: Butilhioscina, Bromuro de"
+            }
+         }
+      },
+      "level_1224": {
+         "position": 12,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Aluminio, Hidróxido de - Hidróxido de Magnesio"
+            },
+            "tiny": {
+               "es": "L1224"
+            },
+            "description": {
+               "es": "Inventario: Aluminio, Hidróxido de - Hidróxido de Magnesio"
+            }
+         }
+      },
+      "used_1224": {
+         "position": 13,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Aluminio, Hidróxido de - Hidróxido de Magnesio"
+            },
+            "tiny": {
+               "es": "U1224"
+            },
+            "description": {
+               "es": "Utilizado 30d: Aluminio, Hidróxido de - Hidróxido de Magnesio"
+            }
+         }
+      },
+      "level_1263": {
+         "position": 14,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Bismuto, Subsalicilato de"
+            },
+            "tiny": {
+               "es": "L1263"
+            },
+            "description": {
+               "es": "Inventario: Bismuto, Subsalicilato de"
+            }
+         }
+      },
+      "used_1263": {
+         "position": 15,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Bismuto, Subsalicilato de"
+            },
+            "tiny": {
+               "es": "U1263"
+            },
+            "description": {
+               "es": "Utilizado 30d: Bismuto, Subsalicilato de"
+            }
+         }
+      }
+   }
+},
+{
+   "meta": {
+      "label": "Hipertensión",
+      "code": "CSD7"
+   },
+   "fields": {
+      "level_0574": {
+         "position": 0,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Captopril"
+            },
+            "tiny": {
+               "es": "L0574"
+            },
+            "description": {
+               "es": "Inventario: Captopril"
+            }
+         }
+      },
+      "used_0574": {
+         "position": 1,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Captopril"
+            },
+            "tiny": {
+               "es": "U0574"
+            },
+            "description": {
+               "es": "Utilizado 30d: Captopril"
+            }
+         }
+      },
+      "level_2501": {
+         "position": 2,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Enalapril o Lisinopril o Ramipril"
+            },
+            "tiny": {
+               "es": "L2501"
+            },
+            "description": {
+               "es": "Inventario: Enalapril o Lisinopril o Ramipril"
+            }
+         }
+      },
+      "used_2501": {
+         "position": 3,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Enalapril o Lisinopril o Ramipril"
+            },
+            "tiny": {
+               "es": "U2501"
+            },
+            "description": {
+               "es": "Utilizado 30d: Enalapril o Lisinopril o Ramipril"
+            }
+         }
+      },
+      "level_0572": {
+         "position": 4,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Metoprolol"
+            },
+            "tiny": {
+               "es": "L0572"
+            },
+            "description": {
+               "es": "Inventario: Metoprolol"
+            }
+         }
+      },
+      "used_0572": {
+         "position": 5,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Metoprolol"
+            },
+            "tiny": {
+               "es": "U0572"
+            },
+            "description": {
+               "es": "Utilizado 30d: Metoprolol"
+            }
+         }
+      },
+      "level_0599": {
+         "position": 6,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Nifedipino"
+            },
+            "tiny": {
+               "es": "L0599"
+            },
+            "description": {
+               "es": "Inventario: Nifedipino"
+            }
+         }
+      },
+      "used_0599": {
+         "position": 7,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Nifedipino"
+            },
+            "tiny": {
+               "es": "U0599"
+            },
+            "description": {
+               "es": "Utilizado 30d: Nifedipino"
+            }
+         }
+      },
+      "level_4095": {
+         "position": 8,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Irbesartan 150mg"
+            },
+            "tiny": {
+               "es": "L4095"
+            },
+            "description": {
+               "es": "Inventario: Irbesartan 150mg"
+            }
+         }
+      },
+      "used_4095": {
+         "position": 9,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Irbesartan 150mg"
+            },
+            "tiny": {
+               "es": "U4095"
+            },
+            "description": {
+               "es": "Utilizado 30d: Irbesartan 150mg"
+            }
+         }
+      },
+      "level_4096": {
+         "position": 10,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Irbesartan 300mg"
+            },
+            "tiny": {
+               "es": "L4096"
+            },
+            "description": {
+               "es": "Inventario: Irbesartan 300mg"
+            }
+         }
+      },
+      "used_4096": {
+         "position": 11,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Irbesartan 300mg"
+            },
+            "tiny": {
+               "es": "U4096"
+            },
+            "description": {
+               "es": "Utilizado 30d: Irbesartan 300mg"
+            }
+         }
+      },
+      "level_2540": {
+         "position": 12,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Telmisartán"
+            },
+            "tiny": {
+               "es": "L2540"
+            },
+            "description": {
+               "es": "Inventario: Telmisartán"
+            }
+         }
+      },
+      "used_2540": {
+         "position": 13,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Telmisartán"
+            },
+            "tiny": {
+               "es": "U2540"
+            },
+            "description": {
+               "es": "Utilizado 30d: Telmisartán"
+            }
+         }
+      },
+      "level_2520": {
+         "position": 14,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Losartán"
+            },
+            "tiny": {
+               "es": "L2520"
+            },
+            "description": {
+               "es": "Inventario: Losartán"
+            }
+         }
+      },
+      "used_2520": {
+         "position": 15,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Losartán"
+            },
+            "tiny": {
+               "es": "U2520"
+            },
+            "description": {
+               "es": "Utilizado 30d: Losartán"
+            }
+         }
+      },
+      "level_0561": {
+         "position": 16,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Clortalidona"
+            },
+            "tiny": {
+               "es": "L0561"
+            },
+            "description": {
+               "es": "Inventario: Clortalidona"
+            }
+         }
+      },
+      "used_0561": {
+         "position": 17,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Clortalidona"
+            },
+            "tiny": {
+               "es": "U0561"
+            },
+            "description": {
+               "es": "Utilizado 30d: Clortalidona"
+            }
+         }
+      },
+      "level_2301": {
+         "position": 18,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Inventario: Hidroclorotiazida"
+            },
+            "tiny": {
+               "es": "L2301"
+            },
+            "description": {
+               "es": "Inventario: Hidroclorotiazida"
+            }
+         }
+      },
+      "used_2301": {
+         "position": 19,
+         "type": "integer",
+         "length": [ 1, 3 ],
+         "range": [
+            0,
+            99
+         ],
+         "labels": {
+            "short": {
+               "es": "Utilizado 30d: Hidroclorotiazida"
+            },
+            "tiny": {
+               "es": "U2301"
+            },
+            "description": {
+               "es": "Utilizado 30d: Hidroclorotiazida"
+            }
+         }
+      }
+   }
+}]

@@ -8,6 +8,7 @@
     },
     "fields" : {
         "id" : {
+            "position": 0,
             "labels": {
                "tiny": {
                  "en": "ID"
@@ -22,7 +23,7 @@
             "type": "string"
         },
         "birth_site2": {
-           "position": 2,
+           "position": 1,
            "type": "string",
            "labels": {
               "short": {
