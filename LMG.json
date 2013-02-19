@@ -23,7 +23,7 @@
             "type": "string",
             "length": [
                1,
-               30
+               20
             ],
             "validations": {},
             "flags": {}
@@ -40,11 +40,11 @@
                   "en": "Name of participant"
                }
             },
-            "position": 0,
+            "position": 1,
             "type": "string",
             "length": [
                1,
-               30
+               20
             ],
             "validations": {},
             "flags": {}
@@ -55,10 +55,10 @@
                    "en": "RES"
                 },
                 "short": {
-                   "en": "result"
+                   "en": "Result"
                 }
              },
-             "position": 3,
+             "position": 2,
              "type": "integer",
              "list": [
                 [
@@ -93,11 +93,11 @@
                   "en": "Describe results"
                }
             },
-            "position": 0,
+            "position": 3,
             "type": "string",
             "length": [
                1,
-               40
+               20
             ],
             "validations": {},
             "flags": {}
@@ -114,11 +114,11 @@
                   "en": "Coach's suggestions"
                }
             },
-            "position": 0,
+            "position": 4,
             "type": "string",
             "length": [
                1,
-               40
+               20
             ],
             "validations": {},
             "flags": {}
@@ -135,11 +135,11 @@
                   "en": "Activities to address obstacles"
                }
             },
-            "position": 0,
+            "position": 5,
             "type": "string",
             "length": [
                1,
-               40
+               20
             ],
             "validations": {},
             "flags": {}
@@ -156,11 +156,11 @@
                   "en": "Next steps"
                }
             },
-            "position": 0,
+            "position": 6,
             "type": "string",
             "length": [
                1,
-               40
+               20
             ],
             "validations": {},
             "flags": {}
@@ -177,7 +177,7 @@
                   "en": "Red flag"
                }
             },
-            "position": 0,
+            "position": 7,
             "type": "string",
             "length": [
                1,
@@ -198,7 +198,7 @@
                   "en": "Endline denominator"
                }
             },
-            "position": 1,
+            "position": 8,
             "type": "integer",
             "required": false,
             "length": [
@@ -224,7 +224,7 @@
                   "en": "Endline numerator"
                }
             },
-            "position": 1,
+            "position": 9,
             "type": "integer",
             "required": false,
             "length": [
@@ -264,7 +264,7 @@
             "type": "string",
             "length": [
                1,
-               30
+               20
             ],
             "validations": {},
             "flags": {}
@@ -281,11 +281,11 @@
                   "en": "Name of team"
                }
             },
-            "position": 0,
+            "position": 1,
             "type": "string",
             "length": [
                1,
-               30
+               20
             ],
             "validations": {},
             "flags": {}
@@ -296,10 +296,10 @@
                    "en": "RES"
                 },
                 "short": {
-                   "en": "result"
+                   "en": "Result"
                 }
              },
-             "position": 3,
+             "position": 2,
              "type": "integer",
              "list": [
                 [
@@ -334,11 +334,11 @@
                   "en": "Describe results"
                }
             },
-            "position": 0,
+            "position": 3,
             "type": "string",
             "length": [
                1,
-               40
+               20
             ],
             "validations": {},
             "flags": {}
@@ -355,11 +355,11 @@
                   "en": "Identified obstacles"
                }
             },
-            "position": 0,
+            "position": 4,
             "type": "string",
             "length": [
                1,
-               40
+               20
             ],
             "validations": {},
             "flags": {}
@@ -376,11 +376,11 @@
                   "en": "Next steps"
                }
             },
-            "position": 0,
+            "position": 5,
             "type": "string",
             "length": [
                1,
-               40
+               20
             ],
             "validations": {},
             "flags": {}
@@ -397,7 +397,7 @@
                   "en": "Help request"
                }
             },
-            "position": 0,
+            "position": 6,
             "type": "string",
             "length": [
                1,
