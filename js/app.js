@@ -94,31 +94,43 @@ define([
         return month+'-'+day+'-'+year+' '+hours+':'+minutes;
     }
 
-    function postToSMSSyncAPI(options, callback) {
-        var data = {
-            message_id: Math.ceil(Math.random() * 100000),
-            //sent_timestamp: formatDate(new Date())
-            sent_timestamp: new Date().valueOf(),
-            message: options.message,
-            from: options.phone
-        };
+    function request(options, callback) {
 
-        //$('.log .console').prepend('<p>'+JSON.stringify(data)+'</p>');
-        var val = log.getValue();
-        log.setValue(json_format(JSON.stringify(data)) +'\n'+val);
+        var data = options.data,
+            host = options.host || 'localhost',
+            port = options.port || 5984,
+            path = options.path,
+            method = options.method || 'POST',
+            headers = options.headers || {'Content-Type': 'application/x-www-form-urlencoded'};
 
         $.ajax({
             success: function(data, textStatus, xhr) {
                 callback(null, data);
             },
             error: function(xhr, textStatus, error) {
-                callback(textStatus);
+                callback(error);
             },
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            url: options.url,
-            type: 'POST',
+            headers: headers,
+            url: path,
+            type: method,
             data: data
         });
+
+    };
+
+    //function postToSMSSyncAPI(options, callback) {
+    function postMessageHTTP(options, callback) {
+        options.path = options.path || '/kujua-base/_design/kujua-base/_rewrite/add';
+        options.data = {
+            message_id: Math.ceil(Math.random() * 100000),
+            //sent_timestamp: formatDate(new Date())
+            sent_timestamp: new Date().valueOf(),
+            message: options.message,
+            from: options.phone
+        };
+        var val = log.getValue();
+        log.setValue(json_format(JSON.stringify(options.data)) +'\n'+val);
+        request(options, callback);
     }
 
     function hasSMSAPI() {
@@ -158,23 +170,25 @@ define([
             .closest('.errors').show();
     };
 
-    function sendMessageCallback(err, data) {
-        console.log('sendMessageCallback data',data);
-        console.log('sendMessageCallback error',err);
-        if (err) {
-            console.error(err);
+    function processResponse(err, data) {
+        var resp;
+        if (err)
             return handleError(err);
-        }
+        //$('.log').prepend('<p>'+data+'</p>');
         try {
-            // response should be in JSON format
-            var d = JSON.parse(data);
+            if (typeof data === 'string')
+                resp = JSON.parse(data);
+            else if (typeof data === 'object')
+                resp = data;
         } catch(e) {
-            //console.error(e);
             return handleError(data);
         }
-        //$('.log').prepend('<p>'+data+'</p>');
         var val = log.getValue();
-        log.setValue(json_format(data) +'\n'+val);
+        log.setValue(json_format(JSON.stringify(resp)) +'\n'+val);
+        if (resp.callback) {
+            resp.callback.options.data = JSON.stringify(resp.callback.data);
+            request(resp.callback.options, processResponse);
+        }
     };
 
 
@@ -235,29 +249,16 @@ define([
                     schemafied[code].post_save(data.data, function(err, doc) {
                         if (err) return handleError(err);
                         editor.setValue(json_format(JSON.stringify(doc)));
-                        var msg = convertToMuvukuFormat(doc),
-                            fn = sendSMS,
-                            callback = sendMessageCallback,
-                            url = '/kujua-base/_design/kujua-base/_rewrite/add',
-                            path = $('.settings form [name=path]').val();
-
-                        if (!hasSMSAPI()) {
-                            fn = postToSMSSyncAPI;
-                            if (path) url = path;
-                            $('.settings form [name=path]').val(url);
-                        }
-
-                        var from = $('.settings form [name=from]').val();
-                        if (!from) from = gateway_num;
-
-                        var opts = {
-                            phone: from,
-                            url: url,
-                            message:msg
+                        var fn = sendSMS;
+                        var options = {
+                            message: convertToMuvukuFormat(doc),
+                            phone: $('.settings form [name=from]').val() || gateway_num
                         };
-
-                        fn(opts, callback);
-
+                        if (!hasSMSAPI()) {
+                            fn = postMessageHTTP;
+                            options.path = $('.settings form [name=path]').val();
+                        }
+                        fn(options, processResponse);
                     });
                 })
 
