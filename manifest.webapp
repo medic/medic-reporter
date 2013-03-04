@@ -1,7 +1,8 @@
 {
-  "version": "0.0.1",
-  "name": "Forms Developer Tool",
-  "description": "Post and validate Medic JSON-form Schemas.",
+  "version": "0.0.2",
+  "name": "Muvuku",
+  "description": "Post and validate Muvuku Forms.",
+  "long_description": "Post and validate Muvuku Forms.",
   "icons": {
     "16": "/img/promo/icon_16.png",
     "48": "/img/promo/icon_48.png",

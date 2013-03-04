@@ -1,8 +1,8 @@
 {
   "version": "0.0.2",
-  "name": "Kujua Forms Developer Tool",
-  "description": "Post and validate Medic JSON-form Schemas.",
-  "long_description" : "",
+  "name": "Muvuku",
+  "description": "Post and validate Muvuku Forms.",
+  "long_description": "Post and validate Muvuku Forms.",
   "launch_path": "/",
   "url": "https://github.com/medic/json-forms",
   "categories": ["health","sms"],
