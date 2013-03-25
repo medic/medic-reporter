@@ -247,7 +247,7 @@
             }
         },
         "fields" : {
-            "intravenousfluids" : {
+            "q1" : {
                 "labels" : {
                     "description" : {
                         "en" : "Intravenous fluids (NS and RL) in stock?",
@@ -271,7 +271,7 @@
                     ]],
                 "required" : true
             },
-            "amoxicillin" : {
+            "q2" : {
                 "labels" : {
                     "description" : {
                         "en" : "Amoxicillin in stock?",
@@ -295,7 +295,7 @@
                     ]],
                 "required" : true
             },
-            "contrimoxazole" : {
+            "q3" : {
                 "labels" : {
                     "description" : {
                         "en" : "Cotrimoxazole tabs in stock?",
@@ -319,7 +319,7 @@
                     ]],
                 "required" : true
             },
-            "misoprostol" : {
+            "q4" : {
                 "labels" : {
                     "description" : {
                         "en" : "Misoprostol pills in stock?",
@@ -343,7 +343,7 @@
                     ]],
                 "required" : true
             },
-            "magnesiumsulphate" : {
+            "q5" : {
                 "labels" : {
                     "description" : {
                         "en" : "Magnesium sulphate in stock?",
@@ -367,7 +367,7 @@
                     ]],
                 "required" : true
             },
-            "depoprovera" : {
+            "q6" : {
                 "labels" : {
                     "description" : {
                         "en" : "Depo Provera doses in stock?",
@@ -391,7 +391,7 @@
                     ]],
                 "required" : true
             },
-            "ocps" : {
+            "q7" : {
                 "labels" : {
                     "description" : {
                         "en" : "Oral Contraceptive Pills (OCPs) in stock?",
@@ -415,7 +415,7 @@
                     ]],
                 "required" : true
             },
-            "condoms" : {
+            "q8" : {
                 "labels" : {
                     "description" : {
                         "en" : "Condoms in stock?",
@@ -439,7 +439,7 @@
                     ]],
                 "required" : true
             },
-            "zinc" : {
+            "q9" : {
                 "labels" : {
                     "description" : {
                         "en" : "Zinc tablets in stock?",
@@ -463,7 +463,7 @@
                     ]],
                 "required" : true
             },
-            "ors" : {
+            "q10" : {
                 "labels" : {
                     "description" : {
                         "en" : "Jeevan Jal (ORS) in stock?",
@@ -487,7 +487,7 @@
                     ]],
                 "required" : true
             },
-            "vitamina" : {
+            "q11" : {
                 "labels" : {
                     "description" : {
                         "en" : "Vitamin A doses in stock?",
@@ -511,7 +511,7 @@
                     ]],
                 "required" : true
             },
-            "iron" : {
+            "q12" : {
                 "labels" : {
                     "description" : {
                         "en" : "Iron tablets in stock?",
@@ -535,7 +535,7 @@
                     ]],
                 "required" : true
             },
-            "dots" : {
+            "q13" : {
                 "labels" : {
                     "description" : {
                         "en" : "Anti-tuberculosis (DOTS) medications in stock?",
@@ -559,7 +559,7 @@
                     ]],
                 "required" : true
             },
-            "staffpresent" : {
+            "q14" : {
                 "labels" : {
                     "description" : {
                         "en" : "Highest level staff present?",
@@ -583,7 +583,7 @@
                     ]],
                 "required" : true
             },            
-            "birthattendant" : {
+            "q15" : {
                 "labels" : {
                     "description" : {
                         "en" : "Skilled Birth Attendant (SBA) present?",
@@ -607,7 +607,7 @@
                     ]],
                 "required" : true
             },
-            "screeningservices" : {
+            "q16" : {
                 "labels" : {
                     "description" : {
                         "en" : "Malnutrition screening services available?",
@@ -631,7 +631,7 @@
                     ]],
                 "required" : true
             },
-            "sharpsboxes" : {
+            "q17" : {
                 "labels" : {
                     "description" : {
                         "en" : "Sharps boxes available?",
@@ -655,7 +655,7 @@
                     ]],
                 "required" : true
             },
-            "sterilizerequipment" : {
+            "q18" : {
                 "labels" : {
                     "description" : {
                         "en" : "Sterilization equipment available?",
@@ -679,7 +679,7 @@
                     ]],
                 "required" : true
             },
-            "wastereceptacles" : {
+            "q19" : {
                 "labels" : {
                     "description" : {
                         "en" : "Waste disposal receptacles available?",
@@ -703,7 +703,7 @@
                     ]],
                 "required" : true
             },
-            "watersupply" : {
+            "q20" : {
                 "labels" : {
                     "description" : {
                         "en" : "Water supply available?",
@@ -727,7 +727,7 @@
                     ]],
                 "required" : true
             },
-            "toilet" : {
+            "q21" : {
                 "labels" : {
                     "description" : {
                         "en" : "Toilet available?",
@@ -751,7 +751,7 @@
                     ]],
                 "required" : true
             },
-            "electricitysupply" : {
+            "q22" : {
                 "labels" : {
                     "description" : {
                         "en" : "Electricity supply available?",
