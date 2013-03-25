@@ -1,7 +1,7 @@
 [
   {
     "meta": {
-      "code": "NYAA",
+      "code": "NYAC",
       "label": {
         "en": "Community Health Survey",
         "ne": "CHW"
@@ -343,7 +343,7 @@
   },
   {
     "meta": {
-      "code": "NYAB",
+      "code": "NYAD",
       "label": {
         "en": "Health Post Surveillance Checklist- Weekly",
         "ne": "Health Post Surveillance Checklist- Weekly"
@@ -1452,7 +1452,7 @@
   },
   {
     "meta": {
-      "code": "NYAC",
+      "code": "NYAE",
       "label": {
         "en": "Health Post Surveillance Checklist- Monthly",
         "ne": "Health Post Surveillance Checklist- Monthly"
