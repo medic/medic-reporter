@@ -1,0 +1,1126 @@
+[{
+        "meta" : {
+            "code" : "NYAA",
+            "label" : {
+                "en" : "Community Health Survey",
+                "ne" : "CHW"
+            }
+        },
+        "fields" : {
+            "location" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Location (ward)",
+                        "ne" : "ठेगाना"
+                    }
+                },
+                "position" : 1,
+                "type" : "integer",
+                "length" : [1, 1],
+                "required": true
+            },
+            "daysoverdue" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Number of days since patient was last seen",
+                        "ne" : "कति दिन अगाडी बिरामीलाई भेट्नु भयो?"
+                    }
+                },
+                "position" : 2,
+                "type" : "integer",
+                "length" : [1, 1],
+                "required" : true,
+                "validations": {
+                    "is_numeric_daysago": true
+                }
+            },
+            "age" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Age (years)",
+                        "ne" : "उमेर"
+                    }
+                },
+                "position" : 3,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "condition" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Condition",
+                        "ne" : "स्वास्थ्य स्थिति"
+                    }
+                },
+                "position" : 4,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required" : true
+            },
+            "gender" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Gender",
+                        "ne" : "लिङ्ग"
+                    }
+                },
+                "position" : 5,
+                "type" : "integer",
+                "list" : [[1, {
+                           "en" : "Male",
+                           "ne" : "पुरुष"
+                        }
+                    ], [2, {
+                            "en" : "Female",
+                            "ne" : "महिला"
+                        }
+                    ]],
+                "required" : true
+            },
+            "newpatient" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "New?",
+                        "ne" : "नयाँ"
+                    }
+                },
+                "position" : 6,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "हो"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "होईन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "referred" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Referred to",
+                        "ne" : "रिफर गरिएको स्वास्थ्य संस्था"
+                    }
+                },
+                "position" : 7,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "BH",
+                            "ne" : "बयालपाटा अस्पताल"
+                        }
+                    ], [2, {
+                            "en" : "Health Post",
+                            "ne" : "हेल्थ पोस्ट"
+                        }
+                    ], [3, {
+                            "en" : "Home Visit",
+                            "ne" : "घर भेट"
+                        }
+                    ], [4, {
+                            "en" : "Private Pharmacy",
+                            "ne" : "मेडिकल"
+                        }
+                    ], [5, {
+                            "en" : "Other",
+                            "ne" : "अन्य"
+                        }
+                    ]],
+                "required" : true
+            },
+            "treatmentgiven": {
+                "labels": {
+                    "short": {
+                        "en": "Treatment Given",
+                        "ne": "दिइएको उपचार"
+                    }
+                },
+                "position" : 8,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "OCP",
+                            "ne" : "पिल्स चक्की"
+                        }
+                    ], [2, {
+                            "en" : "Condom",
+                            "ne" : "हेल्थ पोस्ट"
+                        }
+                    ], [3, {
+                            "en" : "ORS",
+                            "ne" : "जीवनजल"
+                        }
+                    ], [4, {
+                            "en" : "Cotrimoxazole",
+                            "ne" : "कोट्रिम"
+                        }
+                    ], [5, {
+                            "en" : "Iron/Folic Acid",
+                            "ne" : "आइरन चक्की"
+                        }
+                    ], [6, {
+                            "en" : "Paracetamol",
+                            "ne" : "सिटामोल"
+                        }
+                    ],[7, {
+                            "en" : "Vitamin A",
+                            "ne" : "भिटामिन ए"
+                        }
+                    ],[8, {
+                            "en" : "Abendazole",
+                            "ne" : "जुकाको औषधि"
+                        }
+                    ],[9, {
+                            "en" : "Zinc Tablet",
+                            "ne" : "जिङ्क चक्की"
+                        }
+                    ],[10, {
+                            "en" : "Misoprostol",
+                            "ne" : "मातृसुरक्षा चक्की"
+                        }
+                    ],[11, {
+                            "en" : "No Treatment Given",
+                            "ne" : "कुनै पनि उपचार नदिएको"
+                        }
+                    ]],
+                "required" : true
+            },
+            "planningmethod" : {
+                "labels" : {
+                    "short" : {
+                        "en" : "Family Planning Method",
+                        "ne" : "हालको परिवार नियोजनको साधन"
+                    },
+                    "description" : {
+                        "en" : "Current Family Planning method",
+                        "ne" : "हाल प्रयोग गरिरहेको परिवार नियोजनको साधन"
+                    }
+                },
+                "position" : 9,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "OCP",
+                            "ne" : "पिल्स चक्की"
+                        }
+                    ], [2, {
+                            "en" : "Condom",
+                            "ne" : "कन्डम"
+                        }
+                    ], [3, {
+                            "en" : "Depo",
+                            "ne" : "डिपो सुइ"
+                        }
+                    ], [4, {
+                            "en" : "IUD",
+                            "ne" : "कपर टी"
+                        }
+                    ], [5, {
+                            "en" : "Implant",
+                            "ne" : "इम्प्लान्ट"
+                        }
+                    ], [6, {
+                            "en" : "Vasectomy",
+                            "ne" : "भ्यासिक्टोमी"
+                        }
+                    ],[7, {
+                            "en" : "Minilap",
+                            "ne" : "मिनील्याप"
+                        }
+                    ],[8, {
+                            "en" : "None",
+                            "ne" : "कुनै पनि छैन"
+                        }
+                    ]],
+                "required" : true
+            }
+        },
+        "validations" : {
+            "male_condition" : "function() { if (form_data['gender'] === 'Male' && [50,57,44].indexOf(form_data['condition']) !== -1 ) { return 'Male cannot have this condition.'}; }"
+        }
+    }, {
+        "meta" : {
+            "code" : "NYAB",
+            "label" : {
+                "en" : "Health Post Surveillance Checklist- Weekly",
+                "ne" : "Health Post Surveillance Checklist- Weekly"
+            }
+        },
+        "fields" : {
+            "intravenousfluids" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Intravenous fluids (NS and RL) in stock?",
+                        "ne" : "सलाईन पानी (एन् एस् र आर एल)?"
+                    },
+                    "short" : {
+                        "en" : "Intravenous fluids (NS and RL)?",
+                        "ne" : "सलाईन पानी (एन् एस् र आर एल)?"
+                    }
+                },
+                "position" : 1,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "amoxicillin" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Amoxicillin in stock?",
+                        "ne" : "एमोक्सिसिलिन?"
+                    },
+                    "short" : {
+                        "en" : "Amoxicilin?",
+                        "ne" : "एमोक्सिसिलिन?"
+                    }
+                },
+                "position" : 2,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "contrimoxazole" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Cotrimoxazole tabs in stock?",
+                        "ne" : "कोट्रिम?"
+                    },
+                    "short" : {
+                        "en" : "Cotrimoxazole tabs?",
+                        "ne" : "कोट्रिम?"
+                    }
+                },
+                "position" : 3,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "misoprostol" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Misoprostol pills in stock?",
+                        "ne" : "मिसोप्रोस्टोल चक्की?"
+                    },
+                    "short" : {
+                        "en" : "Misoprostol pills?",
+                        "ne" : "मिसोप्रोस्टोल चक्की?"
+                    }
+                },
+                "position" : 4,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "magnesiumsulphate" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Magnesium sulphate in stock?",
+                        "ne" : "म्याग्नेसियम सल्फेट?"
+                    },
+                    "short" : {
+                        "en" : "Magnesium sulphate?",
+                        "ne" : "म्याग्नेसियम सल्फेट?"
+                    }
+                },
+                "position" : 5,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "depoprovera" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Depo Provera doses in stock?",
+                        "ne" : "डिपो सुई?"
+                    },
+                    "short" : {
+                        "en" : "Depo Provera doses?",
+                        "ne" : "डिपो सुई?"
+                    }
+                },
+                "position" : 6,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "ocps" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Oral Contraceptive Pills (OCPs) in stock?",
+                        "ne" : "पिल्स चक्की?"
+                    },
+                    "short" : {
+                        "en" : "Oral Contraceptive Pills (OCPs)?",
+                        "ne" : "पिल्स चक्की?"
+                    }
+                },
+                "position" : 7,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "condoms" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Condoms in stock?",
+                        "ne" : "कण्डम?"
+                    },
+                    "short" : {
+                        "en" : "Condoms?",
+                        "ne" : "कण्डम?"
+                    }
+                },
+                "position" : 8,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "zinc" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Zinc tablets in stock?",
+                        "ne" : "जिन्क चक्की?"
+                    },
+                    "short" : {
+                        "en" : "Zinc tablets?",
+                        "ne" : "जिन्क चक्की?"
+                    }
+                },
+                "position" : 9,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "ors" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Jeevan Jal (ORS) in stock?",
+                        "ne" : "जीवन जल?"
+                    },
+                    "short" : {
+                        "en" : "Jeevan Jal (ORS)?",
+                        "ne" : "जीवन जल?"
+                    }
+                },
+                "position" : 10,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "vitamina" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Vitamin A doses in stock?",
+                        "ne" : "भिटामिन 'ए'?"
+                    },
+                    "short" : {
+                        "en" : "Vitamin A doses?",
+                        "ne" : "भिटामिन 'ए'?"
+                    }
+                },
+                "position" : 11,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "iron" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Iron tablets in stock?",
+                        "ne" : "आईरन चक्की?"
+                    },
+                    "short" : {
+                        "en" : "Iron tablets?",
+                        "ne" : "आईरन चक्की?"
+                    }
+                },
+                "position" : 12,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "dots" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Anti-tuberculosis (DOTS) medications in stock?",
+                        "ne" : "टि. बी को औषधी (डट्स)?"
+                    },
+                    "short" : {
+                        "en" : "Anti- tuberculosis (DOTS) medications?",
+                        "ne" : "टि. बी को औषधी (डट्स)?"
+                    }
+                },
+                "position" : 13,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "staffpresent" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Highest level staff present?",
+                        "ne" : "स्वास्थ्य संस्था प्रमुखको उपस्थिति?"
+                    },
+                    "short" : {
+                        "en" : "Highest level staff present?",
+                        "ne" : "स्वास्थ्य संस्था प्रमुख?"
+                    }
+                },
+                "position" : 14,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },            
+            "birthattendant" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Skilled Birth Attendant (SBA) present?",
+                        "ne" : "दछ्य प्रशुतीकर्मीको उपलब्धता?"
+                    },
+                    "short" : {
+                        "en" : "Skilled Birth Attendant (SBA) present?",
+                        "ne" : "दछ्य प्रशुतीकर्मी?"
+                    }
+                },
+                "position" : 15,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "screeningservices" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Malnutrition screening services available?",
+                        "ne" : "कुपोषण जाँच सेवाको उपलब्धता?"
+                    },
+                    "short" : {
+                        "en" : "Malnutrition screening services available?",
+                        "ne" : "कुपोषण जाँच सेवा?"
+                    }
+                },
+                "position" : 16,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "sharpsboxes" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Sharps boxes available?",
+                        "ne" : "सुई फाल्ने बाकसको उपलब्धता?"
+                    },
+                    "short" : {
+                        "en" : "Sharps boxes available?",
+                        "ne" : "सुई फाल्ने बाकस?"
+                    }
+                },
+                "position" : 17,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "sterilizerequipment" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Sterilization equipment available?",
+                        "ne" : "निर्मुलिकरण गर्ने उपकरणको उपलब्धता?"
+                    },
+                    "short" : {
+                        "en" : "Sterilization equipment available?",
+                        "ne" : "निर्मुलिकरण गर्ने उपकरण?"
+                    }
+                },
+                "position" : 18,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "wastereceptacles" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Waste disposal receptacles available?",
+                        "ne" : "फोहोर व्यवस्थापन गर्न 'डस्ट बिन' को उपलब्धता?"
+                    },
+                    "short" : {
+                        "en" : "Waste disposal receptacles available?",
+                        "ne" : "फोहोर व्यवस्थापन गर्न 'डस्ट बिन'?"
+                    }
+                },
+                "position" : 19,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "watersupply" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Water supply available?",
+                        "ne" : "खानेपानीको उपलब्धता?"
+                    },
+                    "short" : {
+                        "en" : "Water supply available?",
+                        "ne" : "खानेपानी?"
+                    }
+                },
+                "position" : 20,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "toilet" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Toilet available?",
+                        "ne" : "शौचालयको उपलब्धता?"
+                    },
+                    "short" : {
+                        "en" : "Toilet available?",
+                        "ne" : "शौचालय?"
+                    }
+                },
+                "position" : 21,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            },
+            "electricitysupply" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Electricity supply available?",
+                        "ne" : "बिधुत सेवाको उपलब्धता?"
+                    },
+                    "short" : {
+                        "en" : "Electricity supply available?",
+                        "ne" : "बिधुत सेवा?"
+                    }
+                },
+                "position" : 22,
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "required" : true
+            }
+        }
+    }, {
+        "meta" : {
+            "code" : "NYAC",
+            "label" : {
+                "en" : "Health Post Surveillance Checklist- Monthly",
+                "ne" : "Health Post Surveillance Checklist- Monthly"
+            }
+        },
+        "fields" : {
+            "q1" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of new antenatal visits",
+                        "ne" : "नयाँ गर्भ जाँच गराएका महिलाको संख्या"
+                    },
+                    "short" : {
+                        "en" : "Antenatal visits",
+                        "ne" : "नयाँ गर्भ जाँच"
+                    }
+                },
+                "position" : 1,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q2" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of home deliveries assisted by health/sub health post staff",
+                        "ne" : "स्वास्थ्यकर्मीद्वारा घरमा गराईएको सुत्केरी संख्या"
+                    },
+                    "short" : {
+                        "en" : "Home deliveries assisted by health/sub health post staff",
+                        "ne" : "स्वास्थ्यकर्मीद्वारा घरमा गराईएको सुत्केरी"
+                    }
+                },
+                "position" : 2,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q3" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of deliveries conducted in health facility",
+                        "ne" : "स्वा्स्थ्यसंस्थामा गराईएको सुत्केरी संख्या"
+                    },
+                    "short" : {
+                        "en" : "Deliveries conducted in health facitlity",
+                        "ne" : "स्वा्स्थ्यसंस्थामा गराईएको सुत्केरी"
+                    }
+                },
+                "position" : 3,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q4" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of postnatal visits",
+                        "ne" : "सुत्केरी जाँच गराएका महिलाको संख्या"
+                    },
+                    "short" : {
+                        "en" : "Postnatal visits",
+                        "ne" : "सुत्केरी जाँच"
+                    }
+                },
+                "position" : 4,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q5" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of postnatal complications",
+                        "ne" : "सुत्केरी अवस्थामा देखिने जटिल स्वास्थ्य समस्याहरु देखिएका महिलाको संख्या"
+                    },
+                    "short" : {
+                        "en" : "Postnatal complications",
+                        "ne" : "सुत्केरी अवस्थामा देखिएका जटिल समस्या"
+                    }
+                },
+                "position" : 5,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q6" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of neonatal (0-28 days old) deaths at health facility",
+                        "ne" : "स्वास्थ्य संस्थामा भएको नवशिशु (०- २८ दिन) मृत्युको संख्या "
+                    },
+                    "short" : {
+                        "en" : "Neonatal (0-28 days old) deaths at health facility ",
+                        "ne" : "स्वास्थ्य संस्थामा भएको नवशिशु (०- २८ दिन) मृत्यु"
+                    }
+                },
+                "position" : 6,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q7" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of maternal deaths at health facility",
+                        "ne" : "स्वास्थ्य संस्थामा भएको मातृ मृत्युको संख्या "
+                    },
+                    "short" : {
+                        "en" : "Maternal deaths at health facility",
+                        "ne" : "स्वास्थ्य संस्थामा भएको मातृ मृत्यु"
+                    }
+                },
+                "position" : 7,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q8" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of family planning visits",
+                        "ne" : " प्रदान गरिएको परिवार नियोजन सेवाको संख्या"
+                    },
+                    "short" : {
+                        "en" : "Family planning visits",
+                        "ne" : "परिवार नियोजन सेवा"
+                    }
+                },
+                "position" : 8,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q9" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of total outpatient visits",
+                        "ne" : "स्वास्थ्य संस्थामा आएका जम्मा बिरामीहरुको संख्या"
+                    },
+                    "short" : {
+                        "en" : "Total outpatient visits",
+                        "ne" : "स्वास्थ्य संस्थामा आएका जम्मा बिरामीहरु"
+                    }
+                },
+                "position" : 9,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q10" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of neonatal (0-28 days old) outpatient visits",
+                        "ne" : "स्वास्थ्य संस्थामा आएका जम्मा नवशिशु बिरामीहरुको संख्या (०- २८ दिन)"
+                    },
+                    "short" : {
+                        "en" : "Neonatal (0-28 days old) outpatient visits",
+                        "ne" : "स्वास्थ्य संस्थामा आएका जम्मा नवशिशु (०- २८ दिन) बिरामीहरु"
+                    }
+                },
+                "position" : 10,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q11" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of pediatric outpatient visits (28 days - 5 years old)",
+                        "ne" : "स्वास्थ्य संस्थामा आएका जम्मा बच्चा बिरामीहरुको संख्या (२८ दिन- ५ बर्ष)"
+                    },
+                    "short" : {
+                        "en" : "Pediatric outpatient visits (28 days- 5 yrs old)",
+                        "ne" : "स्वास्थ्य संस्थामा आएका बच्चा बिरामीहरु (२८ दिन- ५ बर्ष)"
+                    }
+                },
+                "position" : 11,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q12" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of malnutrition screenings conducted (0-5 years old)",
+                        "ne" : "प्रदान गरिएको कुपोषण जाँच सेवाको संख्या (०-५ बर्ष)"
+                    },
+                    "short" : {
+                        "en" : "Malnutirtion screenings conducted (0-5 years old)",
+                        "ne" : "कुपोषण जाँच सेवा"
+                    }
+                },
+                "position" : 12,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q13" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of malnutrition cases treated/referred",
+                        "ne" : "कुपोषणको उपचार प्रेषणको संख्या"
+                    },
+                    "short" : {
+                        "en" : "Malnutirtion cases treated/referred ",
+                        "ne" : "कुपोषणको उपचार प्रेषण"
+                    }
+                },
+                "position" : 13,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q14" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of diarrheal cases (0-5 years old)",
+                        "ne" : "झाडापखालाका बिरामीहरु (०-५ बर्ष) को संख्या"
+                    },
+                    "short" : {
+                        "en" : "Diarrheal cases (0-5 yrs old)",
+                        "ne" : "झाडापखालाका बिरामीहरु (०-५ बर्ष)"
+                    }
+                },
+                "position" : 14,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q15" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of acute respiratory infection (pneumonia) cases (0-5 years old)",
+                        "ne" : "'ए. आर. आई' (निमोनिया) का बिरामीहरुको संख्या (०-५ बर्ष)"
+                    },
+                    "short" : {
+                        "en" : "Acute respiratory infection (pneumonia) cases (0-5 yrs old)",
+                        "ne" : "'ए. आर. आई' (निमोनिया) का बिरामीहरु"
+                    }
+                },
+                "position" : 15,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q16" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of patients receiving directly observed treatment shortcourse (DOTS) medications",
+                        "ne" : "'टि. बी को औषधी (डट्स)' लिने बिरामीहरुको संख्या"
+                    },
+                    "short" : {
+                        "en" : "Patient receiving DOTS medications",
+                        "ne" : "'टि. बी को औषधी (डट्स)' लिने बिरामीहरु"
+                    }
+                },
+                "position" : 16,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q17" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of malaria cases suspected/confirmed",
+                        "ne" : "औलो (मलेरिया) का संकास्पद वा पत्ता लागेका बिरामीहरुको संख्या"
+                    },
+                    "short" : {
+                        "en" : "Malaria cases suspected/confirmed",
+                        "ne" : "औलो (मलेरिया) का बिरामीहरु"
+                    }
+                },
+                "position" : 17,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q18" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of vaccination events planned this month",
+                        "ne" : "मासिक रुपमा खोप क्लिनिक संचालन गर्नुपर्ने संख्या (योजना गरेको)"
+                    },
+                    "short" : {
+                        "en" : "Vaccination events planned",
+                        "ne" : "मासिक रुपमा खोप क्लिनिक संचालन गर्नुपर्ने संख्या"
+                    }
+                },
+                "position" : 18,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q19" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of vaccination events conducted this month",
+                        "ne" : "मासिक रुपमा खोप क्लिनिक संचालन भएको संख्या "
+                    },
+                    "short" : {
+                        "en" : "Vaccination events conducted",
+                        "ne" : "मासिक रुपमा खोप क्लिनिक संचालन भएको संख्या "
+                    }
+                },
+                "position" : 19,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q20" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of outreach clinics planned this month",
+                        "ne" : "मासिक रुपमा गाउँघर क्लिनिक संचालन गर्नुपर्ने संख्या (योजना गरेको)"
+                    },
+                    "short" : {
+                        "en" : "Outreach clinics planned",
+                        "ne" : "मासिक रुपमा गाउँघर क्लिनिक संचालन गर्नुपर्ने संख्या"
+                    }
+                },
+                "position" : 20,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            },
+            "q21" : {
+                "labels" : {
+                    "description" : {
+                        "en" : "Number of outreach clinics conducted this month",
+                        "ne" : "मासिक रुपमा गाउँघर क्लिनिक संचालन भएको संख्या"
+                    },
+                    "short" : {
+                        "en" : "Outreach clinics conducted",
+                        "ne" : "मासिक रुपमा गाउँघर क्लिनिक संचालन भएको संख्या"
+                    }
+                },
+                "position" : 21,
+                "type" : "integer",
+                "length" : [1, 2],
+                "required": true
+            }
+        }
+    }
+]
