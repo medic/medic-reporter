@@ -271,6 +271,31 @@
                     ]],
                 "required" : true
             },
+            "q1_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q1": 1
+                }
+            },
             "q2" : {
                 "labels" : {
                     "description" : {
@@ -294,6 +319,31 @@
                         }
                     ]],
                 "required" : true
+            },
+            "q2_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q2": 1
+                }
             },
             "q3" : {
                 "labels" : {
@@ -319,6 +369,31 @@
                     ]],
                 "required" : true
             },
+            "q3_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q3": 1
+                }
+            },
             "q4" : {
                 "labels" : {
                     "description" : {
@@ -342,6 +417,31 @@
                         }
                     ]],
                 "required" : true
+            },
+            "q4_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q4": 1
+                }
             },
             "q5" : {
                 "labels" : {
@@ -367,6 +467,31 @@
                     ]],
                 "required" : true
             },
+            "q5_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q5": 1
+                }
+            },
             "q6" : {
                 "labels" : {
                     "description" : {
@@ -390,6 +515,31 @@
                         }
                     ]],
                 "required" : true
+            },
+            "q6_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q6": 1
+                }
             },
             "q7" : {
                 "labels" : {
@@ -415,6 +565,31 @@
                     ]],
                 "required" : true
             },
+            "q7_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q7": 1
+                }
+            },
             "q8" : {
                 "labels" : {
                     "description" : {
@@ -438,6 +613,31 @@
                         }
                     ]],
                 "required" : true
+            },
+            "q8_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q8": 1
+                }
             },
             "q9" : {
                 "labels" : {
@@ -463,6 +663,31 @@
                     ]],
                 "required" : true
             },
+            "q9_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q9": 1
+                }
+            },
             "q10" : {
                 "labels" : {
                     "description" : {
@@ -486,6 +711,31 @@
                         }
                     ]],
                 "required" : true
+            },
+            "q10_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q10": 1
+                }
             },
             "q11" : {
                 "labels" : {
@@ -511,6 +761,31 @@
                     ]],
                 "required" : true
             },
+            "q11_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q11": 1
+                }
+            },
             "q12" : {
                 "labels" : {
                     "description" : {
@@ -535,6 +810,31 @@
                     ]],
                 "required" : true
             },
+            "q12_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q12": 1
+                }
+            },
             "q13" : {
                 "labels" : {
                     "description" : {
@@ -558,6 +858,31 @@
                         }
                     ]],
                 "required" : true
+            },
+            "q13_1" : {
+                "labels" : {
+                    "description" : {
+                        "en": "Is any sample in-stock expired?",
+                        "ne": "मिति पुगिकेको छ या छैन?"
+                    },
+                    "short" : {
+                        "en": "Expired?",
+                        "ne": "मिति पुगिसकेको?"
+                    }
+                },
+                "type" : "integer",
+                "list" : [[1, {
+                            "en" : "Yes",
+                            "ne" : "छ"
+                        }
+                    ], [2, {
+                            "en" : "No",
+                            "ne" : "छैन"
+                        }
+                    ]],
+                "conditions" : {
+                    "q13": 1
+                }
             },
             "q14" : {
                 "labels" : {
