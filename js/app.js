@@ -15,7 +15,8 @@ define([
     'select2',
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
-    'jam/json.edit/addons/enumlabels'
+    'jam/json.edit/addons/enumlabels',
+    'jam/bootstrap/js/bootstrap-dropdown.js'
 ], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, example) {
 
 
@@ -28,24 +29,41 @@ define([
         },
         router = director.Router(routes),
         json_forms_path = 'json-forms',
-        gateway_num = '+13125551212', // todo: make option in app
+        gateway_num = '+13125551212',
         editor,
         schema_used,
         selected_form,
         log;
 
-    exports.init = function () {
+    exports.init = function() {
+    };
 
+    exports.onDOMReady = function() {
+        $(".footer .year").text(new Date().getFullYear());
+        $(".version").text(new Date().getFullYear());
+        initListeners();
         init_json_display();
         initNameSelect();
-
         findAvailableJson(function(err, data){
             renderSelect(data);
             router.init('/');
         })
-
     };
 
+    function onClickOptions(ev) {
+        ev.preventDefault();
+        $('#options').toggle(300);
+    }
+
+    function onClickDebug(ev) {
+        ev.preventDefault();
+        $('#debug').toggle(300);
+    }
+
+    function initListeners() {
+        $('.dropdown .options').on('click', onClickOptions);
+        $('.dropdown .debug').on('click', onClickDebug);
+    }
 
     function no_form_selected() {
         // on first load, just show the example json form VPD, in english
@@ -252,11 +270,11 @@ define([
                         var fn = sendSMS;
                         var options = {
                             message: convertToMuvukuFormat(doc),
-                            phone: $('.settings form [name=from]').val() || gateway_num
+                            phone: $('.options form [name=from]').val() || gateway_num
                         };
                         if (!hasSMSAPI()) {
                             fn = postMessageHTTP;
-                            options.path = $('.settings form [name=path]').val();
+                            options.path = $('.options form [name=path]').val();
                         }
                         fn(options, processResponse);
                     });
