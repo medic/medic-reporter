@@ -345,8 +345,8 @@
     "meta": {
       "code": "NYAD",
       "label": {
-        "en": "Health Post Surveillance Checklist- Weekly",
-        "ne": "Health Post Surveillance Checklist- Weekly"
+        "en": "Weekly Health Post Surveillance Checklist",
+        "ne": "Weekly Health Post Surveillance Checklist"
       }
     },
     "fields": {
@@ -381,38 +381,6 @@
         ],
         "required": true
       },
-      "q1_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q1": 1
-        }
-      },
       "q2": {
         "labels": {
           "description": {
@@ -443,38 +411,6 @@
           ]
         ],
         "required": true
-      },
-      "q2_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q2": 1
-        }
       },
       "q3": {
         "labels": {
@@ -507,38 +443,6 @@
         ],
         "required": true
       },
-      "q3_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q3": 1
-        }
-      },
       "q4": {
         "labels": {
           "description": {
@@ -569,38 +473,6 @@
           ]
         ],
         "required": true
-      },
-      "q4_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q4": 1
-        }
       },
       "q5": {
         "labels": {
@@ -633,38 +505,6 @@
         ],
         "required": true
       },
-      "q5_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q5": 1
-        }
-      },
       "q6": {
         "labels": {
           "description": {
@@ -695,38 +535,6 @@
           ]
         ],
         "required": true
-      },
-      "q6_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q6": 1
-        }
       },
       "q7": {
         "labels": {
@@ -759,38 +567,6 @@
         ],
         "required": true
       },
-      "q7_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q7": 1
-        }
-      },
       "q8": {
         "labels": {
           "description": {
@@ -821,38 +597,6 @@
           ]
         ],
         "required": true
-      },
-      "q8_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q8": 1
-        }
       },
       "q9": {
         "labels": {
@@ -885,38 +629,6 @@
         ],
         "required": true
       },
-      "q9_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q9": 1
-        }
-      },
       "q10": {
         "labels": {
           "description": {
@@ -947,38 +659,6 @@
           ]
         ],
         "required": true
-      },
-      "q10_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q10": 1
-        }
       },
       "q11": {
         "labels": {
@@ -1011,38 +691,6 @@
         ],
         "required": true
       },
-      "q11_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q11": 1
-        }
-      },
       "q12": {
         "labels": {
           "description": {
@@ -1074,38 +722,6 @@
         ],
         "required": true
       },
-      "q12_1": {
-        "labels": {
-          "description": {
-            "en": "Is any sample in-stock expired?",
-            "ne": "मिति पुगिकेको छ या छैन?"
-          },
-          "short": {
-            "en": "Expired?",
-            "ne": "मिति पुगिसकेको?"
-          }
-        },
-        "type": "integer",
-        "list": [
-          [
-            1,
-            {
-              "en": "Yes",
-              "ne": "छ"
-            }
-          ],
-          [
-            2,
-            {
-              "en": "No",
-              "ne": "छैन"
-            }
-          ]
-        ],
-        "conditions": {
-          "q12": 1
-        }
-      },
       "q13": {
         "labels": {
           "description": {
@@ -1113,7 +729,7 @@
             "ne": "टि. बी को औषधी (डट्स)?"
           },
           "short": {
-            "en": "Anti- tuberculosis (DOTS) medications?",
+            "en": "Anti-tuberculosis (DOTS) medications?",
             "ne": "टि. बी को औषधी (डट्स)?"
           }
         },
@@ -1144,10 +760,11 @@
             "ne": "मिति पुगिकेको छ या छैन?"
           },
           "short": {
-            "en": "Expired?",
+            "en": "Any in-stock expired?",
             "ne": "मिति पुगिसकेको?"
           }
         },
+        "position": 14,
         "type": "integer",
         "list": [
           [
@@ -1165,8 +782,11 @@
             }
           ]
         ],
+        "conditions-operator": "||",
         "conditions": {
-          "q13": 1
+          "q1": 1, "q2": 1, "q3": 1, "q4": 1,
+          "q5": 1, "q6": 1, "q7": 1, "q8": 1,
+          "q9": 1, "q10": 1, "q11": 1, "q12": 1, "q13": 1
         }
       },
       "q14": {
@@ -1180,7 +800,7 @@
             "ne": "स्वास्थ्य संस्था प्रमुख?"
           }
         },
-        "position": 14,
+        "position": 15,
         "type": "integer",
         "list": [
           [
@@ -1211,7 +831,7 @@
             "ne": "दछ्य प्रशुतीकर्मी?"
           }
         },
-        "position": 15,
+        "position": 16,
         "type": "integer",
         "list": [
           [
@@ -1242,7 +862,7 @@
             "ne": "कुपोषण जाँच सेवा?"
           }
         },
-        "position": 16,
+        "position": 17,
         "type": "integer",
         "list": [
           [
@@ -1273,7 +893,7 @@
             "ne": "सुई फाल्ने बाकस?"
           }
         },
-        "position": 17,
+        "position": 18,
         "type": "integer",
         "list": [
           [
@@ -1304,7 +924,7 @@
             "ne": "निर्मुलिकरण गर्ने उपकरण?"
           }
         },
-        "position": 18,
+        "position": 19,
         "type": "integer",
         "list": [
           [
@@ -1335,7 +955,7 @@
             "ne": "फोहोर व्यवस्थापन गर्न 'डस्ट बिन'?"
           }
         },
-        "position": 19,
+        "position": 20,
         "type": "integer",
         "list": [
           [
@@ -1366,7 +986,7 @@
             "ne": "खानेपानी?"
           }
         },
-        "position": 20,
+        "position": 21,
         "type": "integer",
         "list": [
           [
@@ -1397,7 +1017,7 @@
             "ne": "शौचालय?"
           }
         },
-        "position": 21,
+        "position": 22,
         "type": "integer",
         "list": [
           [
@@ -1428,7 +1048,7 @@
             "ne": "बिधुत सेवा?"
           }
         },
-        "position": 22,
+        "position": 23,
         "type": "integer",
         "list": [
           [
@@ -1454,8 +1074,8 @@
     "meta": {
       "code": "NYAE",
       "label": {
-        "en": "Health Post Surveillance Checklist- Monthly",
-        "ne": "Health Post Surveillance Checklist- Monthly"
+        "en": "Monthly Health Post Surveillance Checklist",
+        "ne": "Monthly Health Post Surveillance Checklist"
       }
     },
     "fields": {
