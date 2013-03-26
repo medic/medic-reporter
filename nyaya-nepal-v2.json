@@ -1675,7 +1675,7 @@
             "ne": "प्रदान गरिएको कुपोषण जाँच सेवाको संख्या (०-५ बर्ष)"
           },
           "short": {
-            "en": "Malnutirtion screenings conducted (0-5 years old)",
+            "en": "Malnutrition screenings conducted (0-5 years old)",
             "ne": "कुपोषण जाँच सेवा"
           }
         },
@@ -1694,7 +1694,7 @@
             "ne": "कुपोषणको उपचार प्रेषणको संख्या"
           },
           "short": {
-            "en": "Malnutirtion cases treated/referred ",
+            "en": "Malnutrition cases treated/referred ",
             "ne": "कुपोषणको उपचार प्रेषण"
           }
         },
