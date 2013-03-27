@@ -221,47 +221,70 @@
           [
             6,
             {
+              "en": "Next Page",
+              "ne": "कुनै पनि छैन"
+            }
+          ]
+        ],
+        "required": true
+      },
+      "treatmentgiven2": {
+        "labels": {
+          "short": {
+            "en": "Treatment Given",
+            "ne": "दिइएको उपचार"
+          }
+        },
+        "position": 9,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
               "en": "Paracetamol",
               "ne": "सिटामोल"
             }
           ],
           [
-            7,
+            2,
             {
               "en": "Vitamin A",
               "ne": "भिटामिन ए"
             }
           ],
           [
-            8,
+            3,
             {
               "en": "Abendazole",
               "ne": "जुकाको औषधि"
             }
           ],
           [
-            9,
+            4,
             {
               "en": "Zinc Tablet",
               "ne": "जिङ्क चक्की"
             }
           ],
           [
-            10,
+            5,
             {
               "en": "Misoprostol",
               "ne": "मातृसुरक्षा चक्की"
             }
           ],
           [
-            11,
+            6,
             {
-              "en": "No Treatment Given",
-              "ne": "कुनै पनि उपचार नदिएको"
+              "en": "None",
+              "ne": "कुनै पनि छैन"
             }
           ]
         ],
-        "required": true
+        "required": true,
+        "conditions": {
+          "treatmentgiven": 6
+        }
       },
       "planningmethod": {
         "labels": {
@@ -274,7 +297,7 @@
             "ne": "हाल प्रयोग गरिरहेको परिवार नियोजनको साधन"
           }
         },
-        "position": 9,
+        "position": 10,
         "type": "integer",
         "list": [
           [
@@ -308,33 +331,61 @@
           [
             5,
             {
+              "en": "Next Page",
+              "ne": "कुनै पनि छैन"
+            }
+          ]
+        ],
+        "required": true
+      },
+      "planningmethod2": {
+        "labels": {
+          "short": {
+            "en": "Family Planning Method",
+            "ne": "हालको परिवार नियोजनको साधन"
+          },
+          "description": {
+            "en": "Current Family Planning method",
+            "ne": "हाल प्रयोग गरिरहेको परिवार नियोजनको साधन"
+          }
+        },
+        "position": 11,
+        "type": "integer",
+        "list": [
+
+          [
+            1,
+            {
               "en": "Implant",
               "ne": "इम्प्लान्ट"
             }
           ],
           [
-            6,
+            2,
             {
               "en": "Vasectomy",
               "ne": "भ्यासिक्टोमी"
             }
           ],
           [
-            7,
+            3,
             {
               "en": "Minilap",
               "ne": "मिनील्याप"
             }
           ],
           [
-            8,
+            4,
             {
               "en": "None",
               "ne": "कुनै पनि छैन"
             }
           ]
         ],
-        "required": true
+        "required": true,
+        "conditions": {
+          "planningmethod": 5
+        }
       }
     },
     "validations": {
@@ -381,15 +432,15 @@
         ],
         "required": true
       },
-      "q2": {
+      "q1_1": {
         "labels": {
           "description": {
-            "en": "Amoxicillin in stock?",
-            "ne": "एमोक्सिसिलिन?"
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
           },
           "short": {
-            "en": "Amoxicilin?",
-            "ne": "एमोक्सिसिलिन?"
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
           }
         },
         "position": 2,
@@ -410,17 +461,19 @@
             }
           ]
         ],
-        "required": true
+        "conditions": {
+          "q1": 1
+        }
       },
-      "q3": {
+      "q2": {
         "labels": {
           "description": {
-            "en": "Cotrimoxazole tabs in stock?",
-            "ne": "कोट्रिम?"
+            "en": "Amoxicillin in stock?",
+            "ne": "एमोक्सिसिलिन?"
           },
           "short": {
-            "en": "Cotrimoxazole tabs?",
-            "ne": "कोट्रिम?"
+            "en": "Amoxicilin?",
+            "ne": "एमोक्सिसिलिन?"
           }
         },
         "position": 3,
@@ -443,15 +496,15 @@
         ],
         "required": true
       },
-      "q4": {
+      "q2_1": {
         "labels": {
           "description": {
-            "en": "Misoprostol pills in stock?",
-            "ne": "मिसोप्रोस्टोल चक्की?"
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
           },
           "short": {
-            "en": "Misoprostol pills?",
-            "ne": "मिसोप्रोस्टोल चक्की?"
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
           }
         },
         "position": 4,
@@ -472,17 +525,19 @@
             }
           ]
         ],
-        "required": true
+        "conditions": {
+          "q2": 1
+        }
       },
-      "q5": {
+      "q3": {
         "labels": {
           "description": {
-            "en": "Magnesium sulphate in stock?",
-            "ne": "म्याग्नेसियम सल्फेट?"
+            "en": "Cotrimoxazole tabs in stock?",
+            "ne": "कोट्रिम?"
           },
           "short": {
-            "en": "Magnesium sulphate?",
-            "ne": "म्याग्नेसियम सल्फेट?"
+            "en": "Cotrimoxazole tabs?",
+            "ne": "कोट्रिम?"
           }
         },
         "position": 5,
@@ -505,15 +560,15 @@
         ],
         "required": true
       },
-      "q6": {
+      "q3_1": {
         "labels": {
           "description": {
-            "en": "Depo Provera doses in stock?",
-            "ne": "डिपो सुई?"
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
           },
           "short": {
-            "en": "Depo Provera doses?",
-            "ne": "डिपो सुई?"
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
           }
         },
         "position": 6,
@@ -534,17 +589,19 @@
             }
           ]
         ],
-        "required": true
+        "conditions": {
+          "q3": 1
+        }
       },
-      "q7": {
+      "q4": {
         "labels": {
           "description": {
-            "en": "Oral Contraceptive Pills (OCPs) in stock?",
-            "ne": "पिल्स चक्की?"
+            "en": "Misoprostol pills in stock?",
+            "ne": "मिसोप्रोस्टोल चक्की?"
           },
           "short": {
-            "en": "Oral Contraceptive Pills (OCPs)?",
-            "ne": "पिल्स चक्की?"
+            "en": "Misoprostol pills?",
+            "ne": "मिसोप्रोस्टोल चक्की?"
           }
         },
         "position": 7,
@@ -567,15 +624,15 @@
         ],
         "required": true
       },
-      "q8": {
+      "q4_1": {
         "labels": {
           "description": {
-            "en": "Condoms in stock?",
-            "ne": "कण्डम?"
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
           },
           "short": {
-            "en": "Condoms?",
-            "ne": "कण्डम?"
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
           }
         },
         "position": 8,
@@ -596,17 +653,19 @@
             }
           ]
         ],
-        "required": true
+        "conditions": {
+          "q4": 1
+        }
       },
-      "q9": {
+      "q5": {
         "labels": {
           "description": {
-            "en": "Zinc tablets in stock?",
-            "ne": "जिन्क चक्की?"
+            "en": "Magnesium sulphate in stock?",
+            "ne": "म्याग्नेसियम सल्फेट?"
           },
           "short": {
-            "en": "Zinc tablets?",
-            "ne": "जिन्क चक्की?"
+            "en": "Magnesium sulphate?",
+            "ne": "म्याग्नेसियम सल्फेट?"
           }
         },
         "position": 9,
@@ -629,15 +688,15 @@
         ],
         "required": true
       },
-      "q10": {
+      "q5_1": {
         "labels": {
           "description": {
-            "en": "Jeevan Jal (ORS) in stock?",
-            "ne": "जीवन जल?"
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
           },
           "short": {
-            "en": "Jeevan Jal (ORS)?",
-            "ne": "जीवन जल?"
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
           }
         },
         "position": 10,
@@ -658,17 +717,19 @@
             }
           ]
         ],
-        "required": true
+        "conditions": {
+          "q5": 1
+        }
       },
-      "q11": {
+      "q6": {
         "labels": {
           "description": {
-            "en": "Vitamin A doses in stock?",
-            "ne": "भिटामिन 'ए'?"
+            "en": "Depo Provera doses in stock?",
+            "ne": "डिपो सुई?"
           },
           "short": {
-            "en": "Vitamin A doses?",
-            "ne": "भिटामिन 'ए'?"
+            "en": "Depo Provera doses?",
+            "ne": "डिपो सुई?"
           }
         },
         "position": 11,
@@ -691,15 +752,15 @@
         ],
         "required": true
       },
-      "q12": {
+      "q6_1": {
         "labels": {
           "description": {
-            "en": "Iron tablets in stock?",
-            "ne": "आईरन चक्की?"
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
           },
           "short": {
-            "en": "Iron tablets?",
-            "ne": "आईरन चक्की?"
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
           }
         },
         "position": 12,
@@ -720,7 +781,393 @@
             }
           ]
         ],
+        "conditions": {
+          "q6": 1
+        }
+      },
+      "q7": {
+        "labels": {
+          "description": {
+            "en": "Oral Contraceptive Pills (OCPs) in stock?",
+            "ne": "पिल्स चक्की?"
+          },
+          "short": {
+            "en": "Oral Contraceptive Pills (OCPs)?",
+            "ne": "पिल्स चक्की?"
+          }
+        },
+        "position": 13,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
         "required": true
+      },
+      "q7_1": {
+        "labels": {
+          "description": {
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
+          },
+          "short": {
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
+          }
+        },
+        "position": 14,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "conditions": {
+          "q7": 1
+        }
+      },
+      "q8": {
+        "labels": {
+          "description": {
+            "en": "Condoms in stock?",
+            "ne": "कण्डम?"
+          },
+          "short": {
+            "en": "Condoms?",
+            "ne": "कण्डम?"
+          }
+        },
+        "position": 15,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "required": true
+      },
+      "q8_1": {
+        "labels": {
+          "description": {
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
+          },
+          "short": {
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
+          }
+        },
+        "position": 16,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "conditions": {
+          "q8": 1
+        }
+      },
+      "q9": {
+        "labels": {
+          "description": {
+            "en": "Zinc tablets in stock?",
+            "ne": "जिन्क चक्की?"
+          },
+          "short": {
+            "en": "Zinc tablets?",
+            "ne": "जिन्क चक्की?"
+          }
+        },
+        "position": 17,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "required": true
+      },
+      "q9_1": {
+        "labels": {
+          "description": {
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
+          },
+          "short": {
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
+          }
+        },
+        "position": 18,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "conditions": {
+          "q9": 1
+        }
+      },
+      "q10": {
+        "labels": {
+          "description": {
+            "en": "Jeevan Jal (ORS) in stock?",
+            "ne": "जीवन जल?"
+          },
+          "short": {
+            "en": "Jeevan Jal (ORS)?",
+            "ne": "जीवन जल?"
+          }
+        },
+        "position": 19,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "required": true
+      },
+      "q10_1": {
+        "labels": {
+          "description": {
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
+          },
+          "short": {
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
+          }
+        },
+        "position": 20,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "conditions": {
+          "q10": 1
+        }
+      },
+      "q11": {
+        "labels": {
+          "description": {
+            "en": "Vitamin A doses in stock?",
+            "ne": "भिटामिन 'ए'?"
+          },
+          "short": {
+            "en": "Vitamin A doses?",
+            "ne": "भिटामिन 'ए'?"
+          }
+        },
+        "position": 21,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "required": true
+      },
+      "q11_1": {
+        "labels": {
+          "description": {
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
+          },
+          "short": {
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
+          }
+        },
+        "position": 22,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "conditions": {
+          "q11": 1
+        }
+      },
+      "q12": {
+        "labels": {
+          "description": {
+            "en": "Iron tablets in stock?",
+            "ne": "आईरन चक्की?"
+          },
+          "short": {
+            "en": "Iron tablets?",
+            "ne": "आईरन चक्की?"
+          }
+        },
+        "position": 23,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "required": true
+      },
+      "q12_1": {
+        "labels": {
+          "description": {
+            "en": "Is any sample in-stock expired?",
+            "ne": "मिति पुगिकेको छ या छैन?"
+          },
+          "short": {
+            "en": "Any in-stock expired?",
+            "ne": "मिति पुगिसकेको?"
+          }
+        },
+        "position": 24,
+        "type": "integer",
+        "list": [
+          [
+            1,
+            {
+              "en": "Yes",
+              "ne": "छ"
+            }
+          ],
+          [
+            2,
+            {
+              "en": "No",
+              "ne": "छैन"
+            }
+          ]
+        ],
+        "conditions": {
+          "q12": 1
+        }
       },
       "q13": {
         "labels": {
@@ -733,7 +1180,7 @@
             "ne": "टि. बी को औषधी (डट्स)?"
           }
         },
-        "position": 13,
+        "position": 25,
         "type": "integer",
         "list": [
           [
@@ -764,7 +1211,7 @@
             "ne": "मिति पुगिसकेको?"
           }
         },
-        "position": 14,
+        "position": 26,
         "type": "integer",
         "list": [
           [
@@ -782,11 +1229,8 @@
             }
           ]
         ],
-        "conditions-operator": "||",
         "conditions": {
-          "q1": 1, "q2": 1, "q3": 1, "q4": 1,
-          "q5": 1, "q6": 1, "q7": 1, "q8": 1,
-          "q9": 1, "q10": 1, "q11": 1, "q12": 1, "q13": 1
+          "q13": 1
         }
       },
       "q14": {
@@ -800,7 +1244,7 @@
             "ne": "स्वास्थ्य संस्था प्रमुख?"
           }
         },
-        "position": 15,
+        "position": 27,
         "type": "integer",
         "list": [
           [
@@ -831,7 +1275,7 @@
             "ne": "दछ्य प्रशुतीकर्मी?"
           }
         },
-        "position": 16,
+        "position": 28,
         "type": "integer",
         "list": [
           [
@@ -862,7 +1306,7 @@
             "ne": "कुपोषण जाँच सेवा?"
           }
         },
-        "position": 17,
+        "position": 29,
         "type": "integer",
         "list": [
           [
@@ -893,7 +1337,7 @@
             "ne": "सुई फाल्ने बाकस?"
           }
         },
-        "position": 18,
+        "position": 30,
         "type": "integer",
         "list": [
           [
@@ -924,7 +1368,7 @@
             "ne": "निर्मुलिकरण गर्ने उपकरण?"
           }
         },
-        "position": 19,
+        "position": 31,
         "type": "integer",
         "list": [
           [
@@ -955,7 +1399,7 @@
             "ne": "फोहोर व्यवस्थापन गर्न 'डस्ट बिन'?"
           }
         },
-        "position": 20,
+        "position": 32,
         "type": "integer",
         "list": [
           [
@@ -986,7 +1430,7 @@
             "ne": "खानेपानी?"
           }
         },
-        "position": 21,
+        "position": 33,
         "type": "integer",
         "list": [
           [
@@ -1017,7 +1461,7 @@
             "ne": "शौचालय?"
           }
         },
-        "position": 22,
+        "position": 34,
         "type": "integer",
         "list": [
           [
@@ -1048,7 +1492,7 @@
             "ne": "बिधुत सेवा?"
           }
         },
-        "position": 23,
+        "position": 35,
         "type": "integer",
         "list": [
           [
