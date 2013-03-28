@@ -18,47 +18,58 @@
 
   <div class="container-fluid">
       <div class="row-fluid">
-        <form class="form main">
-          <div class="span4" id="form">
+          <div class="span3" id="messages">
               <div class="well">
+                <form class="messages">
                   <fieldset>
                     <div class="controls">
-                      <label>Form Definition</label>
-                      <input type="text" class="input-large" id="choose-form" />
-                    </div>
-                    <div class="controls">
-                      <label>Form Code</label>
-                      <input type="text" class="input" id="choose-name" />
-                    </div>
-                    <div class="controls">
-                      <label for="from">Sent From</label>
+                      <label for="from">From</label>
                       <input type="tel" class="input-medium" id="from" placeholder="+13125551212" />
                     </div>
+                    <div class="controls">
+                      <label for="from">Message</label>
+                      <textarea id="message" name="message" rows=4></textarea>
+                      <p class="pull-right count"></p>
+                    </div>
+                    <div class="submit">
+                      <button class="btn btn-success">Send</button>
+                    </div>
                   </fieldset>
+                </form>
               </div>
           </div>
-          <div class="span4">
+          <div class="span3" id="forms">
               <div class="well">
-                <fieldset>
-                  <div id="form_fields"></div>
-                </fieldset>
-                <div class="submit">
-                  <button class="btn btn-success">Send</button>
-                </div>
+                <form>
+                  <fieldset>
+                      <div class="controls">
+                        <input type="text" class="input-large" id="choose-form" />
+                      </div>
+                      <div class="controls">
+                        <input type="text" class="input" id="choose-name" />
+                      </div>
+                    <div id="form_fields"></div>
+                  </fieldset>
+                  <div class="errors hide alert alert-block">
+                      <button type="button" class="close" data-dismiss="alert">&times;</button>
+                      <div class="head"></div>
+                      <div class="msg"></div>
+                  </div>
+                  <div class="submit">
+                    <button class="btn btn-primary">Save</button>
+                  </div>
+                </form>
               </div>
           </div>
-              <!--div class="errors hide alert alert-block">
-                  <button type="button" class="close" data-dismiss="alert">&times;</button>
-                  <h4 class="head"></h4>
-                  <div class="msg"></div>
-              </div-->
-          <div class="span4">
-              <div class="options well" id="options">
+          <div class="span3" id="options">
+              <div class="options well">
+                <form>
                   <fieldset>
                       <legend>Options</legend>
                       <label for="path">Sync URL</label>
                       <input type="text" class="input-xlarge" name="path" value="/kujua-base/_design/kujua-base/_rewrite/add">
                   </fieldset>
+                </form>
               </div>
               <div class="dropdown pull-right">
                 <a class="dropdown-toggle btn btn-small" data-toggle="dropdown" href="#"><b class="caret"></b></a>
@@ -68,23 +79,23 @@
                 </ul>
               </div>
           </div>
+          <div class="span3">
+              <div id="debug">
+                <div class="log">
+                    <h2>Request/Response</h2>
+                    <div class="entry console"></div>
+                </div>
+                <div>
+                    <h2>Result Data</h2>
+                    <div class="results console"></div>
+                </div>
+                <div>
+                    <h2>Schema Used</h2>
+                    <div class="schema_used console"></div>
+                </div>
+              </div>
+          </div>
         </form>
-    </div>
-    <div class="row-fluid">
-        <div class="span12" id="debug">
-          <div class="log">
-              <h2>Request/Response</h2>
-              <div class="entry console"></div>
-          </div>
-          <div>
-              <h2>Result Data</h2>
-              <div class="results console"></div>
-          </div>
-          <div>
-              <h2>Schema Used</h2>
-              <div class="schema_used console"></div>
-          </div>
-        </div>
     </div>
     <div class="row-fluid">
       <div class="span12">

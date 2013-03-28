@@ -30,6 +30,7 @@ define([
         router = director.Router(routes),
         json_forms_path = 'json-forms',
         gateway_num = '+13125551212',
+        hide_count = true,
         editor,
         schema_used,
         selected_form,
@@ -60,14 +61,27 @@ define([
         $('#debug').toggle(300);
     }
 
+    function onMessageKeyUp (ev) {
+        var $input = $(ev.target),
+            count = $input.val().length;
+        if (count > 100)
+            hide_count = false;
+        if (!hide_count)
+            $input.parents('.controls').find('.count').html(count + ' characters');
+    }
+
     function initListeners() {
         $('.dropdown .options').on('click', onClickOptions);
         $('.dropdown .debug').on('click', onClickDebug);
+        $('#message').on('keyup', onMessageKeyUp);
+        $('[data-dismiss=alert]').on('click', function () {
+            $(this).parent('div').hide();
+        })
     }
 
     function no_form_selected() {
         // on first load, just show the example json form VPD, in english
-        showForm(example, 'ZZZZ', 'en');
+        router.setRoute('/simple-example.json/ZZZZ');
     }
 
     function form_only(form_name, callback) {
@@ -230,51 +244,32 @@ define([
         };
 
 
-        $('form.main').off('submit');
-        $('form.main').on('submit', function (ev) {
+        $('#forms form').off('submit');
+        $('#forms form').on('submit', function (ev) {
 //            try {
+                console.log('submit form triggered');
                 ev.preventDefault();
-                var err_alert = $('.errors.alert');
-                err_alert.hide(10).find('.msg').html('');
-                err_alert.hide(10).find('.head').html('');
-
                 var data = rendered.collect();
-                if (!data.result.ok) {
-
-                    var msg = generateFieldErrorMsg(data.result, schemafied[code].schema);
-
-                    err_alert.show(200)
-                        .find('button.close')
-                        .on('click', function () { err_alert.hide(); })
-                    err_alert.find('h4')
-                         .html(data.result.msg + '<br/>' +  msg);
+                console.log('data',data);
+                updateFieldErrors(data.result, schemafied[code].schema);
+                if (!data.result.ok)
                     return false;
-                }
                 schemafied[code].validate(data.data, function(err){
-
                     if (err) {
-                        var msg = generateValidationErrorMsg(err);
-                        err_alert.show(200)
-                            .find('button.close')
-                            .on('click', function () { err_alert.hide(); })
-                        err_alert.find('h4')
-                             .html(msg);
+                        showValidationErrorMsg(err);
                         return false;
                     }
-
-                    console.log(data.data);
-
                     schemafied[code].post_save(data.data, function(err, doc) {
                         if (err) return handleError(err);
                         editor.setValue(json_format(JSON.stringify(doc)));
                         var fn = sendSMS;
                         var options = {
                             message: convertToMuvukuFormat(doc),
-                            phone: $('.options form [name=from]').val() || gateway_num
+                            phone: $('#messages form [name=from]').val() || gateway_num
                         };
                         if (!hasSMSAPI()) {
                             fn = postMessageHTTP;
-                            options.path = $('.options form [name=path]').val();
+                            options.path = $('#options form [name=path]').val();
                         }
                         fn(options, processResponse);
                     });
@@ -289,25 +284,34 @@ define([
     }
 
 
-    function generateValidationErrorMsg(errors) {
+    function showValidationErrorMsg(errors) {
         var errs = _.map(errors, function(err) {
             return '<b>'+ err.title+ '</b> ' + err.msg
         });
-        return errs.join('<br/>');
+        $('.errors.alert').find('msg').html(errs.join('<br />'));
     }
 
 
-    function generateFieldErrorMsg(result, schema) {
-        var error = [];
-        _.each(result.data, function(value, key){
-            if (!value.ok) {
-                var msg = value.msg;
-                var title = schema.properties[key].title;
-                error.push('<b>'+ title+ '</b> ' + msg );
+    function updateFieldErrors(result, schema) {
+        var has_focus;
+        _.each(schema.order, function(key) {
+            var field = result.data[key],
+                $input = $('[name='+key+']'),
+                $errors = $input.parent().find('.errors');
+            if (field && !field.ok) {
+                if ($errors.length === 0) {
+                    $errors = $('<p class="errors" />');
+                    $input.parent().append($errors);
+                }
+                $errors.text(field.msg);
+                if (!has_focus) {
+                    $input.focus();
+                    has_focus = true;
+                }
+            } else {
+                $errors.remove();
             }
         });
-        return error.join('<br/>');
-
     }
 
 
