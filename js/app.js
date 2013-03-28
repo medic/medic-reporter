@@ -53,12 +53,42 @@ define([
 
     function onClickOptions(ev) {
         ev.preventDefault();
-        $('#options').toggle(300);
+        $('#options').show(300);
+        $('#forms').hide(300);
+        $('#messages').hide(300);
+        $('#debug').hide(300);
     }
 
     function onClickDebug(ev) {
         ev.preventDefault();
-        $('#debug').toggle(300);
+        $('#debug').show(300);
+        $('#forms').hide(300);
+        $('#messages').hide(300);
+        $('#options').hide(300);
+    }
+
+    function onClickForms(ev) {
+        ev.preventDefault();
+        $('#forms').show(300);
+        $('#debug').hide(300);
+        $('#messages').hide(300);
+        $('#options').hide(300);
+    }
+
+    function onClickMessages(ev) {
+        ev.preventDefault();
+        $('#messages').show(300);
+        $('#debug').hide(300);
+        $('#forms').hide(300);
+        $('#options').hide(300);
+    }
+
+    function onClickAll(ev) {
+        ev.preventDefault();
+        $('#messages').show(300);
+        $('#debug').show(300);
+        $('#forms').show(300);
+        $('#options').show(300);
     }
 
     function onMessageKeyUp (ev) {
@@ -73,6 +103,10 @@ define([
     function initListeners() {
         $('.dropdown .options').on('click', onClickOptions);
         $('.dropdown .debug').on('click', onClickDebug);
+        $('.dropdown .messages').on('click', onClickMessages);
+        $('.dropdown .forms').on('click', onClickForms);
+        $('.dropdown .all').on('click', onClickAll);
+        $('#messages form').on('submit', onSendMessage);
         $('#message').on('keyup', onMessageKeyUp);
         $('[data-dismiss=alert]').on('click', function () {
             $(this).parent('div').hide();
@@ -169,6 +203,9 @@ define([
       if (navigator && navigator.mozSms) return true;
     }
 
+    function queueSMS(options) {
+    }
+
     function sendSMS(options, callback) {
 
       console.log("Sending SMS to "+ num +"; message '"+ msg +"' ...");
@@ -217,12 +254,32 @@ define([
         }
         var val = log.getValue();
         log.setValue(json_format(JSON.stringify(resp)) +'\n'+val);
+        if (resp.payload && resp.payload.messages) {
+            _.each(resp.payload.messages, function(msg) {
+                $('#responses').prepend('<p>'+msg.message+'</p>');
+            });
+        }
         if (resp.callback) {
             resp.callback.options.data = JSON.stringify(resp.callback.data);
             request(resp.callback.options, processResponse);
         }
     };
 
+    function onSendMessage(ev) {
+        ev.preventDefault();
+        console.log('onSendMessage');
+        var fn = sendSMS,
+            msg = $('#message').val();
+        var options = {
+            message: msg,
+            phone: $('#messages [name=from]').val() || gateway_num
+        };
+        if (!hasSMSAPI()) {
+            fn = postMessageHTTP;
+            options.path = $('#options [name=path]').val();
+        }
+        fn(options, processResponse);
+    }
 
     // Render and bind a form
     function showForm(forms, code, lang) {
@@ -247,10 +304,8 @@ define([
         $('#forms form').off('submit');
         $('#forms form').on('submit', function (ev) {
 //            try {
-                console.log('submit form triggered');
                 ev.preventDefault();
                 var data = rendered.collect();
-                console.log('data',data);
                 updateFieldErrors(data.result, schemafied[code].schema);
                 if (!data.result.ok)
                     return false;
@@ -262,16 +317,8 @@ define([
                     schemafied[code].post_save(data.data, function(err, doc) {
                         if (err) return handleError(err);
                         editor.setValue(json_format(JSON.stringify(doc)));
-                        var fn = sendSMS;
-                        var options = {
-                            message: convertToMuvukuFormat(doc),
-                            phone: $('#messages form [name=from]').val() || gateway_num
-                        };
-                        if (!hasSMSAPI()) {
-                            fn = postMessageHTTP;
-                            options.path = $('#options form [name=path]').val();
-                        }
-                        fn(options, processResponse);
+                        var msg = convertToMuvukuFormat(doc);
+                        $('#message').val(msg).focus();
                     });
                 })
 
