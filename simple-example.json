@@ -20,7 +20,12 @@
                   "en": "Unit ID"
                }
             },
-            "type": "string"
+            "type" : "integer",
+            "length": [
+                1,
+                8
+            ],
+            "required" : true
         },
         "birth_site2": {
            "position": 1,
@@ -59,7 +64,8 @@
                     "ne": "अन्य ठाउँ"
                  }
               ]
-           ]
+           ],
+           "required" : true
         },
         "birth_site": {
            "position": 2,
@@ -98,7 +104,8 @@
                     "ne": "अन्य ठाउँ"
                  }
               ]
-           ]
+           ],
+           "required" : true
         }
 
     }
