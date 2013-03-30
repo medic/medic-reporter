@@ -61,6 +61,9 @@ define([
         $('[data-dismiss=alert]').on('click', function () {
             $(this).parent('div').hide();
         })
+        $('[name=locale]').on('change', function() {
+            defaults.locale = $(this).val();
+        });
     }
 
     // Used to find all the .json files in the root of this project
@@ -133,16 +136,17 @@ define([
         router.setRoute('/examples.json/ZZZZ');
     }
 
-    function getString(str, lang) {
+    function getLabel(label, lang) {
         lang = lang || defaults.locale;
-        if (typeof str === 'string')
-            return str;
-        if (typeof str === 'object') {
-            if (str[lang]) return str[lang];
-            else if (str.fr)
-                return str.fr;
-            else if (str.ne)
-                return str.ne;
+        if (typeof label === 'string')
+            return label;
+        if (typeof label === 'object') {
+            if (label[lang])
+                return label[lang];
+            // otherwise just return first val
+            for (var key in label) {
+                return label[key];
+            }
         }
     }
 
@@ -155,7 +159,6 @@ define([
                 callback(null, data);
         });
     }
-
 
     function loadProjectAndForm(project, form_code) {
         console.log('loadProjectAndForm');
@@ -453,7 +456,7 @@ define([
         _.each(forms, function(form, idx) {
             if (!form.meta || !form.meta.code) return;
             var code = form.meta.code,
-                label = getString(form.meta.label),
+                label = getLabel(form.meta.label),
                 $option = $('<option/>');
             $option.val(project+'/'+code);
             $option.text(label +' ('+code+')');

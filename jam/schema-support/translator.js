@@ -161,7 +161,7 @@
             for (var i=0; i < property.list.length; i++) {
                 var item_arr = property.list[i];
                 var val = item_arr[0];
-                var label = getLabel(item_arr[1]);
+                var label = getLabel(item_arr[1], lang);
                 prop['je:enumlabels'][val] = label;
                 prop.enum.push(val);
             }
@@ -178,26 +178,17 @@
     }
 
     function getLabel(label, lang) {
-        // use requested language
-        var lbl = label[lang];
-
-        // if the request lang is not available, use english
-        if (!lbl) {
-            lbl = label['en'];
-        }
-
-        // fallback if still not set, use the first
-        if (!lbl) {
+        lang = lang || 'en';
+        if (typeof label === 'string')
+            return label;
+        if (typeof label === 'object') {
+            if (label[lang])
+                return label[lang];
+            // otherwise just return first val
             for (var key in label) {
-                lbl = label[key];
-                break;
+                return label[key];
             }
         }
-        return lbl;
     }
-
-
-
-
 
 }));
