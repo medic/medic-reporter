@@ -11,12 +11,12 @@ define([
     'codemirror',
     'schema-support',
     './json_format',
-    'json!json-forms/simple-example.json',
+    'json!json-forms/examples.json',
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
     'jam/json.edit/addons/enumlabels',
     'jam/bootstrap/js/bootstrap-dropdown.js'
-], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, example) {
+], function ($, _, director, jsonEdit, CodeMirror, translator, json_format) {
 
 
     var exports = {},
@@ -130,7 +130,7 @@ define([
 
     function no_form_selected() {
         // on first load, just show the example json form VPD, in english
-        router.setRoute('/simple-example.json/ZZZZ');
+        router.setRoute('/examples.json/ZZZZ');
     }
 
     function getString(str, lang) {
