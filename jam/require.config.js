@@ -45,11 +45,6 @@ var jam = {
             "main": "translator.js"
         },
         {
-            "name": "select2",
-            "location": "jam/select2",
-            "main": "select2.js"
-        },
-        {
             "name": "text",
             "location": "jam/text",
             "main": "text.js"
@@ -116,11 +111,6 @@ if (typeof require !== "undefined" && require.config) {
             "main": "translator.js"
         },
         {
-            "name": "select2",
-            "location": "jam/select2",
-            "main": "select2.js"
-        },
-        {
             "name": "text",
             "location": "jam/text",
             "main": "text.js"
@@ -184,11 +174,6 @@ else {
             "name": "schema-support",
             "location": "jam/schema-support",
             "main": "translator.js"
-        },
-        {
-            "name": "select2",
-            "location": "jam/select2",
-            "main": "select2.js"
         },
         {
             "name": "text",

@@ -12,7 +12,6 @@ define([
     'schema-support',
     './json_format',
     'json!json-forms/simple-example.json',
-    'select2',
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
     'jam/json.edit/addons/enumlabels',
@@ -23,18 +22,23 @@ define([
     var exports = {},
         routes = {
             '/' : no_form_selected,
-            '/*/*/*' : form_and_code,
-            '/*/*' : form_and_code,
-            '/*' : form_only
+            '/*/*/*' : loadProjectAndForm,
+            '/*/*' : loadProjectAndForm,
+            '/*' : loadProjectAndForm
         },
         router = director.Router(routes),
-        json_forms_path = 'json-forms',
-        gateway_num = '+13125551212',
         hide_count = true,
         editor,
         schema_used,
         selected_form,
         log;
+
+    var defaults = {
+        locale: 'en',
+        sync_url: '/kujua-base/_design/kujua-base/_rewrite/add',
+        json_forms_path: 'json-forms',
+        gateway_num: '+13125551212'
+    };
 
     exports.init = function() {
     };
@@ -43,52 +47,76 @@ define([
         $(".footer .year").text(new Date().getFullYear());
         $(".version").text(new Date().getFullYear());
         initListeners();
-        init_json_display();
-        initNameSelect();
         findAvailableJson(function(err, data){
-            renderSelect(data);
+            initProjectSelect(data);
             router.init('/');
-        })
+        });
+        initJSONDisplay();
     };
 
-    function onClickOptions(ev) {
-        ev.preventDefault();
-        $('#options').show(300);
-        $('#forms').hide(300);
-        $('#messages').hide(300);
-        $('#debug').hide(300);
+    function initListeners() {
+        $('#menu a').on('click', onClickMenuItem);
+        $('#messages form').on('submit', onSendMessage);
+        $('#message').on('keyup', onMessageKeyUp);
+        $('[data-dismiss=alert]').on('click', function () {
+            $(this).parent('div').hide();
+        })
     }
 
-    function onClickDebug(ev) {
-        ev.preventDefault();
-        $('#debug').show(300);
-        $('#forms').hide(300);
-        $('#messages').hide(300);
-        $('#options').hide(300);
+    // Used to find all the .json files in the root of this project
+    function findAvailableJson(callback) {
+        var results = [];
+        $.get(defaults.json_forms_path+'/index.json', function(data) {
+            var index;
+            if (typeof data === 'string')
+                index = JSON.parse(data)[0];
+            else
+                index = data[0];
+            index.forEach(function(file) {
+                results.push({
+                    id: file,
+                    text: file
+                });
+            });
+            callback(null, results);
+        });
     }
 
-    function onClickForms(ev) {
-        ev.preventDefault();
-        $('#forms').show(300);
-        $('#debug').hide(300);
-        $('#messages').hide(300);
-        $('#options').hide(300);
+    function initProjectSelect(data){
+        console.log('initProjectSelect data',data);
+        var $input = $('#choose-project');
+        _.each(data, function(el, idx) {
+            var $option = $('<option/>');
+            $option.attr('value',el.id);
+            console.log('project el',el);
+            $option.text(el.text.replace('.json',''));
+            $input.append($option);
+        });
+        $input.on('change', function(){
+            var val = $(this).val();
+            router.setRoute('/' + val);
+        });
+        $input.closest('form').show();
+        $input.closest('.well').find('.loader').hide();
     }
 
-    function onClickMessages(ev) {
-        ev.preventDefault();
-        $('#messages').show(300);
-        $('#debug').hide(300);
-        $('#forms').hide(300);
-        $('#options').hide(300);
-    }
 
-    function onClickAll(ev) {
+    function onClickMenuItem(ev) {
         ev.preventDefault();
-        $('#messages').show(300);
-        $('#debug').show(300);
-        $('#forms').show(300);
-        $('#options').show(300);
+        var $link = $(this),
+            type = $link.attr('data-toggle');
+        $link.closest('ul').find('li').each(function(el, idx) {
+            console.log('el',el);
+            console.log('idx',idx);
+            var $el = $(el),
+                t = $el.find('a').attr('data-toggle');
+            if (type === 'all')
+                $('#'+t).show(300);
+            else if (t === type)
+                $('#'+t).show(300);
+            else
+                $('#'+t).hide(300);
+        });
     }
 
     function onMessageKeyUp (ev) {
@@ -100,61 +128,55 @@ define([
             $input.parents('.controls').find('.count').html(count + ' characters');
     }
 
-    function initListeners() {
-        $('.dropdown .options').on('click', onClickOptions);
-        $('.dropdown .debug').on('click', onClickDebug);
-        $('.dropdown .messages').on('click', onClickMessages);
-        $('.dropdown .forms').on('click', onClickForms);
-        $('.dropdown .all').on('click', onClickAll);
-        $('#messages form').on('submit', onSendMessage);
-        $('#message').on('keyup', onMessageKeyUp);
-        $('[data-dismiss=alert]').on('click', function () {
-            $(this).parent('div').hide();
-        })
-    }
-
     function no_form_selected() {
         // on first load, just show the example json form VPD, in english
         router.setRoute('/simple-example.json/ZZZZ');
     }
 
-    function form_only(form_name, callback) {
-        $('#choose-form').select2('val', form_name);
-        var form_url = resolve_form_url(form_name);
-        getForm(form_url, function(err, form) {
-            var codes = getFormCodes(form);
-            renderFormNameSelect(form_name, codes);
-            //$('#choose-form').select2('val', '');
-            if (_.isFunction(callback)) {
-                callback(null, {
-                   form_url : form_url,
-                    form : form,
-                    codes : codes
-                });
-            }
+    function getString(str, lang) {
+        lang = lang || defaults.locale;
+        if (typeof str === 'string')
+            return str;
+        if (typeof str === 'object') {
+            if (str[lang]) return str[lang];
+            else if (str.fr)
+                return str.fr;
+            else if (str.ne)
+                return str.ne;
+        }
+    }
 
+    function loadProject(file, callback) {
+        console.log('loadProject');
+        var url = defaults.json_forms_path + '/' + file;
+        $.getJSON(url, function(data) {
+            initFormSelect(file, data);
+            if (_.isFunction(callback))
+                callback(null, data);
         });
     }
 
 
-    function form_and_code(form_name, code, /*optional*/ lang) {
-        if (!lang) lang = 'en';
-        form_only(form_name, function(err, details){
-            $('#choose-name').select2('val', code);
-            showForm(details.form, code, lang);
+    function loadProjectAndForm(project, form_code) {
+        console.log('loadProjectAndForm');
+        loadProject(project, function(err, forms){
+            // choose either first form or match form code argument
+            var form;
+            _.each(forms, function(f) {
+                if (!form)
+                    form = f;
+                if (form_code && form_code === formCode(f))
+                    form = f;
+            });
+            showForm(form);
         })
-
-    }
-
-    function resolve_form_url(form_name) {
-        return json_forms_path + '/' + form_name;
     }
 
     function formatDate(date) {
-        var year = date.getYear() - 100
-            month = date.getMonth() + 1
-            day = date.getDate()
-            hours = date.getHours()
+        var year = date.getYear() - 100,
+            month = date.getMonth() + 1,
+            day = date.getDate(),
+            hours = date.getHours(),
             minutes = date.getMinutes();
         //return "#{month}-#{day}-#{year} #{hours}:#{minutes}"
         return month+'-'+day+'-'+year+' '+hours+':'+minutes;
@@ -184,18 +206,17 @@ define([
 
     };
 
-    //function postToSMSSyncAPI(options, callback) {
     function postMessageHTTP(options, callback) {
-        options.path = options.path || '/kujua-base/_design/kujua-base/_rewrite/add';
+        options.path = options.path || defaults.sync_url;
         options.data = {
             message_id: Math.ceil(Math.random() * 100000),
-            //sent_timestamp: formatDate(new Date())
             sent_timestamp: new Date().valueOf(),
             message: options.message,
             from: options.phone
         };
         var val = log.getValue();
         log.setValue(json_format(JSON.stringify(options.data)) +'\n'+val);
+        $('#messages-log').prepend('<p class="well well-small pull-right message">'+options.data.message+'</p>');
         request(options, callback);
     }
 
@@ -254,9 +275,10 @@ define([
         }
         var val = log.getValue();
         log.setValue(json_format(JSON.stringify(resp)) +'\n'+val);
+        $('#responses').show();
         if (resp.payload && resp.payload.messages) {
             _.each(resp.payload.messages, function(msg) {
-                $('#responses').prepend('<p>'+msg.message+'</p>');
+                $('#messages-log').prepend('<p class="well well-small pull-left response">'+msg.message+'</p>');
             });
         }
         if (resp.callback) {
@@ -272,7 +294,7 @@ define([
             msg = $('#message').val();
         var options = {
             message: msg,
-            phone: $('#messages [name=from]').val() || gateway_num
+            phone: $('#messages [name=from]').val() || defaults.gateway_num
         };
         if (!hasSMSAPI()) {
             fn = postMessageHTTP;
@@ -281,13 +303,24 @@ define([
         fn(options, processResponse);
     }
 
+    function formCode(form) {
+        return form && form.meta && form.meta.code;
+    }
+
     // Render and bind a form
-    function showForm(forms, code, lang) {
+    function showForm(form) {
+        console.log('showForm');
+
+        if (typeof form !== 'object') return;
+
         $form_fields = $('#form_fields');
         $form_fields.empty();
-        var schemafied = translator(forms, lang);
+
+        var code = formCode(form),
+            schemafied = translator(form, defaults.locale),
+            rendered = jsonEdit('form_fields', schemafied[code].schema);
+
         schema_used.setValue(json_format(JSON.stringify(schemafied[code].schema)));
-        var rendered = jsonEdit('form_fields', schemafied[code].schema);
 
         function convertToMuvukuFormat(data) {
             var msg = '';
@@ -318,7 +351,8 @@ define([
                         if (err) return handleError(err);
                         editor.setValue(json_format(JSON.stringify(doc)));
                         var msg = convertToMuvukuFormat(doc);
-                        $('#message').val(msg).focus();
+                        $('#message').val(msg);
+                        $('#messages form').trigger('submit');
                     });
                 })
 
@@ -346,6 +380,7 @@ define([
                 $input = $('[name='+key+']'),
                 $errors = $input.parent().find('.errors');
             if (field && !field.ok) {
+                console.log(JSON.stringify(result,null,2));
                 if ($errors.length === 0) {
                     $errors = $('<p class="errors" />');
                     $input.parent().append($errors);
@@ -362,26 +397,7 @@ define([
     }
 
 
-    // Used to find all the .json files in the root of this project
-    function findAvailableJson(callback) {
-        var results = [];
-        $.get(json_forms_path+'/index.json', function(data) {
-            var index;
-            if (typeof data === 'string')
-                index = JSON.parse(data)[0];
-            else
-                index = data[0];
-            index.forEach(function(file) {
-                results.push({
-                    id: file,
-                    text: file
-                });
-            });
-            callback(null, results);
-        });
-    }
-
-    function init_json_display() {
+    function initJSONDisplay() {
         var elem = $('.results').get()[0];
         editor = CodeMirror(elem, {
             value : '',
@@ -408,64 +424,47 @@ define([
             mode : {name: "javascript", json: true}
         });
         log.setSize(null, 400 );
-
-    }
-
-    function renderSelect(data){
-        $('#choose-form').select2({
-            data : data,
-            initSelection : function(element, callback) {
-                var val = $(element).val();
-                var data = {id: val, text: val};
-                callback(data);
-            }
-        }).on('change', function(){
-            var val = $(this).val();
-            router.setRoute('/' + val);
-        })
     }
 
 
-    function getForm(url, callback) {
+
+    function getJSON(url, callback) {
         $.getJSON(url, function(data){
             callback(null, data);
         })
     }
 
 
-    function getFormCodes(form) {
+    function getFormAttrs(form) {
         return _.map(form, function(entry){
             if (entry.meta && entry.meta.code) {
                 return {
-                    id: entry.meta.code,
-                    text : entry.meta.code
+                    code: entry.meta.code,
+                    label: entry.meta.label
                 }
             }
         });
     }
 
-    function initNameSelect(){
-        $('#choose-name').select2({
-            data : [],
-        }).select2('disable');
-    }
-
-    function renderFormNameSelect(form_name, codes) {
-
-        $('#choose-name').select2({
-            data : codes,
-            initSelection : function(element, callback) {
-                var val = $(element).val();
-                var data = {id: val, text: val};
-                callback(data);
-            }
-        })
-            .select2('enable')
-            .off('change')
-            .on('change', function(){
-                var code = $(this).val();
-                router.setRoute('/' + form_name + '/' + code);
-            })
+    function initFormSelect(project, forms) {
+        console.log('initFormSelect');
+        var $input = $('#choose-form');
+        $input.html(''); //reset
+        _.each(forms, function(form, idx) {
+            if (!form.meta || !form.meta.code) return;
+            var code = form.meta.code,
+                label = getString(form.meta.label),
+                $option = $('<option/>');
+            $option.val(project+'/'+code);
+            $option.text(label +' ('+code+')');
+            $input.append($option);
+        });
+        $input.on('change', function(){
+            var val = $(this).val();
+            router.setRoute('/' + val);
+        });
+        $input.closest('form').show();
+        $input.closest('.well').find('.loader').hide();
     }
 
 

@@ -1,4 +1,16 @@
-textarea {
+#messages-log .response {
+  width: 80%;
+  clear: both;
+  background: #eee;
+}
+#messages-log .message {
+  text-align: right;
+  width: 80%;
+  clear: both;
+  background: #ddd;
+}
+#messages textarea, 
+#options [name=path] {
   width: 95%;
 }
 #menu {
@@ -32,6 +44,7 @@ textarea {
 
 .submit {
   margin-top: 10px;
+  margin-bottom: -20px;
   text-align: center;
   clear: both;
 }
