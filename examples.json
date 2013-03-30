@@ -2,8 +2,8 @@
     "meta": {
       "code": "ZZZZ",
       "label": {
-         "en": "CDC Weekly Report",
-         "fr": "Alerte référence"
+         "en": "Simple Example",
+         "fr": "Exemple simple"
       }
     },
     "fields" : {
@@ -27,45 +27,31 @@
             ],
             "required" : true
         },
-        "birth_site2": {
-           "position": 1,
-           "type": "string",
-           "labels": {
-              "short": {
-                 "en": "Place of Delivery",
-                 "ne": "प्रशुती भएको ठाउँ"
-              },
-              "tiny": {
-                 "en": "SITE"
-              },
-              "description": {
-                 "en": "Site of birth"
-              }
-           },
-           "list": [
-              [
-                 "1",
-                 {
-                    "en": "Home",
-                    "ne": "घर"
-                 }
-              ],
-              [
-                 "2",
-                 {
-                    "en": "Health Facility",
-                    "ne": "स्वास्थ्य संस्था"
-                 }
-              ],
-              [
-                 "3",
-                 {
-                    "en": "Other Place",
-                    "ne": "अन्य ठाउँ"
-                 }
-              ]
-           ],
-           "required" : true
+        "days_since_delivery": {
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "range": [
+               0,
+               99
+            ],
+            "labels": {
+               "short": {
+                  "en": "Days since birth",
+                  "ne": "बच्चा जन्मेको कति दिन भयो?"
+               },
+               "tiny": {
+                  "en": "DAYS"
+               },
+               "description": {
+                  "en": "Days since patient's delivery",
+                  "ne": "बच्चा जन्मेको कति दिन भयो?"
+               }
+            },
+            "required" : true
         },
         "birth_site": {
            "position": 2,
@@ -79,7 +65,8 @@
                  "en": "SITE"
               },
               "description": {
-                 "en": "Site of birth"
+                 "en": "Place of Delivery",
+                 "ne": "प्रशुती भएको ठाउँ"
               }
            },
            "list": [
@@ -104,8 +91,7 @@
                     "ne": "अन्य ठाउँ"
                  }
               ]
-           ],
-           "required" : true
+           ]
         }
 
     }
