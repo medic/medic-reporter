@@ -127,7 +127,13 @@
 
         // seems equivalent
         prop.type = property.type;
-        prop.title = getLabel(property.labels.short, lang);
+        prop.title = getLabel(
+            property.labels.short || property.labels.description, lang
+        );
+
+        // saving tiny field name here for now
+        if (property.labels.tiny)
+            prop.tiny = getLabel(property.labels.tiny, lang);
 
         if (property.required) prop.required = true;
 
