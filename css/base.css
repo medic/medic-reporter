@@ -40,7 +40,7 @@
   position: fixed;
   top: 40px;
   right: 20px;
-/*  display: none; */
+  display: none; 
 }
 .container-fluid {
     padding-top: 40px;
@@ -86,11 +86,5 @@
   }
   #menu {
     display: block;
-  }
-  #forms {
-    display: none;
-  }
-  #options {
-    display: none;
   }
 }

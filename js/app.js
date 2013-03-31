@@ -51,18 +51,19 @@ define([
         loadProjectAndForm(args[0], args[1]);
     }
 
+    function scrollTo($el, offset) {
+        // addl 40px offset for topbar
+        offset = offset || 40;
+        $('html body').animate({
+            scrollTop: $el.offset().top - offset
+        });
+    }
+
     function onClickMenuItem(ev) {
         ev.preventDefault();
         var $link = $(this),
-            type = $link.attr('data-toggle');
-        $link.closest('ul').find('li').each(function(el, idx) {
-            var $el = $(el),
-                t = $el.find('a').attr('data-toggle');
-            if (t === type)
-                $('#'+t).show(300);
-            else
-                $('#'+t).hide(300);
-        });
+            type = $link.attr('data-show');
+        return scrollTo($('#'+type));
     }
 
     function onMessageKeyUp (ev) {
@@ -146,8 +147,6 @@ define([
 
     function sendSMS(options, callback) {
 
-      console.log("Sending SMS to "+ num +"; message '"+ msg +"' ...");
-
       var err,
           num = options.phone,
           msg = options.message;
@@ -164,7 +163,6 @@ define([
     }
 
     function handleError(data) {
-        console.error('error data', data);
         var err;
         try {
             // response should be in JSON format
@@ -234,7 +232,6 @@ define([
 
     function onSendMessage(ev) {
         ev.preventDefault();
-        console.log('onSendMessage');
         var fn = sendSMS,
             msg = $('#message').val();
         var options = {
@@ -282,8 +279,7 @@ define([
     };
 
     // Render and bind a form
-    function showForm(form) {
-        console.log('showForm');
+    function renderForm(form) {
 
         if (typeof form !== 'object') return;
 
@@ -323,6 +319,7 @@ define([
                         } else {
                             msg = convertToMuvukuFormat(doc);
                         }
+                        scrollTo($('#messages'));
                         $('#message').val(msg).trigger('keyup');
                         $('#messages form').trigger('submit');
                     });
@@ -398,7 +395,7 @@ define([
     }
 
     function initListeners() {
-        $('#menu a[data-toggle]').on('click', onClickMenuItem);
+        $('#menu [data-show]').on('click', onClickMenuItem);
         $('#messages form').on('submit', onSendMessage);
         $('#message').on('keyup', onMessageKeyUp);
         $('[data-dismiss=alert]').on('click', function () {
@@ -433,7 +430,6 @@ define([
     }
 
     function initFormSelect(project, forms, form_code) {
-        console.log('initFormSelect');
         var $input = $('#choose-form');
         $input.html(''); //reset
         _.each(forms, function(form, idx) {
@@ -456,7 +452,6 @@ define([
     }
 
     function initProjectIndex(data){
-        console.log('initProjectIndex');
         var $input = $('#choose-project');
         _.each(data, function(el, idx) {
             var $option = $('<option/>');
@@ -473,7 +468,6 @@ define([
     }
 
     function loadProject(file, callback) {
-        console.log('loadProject');
         var url = settings.json_forms_path + '/' + file;
         $.getJSON(url, function(data) {
             $('#choose-project [value="'+file+'"]').prop('selected', true);
@@ -483,7 +477,6 @@ define([
     }
 
     function loadProjectAndForm(project, form_code) {
-        console.log('loadProjectAndForm', project, form_code);
         loadProject(project, function(err, forms){
             initFormSelect(project, forms, form_code);
             // choose either first form or match form code argument
@@ -494,7 +487,7 @@ define([
                 if (form_code && form_code === formCode(f))
                     form = f;
             });
-            showForm(form);
+            renderForm(form);
         })
     }
 
