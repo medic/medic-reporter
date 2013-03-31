@@ -1,3 +1,10 @@
+#message {
+  width: 80%;
+}
+#messages-log {
+  max-height: 19em;
+  overflow: auto;
+}
 #messages-log .response {
   width: 80%;
   clear: both;
@@ -9,14 +16,31 @@
   clear: both;
   background: #ddd;
 }
-#messages textarea, 
+#messages textarea {
+  width: 100%;
+}
+#messages form {
+  margin: 0;
+}
+#messages .send {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#messages .pull-left {
+  width: 70%;
+}
+#messages .count {
+  display: none;
+  margin: 0;
+}
 #options [name=path] {
   width: 95%;
 }
 #menu {
-  position: absolute;
+  position: fixed;
   top: 40px;
   right: 20px;
+/*  display: none; */
 }
 .container-fluid {
     padding-top: 40px;
@@ -41,7 +65,6 @@
   font-size: 13px;
   line-height: 18px;
 }
-
 .submit {
   margin-top: 10px;
   margin-bottom: -20px;
@@ -60,5 +83,14 @@
   }
   #dashboard-topbar {
     z-index: 2000;
+  }
+  #menu {
+    display: block;
+  }
+  #forms {
+    display: none;
+  }
+  #options {
+    display: none;
   }
 }

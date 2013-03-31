@@ -21,7 +21,7 @@ define([
 
     var exports = {},
         routes = {
-            '/' : no_form_selected,
+            '/' : noFormSelected,
             '/*/*/*' : loadProjectAndForm,
             '/*/*' : loadProjectAndForm,
             '/*' : loadProjectAndForm
@@ -30,92 +30,35 @@ define([
         hide_count = true,
         editor,
         schema_used,
+        schemafied,
         selected_form,
         log;
 
+    // settings  defaults, include all settings values here
     var defaults = {
         locale: 'en',
         sync_url: '/kujua-base/_design/kujua-base/_rewrite/add',
         json_forms_path: 'json-forms',
-        gateway_num: '+13125551212'
+        gateway_num: '+13125551212',
+        message_format: 'muvuku'
     };
 
-    exports.init = function() {
-    };
+    var settings = _.extend({}, defaults);
 
-    exports.onDOMReady = function() {
-        $(".footer .year").text(new Date().getFullYear());
-        $(".version").text(new Date().getFullYear());
-        initListeners();
-        findAvailableJson(function(err, data){
-            initProjectSelect(data);
-            router.init('/');
-        });
-        initJSONDisplay();
-    };
-
-    function initListeners() {
-        $('#menu a').on('click', onClickMenuItem);
-        $('#messages form').on('submit', onSendMessage);
-        $('#message').on('keyup', onMessageKeyUp);
-        $('[data-dismiss=alert]').on('click', function () {
-            $(this).parent('div').hide();
-        })
-        $('[name=locale]').on('change', function() {
-            defaults.locale = $(this).val();
-        });
+    function onLocaleChange(ev) {
+        settings.locale = $(this).val();
+        var args = $('#choose-form :selected').val().split('/');
+        loadProjectAndForm(args[0], args[1]);
     }
-
-    // Used to find all the .json files in the root of this project
-    function findAvailableJson(callback) {
-        var results = [];
-        $.get(defaults.json_forms_path+'/index.json', function(data) {
-            var index;
-            if (typeof data === 'string')
-                index = JSON.parse(data)[0];
-            else
-                index = data[0];
-            index.forEach(function(file) {
-                results.push({
-                    id: file,
-                    text: file
-                });
-            });
-            callback(null, results);
-        });
-    }
-
-    function initProjectSelect(data){
-        console.log('initProjectSelect data',data);
-        var $input = $('#choose-project');
-        _.each(data, function(el, idx) {
-            var $option = $('<option/>');
-            $option.attr('value',el.id);
-            console.log('project el',el);
-            $option.text(el.text.replace('.json',''));
-            $input.append($option);
-        });
-        $input.on('change', function(){
-            var val = $(this).val();
-            router.setRoute('/' + val);
-        });
-        $input.closest('form').show();
-        $input.closest('.well').find('.loader').hide();
-    }
-
 
     function onClickMenuItem(ev) {
         ev.preventDefault();
         var $link = $(this),
             type = $link.attr('data-toggle');
         $link.closest('ul').find('li').each(function(el, idx) {
-            console.log('el',el);
-            console.log('idx',idx);
             var $el = $(el),
                 t = $el.find('a').attr('data-toggle');
-            if (type === 'all')
-                $('#'+t).show(300);
-            else if (t === type)
+            if (t === type)
                 $('#'+t).show(300);
             else
                 $('#'+t).hide(300);
@@ -125,19 +68,15 @@ define([
     function onMessageKeyUp (ev) {
         var $input = $(ev.target),
             count = $input.val().length;
-        if (count > 100)
+        if (count > 50)
             hide_count = false;
         if (!hide_count)
-            $input.parents('.controls').find('.count').html(count + ' characters');
-    }
-
-    function no_form_selected() {
-        // on first load, just show the example json form VPD, in english
-        router.setRoute('/examples.json/ZZZZ');
+            $input.parents('.controls').find('.count')
+                .html(count + ' characters').show();
     }
 
     function getLabel(label, lang) {
-        lang = lang || defaults.locale;
+        lang = lang || settings.locale;
         if (typeof label === 'string')
             return label;
         if (typeof label === 'object') {
@@ -148,31 +87,6 @@ define([
                 return label[key];
             }
         }
-    }
-
-    function loadProject(file, callback) {
-        console.log('loadProject');
-        var url = defaults.json_forms_path + '/' + file;
-        $.getJSON(url, function(data) {
-            initFormSelect(file, data);
-            if (_.isFunction(callback))
-                callback(null, data);
-        });
-    }
-
-    function loadProjectAndForm(project, form_code) {
-        console.log('loadProjectAndForm');
-        loadProject(project, function(err, forms){
-            // choose either first form or match form code argument
-            var form;
-            _.each(forms, function(f) {
-                if (!form)
-                    form = f;
-                if (form_code && form_code === formCode(f))
-                    form = f;
-            });
-            showForm(form);
-        })
     }
 
     function formatDate(date) {
@@ -210,7 +124,8 @@ define([
     };
 
     function postMessageHTTP(options, callback) {
-        options.path = options.path || defaults.sync_url;
+        options.path = options.path || settings.sync_url;
+        options.path += '?locale=' + settings.locale;
         options.data = {
             message_id: Math.ceil(Math.random() * 100000),
             sent_timestamp: new Date().valueOf(),
@@ -219,7 +134,7 @@ define([
         };
         var val = log.getValue();
         log.setValue(json_format(JSON.stringify(options.data)) +'\n'+val);
-        $('#messages-log').prepend('<p class="well well-small pull-right message">'+options.data.message+'</p>');
+        updateMessageLog(options.data.message, 'message');
         request(options, callback);
     }
 
@@ -227,8 +142,7 @@ define([
       if (navigator && navigator.mozSms) return true;
     }
 
-    function queueSMS(options) {
-    }
+    function queueSMS(options) {}
 
     function sendSMS(options, callback) {
 
@@ -263,8 +177,31 @@ define([
             .closest('.errors').show();
     };
 
+    function updateMessageLog(msg, type, timeout) {
+        timeout = timeout || 0;
+        type = type || 'message';
+        var $el = $('#messages-log'),
+            clss = '';
+        if (type === 'response') {
+            clss = 'response pull-left';
+        } else {
+            clss = 'message pull-right';
+        }
+        // adding .5 sec to response time to make it feel more like a
+        // response
+        setTimeout(function() {
+            $el.append(
+                $('<p class="well well-small" />').addClass(clss).text(msg)
+            );
+            $el.animate({
+                scrollTop: $el.prop("scrollHeight") - $el.height()
+            });
+        }, timeout);
+    }
+
     function processResponse(err, data) {
-        var resp;
+        var resp,
+            msgs = [];
         if (err)
             return handleError(err);
         //$('.log').prepend('<p>'+data+'</p>');
@@ -278,12 +215,17 @@ define([
         }
         var val = log.getValue();
         log.setValue(json_format(JSON.stringify(resp)) +'\n'+val);
-        $('#responses').show();
-        if (resp.payload && resp.payload.messages) {
-            _.each(resp.payload.messages, function(msg) {
-                $('#messages-log').prepend('<p class="well well-small pull-left response">'+msg.message+'</p>');
-            });
+        if (resp.payload && resp.payload.success) {
+            if (resp.payload.messages) {
+                _.each(resp.payload.messages, function(msg) {
+                    msgs.push(msg.message);
+                });
+            }
         }
+        _.each(msgs, function(msg) {
+            updateMessageLog(msg, 'response', 500);
+        });
+
         if (resp.callback) {
             resp.callback.options.data = JSON.stringify(resp.callback.data);
             request(resp.callback.options, processResponse);
@@ -297,7 +239,7 @@ define([
             msg = $('#message').val();
         var options = {
             message: msg,
-            phone: $('#messages [name=from]').val() || defaults.gateway_num
+            phone: $('#messages [name=from]').val() || settings.gateway_num
         };
         if (!hasSMSAPI()) {
             fn = postMessageHTTP;
@@ -310,6 +252,35 @@ define([
         return form && form.meta && form.meta.code;
     }
 
+    function convertToMuvukuFormat(data) {
+        var msg = '',
+            code = data.form;
+        schemafied[code].schema.order.forEach(function(k) {
+            // handle msg header on first iteration
+            if (!msg)
+                return msg = '1!'+ code +'!'+ data[k];
+            msg += '#'+ data[k];
+        });
+        return msg;
+    };
+
+    function convertToTextformsFormat(data) {
+        var msg = '',
+            code = data.form,
+            schema = schemafied[code].schema,
+            parts = [];
+        schema.order.forEach(function(k) {
+            // handle msg header on first iteration
+            var val = data[k],
+                key = schema.properties[k].tiny;
+            if (!key) throw new Error(k+' missing textforms field name.');
+            if (!msg)
+                msg = code +' ';
+            parts.push(key +' '+ data[k]);
+        });
+        return msg + parts.join('#');
+    };
+
     // Render and bind a form
     function showForm(form) {
         console.log('showForm');
@@ -319,23 +290,12 @@ define([
         $form_fields = $('#form_fields');
         $form_fields.empty();
 
+        schemafied = translator(form, settings.locale);
+
         var code = formCode(form),
-            schemafied = translator(form, defaults.locale),
             rendered = jsonEdit('form_fields', schemafied[code].schema);
 
         schema_used.setValue(json_format(JSON.stringify(schemafied[code].schema)));
-
-        function convertToMuvukuFormat(data) {
-            var msg = '';
-            schemafied[code].schema.order.forEach(function(k) {
-                // handle msg header on first iteration
-                if (!msg)
-                    return msg = '1!'+code+'!'+data[k];
-                msg += '#'+ data[k];
-            });
-            return msg;
-        };
-
 
         $('#forms form').off('submit');
         $('#forms form').on('submit', function (ev) {
@@ -353,8 +313,17 @@ define([
                     schemafied[code].post_save(data.data, function(err, doc) {
                         if (err) return handleError(err);
                         editor.setValue(json_format(JSON.stringify(doc)));
-                        var msg = convertToMuvukuFormat(doc);
-                        $('#message').val(msg);
+                        var msg;
+                        if (settings.message_format === 'textforms') {
+                            try {
+                                msg = convertToTextformsFormat(doc);
+                            } catch(e) {
+                                msg = convertToMuvukuFormat(doc);
+                            }
+                        } else {
+                            msg = convertToMuvukuFormat(doc);
+                        }
+                        $('#message').val(msg).trigger('keyup');
                         $('#messages form').trigger('submit');
                     });
                 })
@@ -383,7 +352,6 @@ define([
                 $input = $('[name='+key+']'),
                 $errors = $input.parent().find('.errors');
             if (field && !field.ok) {
-                console.log(JSON.stringify(result,null,2));
                 if ($errors.length === 0) {
                     $errors = $('<p class="errors" />');
                     $input.parent().append($errors);
@@ -429,27 +397,42 @@ define([
         log.setSize(null, 400 );
     }
 
-
-
-    function getJSON(url, callback) {
-        $.getJSON(url, function(data){
-            callback(null, data);
-        })
-    }
-
-
-    function getFormAttrs(form) {
-        return _.map(form, function(entry){
-            if (entry.meta && entry.meta.code) {
-                return {
-                    code: entry.meta.code,
-                    label: entry.meta.label
-                }
-            }
+    function initListeners() {
+        $('#menu a[data-toggle]').on('click', onClickMenuItem);
+        $('#messages form').on('submit', onSendMessage);
+        $('#message').on('keyup', onMessageKeyUp);
+        $('[data-dismiss=alert]').on('click', function () {
+            $(this).parent('div').hide();
+        });
+        $('[name=locale]').on('change', onLocaleChange);
+        $('[name=use_textforms]').on('change', function() {
+            if ($(this).prop('checked'))
+                settings.message_format = 'textforms';
+            else
+                settings.message_format = 'muvuku';
         });
     }
 
-    function initFormSelect(project, forms) {
+    // Used to find all the .json files in the root of this project
+    function loadAvailableJson(callback) {
+        var results = [];
+        $.get(settings.json_forms_path+'/index.json', function(data) {
+            var index;
+            if (typeof data === 'string')
+                index = JSON.parse(data)[0];
+            else
+                index = data[0];
+            index.forEach(function(file) {
+                results.push({
+                    id: file,
+                    text: file
+                });
+            });
+            callback(null, results);
+        });
+    }
+
+    function initFormSelect(project, forms, form_code) {
         console.log('initFormSelect');
         var $input = $('#choose-form');
         $input.html(''); //reset
@@ -460,6 +443,8 @@ define([
                 $option = $('<option/>');
             $option.val(project+'/'+code);
             $option.text(label +' ('+code+')');
+            if (code === form_code)
+                $option.prop('selected',true);
             $input.append($option);
         });
         $input.on('change', function(){
@@ -470,6 +455,66 @@ define([
         $input.closest('.well').find('.loader').hide();
     }
 
+    function initProjectIndex(data){
+        console.log('initProjectIndex');
+        var $input = $('#choose-project');
+        _.each(data, function(el, idx) {
+            var $option = $('<option/>');
+            $option.attr('value',el.id);
+            $option.text(el.text.replace('.json',''));
+            $input.append($option);
+        });
+        $input.on('change', function() {
+            var val = $(this).val();
+            router.setRoute('/' + val);
+        });
+        $input.closest('form').show();
+        $input.closest('.well').find('.loader').hide();
+    }
+
+    function loadProject(file, callback) {
+        console.log('loadProject');
+        var url = settings.json_forms_path + '/' + file;
+        $.getJSON(url, function(data) {
+            $('#choose-project [value="'+file+'"]').prop('selected', true);
+            if (_.isFunction(callback))
+                callback(null, data);
+        });
+    }
+
+    function loadProjectAndForm(project, form_code) {
+        console.log('loadProjectAndForm', project, form_code);
+        loadProject(project, function(err, forms){
+            initFormSelect(project, forms, form_code);
+            // choose either first form or match form code argument
+            var form;
+            _.each(forms, function(f) {
+                if (!form)
+                    form = f;
+                if (form_code && form_code === formCode(f))
+                    form = f;
+            });
+            showForm(form);
+        })
+    }
+
+    function noFormSelected() {
+        // on first load, just show the example json form VPD, in english
+        router.setRoute('/examples.json/ZZZZ');
+    }
+
+    exports.onDOMReady = function() {
+        $(".footer .year").text(new Date().getFullYear());
+        $(".version").text(new Date().getFullYear());
+        initListeners();
+        loadAvailableJson(function(err, data){
+            initProjectIndex(data);
+            router.init('/');
+        });
+        initJSONDisplay();
+    };
+
+    exports.init = function() {};
 
     return exports;
 });
