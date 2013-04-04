@@ -15,6 +15,7 @@
   width: 80%;
   clear: both;
   background: #ddd;
+  word-wrap: break-word;
 }
 #messages textarea {
   width: 100%;
@@ -24,7 +25,7 @@
 }
 #messages .send {
   margin-top: 20px;
-  margin-left: 20px;
+  margin-left: 10%;
 }
 #messages .pull-left {
   width: 70%;
