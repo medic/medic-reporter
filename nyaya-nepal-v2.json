@@ -282,7 +282,6 @@
             }
           ]
         ],
-        "required": true,
         "conditions": {
           "treatmentgiven": 6
         }
@@ -383,7 +382,6 @@
             }
           ]
         ],
-        "required": true,
         "conditions": {
           "planningmethod": 5
         }
