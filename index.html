@@ -75,20 +75,6 @@
                 </form>
               </div>
           </div>
-          <div id="debug" class="span3 hide">
-            <div class="log">
-                <h5>Request/Response</h5>
-                <div class="entry console"></div>
-            </div>
-            <div>
-                <h5>Result Data</h5>
-                <div class="results console"></div>
-            </div>
-            <div>
-                <h5>Schema Used</h5>
-                <div class="schema_used console"></div>
-            </div>
-          </div>
           <div class="span3" id="options">
               <div class="options well">
                 <form>
@@ -121,12 +107,33 @@
                         <label for="path">Sync URL</label>
                         <input type="text" name="path" placeholder="/kujua-base/_design/kujua-base/_rewrite/add">
                       </div>
+                      <div class="controls">
+                         <label class="checkbox">
+                           <input name="show_debug" type="checkbox"> Show debug panels
+                         </label>
+                      </div>
                     </div>
                   </fieldset>
                 </form>
               </div>
           </div>
         </form>
+    </div>
+    <div class="row-fluid">
+      <div id="debug" class="span12 hide">
+        <div class="log">
+            <h5>Request/Response</h5>
+            <div class="entry console"></div>
+        </div>
+        <div>
+            <h5>Result Data</h5>
+            <div class="results console"></div>
+        </div>
+        <div>
+            <h5>Schema Used</h5>
+            <div class="schema_used console"></div>
+        </div>
+      </div>
     </div>
     <div class="row-fluid">
       <div class="span12">

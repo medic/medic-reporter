@@ -228,6 +228,7 @@ define([
             resp.callback.options.data = JSON.stringify(resp.callback.data);
             request(resp.callback.options, processResponse);
         }
+        $('#message').val('');
     };
 
     function onSendMessage(ev) {
@@ -325,7 +326,6 @@ define([
                     });
                 })
 
-
 //            } catch (e) {
 //                console.log(e);
 //            }
@@ -407,6 +407,12 @@ define([
                 settings.message_format = 'textforms';
             else
                 settings.message_format = 'muvuku';
+        });
+        $('[name=show_debug]').on('change', function() {
+            if ($(this).prop('checked'))
+                $('#debug').show(300);
+            else
+                $('#debug').hide(300);
         });
     }
 
