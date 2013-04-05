@@ -54,7 +54,7 @@ define([
     function scrollTo($el, offset) {
         // addl 40px offset for topbar
         offset = offset || 40;
-        $('html body').animate({
+        $('html,body').animate({
             scrollTop: $el.offset().top - offset
         });
     }
