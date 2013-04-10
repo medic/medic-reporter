@@ -237,7 +237,7 @@ define([
             msg = $('#message').val();
         var options = {
             message: msg,
-            phone: $('#messages [name=from]').val() || settings.gateway_num
+            phone: $('#options [name=from]').val() || settings.gateway_num
         };
         if (!hasSMSAPI()) {
             fn = postMessageHTTP;
