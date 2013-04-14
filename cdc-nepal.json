@@ -3,7 +3,7 @@
       "meta": {
          "code": "VPD",
          "label": {
-            "en": "CDC Weekly Report"
+            "en": "VPD Report"
          }
       },
       "fields": {
@@ -171,7 +171,7 @@
       "meta": {
          "code": "IMD",
          "label": {
-            "en": "CDC Outbreak Report"
+            "en": "Outbreak Report"
          }
       },
       "fields": {
@@ -197,39 +197,49 @@
             "flags": {},
             "required": true
          },
-         "afp_present": {
+         "afp_cases": {
             "labels": {
                "tiny": {
                   "en": "AFP"
                },
                "description": {
-                  "en": "Acute flaccid paralysis (AFP) case present?"
+                  "en": "Number of acute flaccid paralysis (AFP) cases"
                },
                "short": {
-                  "en": "AFP case?"
+                  "en": "Number of AFP cases"
                }
             },
-            "position": 2,
-            "type": "boolean",
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               8
+            ],
             "validations": {},
-            "flags": {}
+            "flags": {},
+            "required": true
          },
-         "msl_present": {
+         "msl_cases": {
             "labels": {
                "tiny": {
                   "en": "MSL"
                },
                "description": {
-                  "en": "Measles (MSL) case present?"
+                  "en": "Number of measles cases encountered"
                },
                "short": {
-                  "en": "Measles case?"
+                  "en": "Number of MSL cases"
                }
             },
-            "position": 3,
-            "type": "boolean",
+            "position": 2,
+            "type": "integer",
+            "length": [
+               1,
+               8
+            ],
             "validations": {},
-            "flags": {}
+            "flags": {},
+            "required": true
          },
          "phone_number": {
             "labels": {
@@ -243,7 +253,7 @@
                   "en": "Patient phone"
                }
             },
-            "position": 4,
+            "position": 3,
             "type": "string",
             "length": [
                7,
