@@ -216,8 +216,7 @@
                8
             ],
             "validations": {},
-            "flags": {},
-            "required": true
+            "flags": {}
          },
          "msl_cases": {
             "labels": {
@@ -238,8 +237,7 @@
                8
             ],
             "validations": {},
-            "flags": {},
-            "required": true
+            "flags": {}
          },
          "phone_number": {
             "labels": {
