@@ -177,7 +177,8 @@
                      "en": "December"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "village": {
             "position": 2,
