@@ -1,8 +1,4 @@
-/**
- * User: ryan
- * Date: 12-11-02
- * Time: 2:03 PM
- */
+
 define([
     'jquery',
     'underscore',
@@ -133,8 +129,7 @@ define([
             message: options.message,
             from: options.phone
         };
-        var val = log.getValue();
-        log.setValue(json_format(JSON.stringify(options.data)) +'\n'+val);
+        updateLog(options.data);
         updateMessageLog(options.data.message, 'message');
         request(options, callback);
     }
@@ -162,15 +157,25 @@ define([
 
     }
 
-    function handleError(data) {
-        var err;
+    function updateLog(data) {
+        var val = log.getValue();
         try {
-            // response should be in JSON format
-            var err = JSON.parse(data);
+            // data is json
+            if (typeof data === 'string')
+                data = JSON.parse(data);
+            log.setValue(json_format(JSON.stringify(data)) +'\n'+val);
         } catch(e) {
-            //console.error(e);
-            err = 'Failed to parse response.';
+            // data is not json
+            try {
+                log.setValue(data +'\n'+val);
+            } catch(e) {
+            }
         }
+    }
+
+    function handleError(data) {
+        updateLog(data);
+        var err = 'Failed to parse response.';
         $('.errors.alert .msg').html('<p>'+err+'</p>')
             .closest('.errors').show();
     };
@@ -200,8 +205,10 @@ define([
     function processResponse(err, data) {
         var resp,
             msgs = [];
+
         if (err)
             return handleError(err);
+
         //$('.log').prepend('<p>'+data+'</p>');
         try {
             if (typeof data === 'string')
@@ -211,8 +218,9 @@ define([
         } catch(e) {
             return handleError(data);
         }
-        var val = log.getValue();
-        log.setValue(json_format(JSON.stringify(resp)) +'\n'+val);
+
+        updateLog(resp);
+
         if (resp.payload && resp.payload.success) {
             if (resp.payload.messages) {
                 _.each(resp.payload.messages, function(msg) {
