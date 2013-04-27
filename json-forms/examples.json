@@ -93,6 +93,7 @@
               ]
            ]
         }
-
-    }
+    },
+    "facility_reference": "id",
+    "facility_required": true
 }]

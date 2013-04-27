@@ -165,7 +165,8 @@
             "required": true
          }
       },
-      "facility_reference": "id"
+      "facility_reference": "id",
+      "facility_required": true
    },
    {
       "meta": {
