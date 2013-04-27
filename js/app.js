@@ -229,7 +229,7 @@ define([
             }
         }
         _.each(msgs, function(msg) {
-            updateMessageLog(msg, 'response', 500);
+            updateMessageLog(msg, 'response');
         });
 
         if (resp.callback) {
