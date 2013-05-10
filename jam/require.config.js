@@ -10,6 +10,11 @@ var jam = {
             "main": "lib/codemirror.js"
         },
         {
+            "name": "couchr",
+            "location": "jam/couchr",
+            "main": "couchr-browser.js"
+        },
+        {
             "name": "director",
             "location": "jam/director",
             "main": "director.js"
@@ -18,6 +23,11 @@ var jam = {
             "name": "domReady",
             "location": "jam/domReady",
             "main": "domReady.js"
+        },
+        {
+            "name": "events",
+            "location": "jam/events",
+            "main": "events.js"
         },
         {
             "name": "jquery",
@@ -55,7 +65,7 @@ var jam = {
             "main": "underscore.js"
         }
     ],
-    "version": "0.2.13",
+    "version": "0.2.17",
     "shim": {
         "director": {
             "exports": "Router"
@@ -76,6 +86,11 @@ if (typeof require !== "undefined" && require.config) {
             "main": "lib/codemirror.js"
         },
         {
+            "name": "couchr",
+            "location": "jam/couchr",
+            "main": "couchr-browser.js"
+        },
+        {
             "name": "director",
             "location": "jam/director",
             "main": "director.js"
@@ -84,6 +99,11 @@ if (typeof require !== "undefined" && require.config) {
             "name": "domReady",
             "location": "jam/domReady",
             "main": "domReady.js"
+        },
+        {
+            "name": "events",
+            "location": "jam/events",
+            "main": "events.js"
         },
         {
             "name": "jquery",
@@ -141,6 +161,11 @@ else {
             "main": "lib/codemirror.js"
         },
         {
+            "name": "couchr",
+            "location": "jam/couchr",
+            "main": "couchr-browser.js"
+        },
+        {
             "name": "director",
             "location": "jam/director",
             "main": "director.js"
@@ -149,6 +174,11 @@ else {
             "name": "domReady",
             "location": "jam/domReady",
             "main": "domReady.js"
+        },
+        {
+            "name": "events",
+            "location": "jam/events",
+            "main": "events.js"
         },
         {
             "name": "jquery",

@@ -7,17 +7,20 @@ define([
     'codemirror',
     'schema-support',
     './json_format',
+    'couchr',
+    'text!new_form.html',
     'json!json-forms/examples.json',
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
     'jam/json.edit/addons/enumlabels',
     'jam/bootstrap/js/bootstrap-dropdown.js'
-], function ($, _, director, jsonEdit, CodeMirror, translator, json_format) {
+], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, couchr, new_form_html) {
 
 
     var exports = {},
         routes = {
             '/' : noFormSelected,
+            '/new' : newForm,
             '/*/*/*' : loadProjectAndForm,
             '/*/*' : loadProjectAndForm,
             '/*' : loadProjectAndForm
@@ -302,6 +305,7 @@ define([
 
         schema_used.setValue(json_format(JSON.stringify(schemafied[code].schema)));
 
+        $('#forms form .btn-success').text('Send');
         $('#forms form').off('submit');
         $('#forms form').on('submit', function (ev) {
 //            try {
@@ -443,6 +447,21 @@ define([
         });
     }
 
+    function loadLocalForms(callback) {
+        couchr.get('_ddoc/_view/saved_forms', function(err, data){
+            if (err) return callback(err);
+            var result = _.map(data.rows, function(row){
+                return {
+                    id: row.id,
+                    text: row.value
+                };
+            });
+            callback(null, result);
+        });
+    }
+
+
+
     function initFormSelect(project, forms, form_code) {
         var $input = $('#choose-form');
         $input.html(''); //reset
@@ -482,7 +501,15 @@ define([
     }
 
     function loadProject(file, callback) {
-        var url = settings.json_forms_path + '/' + file;
+        var url;
+
+        if (file.indexOf('.json', file.length - 5)  !== -1 ) {
+            url = settings.json_forms_path + '/' + file;
+        }
+        else {
+            url = './_ddoc/_show/json_form/' + file;
+        }
+
         $.getJSON(url, function(data) {
             $('#choose-project [value="'+file+'"]').prop('selected', true);
             if (_.isFunction(callback))
@@ -510,13 +537,56 @@ define([
         router.setRoute('/examples.json/ZZZZ');
     }
 
+
+    function newForm() {
+        $form_fields = $('#form_fields');
+        $form_fields.html(new_form_html);
+        $('#forms form .btn-success').text('Save');
+        $('#forms form').off('submit');
+        $('#forms form').on('submit', function (ev) {
+            ev.preventDefault();
+
+            var form_name, form_json;
+            try {
+                form_json = JSON.parse( $('#form_json').val() );
+                form_name = $('#form_name').val();
+                if (!form_name) alert('Please provide a form name');
+            } catch(e) { alert('invalid json'); }
+
+            var doc = {
+                type: 'form',
+                name: form_name,
+                form_json: form_json
+            };
+
+            couchr.post('_db', doc, function(err, resp){
+                if (err) {
+                    var msg = "Problem saving. ";
+                    if (err && err.reason) msg += err.reason;
+                    return alert(msg);
+                }
+                router.setRoute('/' + resp.id);
+                // cheap hack to reload the select.
+                window.location.reload();
+            });
+            return false;
+        });
+
+    }
+
     exports.onDOMReady = function() {
         $(".footer .year").text(new Date().getFullYear());
         $(".version").text(new Date().getFullYear());
         initListeners();
         loadAvailableJson(function(err, data){
-            initProjectIndex(data);
-            router.init('/');
+            loadLocalForms(function(err2, data2){
+                // ignore err2
+                if (data2) data.push.apply(data, data2);
+                initProjectIndex(data);
+                router.init('/');
+            });
+
+
         });
         initJSONDisplay();
     };
