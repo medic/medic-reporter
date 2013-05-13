@@ -10,7 +10,7 @@
         
          "event": {
             "position": 1,
-            "type": "integer",
+            "type": "string",
             "labels": {
                "short": {
                   "en": "Event type"
