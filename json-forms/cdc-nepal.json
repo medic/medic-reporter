@@ -163,6 +163,28 @@
             "validations": {},
             "flags": {},
             "required": true
+         },
+         "pnu_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "PNU"
+               },
+               "description": {
+                  "en": "Number of pneumonia cases encountered"
+               },
+               "short": {
+                  "en": "Number of pneumonia cases"
+               }
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               8
+            ],
+            "validations": {},
+            "flags": {},
+            "required": true
          }
       },
       "facility_reference": "id",
