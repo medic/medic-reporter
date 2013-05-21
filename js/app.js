@@ -489,7 +489,7 @@ define([
         _.each(data, function(el, idx) {
             var $option = $('<option/>');
             $option.attr('value',el.id);
-            $option.text(el.text.replace('.json',''));
+            $option.text(el.text && el.text.replace('.json',''));
             $input.append($option);
         });
         $input.on('change', function() {
