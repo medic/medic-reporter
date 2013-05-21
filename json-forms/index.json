@@ -1,10 +1,12 @@
 {
     "0": [
-        "LMG.json",
         "brac-demo.json",
         "carlos-slim-testing.json",
         "carlos-slim-drugs.json",
         "cdc-nepal.json",
+        "cshi-mexico-pilot-muvuku.json",
+        "examples.json",
+        "LMG.json",
         "msh-benin-cs.json",
         "msh-benin-rc.json",
         "nyaya-nepal-v1.json",
@@ -16,7 +18,6 @@
         "psi-malawi-v2.json",
         "psi-mali-cs.json",
         "psi-mali-rc.json",
-        "examples.json",
         "unfpa-demo-v1.json"
     ]
 }
