@@ -289,7 +289,6 @@
       },
       "facility_reference": "id",
       "facility_required": true,
-      "messages_task": "function() { /* * return array of message objects, e.g: [{to: '+123', message: 'foo'},...] * context includes: phone, clinic, keys, labels, values * Clinic -> Health Center & Hospital */ var ret = [], msg = [], ignore = [], hc_ph = clinic && clinic.parent && clinic.parent.contact && clinic.parent.contact.phone, dh_ph = clinic && clinic.parent && clinic.parent.parent && clinic.parent.parent.contact.phone; keys.forEach(function(key) { if (ignore.indexOf(key) === -1) { msg.push(labels.shift() + ': ' + values.shift()); } else { labels.shift(); values.shift(); } }); ret.push({to:hc_ph, message:msg.join(', ')}, {to:dh_ph, message:msg.join(', ')}); return ret; }"
+      "messages_task": "function() { /* * return array of message objects, e.g: [{to: '+123', message: 'foo'},...] * context includes: phone, clinic, keys, labels, values * Clinic -> Health Center & Hospital */ function phone(f) { return f && f.contact && f.contact.phone; } var ret = [], msg = [], ignore = [], hc = clinic && clinic.parent, dh = hc && hc.parent, no = dh && dh.parent; keys.forEach(function(key) { if (ignore.indexOf(key) === -1) { msg.push(labels.shift() + ': ' + values.shift()); } else { labels.shift(); values.shift(); } }); ret.push( {to:phone(hc), message:msg.join(', ')}, {to:phone(dh), message:msg.join(', ')}, {to:phone(no), message:msg.join(', ')}); return ret;}"
    }
 ]
-
