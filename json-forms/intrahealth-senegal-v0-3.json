@@ -6,7 +6,7 @@
          },
          "code": "ISPF"
       },
-       "fields": {         "report_y": {
+       "fields": {         "year": {
             "position": 0,
             "type": "integer",
             "labels": {
@@ -53,7 +53,7 @@
                ]
             ]
          },
-         "report_m": {
+         "month": {
             "position": 1,
             "type": "integer",
             "labels": {
@@ -140,7 +140,8 @@
                      "fr": "Décembre"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "microgynon_cycle": {
             "position": 2,
@@ -319,7 +320,7 @@
          "code": "ISCP"
       },
       "fields": {
-         "report_y": {
+         "year": {
             "position": 0,
             "type": "integer",
             "labels": {
@@ -366,7 +367,7 @@
                ]
             ]
          },
-         "report_m": {
+         "month": {
             "position": 1,
             "type": "integer",
             "labels": {
@@ -453,7 +454,8 @@
                      "fr": "Décembre"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "nbr_cpn1": {
             "position": 2,
@@ -707,7 +709,7 @@
          "code": "ISLP"
       },
       "fields": {
-         "report_y": {
+         "year": {
             "position": 0,
             "type": "integer",
             "labels": {
@@ -754,7 +756,7 @@
                ]
             ]
          },
-         "report_m": {
+         "month": {
             "position": 1,
             "type": "integer",
             "labels": {
@@ -841,7 +843,8 @@
                      "fr": "Décembre"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "nbr_palu_moins5ans": {
             "position": 2,
@@ -900,7 +903,7 @@
          "code": "ISLD"
       },
       "fields": {
-         "report_y": {
+         "year": {
             "position": 0,
             "type": "integer",
             "labels": {
@@ -947,7 +950,7 @@
                ]
             ]
          },
-         "report_m": {
+         "month": {
             "position": 1,
             "type": "integer",
             "labels": {
@@ -1034,7 +1037,8 @@
                      "fr": "Décembre"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "nbr_dhiarre_moins5ans_poste": {
             "position": 2,
@@ -1078,7 +1082,7 @@
          "code": "ISLPV"
       },
       "fields": {
-         "report_y": {
+         "year": {
             "position": 0,
             "type": "integer",
             "labels": {
@@ -1125,7 +1129,7 @@
                ]
             ]
          },
-         "report_m": {
+         "month": {
             "position": 1,
             "type": "integer",
             "labels": {
@@ -1212,7 +1216,8 @@
                      "fr": "Décembre"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "nbr_total_enfant_penta3": {
             "position": 2,
@@ -1271,7 +1276,7 @@
          "code": "ISPT"
       },
       "fields": {
-         "report_y": {
+         "year": {
             "position": 0,
             "type": "integer",
             "labels": {
@@ -1318,7 +1323,7 @@
                ]
             ]
          },
-         "report_m": {
+         "month": {
             "position": 1,
             "type": "integer",
             "labels": {
@@ -1405,7 +1410,8 @@
                      "fr": "Décembre"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "nbr_f_enceintes_test_vih": {
             "position": 2,
@@ -1463,7 +1469,7 @@
          "code": "ISSV"
       },
       "fields": {
-         "report_y": {
+         "year": {
             "position": 0,
             "type": "integer",
             "labels": {
@@ -1510,7 +1516,7 @@
                ]
             ]
          },
-         "report_m": {
+         "month": {
             "position": 1,
             "type": "integer",
             "labels": {
@@ -1597,7 +1603,8 @@
                      "fr": "Décembre"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "nbr_visites_supervis": {
             "position": 2,
@@ -1686,7 +1693,7 @@
          "code": "ISSA"
       },
       "fields": {
-         "report_y": {
+         "year": {
             "position": 0,
             "type": "integer",
             "labels": {
@@ -1733,7 +1740,7 @@
                ]
             ]
          },
-         "report_m": {
+         "month": {
             "position": 1,
             "type": "integer",
             "labels": {
@@ -1820,7 +1827,8 @@
                      "fr": "Décembre"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "nbr_cases_zone": {
             "position": 2,
@@ -1879,7 +1887,7 @@
          "code": "ISRE"
       },
       "fields": {
-         "report_y": {
+         "year": {
             "position": 0,
             "type": "integer",
             "labels": {
@@ -1926,7 +1934,7 @@
                ]
             ]
          },
-         "report_m": {
+         "month": {
             "position": 1,
             "type": "integer",
             "labels": {
@@ -2013,7 +2021,8 @@
                      "fr": "Décembre"
                   }
                ]
-            ]
+            ],
+            "validations": {"is_numeric_month": true}
          },
          "nbr_evacuation_vers_struc": {
             "position": 2,
