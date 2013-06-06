@@ -773,7 +773,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "2. Salud Materna"
+			"es": "Salud Materna"
 		},
 		"code": "CSA2"
 	},
@@ -1103,7 +1103,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "3. Urgencia Obst"
+			"es": "Urgencia Obstetrica"
 		},
 		"code": "CSA3"
 	},
@@ -1265,7 +1265,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "4. Diab y lipidos"
+			"es": "Diabetes y lipidos"
 		},
 		"code": "CSA4"
 	},
@@ -1651,7 +1651,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "5. Plan. Fam."
+			"es": "Planification familiar"
 		},
 		"code": "CSA5"
 	},
@@ -2037,7 +2037,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "Antibiot (1)"
+			"es": "Antibioticos (1)"
 		},
 		"code": "CSA6"
 	},
@@ -2423,7 +2423,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "Antibiot (2)"
+			"es": "Antibioticos (2)"
 		},
 		"code": "CSA7"
 	},
@@ -2809,7 +2809,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "Parasit-Micot"
+			"es": "Antiparasitario/Antimicotico"
 		},
 		"code": "CSA8"
 	},
@@ -3167,7 +3167,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "Gastro"
+			"es": "Gastrointestinal"
 		},
 		"code": "CSA9"
 	},
@@ -3497,7 +3497,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "Analgesicos"
+			"es": "Analgesicos/Antipireticos"
 		},
 		"code": "CSB0"
 	},
@@ -3855,7 +3855,7 @@
 {
 	"meta": {
 		"label": {
-			"es": "DESINFLAMAT"
+			"es": "Antiinflamatorio"
 		},
 		"code": "CSB1"
 	},
