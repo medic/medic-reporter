@@ -175,7 +175,7 @@
          },
          "due_cycle": {
             "position": 4,
-            "type": "string",
+            "type": "integer",
             "labels": {
                "short": {
                   "fr": "Duet (cycle)"
