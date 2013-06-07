@@ -20,8 +20,8 @@ To use it simply start a http server in the _root_ directory:
 Usage
 ======
 
-You should be shown the `simple-example.json` form and can select any other
-`json` file in the dir to send SMS forms.
+You should be shown the `examples` forms and can select any other `JSON` file
+that is in `json-forms/index.json`.
 
 
 Todos
