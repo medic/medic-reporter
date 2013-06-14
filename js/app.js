@@ -8,13 +8,14 @@ define([
     'schema-support',
     './json_format',
     'couchr',
+    'querystring',
     'text!new_form.html',
     'json!json-forms/examples.json',
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
     'jam/json.edit/addons/enumlabels',
     'jam/bootstrap/js/bootstrap-dropdown.js'
-], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, couchr, new_form_html) {
+], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, couchr, querystring, new_form_html) {
 
 
     var exports = {},
@@ -39,10 +40,40 @@ define([
         sync_url: '/kujua-base/_design/kujua-base/_rewrite/add',
         json_forms_path: 'json-forms',
         gateway_num: '+13125551212',
-        message_format: 'muvuku'
+        message_format: 'muvuku',
+        extra: parseQuerystring()
     };
 
     var settings = _.extend({}, defaults);
+
+    settings.locale = defaults.extra.internal.locale || settings.locale;
+    settings.sync_url = defaults.extra.internal.sync_url || settings.sync_url;
+    settings.gateway_num = defaults.extra.internal.gateway_num || settings.gateway_num;
+
+    if (!defaults.extra.internal.hide_topbar) {
+        loadTopbar();
+    }
+    if (defaults.extra.internal.locale) {
+        $('#options select[name=locale]').val(defaults.extra.internal.locale);
+    }
+
+    if (defaults.extra.internal.gateway_num) {
+        $('#options input[name=from]').val(defaults.extra.internal.gateway_num);
+    }
+
+    if (defaults.extra.internal.debug) {
+        $('#debug').show();
+    }
+
+    if (defaults.extra.internal.textforms_option) {
+        $('#textforms_option').show();
+    }
+
+    if (defaults.extra.internal.use_textforms) {
+        $('#options input[name=use_textforms]').attr('checked', true);
+    } else {
+        $('#options input[name=use_textforms]').attr('checked', false);
+    }
 
     function onLocaleChange(ev) {
         settings.locale = $(this).val();
@@ -304,6 +335,7 @@ define([
             rendered = jsonEdit('form_fields', schemafied[code].schema);
 
         schema_used.setValue(json_format(JSON.stringify(schemafied[code].schema)));
+        prefill_form(settings.extra.form);
 
         $('#forms form .btn-success').text('Send');
         $('#forms form').off('submit');
@@ -573,6 +605,44 @@ define([
         });
 
     }
+
+
+    function parseQuerystring() {
+        if (!window.location.search) return;
+
+        var qs = querystring.parse(window.location.search.substring(1));
+        var internal = {};
+
+        _.each( _.keys(qs), function(name) {
+            if ( name.indexOf('_') === 0 ) {
+                var good_name = name.substring(1);
+                internal[good_name] = qs[name];
+                delete qs[name];
+            }
+        });
+
+        return {
+            internal: internal,
+            form: qs
+        };
+    }
+
+
+    function loadTopbar() {
+        var script = document.createElement("script");
+        script.src = '/dashboard/_design/dashboard/_rewrite/static/js/topbar.js?position=fixed';
+        document.head.appendChild( script );
+    }
+
+
+    function prefill_form(qs) {
+
+        _.each( _.keys(qs), function(name){
+            $('input[name='+ name +']').val( qs[name] );
+            // fallback to a select
+            $('select[name='+ name +']').val( qs[name] );
+        });
+    };
 
     exports.onDOMReady = function() {
         $(".footer .year").text(new Date().getFullYear());

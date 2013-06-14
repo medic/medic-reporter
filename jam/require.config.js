@@ -50,6 +50,11 @@ var jam = {
             "main": "json.edit.js"
         },
         {
+            "name": "querystring",
+            "location": "jam/querystring",
+            "main": "querystring.js"
+        },
+        {
             "name": "schema-support",
             "location": "jam/schema-support",
             "main": "translator.js"
@@ -126,6 +131,11 @@ if (typeof require !== "undefined" && require.config) {
             "main": "json.edit.js"
         },
         {
+            "name": "querystring",
+            "location": "jam/querystring",
+            "main": "querystring.js"
+        },
+        {
             "name": "schema-support",
             "location": "jam/schema-support",
             "main": "translator.js"
@@ -199,6 +209,11 @@ else {
             "name": "json.edit",
             "location": "jam/json.edit",
             "main": "json.edit.js"
+        },
+        {
+            "name": "querystring",
+            "location": "jam/querystring",
+            "main": "querystring.js"
         },
         {
             "name": "schema-support",
