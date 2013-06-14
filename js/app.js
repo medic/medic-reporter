@@ -46,9 +46,9 @@ define([
 
     var settings = _.extend({}, defaults);
 
-    settings.locale = defaults.extra.internal.locale || settings.locale;
-    settings.sync_url = defaults.extra.internal.sync_url || settings.sync_url;
-    settings.gateway_num = defaults.extra.internal.gateway_num || settings.gateway_num;
+    settings.locale = settings.extra.internal.locale || settings.locale;
+    settings.sync_url = settings.extra.internal.sync_url || settings.sync_url;
+    settings.gateway_num = settings.extra.internal.gateway_num || settings.gateway_num;
 
     if (!defaults.extra.internal.hide_topbar) {
         loadTopbar();
@@ -608,7 +608,7 @@ define([
 
 
     function parseQuerystring() {
-        if (!window.location.search) return;
+        if (!window.location.search) return { internal:{}, form: {} };
 
         var qs = querystring.parse(window.location.search.substring(1));
         var internal = {};
