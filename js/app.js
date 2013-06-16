@@ -14,7 +14,8 @@ define([
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
     'jam/json.edit/addons/enumlabels',
-    'jam/bootstrap/js/bootstrap-dropdown.js'
+    'jam/bootstrap/js/bootstrap-dropdown.js',
+    'jam/bootstrap/js/bootstrap-tab.js'
 ], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, couchr, querystring, new_form_html) {
 
 
@@ -50,9 +51,18 @@ define([
     settings.sync_url = settings.extra.internal.sync_url || settings.sync_url;
     settings.gateway_num = settings.extra.internal.gateway_num || settings.gateway_num;
 
+    if (defaults.extra.internal.embed_mode) {
+        $('body').addClass('embed-mode');
+        defaults.extra.internal.hide_topbar = true;
+    }
+
+
     if (!defaults.extra.internal.hide_topbar) {
         loadTopbar();
+    } else {
+        $('body').addClass('hide-topbar');
     }
+
     if (defaults.extra.internal.locale) {
         $('#options select[name=locale]').val(defaults.extra.internal.locale);
     }
@@ -81,12 +91,40 @@ define([
         loadProjectAndForm(args[0], args[1]);
     }
 
+    function tabTo(id) {
+    }
+
     function scrollTo($el, offset) {
         // addl 40px offset for topbar
         offset = offset || 40;
         $('html,body').animate({
             scrollTop: $el.offset().top - offset
         });
+    }
+
+    function showTab(href) {
+
+        // if navigation is hidden do nothing
+        if (!$('#navigation').is(':visible')) return;
+
+        // href of tab is id of tab content div
+        var ids = ['#options', '#forms', '#messages'];
+        _.each(ids, function(id) {
+            if (id === href) {
+                $('#navigation [href='+id+']').tab('show');
+                $(id).show();
+            } else {
+                $(id).hide();
+            }
+        });
+
+    }
+
+    function onClickTab(ev) {
+        ev.preventDefault();
+        var $link = $(this),
+            href = $link.attr('href');
+        showTab(href);
     }
 
     function onClickMenuItem(ev) {
@@ -338,43 +376,44 @@ define([
         prefill_form(settings.extra.form);
 
         $('#forms form .btn-success').text('Send');
-        $('#forms form').off('submit');
-        $('#forms form').on('submit', function (ev) {
-//            try {
-                ev.preventDefault();
-                var data = rendered.collect();
-                updateFieldErrors(data.result, schemafied[code].schema);
-                if (!data.result.ok)
+
+        function onSubmit(ev) {
+            ev.preventDefault();
+            var data = rendered.collect();
+            updateFieldErrors(data.result, schemafied[code].schema);
+
+            if (!data.result.ok)
+                return false;
+
+            schemafied[code].validate(data.data, function(err){
+                if (err) {
+                    showValidationErrorMsg(err);
                     return false;
-                schemafied[code].validate(data.data, function(err){
-                    if (err) {
-                        showValidationErrorMsg(err);
-                        return false;
-                    }
-                    schemafied[code].post_save(data.data, function(err, doc) {
-                        if (err) return handleError(err);
-                        editor.setValue(json_format(JSON.stringify(doc)));
-                        var msg;
-                        if (settings.message_format === 'textforms') {
-                            try {
-                                msg = convertToTextformsFormat(doc);
-                            } catch(e) {
-                                msg = convertToMuvukuFormat(doc);
-                            }
-                        } else {
+                }
+                schemafied[code].post_save(data.data, function(err, doc) {
+                    if (err) return handleError(err);
+                    editor.setValue(json_format(JSON.stringify(doc)));
+                    var msg;
+                    if (settings.message_format === 'textforms') {
+                        try {
+                            msg = convertToTextformsFormat(doc);
+                        } catch(e) {
                             msg = convertToMuvukuFormat(doc);
                         }
-                        scrollTo($('#messages'));
-                        $('#message').val(msg).trigger('keyup');
-                        $('#messages form').trigger('submit');
-                    });
-                })
-
-//            } catch (e) {
-//                console.log(e);
-//            }
+                    } else {
+                        msg = convertToMuvukuFormat(doc);
+                    }
+                    scrollTo($('#messages'));
+                    showTab('#messages');
+                    $('#message').val(msg).trigger('keyup');
+                    $('#messages form').trigger('submit');
+                });
+            })
             return false;
-        });
+        }
+
+        $('#forms form').off('submit');
+        $('#forms form').on('submit', onSubmit);
     }
 
 
@@ -439,6 +478,7 @@ define([
     }
 
     function initListeners() {
+        $('#navigation a').on('click', onClickTab);
         $('#menu [data-show]').on('click', onClickMenuItem);
         $('#messages form').on('submit', onSendMessage);
         $('#message').on('keyup', onMessageKeyUp);
@@ -574,8 +614,8 @@ define([
         $form_fields = $('#form_fields');
         $form_fields.html(new_form_html);
         $('#forms form .btn-success').text('Save');
-        $('#forms form').off('submit');
-        $('#forms form').on('submit', function (ev) {
+
+        function onSubmit(ev) {
             ev.preventDefault();
 
             var form_name, form_json;
@@ -602,7 +642,10 @@ define([
                 window.location.reload();
             });
             return false;
-        });
+        }
+
+        $('#forms form').off('submit');
+        $('#forms form').on('submit', onSubmit);
 
     }
 

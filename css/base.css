@@ -44,7 +44,10 @@
   display: none; 
 }
 .container-fluid {
-    padding-top: 40px;
+  padding-top: 40px;
+}
+.hide-topbar .container-fluid {
+  padding-top: 20px;
 }
 .console {
   height: 250px;
@@ -88,4 +91,14 @@
   #menu {
     display: block;
   }
+}
+/* embed mode */
+.embed-mode #navigation {
+  display: block;
+}
+.embed-mode  h2,
+.embed-mode  #forms, 
+.embed-mode #messages,
+.embed-mode .footer-wrap {
+  display: none;
 }
