@@ -56,6 +56,9 @@ define([
         defaults.extra.internal.hide_topbar = true;
     }
 
+    if (!defaults.extra.internal.hide_settings) {
+        $('body').addClass('show-settings');
+    }
 
     if (!defaults.extra.internal.hide_topbar) {
         loadTopbar();

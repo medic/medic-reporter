@@ -34,6 +34,13 @@
   display: none;
   margin: 0;
 }
+#options {
+  /* 
+   * hide options/settings by default since it only is displayed after
+   * processing query params 
+   * */
+  display: none;
+}
 #options [name=path] {
   width: 95%;
 }
@@ -45,9 +52,6 @@
 }
 .container-fluid {
   padding-top: 40px;
-}
-.hide-topbar .container-fluid {
-  padding-top: 20px;
 }
 .console {
   height: 250px;
@@ -92,7 +96,12 @@
     display: block;
   }
 }
-/* embed mode */
+.show-settings #options {
+  display: block;
+}
+.hide-topbar .container-fluid {
+  padding-top: 20px;
+}
 .embed-mode #navigation {
   display: block;
 }
