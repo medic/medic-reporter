@@ -94,9 +94,6 @@ define([
         loadProjectAndForm(args[0], args[1]);
     }
 
-    function tabTo(id) {
-    }
-
     function scrollTo($el, offset) {
         // addl 40px offset for topbar
         offset = offset || 40;
