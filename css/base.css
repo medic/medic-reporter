@@ -111,3 +111,8 @@
 .embed-mode .footer-wrap {
   display: none;
 }
+.debug-mode #debug,
+.debug-mode #sync_url_option,
+.debug-mode #debug_option {
+  display: block;
+}

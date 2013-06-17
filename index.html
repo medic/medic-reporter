@@ -47,9 +47,9 @@
                         <option value="es">Español</option>
                       </select>
                     </div>
-                    <div class="controls hide">
-                      <label for="path">Sync URL</label>
-                      <input type="text" name="path" value="/kujua-lite/_design/kujua-lite/_rewrite/add">
+                    <div id="sync_url_option" class="controls hide">
+                      <label for="sync_url">Sync URL</label>
+                      <input type="text" name="sync_url" placeholder="/kujua-base/_design/kujua-base/_rewrite/add">
                     </div>
                   </div>
                   <div id="textforms_option" class="controls">
@@ -58,7 +58,7 @@
                      </label>
                   </div>
                   <div class="controls-group">
-                      <div class="controls hide">
+                      <div id="debug_option" class="controls hide">
                          <label class="checkbox">
                            <input name="show_debug" type="checkbox"> Show debug panels
                          </label>

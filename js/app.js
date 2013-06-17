@@ -75,7 +75,7 @@ define([
     }
 
     if (defaults.extra.internal.debug) {
-        $('#debug').show();
+        $('body').addClass('debug-mode');
     }
 
     if (defaults.extra.internal.textforms_option) {
@@ -173,19 +173,31 @@ define([
         var data = options.data,
             host = options.host || 'localhost',
             port = options.port || 5984,
-            path = options.path,
+            url = options.url,
             method = options.method || 'POST',
             headers = options.headers || {'Content-Type': 'application/x-www-form-urlencoded'};
 
         $.ajax({
+            beforeSend: function(xhr, settings){
+                updateLog({
+                    url:settings.url,
+                    type:settings.type,
+                    data:settings.data,
+                    headers:settings.headers
+                });
+            },
             success: function(data, textStatus, xhr) {
+                updateLog(xhr.status + ' ' + xhr.statusText);
+                updateLog(data);
                 callback(null, data);
             },
-            error: function(xhr, textStatus, error) {
-                callback(error);
+            error: function(xhr) {
+                updateLog(xhr.status + ' ' + xhr.statusText);
+                updateLog(data);
+                callback(xhr);
             },
             headers: headers,
-            url: path,
+            url: url,
             type: method,
             data: data
         });
@@ -193,15 +205,15 @@ define([
     };
 
     function postMessageHTTP(options, callback) {
-        options.path = options.path || settings.sync_url;
-        options.path += '?locale=' + settings.locale;
+        options.url = options.url || settings.sync_url;
+        options.url += '?locale=' + settings.locale;
+        options.method = 'POST';
         options.data = {
             message_id: Math.ceil(Math.random() * 100000),
             sent_timestamp: new Date().valueOf(),
             message: options.message,
             from: options.phone
         };
-        updateLog(options.data);
         updateMessageLog(options.data.message, 'message');
         request(options, callback);
     }
@@ -246,10 +258,17 @@ define([
     }
 
     function handleError(data) {
-        updateLog(data);
         var err = 'Failed to parse response.';
-        $('.errors.alert .msg').html('<p>'+err+'</p>')
-            .closest('.errors').show();
+        $('.errors.alert .msg').html(
+            '<p>'+err+'</p>'
+        ).closest('.errors').show();
+        if (data.status) {
+            $('.errors.alert .msg').append(
+                '<code>'
+                + data.status+' '+data.statusText+'\n'
+                + '</code>'
+            )
+        }
     };
 
     function updateMessageLog(msg, type, timeout) {
@@ -291,8 +310,6 @@ define([
             return handleError(data);
         }
 
-        updateLog(resp);
-
         if (resp.payload && resp.payload.success) {
             if (resp.payload.messages) {
                 _.each(resp.payload.messages, function(msg) {
@@ -305,8 +322,12 @@ define([
         });
 
         if (resp.callback) {
-            resp.callback.options.data = JSON.stringify(resp.callback.data);
-            request(resp.callback.options, processResponse);
+            request({
+                url: resp.callback.options.path,
+                data: JSON.stringify(resp.callback.data),
+                method: resp.callback.options.method,
+                headers: resp.callback.options.headers
+            }, processResponse);
         }
         $('#message').val('');
     };
@@ -321,7 +342,7 @@ define([
         };
         if (!hasSMSAPI()) {
             fn = postMessageHTTP;
-            options.path = $('#options [name=path]').val();
+            options.url = $('[name=sync_url]').val() || settings.sync_url;
         }
         fn(options, processResponse);
     }
@@ -690,6 +711,9 @@ define([
     exports.onDOMReady = function() {
         $(".footer .year").text(new Date().getFullYear());
         $(".version").text(new Date().getFullYear());
+        if (settings.sync_url) {
+            $('[name=sync_url]').val(settings.sync_url);
+        }
         initListeners();
         loadAvailableJson(function(err, data){
             loadLocalForms(function(err2, data2){
