@@ -52,7 +52,23 @@ define([
     settings.gateway_num = settings.extra.internal.gateway_num || settings.gateway_num;
 
     if (defaults.extra.internal.embed_mode) {
-        $('body').addClass('embed-mode');
+
+        if (defaults.extra.internal.embed_mode === '2') {
+            var ids = ['#options',  '#messages'];
+            _.each(ids, function(id) {
+                $(id).hide();
+            });
+            $('#forms form').show();
+            $('#forms h2').hide();
+            $('#messages').show();
+            $('#messages h2').hide();
+            $('#messages .message-entry').hide();
+        }
+        else {
+            $('body').addClass('embed-mode');
+        }
+
+
         defaults.extra.internal.hide_topbar = true;
     }
 
