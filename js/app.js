@@ -113,6 +113,7 @@ define([
             if (id === href) {
                 $('#navigation [href='+id+']').tab('show');
                 $(id).show();
+                if (id === '#forms') $('#forms form').show();
             } else {
                 $(id).hide();
             }
