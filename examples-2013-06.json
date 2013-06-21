@@ -1,0 +1,2321 @@
+[
+   {
+      "meta": {
+         "code": "ZDIS",
+         "label": {
+            "en": "Disease Surveillance"
+         }
+      },
+      "fields": {
+         "id": {
+            "labels": {
+               "tiny": {
+                 "en": "ID"
+               },
+               "description": {
+                  "en": "Reporting Unit ID"
+               },
+               "short": {
+                  "en": "Unit ID"
+               }
+            },
+            "position": 0,
+            "type": "string",
+            "length": [
+               1,
+               8
+            ],
+            "required": true
+         },
+         "week_number": {
+            "labels": {
+               "tiny": {
+                  "en": "WKN"
+               },
+               "description": {
+                  "en": "Epi-week number for report"
+               },
+               "short": {
+                  "en": "Epi-week number"
+               }
+            },
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "range": [
+               1,
+               53
+            ],
+            "validations": {},
+            "flags": {},
+            "required": true
+         },
+         "year": {
+            "labels": {
+               "tiny": {
+                 "en": "YR"
+               },
+               "description": {
+                  "en": "Year of report"
+               },
+               "short": {
+                  "en": "Year"
+               }
+            },
+            "position": 2,
+            "type": "integer",
+            "length": [
+               4,
+               4
+            ],
+            "validations": {
+               "is_numeric_year": true
+            },
+            "required": true
+         },
+         "afp_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "AFP"
+               },
+               "description": {
+                  "en": "Number of acute flaccid paralysis (AFP) cases"
+               },
+               "short": {
+                  "en": "Number of AFP cases"
+               }
+            },
+            "position": 3,
+            "type": "integer",
+            "length": [
+               1,
+               8
+            ],
+            "validations": {},
+            "flags": {},
+            "required": true
+         },
+         "nnt_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "NNT"
+               },
+               "description": {
+                  "en": "Number of neonatal tetanus cases encountered"
+               },
+               "short": {
+                  "en": "Number of NNT cases"
+               }
+            },
+            "position": 4,
+            "type": "integer",
+            "length": [
+               1,
+               8
+            ],
+            "validations": {},
+            "flags": {},
+            "required": true
+         },
+         "msl_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "MSL"
+               },
+               "description": {
+                  "en": "Number of measles cases encountered"
+               },
+               "short": {
+                  "en": "Number of MSL cases"
+               }
+            },
+            "position": 5,
+            "type": "integer",
+            "length": [
+               1,
+               8
+            ],
+            "validations": {},
+            "flags": {},
+            "required": true
+         },
+         "aes_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "AES"
+               },
+               "description": {
+                  "en": "Number of acute encephalitis syndrome (AES) cases encountered"
+               },
+               "short": {
+                  "en": "Number of AES cases"
+               }
+            },
+            "position": 6,
+            "type": "integer",
+            "length": [
+               1,
+               8
+            ],
+            "validations": {},
+            "flags": {},
+            "required": true
+         },
+         "pnu_cases": {
+            "labels": {
+               "tiny": {
+                  "en": "PNU"
+               },
+               "description": {
+                  "en": "Number of pneumonia cases encountered"
+               },
+               "short": {
+                  "en": "Number of pneumonia cases"
+               }
+            },
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               8
+            ],
+            "validations": {},
+            "flags": {},
+            "required": true
+         }
+      },
+      "facility_reference": "id",
+      "facility_required": true
+   },
+   {
+       "meta": {
+          "code": "ZSTK",
+          "label": "Stock Monitoring"
+       },
+       "fields": {
+          "vc": {
+             "labels": {
+                "short": {
+                   "en": "Clinic Name"
+                }
+             },
+             "position": 1,
+             "type": "string",
+             "length": [
+                3,
+                15
+             ]
+          },
+          "year": {
+             "labels": {
+                "short": {
+                   "en": "Reporting Year"
+                }
+             },
+             "position": 2,
+             "type": "integer",
+             "list": [
+                [
+                   1,
+                   {
+                      "en": "2012"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "2013"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "2014"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "2015"
+                   }
+                ]
+             ]
+          },
+          "month": {
+             "labels": {
+                "short": {
+                   "en": "Reporting month"
+                }
+             },
+             "position": 3,
+             "validations": {
+                 "is_numeric_month": true
+             },
+             "type": "integer",
+             "list": [
+                [
+                   1,
+                   {
+                      "en": "January"
+                   }
+                ],
+                [
+                   2,
+                   {
+                      "en": "February"
+                   }
+                ],
+                [
+                   3,
+                   {
+                      "en": "March"
+                   }
+                ],
+                [
+                   4,
+                   {
+                      "en": "April"
+                   }
+                ],
+                [
+                   5,
+                   {
+                      "en": "May"
+                   }
+                ],
+                [
+                   6,
+                   {
+                      "en": "June"
+                   }
+                ],
+                [
+                   7,
+                   {
+                      "en": "July"
+                   }
+                ],
+                [
+                   8,
+                   {
+                      "en": "August"
+                   }
+                ],
+                [
+                   9,
+                   {
+                      "en": "September"
+                   }
+                ],
+                [
+                   10,
+                   {
+                      "en": "October"
+                   }
+                ],
+                [
+                   11,
+                   {
+                      "en": "November"
+                   }
+                ],
+                [
+                   12,
+                   {
+                      "en": "December"
+                   }
+                ]
+             ]
+          },
+          "qty_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "On hand: LA6x1"
+                }
+             },
+             "position": 4,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "On hand: LA6x2"
+                }
+             },
+             "position": 5,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_apap": {
+             "labels": {
+                "short": {
+                   "en": "On hand: Paracetamol"
+                }
+             },
+             "position": 6,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "On hand: Cotrimoxazole"
+                }
+             },
+             "position": 7,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_zinc": {
+             "labels": {
+                "short": {
+                   "en": "On hand: Zinc"
+                }
+             },
+             "position": 8,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_ors": {
+             "labels": {
+                "short": {
+                   "en": "On hand: ORS"
+                }
+             },
+             "position": 9,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "qty_eye": {
+             "labels": {
+                "short": {
+                   "en": "On hand: Eye ointment"
+                }
+             },
+             "position": 10,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed: LA6x1"
+                }
+             },
+             "position": 11,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed: LA6x2"
+                }
+             },
+             "position": 12,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_apap": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed: Paracetamol"
+                }
+             },
+             "position": 13,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_ord": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed: ORS"
+                }
+             },
+             "position": 14,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed: Zinc"
+                }
+             },
+             "position": 15,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed: Cotrimoxazole"
+                }
+             },
+             "position": 16,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "disp_eye": {
+             "labels": {
+                "short": {
+                   "en": "Dispensed: Eye ointment"
+                }
+             },
+             "position": 17,
+             "type": "integer",
+             "length": [
+                1,
+                4
+             ]
+          },
+          "loss_la6x1": {
+             "labels": {
+                "short": {
+                   "en": "Losses: LA6x1"
+                }
+             },
+             "position": 18,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_la6x2": {
+             "labels": {
+                "short": {
+                   "en": "Losses: LA6x2"
+                }
+             },
+             "position": 19,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_apap": {
+             "labels": {
+                "short": {
+                   "en": "Losses: Paracetamol"
+                }
+             },
+             "position": 20,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_ors": {
+             "labels": {
+                "short": {
+                   "en": "Losses: ORS"
+                }
+             },
+             "position": 21,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_zinc": {
+             "labels": {
+                "short": {
+                   "en": "Losses: Zinc"
+                }
+             },
+             "position": 22,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_cotrx": {
+             "labels": {
+                "short": {
+                   "en": "Losses: Cotrimoxazole"
+                }
+             },
+             "position": 23,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          },
+          "loss_eye": {
+             "labels": {
+                "short": {
+                   "en": "Losses: Eye ointment"
+                }
+             },
+             "position": 24,
+             "type": "integer",
+             "length": [
+                1,
+                3
+             ]
+          }
+       }
+    },
+    {
+    "meta": {
+      "code": "ZSRV",
+      "label": {
+        "en": "Service Monitoring",
+        "ne": "Service Monitoring"
+      }
+    },
+    "fields": {
+      "q1": {
+        "labels": {
+          "description": {
+            "en": "Number of new antenatal visits",
+            "ne": "नयाँ गर्भ जाँच गराएका महिलाको संख्या"
+          },
+          "short": {
+            "en": "Antenatal visits",
+            "ne": "नयाँ गर्भ जाँच"
+          }
+        },
+        "position": 1,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q2": {
+        "labels": {
+          "description": {
+            "en": "Number of home deliveries assisted by health/sub health post staff",
+            "ne": "स्वास्थ्यकर्मीद्वारा घरमा गराईएको सुत्केरी संख्या"
+          },
+          "short": {
+            "en": "Home deliveries assisted by health/sub health post staff",
+            "ne": "स्वास्थ्यकर्मीद्वारा घरमा गराईएको सुत्केरी"
+          }
+        },
+        "position": 2,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q3": {
+        "labels": {
+          "description": {
+            "en": "Number of deliveries conducted in health facility",
+            "ne": "स्वा्स्थ्यसंस्थामा गराईएको सुत्केरी संख्या"
+          },
+          "short": {
+            "en": "Deliveries conducted in health facitlity",
+            "ne": "स्वा्स्थ्यसंस्थामा गराईएको सुत्केरी"
+          }
+        },
+        "position": 3,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q4": {
+        "labels": {
+          "description": {
+            "en": "Number of postnatal visits",
+            "ne": "सुत्केरी जाँच गराएका महिलाको संख्या"
+          },
+          "short": {
+            "en": "Postnatal visits",
+            "ne": "सुत्केरी जाँच"
+          }
+        },
+        "position": 4,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q5": {
+        "labels": {
+          "description": {
+            "en": "Number of postnatal complications",
+            "ne": "सुत्केरी अवस्थामा देखिने जटिल स्वास्थ्य समस्याहरु देखिएका महिलाको संख्या"
+          },
+          "short": {
+            "en": "Postnatal complications",
+            "ne": "सुत्केरी अवस्थामा देखिएका जटिल समस्या"
+          }
+        },
+        "position": 5,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q6": {
+        "labels": {
+          "description": {
+            "en": "Number of neonatal (0-28 days old) deaths at health facility",
+            "ne": "स्वास्थ्य संस्थामा भएको नवशिशु (०- २८ दिन) मृत्युको संख्या "
+          },
+          "short": {
+            "en": "Neonatal (0-28 days old) deaths at health facility ",
+            "ne": "स्वास्थ्य संस्थामा भएको नवशिशु (०- २८ दिन) मृत्यु"
+          }
+        },
+        "position": 6,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q7": {
+        "labels": {
+          "description": {
+            "en": "Number of maternal deaths at health facility",
+            "ne": "स्वास्थ्य संस्थामा भएको मातृ मृत्युको संख्या "
+          },
+          "short": {
+            "en": "Maternal deaths at health facility",
+            "ne": "स्वास्थ्य संस्थामा भएको मातृ मृत्यु"
+          }
+        },
+        "position": 7,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q8": {
+        "labels": {
+          "description": {
+            "en": "Number of family planning visits",
+            "ne": " प्रदान गरिएको परिवार नियोजन सेवाको संख्या"
+          },
+          "short": {
+            "en": "Family planning visits",
+            "ne": "परिवार नियोजन सेवा"
+          }
+        },
+        "position": 8,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q9": {
+        "labels": {
+          "description": {
+            "en": "Number of total outpatient visits",
+            "ne": "स्वास्थ्य संस्थामा आएका जम्मा बिरामीहरुको संख्या"
+          },
+          "short": {
+            "en": "Total outpatient visits",
+            "ne": "स्वास्थ्य संस्थामा आएका जम्मा बिरामीहरु"
+          }
+        },
+        "position": 9,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q10": {
+        "labels": {
+          "description": {
+            "en": "Number of neonatal (0-28 days old) outpatient visits",
+            "ne": "स्वास्थ्य संस्थामा आएका जम्मा नवशिशु बिरामीहरुको संख्या (०- २८ दिन)"
+          },
+          "short": {
+            "en": "Neonatal (0-28 days old) outpatient visits",
+            "ne": "स्वास्थ्य संस्थामा आएका जम्मा नवशिशु (०- २८ दिन) बिरामीहरु"
+          }
+        },
+        "position": 10,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q11": {
+        "labels": {
+          "description": {
+            "en": "Number of pediatric outpatient visits (28 days - 5 years old)",
+            "ne": "स्वास्थ्य संस्थामा आएका जम्मा बच्चा बिरामीहरुको संख्या (२८ दिन- ५ बर्ष)"
+          },
+          "short": {
+            "en": "Pediatric outpatient visits (28 days- 5 yrs old)",
+            "ne": "स्वास्थ्य संस्थामा आएका बच्चा बिरामीहरु (२८ दिन- ५ बर्ष)"
+          }
+        },
+        "position": 11,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q12": {
+        "labels": {
+          "description": {
+            "en": "Number of malnutrition screenings conducted (0-5 years old)",
+            "ne": "प्रदान गरिएको कुपोषण जाँच सेवाको संख्या (०-५ बर्ष)"
+          },
+          "short": {
+            "en": "Malnutrition screenings conducted (0-5 years old)",
+            "ne": "कुपोषण जाँच सेवा"
+          }
+        },
+        "position": 12,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q13": {
+        "labels": {
+          "description": {
+            "en": "Number of malnutrition cases treated/referred",
+            "ne": "कुपोषणको उपचार प्रेषणको संख्या"
+          },
+          "short": {
+            "en": "Malnutrition cases treated/referred ",
+            "ne": "कुपोषणको उपचार प्रेषण"
+          }
+        },
+        "position": 13,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q14": {
+        "labels": {
+          "description": {
+            "en": "Number of diarrheal cases (0-5 years old)",
+            "ne": "झाडापखालाका बिरामीहरु (०-५ बर्ष) को संख्या"
+          },
+          "short": {
+            "en": "Diarrheal cases (0-5 yrs old)",
+            "ne": "झाडापखालाका बिरामीहरु (०-५ बर्ष)"
+          }
+        },
+        "position": 14,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q15": {
+        "labels": {
+          "description": {
+            "en": "Number of acute respiratory infection (pneumonia) cases (0-5 years old)",
+            "ne": "'ए. आर. आई' (निमोनिया) का बिरामीहरुको संख्या (०-५ बर्ष)"
+          },
+          "short": {
+            "en": "Acute respiratory infection (pneumonia) cases (0-5 yrs old)",
+            "ne": "'ए. आर. आई' (निमोनिया) का बिरामीहरु"
+          }
+        },
+        "position": 15,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q16": {
+        "labels": {
+          "description": {
+            "en": "Number of patients receiving directly observed treatment shortcourse (DOTS) medications",
+            "ne": "'टि. बी को औषधी (डट्स)' लिने बिरामीहरुको संख्या"
+          },
+          "short": {
+            "en": "Patient receiving DOTS medications",
+            "ne": "'टि. बी को औषधी (डट्स)' लिने बिरामीहरु"
+          }
+        },
+        "position": 16,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q17": {
+        "labels": {
+          "description": {
+            "en": "Number of malaria cases suspected/confirmed",
+            "ne": "औलो (मलेरिया) का संकास्पद वा पत्ता लागेका बिरामीहरुको संख्या"
+          },
+          "short": {
+            "en": "Malaria cases suspected/confirmed",
+            "ne": "औलो (मलेरिया) का बिरामीहरु"
+          }
+        },
+        "position": 17,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q18": {
+        "labels": {
+          "description": {
+            "en": "Number of vaccination events planned this month",
+            "ne": "मासिक रुपमा खोप क्लिनिक संचालन गर्नुपर्ने संख्या (योजना गरेको)"
+          },
+          "short": {
+            "en": "Vaccination events planned",
+            "ne": "मासिक रुपमा खोप क्लिनिक संचालन गर्नुपर्ने संख्या"
+          }
+        },
+        "position": 18,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q19": {
+        "labels": {
+          "description": {
+            "en": "Number of vaccination events conducted this month",
+            "ne": "मासिक रुपमा खोप क्लिनिक संचालन भएको संख्या "
+          },
+          "short": {
+            "en": "Vaccination events conducted",
+            "ne": "मासिक रुपमा खोप क्लिनिक संचालन भएको संख्या "
+          }
+        },
+        "position": 19,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q20": {
+        "labels": {
+          "description": {
+            "en": "Number of outreach clinics planned this month",
+            "ne": "मासिक रुपमा गाउँघर क्लिनिक संचालन गर्नुपर्ने संख्या (योजना गरेको)"
+          },
+          "short": {
+            "en": "Outreach clinics planned",
+            "ne": "मासिक रुपमा गाउँघर क्लिनिक संचालन गर्नुपर्ने संख्या"
+          }
+        },
+        "position": 20,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      },
+      "q21": {
+        "labels": {
+          "description": {
+            "en": "Number of outreach clinics conducted this month",
+            "ne": "मासिक रुपमा गाउँघर क्लिनिक संचालन भएको संख्या"
+          },
+          "short": {
+            "en": "Outreach clinics conducted",
+            "ne": "मासिक रुपमा गाउँघर क्लिनिक संचालन भएको संख्या"
+          }
+        },
+        "position": 21,
+        "type": "integer",
+        "length": [
+          1,
+          2
+        ],
+        "required": true
+      }
+    }
+  },
+{
+      "meta": {
+         "label": {
+            "en": "MNCH: Register Pregnancy",
+            "ne": "MNCH: गर्भवती दर्ता फारम"
+         },
+         "code": "ZMRP"
+      },
+      "fields": {
+         "serial_number": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Serial number for pregnant woman",
+                  "ne": "गर्भवती महिलाको गणना नं"
+               },
+               "tiny": {
+                  "en": "SN"
+               },
+               "description": {
+                  "en": "Serial number for pregnant woman"
+               }
+            },
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                1, 2
+            ],
+            "required": true
+         },
+         "last_menstrual_period": {
+            "position": 1,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Weeks since LMP",
+                  "ne": "अन्तिम महिनावारी भएको कति हप्ता भयो?"
+               },
+               "tiny": {
+                  "en": "LMP"
+               },
+               "description": {
+                  "en": "Weeks since last menstrual period"
+               }
+            },
+            "length": [
+               1, 2
+            ],
+            "required": true
+         }
+      },
+      "use_sentinel": true
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "MNCH: Counseling Form",
+            "ne": "MNCH: परामर्श फारम"
+         },
+         "code": "ZMCF"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID",
+                  "ne": "महिलाको दर्ता नं (५ अङ्क)"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient Identifier"
+               }
+            },
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                5, 5
+            ]
+         },
+         "anc_pnc": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 1,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "ANC or PNC?",
+                  "ne": "महिला गर्भवती हुन् या सुत्केरी हुन्?"
+               },
+               "tiny": {
+                  "en": "ANC"
+               },
+               "description": {
+                  "en": "ANC or PNC?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "ANC",
+                     "ne": "गर्भवती"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "PNC",
+                     "ne": "सुत्केरी"
+                  }
+               ]
+            ]
+         },
+         "deworming_tablet": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 2,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Deworming tablet taken?",
+                  "ne": "जुकाको औषधि खाएको?"
+               },
+               "tiny": {
+                  "en": "WORM"
+               },
+               "description": {
+                  "en": "Deworming tablet taken?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "None available",
+                     "ne": "उपलब्ध छैन"
+                  }
+               ]
+            ],
+            "conditions": {
+                "anc_pnc": 1
+            }
+         },
+         "iron_tablet": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 3,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Has the woman been taking iron tablets everyday?",
+                  "ne": "नियमित आईरन चक्की खाईरहेको?"
+               },
+               "tiny": {
+                  "en": "Iron"
+               },
+               "description": {
+                  "en": "Iron tablets given on this visit?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "None available",
+                     "ne": "उपलब्ध छैन"
+                  }
+               ]
+            ],
+            "conditions": {
+                "anc_pnc": 1
+            }
+         },
+         "tetanus_toxoid": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 4,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "TT received?",
+                  "ne": "टि.टि खोप लगाएको?"
+               },
+               "tiny": {
+                  "en": "TT"
+               },
+               "description": {
+                  "en": "Tetanus toxoid received?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "One",
+                     "ne": "एक वटा"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Two",
+                     "ne": "दुई वटा"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "None",
+                     "ne": "छैन"
+                  }
+               ]
+            ],
+            "conditions": {
+                "anc_pnc": 1
+            }
+         },
+         "misoprostol_counseling": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 5,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Misoprostol counseling given on this visit?",
+                  "ne": "यो भेटमा मात्री-सुरक्षा चक्की बारे परामर्श दिएको?"
+               },
+               "tiny": {
+                  "en": "MISOC"
+               },
+               "description": {
+                  "en": "Misoprostol counseling given on this visit?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ],
+            "validations": {
+                "confirm_misoprostol": true
+            },
+            "conditions": {
+                "anc_pnc": 1
+            }
+         },
+         "misoprostol_given": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 6,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Misoprostol given on this visit?",
+                  "ne": "यो भेटमा मातृ-सुरक्षा चक्की दिएको?"
+               },
+               "tiny": {
+                  "en": "MISO"
+               },
+               "description": {
+                  "en": "Misoprostol given on this visit?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "None available",
+                     "ne": "उपलब्ध छैन"
+                  }
+               ]
+            ],
+            "conditions": {
+                "anc_pnc": 1
+            }
+         },
+         "days_since_birth": {
+            "position": 7,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "range": [
+               0,
+               99
+            ],
+            "labels": {
+               "short": {
+                  "en": "Days since birth",
+                  "ne": "बच्चा जन्मेको कति दिन भयो?"
+               },
+               "tiny": {
+                  "en": "DAYS"
+               },
+               "description": {
+                  "en": "Days since baby's birth"
+               }
+            },
+            "conditions": {
+                "anc_pnc": 2
+            }
+         },
+         "vitamins": {
+            "position": 8,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Vitamins Given?",
+                  "ne": "भिटामिन दिएको?"
+               },
+               "tiny": {
+                  "en": "VIT"
+               },
+               "description": {
+                  "en": "Were vitamins given to the patient?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "None available",
+                     "ne": "उपलब्ध छैन"
+                  }
+               ]
+            ],
+            "conditions": {
+                "anc_pnc": 2
+            }
+         },
+         "weight": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 9,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Weight of Baby",
+                  "ne": "बच्चाको तौल"
+               },
+               "tiny": {
+                  "en": "WT"
+               },
+               "description": {
+                  "en": "Category for baby's current weight"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Red",
+                     "ne": "रातो"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Yellow",
+                     "ne": "पहेंलो"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Green",
+                     "ne": "हरियो"
+                  }
+               ]
+            ],
+            "conditions": {
+                "anc_pnc": 2
+            }
+         }
+      },
+      "use_sentinel": true
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "MNCH: Emergency Report",
+            "ne": "MNCH: आकस्मिक प्रतिबेदन"
+         },
+         "code": "ZMER"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID",
+                  "ne": "महिलाको दर्ता नं (५ अङ्क)"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient Identifier"
+               }
+            },
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                5, 5
+            ]
+         },
+         "anc_labor_pnc": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 1,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "ANC, in labor, or PNC?",
+                  "ne": "महिला गर्भवती हुन्, उनीलाई व्यथा लागेको छ या उनी सुत्केरी हुन्?"
+               },
+               "tiny": {
+                  "en": "ALP"
+               },
+               "description": {
+                  "en": "ANC, in labor, or PNC?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "ANC",
+                     "ne": "गर्भवती"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "In labor",
+                     "ne": "व्यथा लागेको"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "PNC",
+                     "ne": "सुत्केरी"
+                  }
+               ]
+            ]
+         },
+         "labor_danger": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 2,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Danger sign?",
+                  "ne": "खतराका चिन्ह देख्नुहुन्छ या देख्नुहुन्न?"
+               },
+               "tiny": {
+                  "en": "DNGR"
+               },
+               "description": {
+                  "en": "Danger sign?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "देख्छु"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "देख्दिन"
+                  }
+               ]
+            ]
+         },
+         "advice_received": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 3,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Advice received from a health worker?",
+                  "ne": "स्वास्थ्यकर्मि बाट सल्लाह लिनुभयो?"
+               },
+               "tiny": {
+                  "en": "ADVRX"
+               },
+               "description": {
+                  "en": "Have you received advice from a health worker yet?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ],
+            "conditions-operator": "||",
+            "conditions": {
+               "anc_labor_pnc": 2,
+               "labor_danger": 1
+            },
+            "validations": {
+              "confirm_advice_received": true
+            }
+         },
+         "patient_referred": {
+            "length": [
+               1,
+               1
+            ],
+            "position": 4,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Patient referred to health facility?",
+                  "ne": "महिलालाई स्वास्थ्य संस्थामा रिफर गर्नुभयो?"
+               },
+               "tiny": {
+                  "en": "PTREF"
+               },
+               "description": {
+                  "en": "Patient referred to health facility?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "छ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "छैन"
+                  }
+               ]
+            ],
+            "conditions-operator": "||",
+            "conditions": {
+               "anc_labor_pnc": 2,
+               "labor_danger": 1
+            },
+            "validations": {
+               "confirm_patient_referred": true
+            }
+         }
+      },
+      "use_sentinel": true
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "MNCH: Birth Outcome Report",
+            "ne": "MNCH: जन्मअवस्थाको प्रतिबेदन"
+         },
+         "code": "ZMBO"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID",
+                  "ne": "महिलाको दर्ता नं (५ अङ्क)"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient's unique identifier"
+               }
+            },
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                5, 5
+            ]
+         },
+         "days_since_delivery": {
+            "position": 1,
+            "type": "integer",
+            "length": [
+               1,
+               2
+            ],
+            "range": [
+               0,
+               99
+            ],
+            "labels": {
+               "short": {
+                  "en": "Days since birth",
+                  "ne": "बच्चा जन्मेको कति दिन भयो?"
+               },
+               "tiny": {
+                  "en": "DAYS"
+               },
+               "description": {
+                  "en": "Days since patient's delivery"
+               }
+            }
+         },
+         "birth_site": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               4
+            ],
+            "position": 2,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Place of Delivery",
+                  "ne": "प्रशुती भएको ठाउँ"
+               },
+               "tiny": {
+                  "en": "SITE"
+               },
+               "description": {
+                  "en": "Site of birth"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Home",
+                     "ne": "घर"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Health facility",
+                     "ne": "स्वास्थ्य संस्था"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "On the way",
+                     "ne": "स्वास्थ्य संस्था जाँदै गर्दा बाटोमा"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "en": "Other place",
+                     "ne": "अन्य ठाउँ"
+                  }
+               ]
+            ]
+         },
+         "incentive_received": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               2
+            ],
+            "position": 3,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Facility delivery incentive received by mother?",
+                  "ne": "स्वास्थ्य संस्थामा डेलिभरी गराए वापत सुत्केरी महिलाले पैसा पाउनु भयो?"
+               },
+               "tiny": {
+                  "en": "INC"
+               },
+               "description": {
+                  "en": "Was a facility delivery incentive received by the mother?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "भयो"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "भएन"
+                  }
+               ]
+            ],
+            "conditions": {
+              "birth_site": 2
+            }
+         },
+         "reporter_present": {
+            "position": 4,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Were you present at delivery?",
+                  "ne": "के तपाई प्रशुती गराउदा उपस्थित हुनुहुन्थ्यो?"
+               },
+               "tiny": {
+                  "en": "PRES"
+               },
+               "description": {
+                  "en": "Were you present at delivery?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "थिएँ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "थिइन"
+                  }
+               ]
+            ]
+         },
+         "persons_present": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               4
+            ],
+            "position": 5,
+            "multiple": true,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Who else was present at delivery?",
+                  "ne": "प्रशुती गराउँदा अरु को उपस्थित हुनुहुन्थ्यो?"
+               },
+               "tiny": {
+                  "en": "PPL"
+               },
+               "description": {
+                  "en": "Person or people present during delivery"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Skilled birth attendant",
+                     "ne": "दक्ष प्रशुतीकर्मी"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Birth attendant",
+                     "ne": "प्रशुतीकर्मी"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Family member",
+                     "ne": "परिवारका सदस्य"
+                  }
+               ],
+               [
+                  4,
+                  {
+                     "en": "No one",
+                     "ne": "कोही पनि थिएनन्"
+                  }
+               ],
+               [
+                  5,
+                  {
+                      "en": "Others",
+                      "ne": "अन्य"
+                  }
+               ]
+            ]
+         },
+         "outcome_mother": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 6,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Outcome for Mother",
+                  "ne": "आमा को अबस्था"
+               },
+               "tiny": {
+                  "en": "MOM"
+               },
+               "description": {
+                  "en": "Post-delivery outcome for mother"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Alive and Well",
+                     "ne": "जीवित र स्वस्थ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Alive and Sick",
+                     "ne": "जीवित र बिरामी"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Deceased",
+                     "ne": "मृत्यु"
+                  }
+               ]
+            ]
+         },
+         "outcome_child": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 7,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Outcome for Baby",
+                  "ne": "बच्चाको अबस्था"
+               },
+               "tiny": {
+                  "en": "KID"
+               },
+               "description": {
+                  "en": "Post-delivery outcome for newborn baby"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Alive and Well",
+                     "ne": "जीवित र स्वस्थ"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Alive and Sick",
+                     "ne": "जीवित र बिरामी"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Deceased",
+                     "ne": "मृत्यु"
+                  }
+               ]
+            ]
+         },
+         "birth_weight": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "position": 8,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Weight of baby",
+                  "ne": "बच्चाको तौल"
+               },
+               "tiny": {
+                  "en": "WT"
+               },
+               "description": {
+                  "en": "Weight of newborn child at birth"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Red",
+                     "ne": "रातो"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Yellow",
+                     "ne": "पहेंलो"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Green",
+                     "ne": "हरियो"
+                  }
+               ]
+            ],
+            "conditions": {
+                "outcome_child": 1,
+                "outcome_child": 2
+            },
+            "conditions-operator": "||"
+         },
+         "chlorhexidine_applied": {
+            "position": 9,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "labels": {
+               "short": {
+                  "en": "Chlorhexidine applied?",
+                  "ne": "के बच्चाको नाभीमा नाभी मल्हम लगाइयो?"
+               },
+               "tiny": {
+                  "en": "CHLOR"
+               },
+               "description": {
+                  "en": "Was chlorhexidine applied?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "लगाइयो"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "लगाइएन"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Not Available",
+                     "ne": "उपलब्ध थिएन"
+                  }
+               ]
+            ],
+            "conditions": {
+                "outcome_child": 1,
+                "outcome_child": 2
+            },
+            "conditions-operator": "||"
+         },
+         "misoprostol_administered": {
+            "position": 10,
+            "type": "integer",
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               3
+            ],
+            "labels": {
+               "short": {
+                  "en": "Was misoprostol administered?",
+                  "ne": "के मात्री-सुरक्षा चक्की खुवाएको थियो?"
+               },
+               "tiny": {
+                  "en": "MIS"
+               },
+               "description": {
+                  "en": "Was misoprostol administered?"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Yes",
+                     "ne": "थियो"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "No",
+                     "ne": "थिएन"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Not Available",
+                     "ne": "उपलब्ध थिएन"
+                  }
+               ]
+            ],
+            "validations": {
+               "confirm_misoprostol_return": true
+            }
+         }
+      },
+      "use_sentinel": true
+   },
+   {
+      "meta": {
+         "label": {
+            "en": "MNCH: Start/Stop Notifications",
+            "ne": "MNCH: सुचना सुरु / बन्द"
+         },
+         "code": "ZMSS"
+      },
+      "fields": {
+         "patient_id": {
+            "position": 0,
+            "type": "string",
+            "labels": {
+               "short": {
+                  "en": "Patient ID",
+                  "ne": "गर्भवती महिलाको दर्ता"
+               },
+               "tiny": {
+                  "en": "ID"
+               },
+               "description": {
+                  "en": "Patient Identifier"
+               }
+            },
+            "flags": {
+                "input_digits_only": true
+            },
+            "length": [
+                5, 5
+            ]
+         },
+         "notifications": {
+            "position": 1,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Notifications?",
+                  "ne": "सुचनाहरु?"
+               },
+               "tiny": {
+                  "en": "SMS"
+               },
+               "description": {
+                  "en": "Change state of FCHV notifications"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "On",
+                     "ne": "सुरु"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Off",
+                     "ne": "बन्द"
+                  }
+               ]
+            ]
+         },
+         "reason": {
+            "length": [
+               1,
+               1
+            ],
+            "range": [
+               1,
+               4
+            ],
+            "position": 2,
+            "multiple": true,
+            "type": "integer",
+            "labels": {
+               "short": {
+                  "en": "Reason For Deactivation",
+                  "ne": "सुचना निस्क्रिय पार्नुको कारणहरु"
+               },
+               "tiny": {
+                  "en": "WHY"
+               },
+               "description": {
+                  "en": "Reason for deactivation of reminders"
+               }
+            },
+            "list": [
+               [
+                  1,
+                  {
+                     "en": "Cannot be found",
+                     "ne": "पत्ता लगाउन नसकेर"
+                  }
+               ],
+               [
+                  2,
+                  {
+                     "en": "Deceased",
+                     "ne": "मृत्यु भएर"
+                  }
+               ],
+               [
+                  3,
+                  {
+                     "en": "Refuses care",
+                     "ne": "स्याहार अस्वीकार भएर"
+                  }
+               ],
+              [
+                  4,
+                  {
+                     "en": "Miscarriage",
+                     "ne": "गर्भ तुहिएर"
+                  }
+               ],
+               [
+                  5,
+                  {
+                     "en": "No Reason Given",
+                     "ne": "कारण नदिइएको"
+                  }
+               ]
+            ],
+            "conditions": {
+                "notifications": 2
+            }
+         }
+      },
+      "use_sentinel": true
+   }   
+]
