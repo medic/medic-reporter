@@ -636,7 +636,7 @@ define([
 
     function noFormSelected() {
         // on first load, just show the example json form VPD, in english
-        router.setRoute('/examples.json/ZZZZ');
+        router.setRoute('/examples.json/ZDIS');
     }
 
 
