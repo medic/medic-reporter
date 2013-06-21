@@ -111,6 +111,14 @@
 .embed-mode .footer-wrap {
   display: none;
 }
+.embed-mode-2 #forms h2,
+.embed-mode-2 #forms form,
+.embed-mode-2 #options, 
+.embed-mode-2 #messages h2,
+.embed-mode-2 #messages .message-entry,
+.embed-mode-2 .footer-wrap {
+  display: none;
+}
 .debug-mode #debug,
 .debug-mode #sync_url_option,
 .debug-mode #debug_option {

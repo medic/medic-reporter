@@ -54,15 +54,7 @@ define([
     if (defaults.extra.internal.embed_mode) {
 
         if (defaults.extra.internal.embed_mode === '2') {
-            var ids = ['#options',  '#messages'];
-            _.each(ids, function(id) {
-                $(id).hide();
-            });
-            $('#forms form').show();
-            $('#forms h2').hide();
-            $('#messages').show();
-            $('#messages h2').hide();
-            $('#messages .message-entry').hide();
+            $('body').addClass('embed-mode-2');
         }
         else {
             $('body').addClass('embed-mode');
