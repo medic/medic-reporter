@@ -17,20 +17,20 @@
   background: #ddd;
   word-wrap: break-word;
 }
-#messages textarea {
+#compose textarea {
   width: 100%;
 }
-#messages form {
+#compose form {
   margin: 0;
 }
-#messages .send {
+#compose .send {
   margin-top: 20px;
   margin-left: 10%;
 }
-#messages .pull-left {
+#compose .pull-left {
   width: 70%;
 }
-#messages .count {
+#compose .count {
   display: none;
   margin: 0;
 }
@@ -105,17 +105,19 @@
 .embed-mode #navigation {
   display: block;
 }
-.embed-mode  h2,
-.embed-mode  #forms, 
-.embed-mode #messages,
+.embed-mode h2,
+.embed-mode #options, 
+.embed-mode #compose,
 .embed-mode .footer-wrap {
   display: none;
 }
-.embed-mode-2 #forms h2,
-.embed-mode-2 #forms form,
-.embed-mode-2 #options, 
-.embed-mode-2 #messages h2,
-.embed-mode-2 #messages .message-entry,
+.embed-mode-2 #navigation {
+  display: block;
+}
+.embed-mode-2 h2,
+.embed-mode-2 #options,
+.embed-mode-2 #compose,
+.embed-mode-2 #compose .message-entry,
 .embed-mode-2 .footer-wrap {
   display: none;
 }

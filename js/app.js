@@ -55,6 +55,8 @@ define([
 
         if (defaults.extra.internal.embed_mode === '2') {
             $('body').addClass('embed-mode-2');
+            // change title to Log for regular users
+            $('#navigation [href=#compose]').text('Log');
         }
         else {
             $('body').addClass('embed-mode');
@@ -116,7 +118,7 @@ define([
         if (!$('#navigation').is(':visible')) return;
 
         // href of tab is id of tab content div
-        var ids = ['#options', '#forms', '#messages'];
+        var ids = ['#options', '#forms', '#compose'];
         _.each(ids, function(id) {
             if (id === href) {
                 $('#navigation [href='+id+']').tab('show');
@@ -433,10 +435,10 @@ define([
                     } else {
                         msg = convertToMuvukuFormat(doc);
                     }
-                    scrollTo($('#messages'));
-                    showTab('#messages');
+                    scrollTo($('#messages-log'));
+                    showTab('#compose');
                     $('#message').val(msg).trigger('keyup');
-                    $('#messages form').trigger('submit');
+                    $('#compose form').trigger('submit');
                 });
             })
             return false;
@@ -510,7 +512,7 @@ define([
     function initListeners() {
         $('#navigation a').on('click', onClickTab);
         $('#menu [data-show]').on('click', onClickMenuItem);
-        $('#messages form').on('submit', onSendMessage);
+        $('#compose form').on('submit', onSendMessage);
         $('#message').on('keyup', onMessageKeyUp);
         $('[data-dismiss=alert]').on('click', function () {
             $(this).parent('div').hide();
