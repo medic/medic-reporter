@@ -1,12 +1,10 @@
-Install
-=======
+## Install
 
 Push the couchapp with erica:
 
     erica push http://localhost:5984/json-forms
 
-FFOS
------
+### FFOS
 
 `manifest.webapp` is used by FF OS's style of app development.
 
@@ -17,31 +15,23 @@ To use it simply start a http server in the _root_ directory:
     Serving app at http://0.0.0.0:9100/
 
 
-Usage
-======
+## Usage
 
 You should be shown the `examples` forms and can select any other `JSON` file
 that is in `json-forms/index.json`.
 
+## License & Copyright
 
-Todos
-=====
+Copyright 2013 Medic Mobile, 501(c)(3)  <hello@medicmobile.org>
 
-Add text input field where sms message shown and available to be edited, so a
-free-form text message can also be sent via SMS or HTTP.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-Fix validation on subsequent sends.
+   http://www.apache.org/licenses/LICENSE-2.0
 
-Add localization, should probably have a dropdown for locale.
-https://github.com/fabi1cazenave/webL10n
-
-Be able to send SMS when running on iOS/Android/FFOS.  Check for feasiblity on
-Android + Aurora or what options we have for sending SMS when using Android
-without internet connection.  Probably ok to require internet connection?
-
-Save sent forms and maintain a history, then x forms can be edited and sent or
-re-sent, emulating Muvuku.  Show clear confirmation when SMS message are
-sent/forms are submitted. Maybe add a history tab that displays this
-information.  Should probably use local storage or maybe pouchdb (+
-browserid?).
-
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
