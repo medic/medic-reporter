@@ -7,6 +7,7 @@ define([
     'codemirror',
     'schema-support',
     './json_format',
+    './config',
     'couchr',
     'querystring',
     'text!new_form.html',
@@ -16,7 +17,7 @@ define([
     'jam/json.edit/addons/enumlabels',
     'jam/bootstrap/js/bootstrap-dropdown.js',
     'jam/bootstrap/js/bootstrap-tab.js'
-], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, couchr, querystring, new_form_html) {
+], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, config, couchr, querystring, new_form_html) {
 
 
     var exports = {},
@@ -48,7 +49,8 @@ define([
     var settings = _.extend({}, defaults);
 
     settings.locale = settings.extra.internal.locale || settings.locale;
-    settings.sync_url = settings.extra.internal.sync_url || settings.sync_url;
+    // passed as param trumps internal config
+    settings.sync_url = settings.extra.internal.sync_url || config('sync_url') || settings.sync_url;
     settings.gateway_num = settings.extra.internal.gateway_num || settings.gateway_num;
 
     if (defaults.extra.internal.embed_mode) {

@@ -1,0 +1,31 @@
+function(doc, req) {
+    return {
+        body: '' +
+        'define([\'jquery\'], function($) {\n' +
+        '    var config = {};\n' +
+        '\n' +
+        '    try {\n' +
+        '        config = ' + JSON.stringify(this.app_settings || {}) + ';\n' +
+        '    } catch (e) { /* do nothing */ }\n' +
+        '    if (config.translations) {\n' +
+        '        config.translations.forEach(function(t) {\n' +
+        '            if (t.key && !config[t.key]) {\n' +
+        '                config[t.key] = t.value;\n' +
+        '            }\n' +
+        '        })\n' +
+        '    }\n' +
+        '    return function(key, noFallback) {\n' +
+        '        if (arguments.length === 0) {\n' +
+        '            return config;\n' +
+        '        } else if (config[key] || noFallback) {\n' +
+        '            return config[key];\n' +
+        '        } else {\n' +
+        '            return key;\n' +
+        '        }\n' +
+        '    };\n' +
+        '});',
+        headers: {
+            'Content-Type': 'text/javascript'
+        }
+    };
+}
