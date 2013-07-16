@@ -49,7 +49,8 @@ define([
     var settings = _.extend({}, defaults);
 
     settings.locale = settings.extra.internal.locale || settings.locale;
-    settings.sync_url = config('sync_url') || settings.sync_url;
+    // passed as param trumps internal config
+    settings.sync_url = settings.extra.internal.sync_url || config('sync_url') || settings.sync_url;
     settings.gateway_num = settings.extra.internal.gateway_num || settings.gateway_num;
 
     if (defaults.extra.internal.embed_mode) {
