@@ -1,5 +1,5 @@
 {
-  "version": "0.0.31",
+  "version": "0.0.32",
   "name": "Muvuku",
   "description": "Post and validate SMS Forms.",
   "long_description": "Post and validate SMS Forms.",
@@ -18,5 +18,16 @@
   "screenshots": [
      "img/promo/screenshot1.png"
   ],
-  "default_locale": "en"
+  "default_locale": "en",
+  "settings_schema" : {
+    "description": "Muvuku Settings",
+    "type": "object",
+    "properties": {
+      "sync_url": {
+        "type": "string",
+        "title": "Sync Url",
+        "default": "/kujua-lite/_design/kujua-lite/_rewrite/add"
+      }
+    }
+  }
 }
