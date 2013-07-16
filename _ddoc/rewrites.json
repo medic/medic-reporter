@@ -5,5 +5,6 @@
     { "from": "_ddoc/*" , "to"  : "*"},
 
     { "from": "/", "to": "index.html"},
+    { "from": "/js/config.js", "to": "_show/config"},
     { "from": "/*", "to": "*"}
 ]
