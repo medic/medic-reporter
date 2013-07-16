@@ -14,11 +14,24 @@ To use it simply start a http server in the _root_ directory:
     Manifest URL: http://0.0.0.0:9100/manifest.webapp
     Serving app at http://0.0.0.0:9100/
 
-
 ## Usage
 
 You should be shown the `examples` forms and can select any other `JSON` file
 that is in `json-forms/index.json`.
+
+## Configuration Parameters
+
+Special parameters are:
+    `_hide_topbar` - set to true so the dashboard topbar will not be displayed
+    `_locale` - preset the local the form will render in
+    `_sync_url` - set the sync_url value
+    `_gateway_num` - set the gateway number
+    `_debug` - show the debug panel
+    `_textforms_option` - show the textforms checkbox option
+    `_use_textforms` - if set to 'true' then toggle it to on.
+    `_embed_mode` query param that uses tabs for use within kujua 
+
+All other parameters attempt to bind into the form.
 
 ## License & Copyright
 
