@@ -1,5 +1,10 @@
 ## Install
 
+Clone the repo and update submodules:
+
+    git clone --recursive https://github.com/medic/muvuku-webapp
+    cd muvuku-webapp
+
 Push the couchapp with erica:
 
     erica push http://localhost:5984/muvuku
