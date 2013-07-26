@@ -11,7 +11,7 @@ define([
     'couchr',
     'querystring',
     'text!new_form.html',
-    'json!json-forms/examples.json',
+    'json!forms/json/examples.json',
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
     'jam/json.edit/addons/enumlabels',
@@ -40,7 +40,8 @@ define([
     var defaults = {
         locale: 'en',
         sync_url: '/kujua-base/_design/kujua-base/_rewrite/add',
-        json_forms_path: 'json-forms',
+        json_forms_index_path: 'forms/index.json',
+        json_forms_path: 'forms/json',
         gateway_num: '+13125551212',
         message_format: 'muvuku',
         extra: parseQuerystring()
@@ -537,7 +538,7 @@ define([
     // Used to find all the .json files in the root of this project
     function loadAvailableJson(callback) {
         var results = [];
-        $.get(settings.json_forms_path+'/index.json', function(data) {
+        $.get(settings.json_forms_index_path, function(data) {
             var index;
             if (typeof data === 'string')
                 index = JSON.parse(data)[0];

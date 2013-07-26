@@ -2,7 +2,7 @@
 
 Push the couchapp with erica:
 
-    erica push http://localhost:5984/json-forms
+    erica push http://localhost:5984/muvuku
 
 ### FFOS
 
@@ -17,7 +17,7 @@ To use it simply start a http server in the _root_ directory:
 ## Usage
 
 You should be shown the `examples` forms and can select any other `JSON` file
-that is in `json-forms/index.json`.
+that is in `forms/index.json`.
 
 ## Configuration Parameters
 
