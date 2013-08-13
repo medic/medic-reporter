@@ -39,7 +39,7 @@ define([
     // settings  defaults, include all settings values here
     var defaults = {
         locale: 'en',
-        sync_url: '/kujua-base/_design/kujua-base/_rewrite/add',
+        sync_url: '/kujua-lite/_design/kujua-lite/_rewrite/add',
         json_forms_index_path: 'forms/index.json',
         json_forms_path: 'forms/json',
         gateway_num: '+13125551212',
