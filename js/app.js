@@ -18,8 +18,6 @@ define([
     'jam/bootstrap/js/bootstrap-dropdown.js',
     'jam/bootstrap/js/bootstrap-tab.js'
 ], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, config, couchr, querystring, new_form_html) {
-
-
     var exports = {},
         routes = {
             '/' : noFormSelected,
@@ -39,6 +37,7 @@ define([
     // settings  defaults, include all settings values here
     var defaults = {
         locale: 'en',
+        task_filter: 'kujua-lite/tasks_by_id',
         sync_url: '/kujua-lite/_design/kujua-lite/_rewrite/add',
         json_forms_index_path: 'forms/index.json',
         json_forms_path: 'forms/json',
@@ -329,6 +328,8 @@ define([
                 _.each(resp.payload.messages, function(msg) {
                     msgs.push(msg.message);
                 });
+            } else if (resp.payload.id) {
+                taskListener(resp.payload.id);
             }
         }
         _.each(msgs, function(msg) {
@@ -345,6 +346,57 @@ define([
         }
         $('#message').val('');
     };
+
+    function taskListener(id, since) {
+        var options,
+            url;
+
+        options = {
+            feed: 'longpoll',
+            heartbeat: 10000,
+            filter: settings.task_filter,
+            id: id,
+            since: since || 1
+        };
+
+        url = settings.sync_url.replace(/_design.+$/, '_changes?' + querystring.stringify(options));
+
+        $.ajax({
+            success: function(change) {
+                change = JSON.parse(change);
+
+                logTasks(id);
+                taskListener(id, change.last_seq);
+            },
+            url: url
+        });
+    }
+
+    var taskCache = {};
+
+    function logTasks(id) {
+        var url = settings.sync_url.replace(/_design.+$/, id);
+
+        // initialise taskCache if not already set
+        taskCache[id] = taskCache[id] || {};
+
+        $.ajax({
+            success: function(doc) {
+                doc = JSON.parse(doc);
+
+                _.each(doc.tasks, function(task) {
+                    var message = task.messages[0].message,
+                        newMessage = !taskCache[id][message];
+
+                    if (newMessage) {
+                        taskCache[id][message] = true;
+                        updateMessageLog(message, 'response');
+                    }
+                });
+            },
+            url: url
+        });
+    }
 
     function onSendMessage(ev) {
         ev.preventDefault();
