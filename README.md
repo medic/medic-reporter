@@ -35,7 +35,8 @@ Special parameters are:
 * `_debug` - show the debug panel
 * `_textforms_option` - show the textforms checkbox option
 * `_use_textforms` - if set to 'true' then toggle it to on.
-* `_embed_mode` query param that uses tabs for use within kujua 
+* `_embed_mode=1` query param that uses tabs for use within kujua 
+* `_embed_mode=2` same as 1 but also hides project select list, useful to show only specific project. e.g. `/?_embed_mode=2#/icss-mexico.json`
 
 All other parameters attempt to bind into the form.
 
