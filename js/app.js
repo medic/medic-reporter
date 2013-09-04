@@ -33,7 +33,7 @@ define([
         schemafied,
         selected_form,
         log,
-        showForms;
+        show_forms;
 
     // settings  defaults, include all settings values here
     var defaults = {
@@ -102,7 +102,7 @@ define([
     }
 
     if (defaults.extra.internal.show) {
-        showForms = defaults.extra.internal.show.toLowerCase().split(',');
+        show_forms = defaults.extra.internal.show.toLowerCase().split(',');
     }
 
     function onLocaleChange(ev) {
@@ -653,8 +653,7 @@ define([
         _.each(data, function(el, idx) {
             var $option = $('<option/>'),
                 text = el.text && el.text.replace('.json','');
-
-            if (!showForms || _.contains(showForms, text.toLowerCase())) {
+            if (!show_forms || _.contains(show_forms, text.toLowerCase())) {
                 $option.attr('value',el.id);
                 $option.text(el.text && el.text.replace('.json',''));
                 $input.append($option);
