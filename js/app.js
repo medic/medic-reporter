@@ -32,7 +32,8 @@ define([
         schema_used,
         schemafied,
         selected_form,
-        log;
+        log,
+        showForms;
 
     // settings  defaults, include all settings values here
     var defaults = {
@@ -98,6 +99,10 @@ define([
         $('#options input[name=use_textforms]').attr('checked', true);
     } else {
         $('#options input[name=use_textforms]').attr('checked', false);
+    }
+
+    if (defaults.extra.internal.show) {
+        showForms = defaults.extra.internal.show.toLowerCase().split(',');
     }
 
     function onLocaleChange(ev) {
@@ -646,10 +651,14 @@ define([
     function initProjectIndex(data){
         var $input = $('#choose-project');
         _.each(data, function(el, idx) {
-            var $option = $('<option/>');
-            $option.attr('value',el.id);
-            $option.text(el.text && el.text.replace('.json',''));
-            $input.append($option);
+            var $option = $('<option/>'),
+                text = el.text && el.text.replace('.json','');
+
+            if (!showForms || _.contains(showForms, text.toLowerCase())) {
+                $option.attr('value',el.id);
+                $option.text(el.text && el.text.replace('.json',''));
+                $input.append($option);
+            }
         });
         $input.on('change', function() {
             var val = $(this).val();
