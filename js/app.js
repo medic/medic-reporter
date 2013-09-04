@@ -650,6 +650,10 @@ define([
 
     function initProjectIndex(data){
         var $input = $('#choose-project');
+        if (show_forms) {
+            // hide ability to choose project
+            $('#choose-project').hide();
+        }
         _.each(data, function(el, idx) {
             var $option = $('<option/>'),
                 text = el.text && el.text.replace('.json','');
