@@ -224,6 +224,14 @@
             }
         }
 
+        if (property.type === "month") {
+            prop.type = "string";
+            if (property.length) {
+                prop.minLength = property.length[0];
+                prop.maxLength = property.length[1];
+            }
+        }
+
         if (property.list) {
             prop['je:hint'] = 'enumlabels';
             prop['je:enumlabels'] = {};
