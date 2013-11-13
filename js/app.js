@@ -591,7 +591,6 @@ define([
     };
 
     function initI18N(locale) {
-        console.log('initI18N locale', locale);
         $.i18n.init({
             resStore: translations,
             lng: locale || 'en'
