@@ -2031,6 +2031,11 @@ var jam = {
             "main": "events.js"
         },
         {
+            "name": "i18next",
+            "location": "jam/i18next",
+            "main": "i18next.js"
+        },
+        {
             "name": "jquery",
             "location": "jam/jquery",
             "main": "jquery.js"
@@ -2112,6 +2117,11 @@ if (typeof require !== "undefined" && require.config) {
             "main": "events.js"
         },
         {
+            "name": "i18next",
+            "location": "jam/i18next",
+            "main": "i18next.js"
+        },
+        {
             "name": "jquery",
             "location": "jam/jquery",
             "main": "jquery.js"
@@ -2190,6 +2200,11 @@ else {
             "name": "events",
             "location": "jam/events",
             "main": "events.js"
+        },
+        {
+            "name": "i18next",
+            "location": "jam/i18next",
+            "main": "i18next.js"
         },
         {
             "name": "jquery",

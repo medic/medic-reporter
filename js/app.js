@@ -11,6 +11,7 @@ define([
     'couchr',
     'querystring',
     'text!new_form.html',
+    'i18next',
     'json!forms/json/examples.json',
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
@@ -109,6 +110,7 @@ define([
         settings.locale = $(this).val();
         var args = $('#choose-form :selected').val().split('/');
         loadProjectAndForm(args[0], args[1]);
+        initI18N(settings.locale);
     }
 
     function scrollTo($el, offset) {
@@ -540,6 +542,64 @@ define([
     }
 
 
+    var translations = {
+        es: {
+            translation: {
+                labels : {
+                    forms: "Formas",
+                    log: "Log",
+                    compose: "Componer",
+                    settings: "Configuración",
+                    select_form: "Seleccione la forma",
+                    send: "Enviar",
+                    sent_from: "Enviad",
+                    locale: "Lugar",
+                    use_textforms: "Utilice el formato Textforms cuando esté disponible"
+                }
+            }
+        },
+        fr: {
+            translation: {
+                labels : {
+                    forms: "Formulaires",
+                    log: "Connexion",
+                    compose: "Composez",
+                    settings: "Réglages",
+                    select_form: "Sélectionnez forme",
+                    send: "Envoyer",
+                    sent_from: "envoyé à partir de",
+                    locale: "Locale",
+                    use_textforms: "Utiliser le format Textforms lorsque disponible"
+                }
+            }
+        },
+        dev: {
+            translation: {
+                labels : {
+                    forms: "Forms",
+                    log: "Log",
+                    compose: "Compose",
+                    settings: "Settings",
+                    select_form: "Select Form",
+                    send: "Send",
+                    sent_from: "Sent From",
+                    locale: "Locale",
+                    use_textforms: "Use Textforms format when available"
+                }
+            }
+        }
+    };
+
+    function initI18N(locale) {
+        console.log('initI18N locale', locale);
+        $.i18n.init({
+            resStore: translations,
+            lng: locale || 'en'
+        }, function(t) {
+            $("body").i18n();
+        });
+    };
+
     function initJSONDisplay() {
         var elem = $('.results').get()[0];
         editor = CodeMirror(elem, {
@@ -787,6 +847,7 @@ define([
     };
 
     exports.onDOMReady = function() {
+        initI18N(settings.locale);
         $(".footer .year").text(new Date().getFullYear());
         $(".version").text(new Date().getFullYear());
         if (settings.sync_url) {
@@ -800,8 +861,6 @@ define([
                 initProjectIndex(data);
                 router.init('/');
             });
-
-
         });
         initJSONDisplay();
     };
