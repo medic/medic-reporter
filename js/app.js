@@ -546,15 +546,15 @@ define([
         es: {
             translation: {
                 labels : {
-                    forms: "Formas",
+                    forms: "Reportes",
                     log: "Log",
-                    compose: "Componer",
+                    compose: "Escribir",
                     settings: "Configuración",
-                    select_form: "Seleccione la forma",
+                    select_form: "Seleccione el reporte",
                     send: "Enviar",
-                    sent_from: "Enviad",
-                    locale: "Lugar",
-                    use_textforms: "Utilice el formato Textforms cuando esté disponible"
+                    sent_from: "Enviado desde",
+                    locale: "Idioma",
+                    use_textforms: "Utilice el formato TextForms cuando disponible"
                 }
             }
         },
@@ -562,14 +562,14 @@ define([
             translation: {
                 labels : {
                     forms: "Formulaires",
-                    log: "Connexion",
+                    log: "Log",
                     compose: "Composez",
-                    settings: "Réglages",
-                    select_form: "Sélectionnez forme",
+                    settings: "Paramètres",
+                    select_form: "Sélectionnez formulaire",
                     send: "Envoyer",
-                    sent_from: "envoyé à partir de",
-                    locale: "Locale",
-                    use_textforms: "Utiliser le format Textforms lorsque disponible"
+                    sent_from: "En provenance de",
+                    locale: "Langue",
+                    use_textforms: "Utiliser le format TextForms lors disponible"
                 }
             }
         },
@@ -584,7 +584,7 @@ define([
                     send: "Send",
                     sent_from: "Sent From",
                     locale: "Locale",
-                    use_textforms: "Use Textforms format when available"
+                    use_textforms: "Use TextForms format when available"
                 }
             }
         }
