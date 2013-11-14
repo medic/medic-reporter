@@ -683,6 +683,17 @@ define([
         });
     }
 
+    function loadUserDoc(callback) {
+        couchr.get('_couch/_session/', function(err, data){
+            if (err) return callback(err);
+            var url = '_couch/_users/org.couchdb.user:' + data.userCtx.name;
+            couchr.get(url, function(err, data) {
+                if (err) return callback(err);
+                callback(null, data);
+            });
+        });
+    }
+
 
 
     function initFormSelect(project, forms, form_code) {
@@ -853,6 +864,14 @@ define([
             $('[name=sync_url]').val(settings.sync_url);
         }
         initListeners();
+        // set default phone number if not passed in as query param
+        if (!settings.extra.internal.gateway_num) {
+            loadUserDoc(function(err, data) {
+                if (data.phone) {
+                    $('#options [name=from]').val(data.phone);
+                }
+            });
+        }
         loadAvailableJson(function(err, data){
             loadLocalForms(function(err2, data2){
                 // ignore err2

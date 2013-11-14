@@ -3,6 +3,8 @@
     { "from": "_db/*" , "to"  : "../../*" },
     { "description": "Access to this design document" , "from": "_ddoc" , "to"  : "" },
     { "from": "_ddoc/*" , "to"  : "*"},
+    { "description": "Access to this couch" , "from": "_couch" , "to"  : "../../.." },
+    { "from": "_couch/*" , "to"  : "../../../*" },
 
     { "from": "/", "to": "index.html"},
     { "from": "/js/config.js", "to": "_show/config"},
