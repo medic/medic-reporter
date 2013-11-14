@@ -684,9 +684,9 @@ define([
     }
 
     function loadUserDoc(callback) {
-        couchr.get('_couch/_session/', function(err, data){
+        couchr.get('_session/', function(err, data){
             if (err) return callback(err);
-            var url = '_couch/_users/org.couchdb.user:' + data.userCtx.name;
+            var url = '_users/org.couchdb.user:' + data.userCtx.name;
             couchr.get(url, function(err, data) {
                 if (err) return callback(err);
                 callback(null, data);

@@ -3,8 +3,10 @@
     { "from": "_db/*" , "to"  : "../../*" },
     { "description": "Access to this design document" , "from": "_ddoc" , "to"  : "" },
     { "from": "_ddoc/*" , "to"  : "*"},
-    { "description": "Access to this couch" , "from": "_couch" , "to"  : "../../.." },
-    { "from": "_couch/*" , "to"  : "../../../*" },
+    { "description": "Access to session db" , "from": "_session" , "to"  : "../../../_session" },
+    { "from": "_session/*" , "to"  : "../../../_session/*" },
+    { "description": "Access to users db" , "from": "_users" , "to"  : "../../../_users" },
+    { "from": "_users/*" , "to"  : "../../../_users/*" },
 
     { "from": "/", "to": "index.html"},
     { "from": "/js/config.js", "to": "_show/config"},
