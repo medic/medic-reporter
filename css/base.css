@@ -114,6 +114,9 @@
 .embed-mode-2 #navigation {
   display: block;
 }
+.embed-mode-2 .nav-tabs .options {
+  display: none;
+}
 .embed-mode-2 h2,
 .embed-mode-2 #options,
 .embed-mode-2 #choose-project,

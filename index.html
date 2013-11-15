@@ -20,12 +20,24 @@
   </head>
   <body>
 
-  <div class="container-fluid">
+  <div class="container-fluid loader">
+      <div class="row-fluid">
+          <div class="span3">
+              <div class="well">
+                <p data-i18n="labels.loading_forms">Loading forms...</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container-fluid hide main">
       <div id="navigation" class="row-fluid hide">
           <ul class="nav nav-tabs">
               <li class="active"><a data-i18n="labels.forms" href="#forms" data-toggle="tab"></a></li>
-              <li><a href="#compose" data-i18n="labels.compose" data-toggle="tab"></a></li>
-              <li>
+              <li class="compose">
+                <a href="#compose" data-i18n="labels.compose" data-toggle="tab"></a>
+              </li>
+              <li class="options">
                 <a href="#options" data-i18n="labels.settings" data-toggle="tab"></a>
               </li>
           </ul>
@@ -35,7 +47,6 @@
               <h2 data-i18n="labels.forms"></h2>
               <div class="well">
                 <legend data-i18n="labels.select_form">Select Form</legend>
-                <p class="loader">Loading forms...</p>
                 <form class="hide">
                   <fieldset>
                     <div class="controls-group">

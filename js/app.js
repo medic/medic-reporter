@@ -60,7 +60,7 @@ define([
         if (defaults.extra.internal.embed_mode === '2') {
             $('body').addClass('embed-mode-2');
             // change title to Log for regular users
-            $('#navigation [href=#compose]').text('Log');
+            $('#navigation [href=#compose]').attr('data-i18n', 'labels.log');
         }
         else {
             $('body').addClass('embed-mode');
@@ -320,7 +320,6 @@ define([
         if (err)
             return handleError(err);
 
-        //$('.log').prepend('<p>'+data+'</p>');
         try {
             if (typeof data === 'string')
                 resp = JSON.parse(data);
@@ -715,7 +714,8 @@ define([
             router.setRoute('/' + val);
         });
         $input.closest('form').show();
-        $input.closest('.well').find('.loader').hide();
+        $('.container-fluid.loader').hide();
+        $('.container-fluid.main').show();
     }
 
     function initProjectIndex(data){
@@ -738,7 +738,7 @@ define([
             router.setRoute('/' + val);
         });
         $input.closest('form').show();
-        $input.closest('.well').find('.loader').hide();
+        $('.container-fluid.loader').hide();
     }
 
     function loadProject(file, callback) {
