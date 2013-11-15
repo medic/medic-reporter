@@ -906,7 +906,7 @@ define([
                 phone = user.facility.contact && user.facility.contact.phone;
             }
             if (!phone) {
-                phone = data.phone;
+                phone = user.phone;
             }
             $('#options [name=from]').val(phone);
         }
