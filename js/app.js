@@ -691,7 +691,6 @@ define([
 
     function loadUserProfile(callback) {
         couchr.get('_session/', function(err, data){
-            console.log('_session/', data);
             if (err) {
                 return callback(err);
             }
@@ -706,11 +705,14 @@ define([
                 user.roles = _.uniq(user.roles.concat(data.userCtx.roles));
                 if (user.facility_id) {
                     request({
-                        url: settings.kujua_db + '/' + user.facility_id
+                        url: settings.kujua_db + '/' + user.facility_id,
+                        method: 'GET'
                     }, function(err, data) {
-                        console.log('facility', data);
+                        if (err) return callback(err);
                         // attach user facility if found
-                        user.facility = data;
+                        if (data) {
+                            user.facility = JSON.parse(data);
+                        }
                         callback(null, user);
                     });
                 } else {
@@ -898,8 +900,15 @@ define([
 
     function setPhoneNumber(user) {
         // set a phone number if not passed in as query param
-        if (!settings.extra.internal.gateway_num && data.phone) {
-            $('#options [name=from]').val(user.phone);
+        var phone;
+        if (!settings.extra.internal.gateway_num) {
+            if (user.facility) {
+                phone = user.facility.contact && user.facility.contact.phone;
+            }
+            if (!phone) {
+                phone = data.phone;
+            }
+            $('#options [name=from]').val(phone);
         }
     }
 
@@ -910,14 +919,15 @@ define([
             $('[name=sync_url]').val(settings.sync_url);
         }
         initListeners();
+        initJSONDisplay();
         loadUserProfile(function(err, user) {
-            console.log('loadUserProfile', user);
             if (err) {
                 return $('.loader p').text(JSON.stringify(err));
             }
             if (!hasPermissions(user)) {
                 return $('.loader p').text("Please log in with an authorized account.");
             }
+            setPhoneNumber(user);
             initI18N(settings.locale);
             loadAvailableJson(function(err, data){
                 loadLocalForms(function(err2, data2){
@@ -927,7 +937,6 @@ define([
                     router.init('/');
                 });
             });
-            initJSONDisplay();
         });
     };
 
