@@ -55,6 +55,13 @@ define([
     settings.sync_url = settings.extra.internal.sync_url || config('sync_url', true) || settings.sync_url;
     settings.gateway_num = settings.extra.internal.gateway_num || settings.gateway_num;
 
+    (function setKujuaDB() {
+        var z = settings.sync_url.split('/');
+        z.pop();
+        z.push('_db');
+        settings.kujua_db = z.join('/');
+    })();
+
     if (defaults.extra.internal.embed_mode) {
 
         if (defaults.extra.internal.embed_mode === '2') {
@@ -682,13 +689,33 @@ define([
         });
     }
 
-    function loadUserDoc(callback) {
+    function loadUserProfile(callback) {
         couchr.get('_session/', function(err, data){
-            if (err) return callback(err);
+            console.log('_session/', data);
+            if (err) {
+                return callback(err);
+            }
+            if (!data.userCtx || !data.userCtx.name) {
+                return callback("Please log in.");
+            }
             var url = '_users/org.couchdb.user:' + data.userCtx.name;
-            couchr.get(url, function(err, data) {
+            couchr.get(url, function(err, user) {
                 if (err) return callback(err);
-                callback(null, data);
+                // combine session roles with user doc roles, basically
+                // so _admin is included when appropriate.
+                user.roles = _.uniq(user.roles.concat(data.userCtx.roles));
+                if (user.facility_id) {
+                    request({
+                        url: settings.kujua_db + '/' + user.facility_id
+                    }, function(err, data) {
+                        console.log('facility', data);
+                        // attach user facility if found
+                        user.facility = data;
+                        callback(null, user);
+                    });
+                } else {
+                    callback(null, user);
+                }
             });
         });
     }
@@ -848,7 +875,6 @@ define([
 
 
     function prefill_form(qs) {
-
         _.each( _.keys(qs), function(name){
             $('input[name='+ name +']').val( qs[name] );
             // fallback to a select
@@ -856,31 +882,53 @@ define([
         });
     };
 
+    /*
+     * return true if the user is allowed to use muvuku webapp
+     */
+    function hasPermissions(user) {
+        var allowedRoles = ['_admin', 'data_entry', 'national_admin', 'district_admin'],
+            ret = false;
+        _.each(allowedRoles, function(el) {
+            if (_.contains(user.roles, el)) {
+                ret = true;
+            }
+        });
+        return ret;
+    }
+
+    function setPhoneNumber(user) {
+        // set a phone number if not passed in as query param
+        if (!settings.extra.internal.gateway_num && data.phone) {
+            $('#options [name=from]').val(user.phone);
+        }
+    }
+
     exports.onDOMReady = function() {
-        initI18N(settings.locale);
         $(".footer .year").text(new Date().getFullYear());
         $(".version").text(new Date().getFullYear());
         if (settings.sync_url) {
             $('[name=sync_url]').val(settings.sync_url);
         }
         initListeners();
-        // set default phone number if not passed in as query param
-        if (!settings.extra.internal.gateway_num) {
-            loadUserDoc(function(err, data) {
-                if (data.phone) {
-                    $('#options [name=from]').val(data.phone);
-                }
+        loadUserProfile(function(err, user) {
+            console.log('loadUserProfile', user);
+            if (err) {
+                return $('.loader p').text(JSON.stringify(err));
+            }
+            if (!hasPermissions(user)) {
+                return $('.loader p').text("Please log in with an authorized account.");
+            }
+            initI18N(settings.locale);
+            loadAvailableJson(function(err, data){
+                loadLocalForms(function(err2, data2){
+                    // ignore err2
+                    if (data2) data.push.apply(data, data2);
+                    initProjectIndex(data);
+                    router.init('/');
+                });
             });
-        }
-        loadAvailableJson(function(err, data){
-            loadLocalForms(function(err2, data2){
-                // ignore err2
-                if (data2) data.push.apply(data, data2);
-                initProjectIndex(data);
-                router.init('/');
-            });
+            initJSONDisplay();
         });
-        initJSONDisplay();
     };
 
     exports.init = function() {};
