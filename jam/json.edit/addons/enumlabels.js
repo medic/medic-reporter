@@ -55,7 +55,7 @@
         var value, strValue = priv.getChildrenOrSelf(field, "select").val();
         try {
             if (strValue) {
-                value = JSON.parse(strValue);
+                value = JSON.parse(Number(strValue));
             }
             return {result: priv.validateJson(name, value, schema, required), data: value};
         } catch (error) {
