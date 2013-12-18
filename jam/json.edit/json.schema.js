@@ -439,6 +439,10 @@
             return mResult(false, "field '" + name + "' " + msg, data);
         }
 
+        if (typeof value === 'undefined' && !required) {
+            return validators.number(name, value, schema, required, notInteger);
+        }
+
         if (typeof value === "number" && (value % 1) !== 0) {
             return failed(notInteger);
         } else {
@@ -454,6 +458,10 @@
 
         function failed(msg, data) {
             return mResult(false, "field '" + name + "' " + msg, data);
+        }
+
+        if (typeof value === 'undefined' && !required) {
+            return mResult(true);
         }
 
         if (typeof value !== "number") {

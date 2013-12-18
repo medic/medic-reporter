@@ -435,9 +435,11 @@ define([
             code = data.form;
         schemafied[code].schema.order.forEach(function(k) {
             // handle msg header on first iteration
-            if (!msg)
-                return msg = '1!'+ code +'!'+ data[k];
-            msg += '#'+ data[k];
+            if (!msg) {
+                return msg = '1!'+ code +'!'+ (data[k] || '');
+            }
+            // use empty string not 'undefined' in the message
+            msg += '#'+ (data[k] || '');
         });
         return msg;
     };
@@ -518,10 +520,11 @@ define([
 
 
     function showValidationErrorMsg(errors) {
+        console.log('validation errors', errors);
         var errs = _.map(errors, function(err) {
             return '<b>'+ err.title+ '</b> ' + err.msg
         });
-        $('.errors.alert').find('msg').html(errs.join('<br />'));
+        $('.errors.alert').show().find('.msg').html(errs.join('<br />'));
     }
 
 

@@ -127,9 +127,13 @@
         if (form.fields) {
             result.schema.properties = {};
             result.schema.order = [];
+            result.schema.required = [];
             // preserve ordering
             for (var k in form.fields) {
                 result.schema.order.push(k);
+                if (form.fields[k].required) {
+                    result.schema.required.push(k);
+                }
                 result.schema.properties[k] = convertProperty(
                     k, form.fields[k], lang
                 );
@@ -198,8 +202,6 @@
         // saving tiny field name here for now
         if (property.labels.tiny)
             prop.tiny = getLabel(property.labels.tiny, lang);
-
-        if (property.required) prop.required = true;
 
         if (property.type === "string") {
             if (property.length) {

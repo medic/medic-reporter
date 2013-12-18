@@ -49,13 +49,15 @@
     formatHints.integer.enumlabels = formatHints.string.enumlabels;
 
     // add a collector hint for integers
-    collectorHints.integer.enumlabels = function(key, field, schema, priv) {
+    collectorHints.integer.enumlabels = function(name, field, schema, priv, required) {
 
         // The only real diff here is the 'select' instead of 'input'
         var value, strValue = priv.getChildrenOrSelf(field, "select").val();
         try {
-            value = JSON.parse(strValue);
-            return {result: priv.validateJson(name, value, schema), data: value};
+            if (strValue) {
+                value = JSON.parse(strValue);
+            }
+            return {result: priv.validateJson(name, value, schema, required), data: value};
         } catch (error) {
             return {
                 result: priv.collectResult(false, "invalid format", {
