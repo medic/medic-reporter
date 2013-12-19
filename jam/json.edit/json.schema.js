@@ -453,6 +453,7 @@
     validators.number = function (name, value, schema, required, notType) {
         var
             size,
+            regex,
             errs = cons.msgs.err,
             mResult = priv.makeResult;
 
@@ -466,6 +467,16 @@
 
         if (typeof value !== "number") {
             return failed(notType || errs.NOT_NUMBER);
+        }
+
+        if (schema.pattern) {
+            regex = new RegExp(schema.pattern);
+
+            if (!regex.test(value)) {
+                return failed(errs.INVALID_FORMAT, {
+                    pattern: schema.pattern
+                });
+            }
         }
 
         if (schema.minimum !== undefined) {

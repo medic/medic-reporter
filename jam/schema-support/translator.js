@@ -217,8 +217,7 @@
 
         if (property.type === "integer") {
             if (property.length) {
-                prop.minLength = property.length[0];
-                prop.maxLength = property.length[1];
+                prop.pattern = '^\\d{'+property.length[0]+','+property.length[1]+'}$';
             }
             if (property.range) {
                 prop.minimum = property.range[0];
