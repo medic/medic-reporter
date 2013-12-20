@@ -432,14 +432,16 @@ define([
 
     function convertToMuvukuFormat(data) {
         var msg = '',
-            code = data.form;
+            code = data.form,
+            val;
         schemafied[code].schema.order.forEach(function(k) {
+            // use empty string not 'undefined' in the message
+            val = typeof data[k] !== 'undefined' ? data[k] : '';
             // handle msg header on first iteration
             if (!msg) {
-                return msg = '1!'+ code +'!'+ (data[k] || '');
+                return msg = '1!'+ code +'!'+ val;
             }
-            // use empty string not 'undefined' in the message
-            msg += '#'+ (data[k] || '');
+            msg += '#'+ val;
         });
         return msg;
     };
