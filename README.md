@@ -7,7 +7,7 @@ Clone the repo and update submodules:
 
 Push the couchapp with erica:
 
-    erica push http://localhost:5984/muvuku
+    erica push http://admin:pass@localhost:5984/muvuku
 
 ### FFOS
 
