@@ -28,7 +28,7 @@ that is in `forms/index.json`.
 
 Special parameters are:
 
-* `_hide_topbar` - set to true so the dashboard topbar will not be displayed
+* `_hide_topbar` - 0 to display and 1 to hide
 * `_locale` - preset the local the form will render in
 * `_sync_url` - set the sync_url value
 * `_gateway_num` - set the gateway number

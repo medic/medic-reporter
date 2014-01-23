@@ -64,7 +64,7 @@ define([
 
     if (defaults.extra.internal.embed_mode) {
 
-        if (defaults.extra.internal.embed_mode === '2') {
+        if (defaults.extra.internal.embed_mode == '2') {
             $('body').addClass('embed-mode-2');
             // change title to Log for regular users
             $('#navigation [href=#compose]').attr('data-i18n', 'labels.log');
@@ -73,8 +73,10 @@ define([
             $('body').addClass('embed-mode');
         }
 
-
-        defaults.extra.internal.hide_topbar = true;
+        // top bar hidden by default in embed mode but can be overridden
+        if (typeof defaults.extra.internal.hide_topbar === 'undefined') {
+            defaults.extra.internal.hide_topbar = 1;
+        }
     }
 
     if (!defaults.extra.internal.hide_settings) {
@@ -862,7 +864,12 @@ define([
         _.each( _.keys(qs), function(name) {
             if ( name.indexOf('_') === 0 ) {
                 var good_name = name.substring(1);
-                internal[good_name] = qs[name];
+                if (isNaN(qs[name])) {
+                    internal[good_name] = qs[name];
+                } else {
+                    // preserve numbers so zero is falsey
+                    internal[good_name] = Number(qs[name]);
+                }
                 delete qs[name];
             }
         });
