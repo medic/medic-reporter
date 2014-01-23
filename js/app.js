@@ -34,7 +34,8 @@ define([
         schemafied,
         selected_form,
         log,
-        show_forms;
+        show_forms,
+        hide_forms = [];
 
     // settings  defaults, include all settings values here
     var defaults = {
@@ -113,6 +114,10 @@ define([
 
     if (defaults.extra.internal.show) {
         show_forms = defaults.extra.internal.show.toLowerCase().split(',');
+    }
+
+    if (defaults.extra.internal.hide_forms) {
+        hide_forms = defaults.extra.internal.hide_forms.toLowerCase().split(',');
     }
 
     function onLocaleChange(ev) {
@@ -739,10 +744,14 @@ define([
             var code = form.meta.code,
                 label = getLabel(form.meta.label),
                 $option = $('<option/>');
+            if (_.indexOf(hide_forms, code.toLowerCase()) !== -1) {
+                return;
+            }
             $option.val(project+'/'+code);
             $option.text(label +' ('+code+')');
-            if (code === form_code)
+            if (code === form_code) {
                 $option.prop('selected',true);
+            }
             $input.append($option);
         });
         $input.on('change', function(){
