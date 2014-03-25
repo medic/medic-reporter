@@ -106,10 +106,9 @@ define([
         $('#textforms_option').show();
     }
 
+
     if (defaults.extra.internal.use_textforms) {
-        $('#options input[name=use_textforms]').attr('checked', true);
-    } else {
-        $('#options input[name=use_textforms]').attr('checked', false);
+        $('#options input[name=use_textforms]').val('textforms');
     }
 
     if (defaults.extra.internal.show) {
@@ -438,36 +437,40 @@ define([
     }
 
     function convertToMuvukuFormat(data) {
-        var msg = '',
-            code = data.form,
-            val;
-        schemafied[code].schema.order.forEach(function(k) {
-            // use empty string not 'undefined' in the message
-            val = typeof data[k] !== 'undefined' ? data[k] : '';
-            // handle msg header on first iteration
-            if (!msg) {
-                return msg = '1!'+ code +'!'+ val;
-            }
-            msg += '#'+ val;
-        });
-        return msg;
-    };
-
-    function convertToTextformsFormat(data) {
-        var msg = '',
-            code = data.form,
+        var code = data.form,
             schema = schemafied[code].schema,
             parts = [];
         schema.order.forEach(function(k) {
-            // handle msg header on first iteration
-            var val = data[k],
-                key = schema.properties[k].tiny;
-            if (!key) throw new Error(k+' missing textforms field name.');
-            if (!msg)
-                msg = code +' ';
-            parts.push(key +' '+ data[k]);
+            // use empty string not 'undefined' in the message
+            parts.push(typeof data[k] !== 'undefined' ? data[k] : '');
         });
-        return msg + parts.join('#');
+        return '1!' + code + '!' + parts.join('#');
+    };
+
+    function convertToTextformsFormat(data) {
+        var code = data.form,
+            schema = schemafied[code].schema,
+            parts = [];
+        schema.order.forEach(function(k) {
+            var key = schema.properties[k].tiny;
+            if (!key) throw new Error(k + ' missing textforms field name.');
+            parts.push(key + ' ' + data[k]);
+        });
+        return code + ' ' + parts.join('#');
+    };
+
+    function convertToCompactFormat(data) {
+        var code = data.form,
+            schema = schemafied[code].schema,
+            parts = [];
+        schema.order.forEach(function(k) {
+            var value = data[k];
+            if (/\s+/.test(value)) {
+                value = '"' + value + '"';
+            }
+            parts.push(value);
+        });
+        return code + ' ' + parts.join(' ');
     };
 
     // Render and bind a form
@@ -511,6 +514,8 @@ define([
                         } catch(e) {
                             msg = convertToMuvukuFormat(doc);
                         }
+                    } else if(settings.message_format === 'compact') {
+                        msg = convertToCompactFormat(doc);
                     } else {
                         msg = convertToMuvukuFormat(doc);
                     }
@@ -571,8 +576,7 @@ define([
                     select_form: "Seleccione el reporte",
                     send: "Enviar",
                     sent_from: "Enviado desde",
-                    locale: "Idioma",
-                    use_textforms: "Utilice el formato TextForms cuando disponible"
+                    locale: "Idioma"
                 }
             }
         },
@@ -586,8 +590,7 @@ define([
                     select_form: "Sélectionnez formulaire",
                     send: "Envoyer",
                     sent_from: "En provenance de",
-                    locale: "Langue",
-                    use_textforms: "Utiliser le format TextForms lors disponible"
+                    locale: "Langue"
                 }
             }
         },
@@ -601,8 +604,7 @@ define([
                     select_form: "Select Form",
                     send: "Send",
                     sent_from: "Sent From",
-                    locale: "Locale",
-                    use_textforms: "Use TextForms format when available"
+                    locale: "Locale"
                 }
             }
         }
@@ -655,11 +657,8 @@ define([
             $(this).parent('div').hide();
         });
         $('[name=locale]').on('change', onLocaleChange);
-        $('[name=use_textforms]').on('change', function() {
-            if ($(this).prop('checked'))
-                settings.message_format = 'textforms';
-            else
-                settings.message_format = 'muvuku';
+        $('[name=format]').on('change', function() {
+            settings.message_format = $(this).val();
         });
         $('[name=show_debug]').on('change', function() {
             if ($(this).prop('checked'))
