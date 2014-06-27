@@ -40,8 +40,8 @@ define([
     // settings  defaults, include all settings values here
     var defaults = {
         locale: 'en',
-        task_filter: 'kujua-lite/tasks_by_id',
-        sync_url: '/kujua-lite/_design/kujua-lite/_rewrite/add',
+        task_filter: 'medic/tasks_by_id',
+        sync_url: '/medic/_design/medic/_rewrite/add',
         json_forms_index_path: 'forms/index.json',
         json_forms_path: 'forms/json',
         gateway_num: '+13125551212',

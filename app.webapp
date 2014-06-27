@@ -26,7 +26,7 @@
                 "sync_url": {
                     "type": "string",
                     "title": "Sync Url",
-                    "default": "/kujua-lite/_design/kujua-lite/_rewrite/add"
+                    "default": "/medic/_design/medic/_rewrite/add"
                 }
             }
         }
