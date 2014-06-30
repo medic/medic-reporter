@@ -719,8 +719,6 @@ define([
                         url: settings.kujua_db + '/' + user.facility_id,
                         method: 'GET'
                     }, function(err, data) {
-                        if (err) return callback(err);
-                        // attach user facility if found
                         if (data) {
                             user.facility = JSON.parse(data);
                         }
