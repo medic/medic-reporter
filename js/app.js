@@ -12,20 +12,17 @@ define([
     'querystring',
     'text!new_form.html',
     'i18next',
-    'json!forms/json/examples.json',
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
     'jam/json.edit/addons/enumlabels',
     'jam/bootstrap/js/bootstrap-dropdown.js',
     'jam/bootstrap/js/bootstrap-tab.js'
-], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, config, couchr, querystring, new_form_html) {
+], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, config, couchr, querystring, new_form_html, i18next) {
     var exports = {},
         routes = {
-            '/' : noFormSelected,
+            '/' : handleRoute,
             '/new' : newForm,
-            '/*/*/*' : loadProjectAndForm,
-            '/*/*' : loadProjectAndForm,
-            '/*' : loadProjectAndForm
+            '/*' : handleRoute
         },
         router = director.Router(routes),
         hide_count = true,
@@ -35,15 +32,15 @@ define([
         selected_form,
         log,
         show_forms,
-        hide_forms = [];
+        hide_forms = [],
+        cache = {};
 
     // settings  defaults, include all settings values here
     var defaults = {
         locale: 'en',
         task_filter: 'medic/tasks_by_id',
         sync_url: '/medic/_design/medic/_rewrite/add',
-        json_forms_index_path: 'forms/index.json',
-        json_forms_path: 'forms/json',
+        forms_list_path: '/medic/_design/medic/_rewrite/app_settings/medic/forms',
         gateway_num: '+13125551212',
         message_format: 'muvuku',
         extra: parseQuerystring()
@@ -52,15 +49,26 @@ define([
     var settings = _.extend({}, defaults);
 
     settings.locale = settings.extra.internal.locale || settings.locale;
-    // passed as param trumps internal config
-    settings.sync_url = settings.extra.internal.sync_url || config('sync_url', true) || settings.sync_url;
-    settings.gateway_num = settings.extra.internal.gateway_num || settings.gateway_num;
+
+    // passed as query param trumps other configs
+    settings.sync_url = settings.extra.internal.sync_url
+        || config('sync_url', true)
+        || settings.sync_url;
+
+    settings.forms_list_path = settings.extra.forms_list_path
+        || config('forms_list_path', true)
+        || settings.forms_list_path;
+
+    settings.gateway_num = settings.extra.internal.gateway_num
+        || settings.gateway_num;
 
     (function setKujuaDB() {
         var z = settings.sync_url.split('/');
         z.pop();
         z.push('_db');
         settings.kujua_db = z.join('/');
+        console.log('settings.kujua_db');
+        console.log(settings.kujua_db);
     })();
 
     if (defaults.extra.internal.embed_mode) {
@@ -122,7 +130,7 @@ define([
     function onLocaleChange(ev) {
         settings.locale = $(this).val();
         var args = $('#choose-form :selected').val().split('/');
-        loadProjectAndForm(args[0], args[1]);
+        handleRoute(args[0], args[1]);
         initI18N(settings.locale);
     }
 
@@ -294,7 +302,7 @@ define([
         var err = 'Failed to parse response.';
         $('.errors.alert .msg').html(
             '<p>'+err+'</p>'
-        ).closest('.errors').show();
+        ).show();
         if (data.status) {
             $('.errors.alert .msg').append(
                 '<code>'
@@ -476,10 +484,13 @@ define([
     // Render and bind a form
     function renderForm(form) {
 
-        if (typeof form !== 'object') return;
 
         $form_fields = $('#form_fields');
         $form_fields.empty();
+
+        if (!form || typeof form !== 'object') {
+            return $form_fields.html('<p>Form not found.</p>');
+        }
 
         schemafied = translator(form, settings.locale);
 
@@ -668,36 +679,43 @@ define([
         });
     }
 
-    // Used to find all the .json files in the root of this project
-    function loadAvailableJson(callback) {
-        var results = [];
-        $.get(settings.json_forms_index_path, function(data) {
-            var index;
-            if (typeof data === 'string')
-                index = JSON.parse(data)[0];
-            else
-                index = data[0];
-            index.forEach(function(file) {
-                results.push({
-                    id: file,
-                    text: file
-                });
-            });
-            callback(null, results);
-        });
-    }
+    // optional form_code
+    function handleRoute(form_code) {
 
-    function loadLocalForms(callback) {
-        couchr.get('_ddoc/_view/saved_forms', function(err, data){
-            if (err) return callback(err);
-            var result = _.map(data.rows, function(row){
-                return {
-                    id: row.id,
-                    text: row.value
-                };
-            });
-            callback(null, result);
-        });
+        console.log('handleRoute', form_code);
+        function finish(err, data) {
+            if (err) {
+                alert(err.status + ' ' + err.responseText);
+            } else {
+                cache.forms = data;
+                if (!form_code) {
+                    // if no form code is set then get the first form_code and
+                    // route to that form
+                    _.each(data, function(form) {
+                        if (form_code) return;
+                        form_code = form.meta && form.meta.code;
+                    });
+                    return router.setRoute('/' + form_code);
+                }
+            }
+            initFormsSelect(data, form_code);
+        }
+
+        if (cache.forms) {
+            return finish(null, cache.forms);
+        }
+
+        // fetch forms data if not found in cache
+        request({
+            url: settings.forms_list_path,
+            method: 'GET'
+        }, function(err, data) {
+            console.log('handleRoute', arguments);
+            if (err) {
+                return finish(err);
+            }
+            finish(null, data && data.settings);
+        })
     }
 
     function loadUserProfile(callback) {
@@ -733,21 +751,26 @@ define([
 
 
 
-    function initFormSelect(project, forms, form_code) {
-        var $input = $('#choose-form');
+    // take list of forms then render and init select list.
+    function initFormsSelect(forms, form_code) {
+        var $input = $('#choose-form'),
+            selected_form;
         $input.html(''); //reset
         _.each(forms, function(form, idx) {
-            if (!form.meta || !form.meta.code) return;
+            if (!form.meta || !form.meta.code) {
+                return;
+            }
             var code = form.meta.code,
                 label = getLabel(form.meta.label),
                 $option = $('<option/>');
             if (_.indexOf(hide_forms, code.toLowerCase()) !== -1) {
                 return;
             }
-            $option.val(project+'/'+code);
+            $option.val(code);
             $option.text(label +' ('+code+')');
             if (code === form_code) {
                 $option.prop('selected',true);
+                selected_form = form;
             }
             $input.append($option);
         });
@@ -758,68 +781,8 @@ define([
         $input.closest('form').show();
         $('.container-fluid.loader').hide();
         $('.container-fluid.main').show();
+        renderForm(selected_form);
     }
-
-    function initProjectIndex(data){
-        var $input = $('#choose-project');
-        if (show_forms) {
-            // hide ability to choose project
-            $('#choose-project').hide();
-        }
-        _.each(data, function(el, idx) {
-            var $option = $('<option/>'),
-                text = el.text && el.text.replace('.json','');
-            if (!show_forms || _.contains(show_forms, text.toLowerCase())) {
-                $option.attr('value',el.id);
-                $option.text(el.text && el.text.replace('.json',''));
-                $input.append($option);
-            }
-        });
-        $input.on('change', function() {
-            var val = $(this).val();
-            router.setRoute('/' + val);
-        });
-        $input.closest('form').show();
-        $('.container-fluid.loader').hide();
-    }
-
-    function loadProject(file, callback) {
-        var url;
-
-        if (file.indexOf('.json', file.length - 5)  !== -1 ) {
-            url = settings.json_forms_path + '/' + file;
-        }
-        else {
-            url = './_ddoc/_show/json_form/' + file;
-        }
-
-        $.getJSON(url, function(data) {
-            $('#choose-project [value="'+file+'"]').prop('selected', true);
-            if (_.isFunction(callback))
-                callback(null, data);
-        });
-    }
-
-    function loadProjectAndForm(project, form_code) {
-        loadProject(project, function(err, forms){
-            initFormSelect(project, forms, form_code);
-            // choose either first form or match form code argument
-            var form;
-            _.each(forms, function(f) {
-                if (!form)
-                    form = f;
-                if (form_code && form_code === formCode(f))
-                    form = f;
-            });
-            renderForm(form);
-        })
-    }
-
-    function noFormSelected() {
-        // on first load, just show an example, in english
-        router.setRoute('/examples.json/ZDIS');
-    }
-
 
     function newForm() {
         $form_fields = $('#form_fields');
@@ -834,7 +797,9 @@ define([
                 form_json = JSON.parse( $('#form_json').val() );
                 form_name = $('#form_name').val();
                 if (!form_name) alert('Please provide a form name');
-            } catch(e) { alert('invalid json'); }
+            } catch(e) {
+                return alert('invalid json');
+            }
 
             var doc = {
                 type: 'form',
@@ -947,14 +912,7 @@ define([
             }
             setPhoneNumber(user);
             initI18N(settings.locale);
-            loadAvailableJson(function(err, data){
-                loadLocalForms(function(err2, data2){
-                    // ignore err2
-                    if (data2) data.push.apply(data, data2);
-                    initProjectIndex(data);
-                    router.init('/');
-                });
-            });
+            router.init('/');
         });
     };
 
