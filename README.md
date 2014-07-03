@@ -2,12 +2,12 @@
 
 Clone the repo and update submodules:
 
-    git clone --recursive https://github.com/medic/muvuku-webapp
-    cd muvuku-webapp
+    git clone --recursive https://github.com/medic/medic-reporter
+    cd medic-reporter
 
 Push the couchapp with erica:
 
-    erica push http://admin:pass@localhost:5984/muvuku
+    erica push http://admin:pass@localhost:5984/medic-reporter
 
 ### FFOS
 
@@ -21,23 +21,35 @@ To use it simply start a http server in the _root_ directory:
 
 ## Usage
 
-You should be shown the `examples` forms and can select any other `JSON` file
-that is in `forms/index.json`.
+### Upload Forms
+
+You must make a list of JSON forms available via http on the server so reporter
+can load them. If using medic-webapp this is typically done with a JSON
+formatted file of a list of form schemas that is uploaded in your Medic Mobile
+settings.
+
+### Configure Form List URL
+
+Once you uploaded your forms you can configure this location your
+medic-reporter settings.  If you are using Medic Mobile then the defaults
+should suffice here.
 
 ## Configuration Parameters
 
-Special parameters are:
+Special query parameters are:
 
 * `_hide_topbar` - 0 to display and 1 to hide
 * `_hide_forms` - comma separated list of form codes to hide
 * `_locale` - preset the local the form will render in
-* `_sync_url` - set the sync_url value
+* `_sync_url` - path to resource where messages are added
+* `_forms_list_path` - path to JSON encoded forms resource
 * `_gateway_num` - set the gateway number
 * `_debug` - show the debug panel
 * `_textforms_option` - show the textforms checkbox option
-* `_use_textforms` - if set to 'true' then toggle it to on.
-* `_embed_mode=1` query param that uses tabs for use within kujua 
-* `_embed_mode=2` same as 1 but also hides project select list, useful to show only specific project. e.g. `/?_embed_mode=2#/icss-mexico.json`
+* `_use_textforms` - if set to 'true' then toggle it to on
+* `_embed_mode=1` - uses tabs on the interface; more compact and useful for embedding
+* `_embed_mode=2` same as 1 but provides even simpler interface by removing the
+  compose and configuration functionality.
 
 All other parameters attempt to bind into the form.
 

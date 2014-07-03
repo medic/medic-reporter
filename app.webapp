@@ -32,7 +32,7 @@
                 "form_list_path": {
                     "type": "string",
                     "title": "Form List URL",
-                    "description": "URL path to JSON encoded list of form definitions",
+                    "description": "URL path to JSON encoded list of form definitions.",
                     "default": "/medic/_design/medic/_rewrite/app_settings/medic/forms"
                 }
             }
