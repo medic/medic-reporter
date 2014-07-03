@@ -26,7 +26,8 @@
                 "sync_url": {
                     "type": "string",
                     "title": "Sync Url",
-                    "default": "/medic/_design/medic/_rewrite/add"
+                    "default": "/medic/_design/medic/_rewrite/add",
+                    "description": "The URL path where messages are added."
                 },
                 "form_list_path": {
                     "type": "string",
