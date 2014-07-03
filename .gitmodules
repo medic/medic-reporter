@@ -1,3 +1,0 @@
-[submodule "forms/json"]
-	path = forms/json
-	url = git@github.com:medic/json-forms.git
