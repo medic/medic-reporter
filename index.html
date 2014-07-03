@@ -166,7 +166,7 @@
 
     <script src="jam/require.js"></script>
     <script>
-      require(['js/app','domReady'], function (app, domReady) {
+      require(['jam/jquery/jquery', 'js/app','domReady'], function ($, app, domReady) {
         app.init();
         domReady(app.onDOMReady);
       });

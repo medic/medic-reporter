@@ -1,6 +1,5 @@
 
 define([
-    'jquery',
     'underscore',
     'director',
     'json.edit',
@@ -15,9 +14,9 @@ define([
     'jam/codemirror/mode/javascript/javascript',
     'domReady!',
     'jam/json.edit/addons/enumlabels',
-    'jam/bootstrap/js/bootstrap-dropdown.js',
-    'jam/bootstrap/js/bootstrap-tab.js'
-], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, config, couchr, querystring, new_form_html, i18next) {
+    'jam/bootstrap/js/bootstrap-dropdown',
+    'jam/bootstrap/js/bootstrap-tab'
+], function (_, director, jsonEdit, CodeMirror, translator, json_format, config, couchr, querystring, new_form_html) {
     var exports = {},
         routes = {
             '/' : handleRoute,
@@ -67,8 +66,6 @@ define([
         z.pop();
         z.push('_db');
         settings.kujua_db = z.join('/');
-        console.log('settings.kujua_db');
-        console.log(settings.kujua_db);
     })();
 
     if (defaults.extra.internal.embed_mode) {
@@ -682,7 +679,6 @@ define([
     // optional form_code
     function handleRoute(form_code) {
 
-        console.log('handleRoute', form_code);
         function finish(err, data) {
             if (err) {
                 alert(err.status + ' ' + err.responseText);
@@ -710,7 +706,6 @@ define([
             url: settings.forms_list_path,
             method: 'GET'
         }, function(err, data) {
-            console.log('handleRoute', arguments);
             if (err) {
                 return finish(err);
             }
@@ -767,7 +762,7 @@ define([
                 return;
             }
             $option.val(code);
-            $option.text(label +' ('+code+')');
+            $option.text(label + ' (' + code + ')');
             if (code === form_code) {
                 $option.prop('selected',true);
                 selected_form = form;
