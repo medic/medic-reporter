@@ -21,6 +21,7 @@ define([
         routes = {
             '/' : handleRoute,
             '/new' : newForm,
+            '/*/*' : handleRoute,
             '/*' : handleRoute
         },
         router = director.Router(routes),
@@ -691,10 +692,10 @@ define([
                         if (form_code) return;
                         form_code = form.meta && form.meta.code;
                     });
-                    return router.setRoute('/' + form_code);
+                    return router.setRoute('/' + encodeURIComponent(form_code));
                 }
             }
-            initFormsSelect(data, form_code);
+            initFormsSelect(data, decodeURIComponent(form_code));
         }
 
         if (cache.forms) {
@@ -771,7 +772,7 @@ define([
         });
         $input.on('change', function(){
             var val = $(this).val();
-            router.setRoute('/' + val);
+            router.setRoute('/' + encodeURIComponent(val));
         });
         $input.closest('form').show();
         $('.container-fluid.loader').hide();
@@ -808,7 +809,7 @@ define([
                     if (err && err.reason) msg += err.reason;
                     return alert(msg);
                 }
-                router.setRoute('/' + resp.id);
+                router.setRoute('/' + encodeURIComponent(resp.id));
                 // cheap hack to reload the select.
                 window.location.reload();
             });
