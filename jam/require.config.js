@@ -2,7 +2,8 @@ var jam = {
     "packages": [
         {
             "name": "bootstrap",
-            "location": "jam/bootstrap"
+            "location": "jam/bootstrap",
+            "main": "docs/assets/js/bootstrap.min.js"
         },
         {
             "name": "codemirror",
@@ -77,8 +78,18 @@ var jam = {
     ],
     "version": "0.2.17",
     "shim": {
+        "bootstrap": {
+            "deps": [
+                "jquery"
+            ]
+        },
         "director": {
             "exports": "Router"
+        },
+        "i18next": {
+            "deps": [
+                "jquery"
+            ]
         }
     }
 };
@@ -88,7 +99,8 @@ if (typeof require !== "undefined" && require.config) {
     "packages": [
         {
             "name": "bootstrap",
-            "location": "jam/bootstrap"
+            "location": "jam/bootstrap",
+            "main": "docs/assets/js/bootstrap.min.js"
         },
         {
             "name": "codemirror",
@@ -162,8 +174,18 @@ if (typeof require !== "undefined" && require.config) {
         }
     ],
     "shim": {
+        "bootstrap": {
+            "deps": [
+                "jquery"
+            ]
+        },
         "director": {
             "exports": "Router"
+        },
+        "i18next": {
+            "deps": [
+                "jquery"
+            ]
         }
     }
 });
@@ -173,7 +195,8 @@ else {
     "packages": [
         {
             "name": "bootstrap",
-            "location": "jam/bootstrap"
+            "location": "jam/bootstrap",
+            "main": "docs/assets/js/bootstrap.min.js"
         },
         {
             "name": "codemirror",
@@ -247,8 +270,18 @@ else {
         }
     ],
     "shim": {
+        "bootstrap": {
+            "deps": [
+                "jquery"
+            ]
+        },
         "director": {
             "exports": "Router"
+        },
+        "i18next": {
+            "deps": [
+                "jquery"
+            ]
         }
     }
 };

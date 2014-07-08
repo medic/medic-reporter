@@ -1,5 +1,6 @@
 
 define([
+    'jquery',
     'underscore',
     'director',
     'json.edit',
@@ -10,13 +11,12 @@ define([
     'couchr',
     'querystring',
     'text!new_form.html',
+    'domReady',
     'i18next',
+    'bootstrap',
     'jam/codemirror/mode/javascript/javascript',
-    'domReady!',
-    'jam/json.edit/addons/enumlabels',
-    'jam/bootstrap/js/bootstrap-dropdown',
-    'jam/bootstrap/js/bootstrap-tab'
-], function (_, director, jsonEdit, CodeMirror, translator, json_format, config, couchr, querystring, new_form_html) {
+    'jam/json.edit/addons/enumlabels'
+], function ($, _, director, jsonEdit, CodeMirror, translator, json_format, config, couchr, querystring, new_form_html, domReady) {
     var exports = {},
         routes = {
             '/' : handleRoute,
@@ -912,7 +912,9 @@ define([
         });
     };
 
-    exports.init = function() {};
+    exports.init = function() {
+        domReady(exports.onDOMReady);
+    };
 
     return exports;
 });

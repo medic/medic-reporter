@@ -17,5 +17,8 @@
     "bugs": {
         "web": "https://github.com/jamuhl/i18next/issues"
     },
+    "shim": {
+        "deps": ["jquery"]
+    },
     "main": "i18next.js"
 }
