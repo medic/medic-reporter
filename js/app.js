@@ -768,6 +768,9 @@ define([
                 $option.prop('selected',true);
                 selected_form = form;
             }
+            if (!selected_form) {
+                selected_form = form;
+            }
             $input.append($option);
         });
         $input.on('change', function(){
