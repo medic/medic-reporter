@@ -5,6 +5,10 @@ Clone the repo and update submodules:
     git clone --recursive https://github.com/medic/medic-reporter
     cd medic-reporter
 
+Get the erica tool:
+
+    curl https://people.apache.org/~dch/dist/tools/erica > erica
+
 Push the couchapp with erica:
 
     erica push http://admin:pass@localhost:5984/medic-reporter
@@ -15,7 +19,7 @@ Push the couchapp with erica:
 
 To use it simply start a http server in the _root_ directory:
 
-    python run_server.py 
+    python run_server.py
     Manifest URL: http://0.0.0.0:9100/manifest.webapp
     Serving app at http://0.0.0.0:9100/
 
