@@ -1,3 +1,18 @@
+Medic Reporter is a web interface to send reports to a Medic Mobile instance (see [medic-webapp](https://github.com/medic/medic-webapp)). You can send all formats that Medic Mobile supports :
+Textforms [link to doc?](), [Medic Collect](https://github.com/medic/medic-collect) or SimApp [link to doc?]().
+
+Medic Reported is a couchapp, install it in a couchdb server, and then access it through:
+
+`<server url>/medic-reporter/_design/medic-reporter/_rewrite/`
+
+You're guided to fill in reports:
+
+![Screenshot: field validation](https://cloud.githubusercontent.com/assets/911434/16682400/ca616f24-44fa-11e6-8b21-f13c6dec875f.png)
+
+You can use the different report formats that Medic Mobile supports:
+
+![Screenshot: different report formats](https://cloud.githubusercontent.com/assets/911434/16682386/bba1a6d4-44fa-11e6-8778-ad002703c1c6.png)
+
 ## Install
 
 Clone the repo and update submodules:
@@ -27,19 +42,27 @@ To use it simply start a http server in the _root_ directory:
 
 ### Upload Forms
 
-You must make a list of JSON forms available via http on the server so reporter
-can load them. If using medic-webapp this is typically done with a JSON
-formatted file of a list of form schemas that is uploaded in your Medic Mobile
-settings.
+You must make a list of JSON forms available via http so that medic-reporter
+can pull them, with the following format:
+
+`{ settings: [ {<form1>, {<form2>}, ..., {formN}] }`
+
+
+Each form should follow the Medic Mobile JSON forms format ([link to format doc?]()).
+
+
+If you are using [medic-webapp](https://github.com/medic/medic-webapp), leave the default setting
+which will fetch the forms from the webapp.
 
 ### Configure Form List URL
 
-Once you uploaded your forms you can configure this location your
-medic-reporter settings.  If you are using Medic Mobile then the defaults
-should suffice here.
+Once you uploaded your forms, if you are not user Medic Mobile webapp, edit default settings in
+[js/app.js](js/app.js) to point medic-reporter to your forms.
 
-## Configuration Parameters
 
+## Query Parameters
+
+You can also specify settings with URL query parameters.
 Special query parameters are:
 
 * `_hide_topbar` - 0 to display and 1 to hide
