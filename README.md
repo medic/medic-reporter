@@ -1,5 +1,5 @@
 Medic Reporter is a web interface to send reports to a Medic Mobile instance (see [medic-webapp](https://github.com/medic/medic-webapp)). You can send all formats that Medic Mobile supports :
-Textforms [link to doc?](), [Medic Collect](https://github.com/medic/medic-collect) or SimApp [link to doc?]().
+Textforms, [Medic Collect](https://github.com/medic/medic-collect) or SimApp.
 
 Medic Reported is a couchapp, install it in a couchdb server, and then access it through:
 
@@ -15,9 +15,9 @@ You can use the different report formats that Medic Mobile supports:
 
 ## Install
 
-Clone the repo and update submodules:
+Clone the repo:
 
-    git clone --recursive https://github.com/medic/medic-reporter
+    git clone https://github.com/medic/medic-reporter
     cd medic-reporter
 
 Get the erica tool:
