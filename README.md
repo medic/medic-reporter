@@ -20,7 +20,7 @@ Clone the repo:
     git clone https://github.com/medic/medic-reporter
     cd medic-reporter
 
-Get the erica tool:
+Get the [erica](https://github.com/benoitc/erica) tool, following the linked instructions or just downloading the signed release:
 
     curl https://people.apache.org/~dch/dist/tools/erica > erica
 
