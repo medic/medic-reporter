@@ -67,6 +67,7 @@ Special query parameters are:
 
 * `_hide_topbar` - 0 to display and 1 to hide
 * `_hide_forms` - comma separated list of form codes to hide
+* `_show_forms` - comma separated list of form codes to show, all others will be hidden
 * `_locale` - preset the local the form will render in
 * `_sync_url` - path to resource where messages are added
 * `_forms_list_path` - path to JSON encoded forms resource
@@ -77,6 +78,10 @@ Special query parameters are:
 * `_embed_mode=1` - uses tabs on the interface; more compact and useful for embedding
 * `_embed_mode=2` same as 1 but provides even simpler interface by removing the
   compose and configuration functionality.
+
+Example :
+`http://localhost:5988/medic-reporter/_design/medic-reporter/_rewrite/?_embed_mode=1&_show_forms=REF,VAC`
+
 
 All other parameters attempt to bind into the form.
 
