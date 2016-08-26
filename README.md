@@ -23,10 +23,13 @@ Clone the repo:
 Get the [erica](https://github.com/benoitc/erica) tool, following the linked instructions or just downloading the signed release:
 
     curl https://people.apache.org/~dch/dist/tools/erica > erica
+    chmod 775 erica
+
+Note : the `erica` script needs to be in the same dir as the app files, otherwise you'll get an error on push. (So don't add it to your PATH for instance!)
 
 Push the couchapp with erica:
 
-    erica push http://admin:pass@localhost:5984/medic-reporter
+    ./erica push http://admin:pass@localhost:5984/medic-reporter
 
 ### FFOS
 
