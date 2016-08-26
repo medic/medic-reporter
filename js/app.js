@@ -117,8 +117,8 @@ define([
         $('#options input[name=use_textforms]').val('textforms');
     }
 
-    if (defaults.extra.internal.show) {
-        show_forms = defaults.extra.internal.show.toLowerCase().split(',');
+    if (defaults.extra.internal.show_forms) {
+        show_forms = defaults.extra.internal.show_forms.toLowerCase().split(',');
     }
 
     if (defaults.extra.internal.hide_forms) {
@@ -759,6 +759,9 @@ define([
             var code = form.meta.code,
                 label = getLabel(form.meta.label),
                 $option = $('<option/>');
+            if (show_forms && _.indexOf(show_forms, code.toLowerCase()) === -1) {
+                return;
+            }
             if (_.indexOf(hide_forms, code.toLowerCase()) !== -1) {
                 return;
             }
