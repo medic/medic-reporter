@@ -55,7 +55,7 @@ define([
         || config('sync_url', true)
         || settings.sync_url;
 
-    settings.forms_list_path = settings.extra.forms_list_path
+    settings.forms_list_path = settings.extra.internal.forms_list_path
         || config('forms_list_path', true)
         || settings.forms_list_path;
 
