@@ -1,5 +1,5 @@
-Medic Reporter is a web interface to send reports to a Medic Mobile instance (see [medic-webapp](https://github.com/medic/medic-webapp)). You can send all formats that Medic Mobile supports :
-Textforms, [Medic Collect](https://github.com/medic/medic-collect) or SimApp.
+Medic Reporter is a web interface to send reports to a Medic Mobile instance (see [medic-webapp](https://github.com/medic/medic-webapp)). You can send all SMS-based formats that Medic Mobile supports :
+[Muvuku](tests/nodeunit/unit/kujua-sms/smsparser.js), [Texforms](tests/nodeunit/unit/kujua-sms/textforms_parser.js) or [Textforms Compact](tests/nodeunit/unit/kujua-sms/smsparser_compact_textform.js) formats.
 
 Medic Reported is a couchapp, install it in a couchdb server, and then access it through:
 
@@ -7,11 +7,11 @@ Medic Reported is a couchapp, install it in a couchdb server, and then access it
 
 You're guided to fill in reports:
 
-![Screenshot: field validation](https://cloud.githubusercontent.com/assets/911434/16682400/ca616f24-44fa-11e6-8b21-f13c6dec875f.png)
+![Screenshot: field validation](documentation_images/different_report_formats.png)
 
 You can use the different report formats that Medic Mobile supports:
 
-![Screenshot: different report formats](https://cloud.githubusercontent.com/assets/911434/16682386/bba1a6d4-44fa-11e6-8778-ad002703c1c6.png)
+![Screenshot: different report formats](documentation_images/field_validation.png)
 
 ## Install
 
@@ -20,12 +20,15 @@ Clone the repo:
     git clone https://github.com/medic/medic-reporter
     cd medic-reporter
 
-Get the [erica](https://github.com/benoitc/erica) tool, following the linked instructions or just downloading the signed release:
+Use the [erica](https://github.com/benoitc/erica) tool to push. The binary is committed to the repo. You can also download the signed release :
 
     curl https://people.apache.org/~dch/dist/tools/erica > erica
-    chmod 775 erica
 
 Note : the `erica` script needs to be in the same dir as the app files, otherwise you'll get an error on push. (So don't add it to your PATH for instance!)
+
+Chmod the erica script:
+
+    chmod 775 erica
 
 Push the couchapp with erica:
 
@@ -48,10 +51,18 @@ To use it simply start a http server in the _root_ directory:
 You must make a list of JSON forms available via http so that medic-reporter
 can pull them, with the following format:
 
-`{ settings: [ {<form1>, {<form2>}, ..., {formN}] }`
+```
+{
+  settings: {
+    formCode1: {<form1>},
+    formCode2: {<form2>},
+    ...,
+    formCodeN: {formN}
+  }
+}
+```
 
-
-Each form should follow the Medic Mobile JSON forms format ([link to format doc?]()).
+Each form should follow the Medic Mobile JSON forms format. ([Format example](tests/nodeunit/form_definitions.js#L6)).
 
 
 If you are using [medic-webapp](https://github.com/medic/medic-webapp), leave the default setting
