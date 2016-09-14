@@ -1,5 +1,5 @@
 Medic Reporter is a web interface to send reports to a Medic Mobile instance (see [medic-webapp](https://github.com/medic/medic-webapp)). You can send all SMS-based formats that Medic Mobile supports :
-[Muvuku](tests/nodeunit/unit/kujua-sms/smsparser.js), [Texforms](tests/nodeunit/unit/kujua-sms/textforms_parser.js) or [Textforms Compact](tests/nodeunit/unit/kujua-sms/smsparser_compact_textform.js) formats.
+[Muvuku](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/unit/kujua-sms/smsparser.js), [Texforms](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/unit/kujua-sms/textforms_parser.js) or [Textforms Compact](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/unit/kujua-sms/smsparser_compact_textform.js) formats.
 
 Medic Reported is a couchapp, install it in a couchdb server, and then access it through:
 
@@ -7,11 +7,11 @@ Medic Reported is a couchapp, install it in a couchdb server, and then access it
 
 You're guided to fill in reports:
 
-![Screenshot: field validation](documentation_images/different_report_formats.png)
+![Screenshot: field validation](documentation_images/different_report_formats.png?raw=true)
 
 You can use the different report formats that Medic Mobile supports:
 
-![Screenshot: different report formats](documentation_images/field_validation.png)
+![Screenshot: different report formats](documentation_images/field_validation.png?raw=true)
 
 ## Install
 
@@ -62,7 +62,7 @@ can pull them, with the following format:
 }
 ```
 
-Each form should follow the Medic Mobile JSON forms format. ([Format example](tests/nodeunit/form_definitions.js#L6)).
+Each form should follow the Medic Mobile JSON forms format. ([Format example](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/form_definitions.js#L6)).
 
 
 If you are using [medic-webapp](https://github.com/medic/medic-webapp), leave the default setting
