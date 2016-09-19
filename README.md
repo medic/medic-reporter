@@ -1,5 +1,5 @@
 Medic Reporter is a web interface to send reports to a Medic Mobile instance (see [medic-webapp](https://github.com/medic/medic-webapp)). You can send all SMS-based formats that Medic Mobile supports :
-[Muvuku](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/unit/kujua-sms/smsparser.js), [Texforms](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/unit/kujua-sms/textforms_parser.js) or [Textforms Compact](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/unit/kujua-sms/smsparser_compact_textform.js) formats.
+[Muvuku](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/unit/kujua-sms/smsparser.js) (used by SimApps), [Texforms](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/unit/kujua-sms/textforms_parser.js) or [Textforms Compact](https://github.com/medic/medic-webapp/blob/master/tests/nodeunit/unit/kujua-sms/smsparser_compact_textform.js) formats.
 
 Medic Reported is a couchapp, install it in a couchdb server, and then access it through:
 
